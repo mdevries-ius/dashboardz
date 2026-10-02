@@ -1,0 +1,474 @@
+month,seller_id,dealer_name,city,state_province,postal_code,dma_code,dma_name,latitude,longitude,average_inventory
+2025-01-01,62581,Genesis Santa Monica,Santa Monica,CA,90404,803,"Los Angeles, CA",34.03227,-118.4751279,255.0
+2025-01-01,6767,Tuttle-Click Genesis,Irvine,CA,92618,803,"Los Angeles, CA",33.6342181,-117.7233823,214.0
+2025-01-01,72517,Genesis of Loma Linda,Ontario,CA,91764,803,"Los Angeles, CA",34.0699402,-117.6059991,201.0
+2025-01-01,62609,Norm Reeves Genesis of Cerritos,Cerritos,CA,90703,803,"Los Angeles, CA",33.8662378,-118.1015234,165.0
+2025-01-01,64605,Genesis of South Bay,Torrance,CA,90505,803,"Los Angeles, CA",33.7991718,-118.3411724,163.0
+2025-01-01,74040,Genesis of San Bruno,San Bruno,CA,94066,807,"San Francisco-Oakland-San Jose, CA",37.6372585,-122.419091,122.0
+2025-01-01,67653,Genesis of Corona,Corona,CA,92882,803,"Los Angeles, CA",33.882918,-117.6138489,110.0
+2025-01-01,96441,Genesis of Rocklin,Rocklin,CA,95677,862,"Sacramento-Stockton-Modesto, CA",38.7952904,-121.2164042,105.0
+2025-01-01,56215,Genesis of Westlake,Thousand Oaks,CA,91362,803,"Los Angeles, CA",34.1644513,-118.8296499,104.0
+2025-01-01,9164,Genesis of Kearny Mesa,San Diego,CA,92111,825,"San Diego, CA",32.82812,-117.1528769,81.0
+2025-01-01,95718,Genesis of Pasadena,Pasadena,CA,91107,803,"Los Angeles, CA",34.1459718,-118.077746,78.0
+2025-01-01,61240,Genesis of Palm Springs,Palm Springs,CA,92264,804,"Palm Springs, CA",33.7945577,-116.5032881,71.0
+2025-01-01,68973,Genesis of Dublin,Dublin,CA,94568,807,"San Francisco-Oakland-San Jose, CA",37.7027037,-121.9030039,63.0
+2025-01-01,65171,Genesis of Selma,Selma,CA,93662,866,"Fresno-Visalia, CA",36.5705206,-119.6297571,35.0
+2025-01-01,69677,Genesis of La Quinta,La Quinta,CA,92253,804,"Palm Springs, CA",33.7072313,-116.2852619,22.0
+2025-01-01,69701,Genesis of Victorville,Victorville,CA,92392,803,"Los Angeles, CA",34.5060794,-117.3405032,11.0
+2025-01-01,73047,Genesis of Stevens Creek,Santa Clara,CA,95051,807,"San Francisco-Oakland-San Jose, CA",37.3235793,-121.9800176,8.0
+2025-01-01,9692,Hyundai of La Quinta,La Quinta,CA,92253,804,"Palm Springs, CA",33.7072313,-116.2852619,8.0
+2025-01-01,69409,Genesis of Richmond,Richmond,CA,94806,807,"San Francisco-Oakland-San Jose, CA",37.9857273,-122.3202802,4.0
+2025-01-01,8279,Capitol Hyundai,San Jose,CA,95136,807,"San Francisco-Oakland-San Jose, CA",37.274631,-121.8752863,2.0
+2025-01-01,100529,Genesis of San Diego,San Diego,CA,92111,825,"San Diego, CA",32.8306319,-117.1434333,2.0
+2025-01-01,25937,STG Auto Group,Montclair,CA,91763,803,"Los Angeles, CA",34.0640219,-117.6889961,2.0
+2025-01-01,7311,Stevens Creek Hyundai,Santa Clara,CA,95051,807,"San Francisco-Oakland-San Jose, CA",37.3235793,-121.9800176,2.0
+2025-01-01,26752,Beach Cities Toyota Westminster,Westminster,CA,92683,803,"Los Angeles, CA",33.7408884,-117.9882786,1.0
+2025-01-01,11903,Cadillac Pasadena,Pasadena,CA,91107,803,"Los Angeles, CA",34.1465853,-118.0788768,1.0
+2025-01-01,74653,CarMax Bakersfield,Bakersfield,CA,93307,800,"Bakersfield, CA",35.2931773,-119.0284246,1.0
+2025-01-01,80993,Driveline Used Cars of Murrieta,Murrieta,CA,92562,803,"Los Angeles, CA",33.5292134,-117.1733988,1.0
+2025-01-01,15434,Folsom Lake Ford,Folsom,CA,95630,862,"Sacramento-Stockton-Modesto, CA",38.6346917,-121.2046807,1.0
+2025-01-01,57993,Roseville Kia,Roseville,CA,95661,862,"Sacramento-Stockton-Modesto, CA",38.7524054,-121.2603762,1.0
+2025-01-01,69397,Tom Bell Chevrolet,Redlands,CA,92374,803,"Los Angeles, CA",34.0637996,-117.2078979,1.0
+2025-01-01,70476,Genesis of Escondido,Escondido,CA,92029,825,"San Diego, CA",33.1150272,-117.1049655,0.0
+2025-02-01,62581,Genesis Santa Monica,Santa Monica,CA,90404,803,"Los Angeles, CA",34.03227,-118.4751279,222.0
+2025-02-01,6767,Tuttle-Click Genesis,Irvine,CA,92618,803,"Los Angeles, CA",33.6342181,-117.7233823,195.0
+2025-02-01,72517,Genesis of Loma Linda,Ontario,CA,91764,803,"Los Angeles, CA",34.0699402,-117.6059991,192.0
+2025-02-01,62609,Norm Reeves Genesis of Cerritos,Cerritos,CA,90703,803,"Los Angeles, CA",33.8662378,-118.1015234,170.0
+2025-02-01,64605,Genesis of South Bay,Torrance,CA,90505,803,"Los Angeles, CA",33.7991718,-118.3411724,146.0
+2025-02-01,67653,Genesis of Corona,Corona,CA,92882,803,"Los Angeles, CA",33.882918,-117.6138489,126.0
+2025-02-01,74040,Genesis of San Bruno,San Bruno,CA,94066,807,"San Francisco-Oakland-San Jose, CA",37.6372585,-122.419091,104.0
+2025-02-01,96441,Genesis of Rocklin,Rocklin,CA,95677,862,"Sacramento-Stockton-Modesto, CA",38.7952904,-121.2164042,102.0
+2025-02-01,56215,Genesis of Westlake,Thousand Oaks,CA,91362,803,"Los Angeles, CA",34.1644513,-118.8296499,93.0
+2025-02-01,9164,Genesis of Kearny Mesa,San Diego,CA,92111,825,"San Diego, CA",32.82812,-117.1528769,79.0
+2025-02-01,61240,Genesis of Palm Springs,Palm Springs,CA,92264,804,"Palm Springs, CA",33.7945577,-116.5032881,68.0
+2025-02-01,68973,Genesis of Dublin,Dublin,CA,94568,807,"San Francisco-Oakland-San Jose, CA",37.7027037,-121.9030039,61.0
+2025-02-01,65171,Genesis of Selma,Selma,CA,93662,866,"Fresno-Visalia, CA",36.5705206,-119.6297571,30.0
+2025-02-01,95718,Genesis of Pasadena,Pasadena,CA,91107,803,"Los Angeles, CA",34.1459718,-118.077746,27.0
+2025-02-01,69677,Genesis of La Quinta,La Quinta,CA,92253,804,"Palm Springs, CA",33.7072313,-116.2852619,20.0
+2025-02-01,69701,Genesis of Victorville,Victorville,CA,92392,803,"Los Angeles, CA",34.5060794,-117.3405032,11.0
+2025-02-01,9692,Hyundai of La Quinta,La Quinta,CA,92253,804,"Palm Springs, CA",33.7072313,-116.2852619,9.0
+2025-02-01,73047,Genesis of Stevens Creek,Santa Clara,CA,95051,807,"San Francisco-Oakland-San Jose, CA",37.3235793,-121.9800176,8.0
+2025-02-01,8279,Capitol Hyundai,San Jose,CA,95136,807,"San Francisco-Oakland-San Jose, CA",37.274631,-121.8752863,2.0
+2025-02-01,100529,Genesis of San Diego,San Diego,CA,92111,825,"San Diego, CA",32.8306319,-117.1434333,2.0
+2025-02-01,25937,STG Auto Group,Montclair,CA,91763,803,"Los Angeles, CA",34.0640219,-117.6889961,2.0
+2025-02-01,7311,Stevens Creek Hyundai,Santa Clara,CA,95051,807,"San Francisco-Oakland-San Jose, CA",37.3235793,-121.9800176,2.0
+2025-02-01,26752,Beach Cities Toyota Westminster,Westminster,CA,92683,803,"Los Angeles, CA",33.7408884,-117.9882786,1.0
+2025-02-01,11903,Cadillac Pasadena,Pasadena,CA,91107,803,"Los Angeles, CA",34.1465853,-118.0788768,1.0
+2025-02-01,74653,CarMax Bakersfield,Bakersfield,CA,93307,800,"Bakersfield, CA",35.2931773,-119.0284246,1.0
+2025-02-01,80993,Driveline Used Cars of Murrieta,Murrieta,CA,92562,803,"Los Angeles, CA",33.5292134,-117.1733988,1.0
+2025-02-01,15434,Folsom Lake Ford,Folsom,CA,95630,862,"Sacramento-Stockton-Modesto, CA",38.6346917,-121.2046807,1.0
+2025-02-01,69409,Genesis of Richmond,Richmond,CA,94806,807,"San Francisco-Oakland-San Jose, CA",37.9857273,-122.3202802,1.0
+2025-02-01,57993,Roseville Kia,Roseville,CA,95661,862,"Sacramento-Stockton-Modesto, CA",38.7524054,-121.2603762,1.0
+2025-02-01,69397,Tom Bell Chevrolet,Redlands,CA,92374,803,"Los Angeles, CA",34.0637996,-117.2078979,1.0
+2025-02-01,98536,Galpin Genesis of Van Nuys,Los Angeles,CA,91406,803,"Los Angeles, CA",34.2209833,-118.4687863,0.0
+2025-02-01,70476,Genesis of Escondido,Escondido,CA,92029,825,"San Diego, CA",33.1150272,-117.1049655,0.0
+2025-03-01,72517,Genesis of Loma Linda,Ontario,CA,91764,803,"Los Angeles, CA",34.0699402,-117.6059991,236.0
+2025-03-01,62609,Norm Reeves Genesis of Cerritos,Cerritos,CA,90703,803,"Los Angeles, CA",33.8662378,-118.1015234,208.0
+2025-03-01,62581,Genesis Santa Monica,Santa Monica,CA,90404,803,"Los Angeles, CA",34.03227,-118.4751279,203.0
+2025-03-01,6767,Tuttle-Click Genesis,Irvine,CA,92618,803,"Los Angeles, CA",33.6342181,-117.7233823,182.0
+2025-03-01,64605,Genesis of South Bay,Torrance,CA,90505,803,"Los Angeles, CA",33.7991718,-118.3411724,147.0
+2025-03-01,67653,Genesis of Corona,Corona,CA,92882,803,"Los Angeles, CA",33.882918,-117.6138489,140.0
+2025-03-01,74040,Genesis of San Bruno,San Bruno,CA,94066,807,"San Francisco-Oakland-San Jose, CA",37.6372585,-122.419091,108.0
+2025-03-01,96441,Genesis of Rocklin,Rocklin,CA,95677,862,"Sacramento-Stockton-Modesto, CA",38.7952904,-121.2164042,97.0
+2025-03-01,9164,Genesis of Kearny Mesa,San Diego,CA,92111,825,"San Diego, CA",32.82812,-117.1528769,74.0
+2025-03-01,56215,Genesis of Westlake,Thousand Oaks,CA,91362,803,"Los Angeles, CA",34.1644513,-118.8296499,74.0
+2025-03-01,61240,Genesis of Palm Springs,Palm Springs,CA,92264,804,"Palm Springs, CA",33.7945577,-116.5032881,72.0
+2025-03-01,68973,Genesis of Dublin,Dublin,CA,94568,807,"San Francisco-Oakland-San Jose, CA",37.7027037,-121.9030039,69.0
+2025-03-01,65171,Genesis of Selma,Selma,CA,93662,866,"Fresno-Visalia, CA",36.5705206,-119.6297571,34.0
+2025-03-01,69677,Genesis of La Quinta,La Quinta,CA,92253,804,"Palm Springs, CA",33.7072313,-116.2852619,12.0
+2025-03-01,73047,Genesis of Stevens Creek,Santa Clara,CA,95051,807,"San Francisco-Oakland-San Jose, CA",37.3235793,-121.9800176,11.0
+2025-03-01,69701,Genesis of Victorville,Victorville,CA,92392,803,"Los Angeles, CA",34.5060794,-117.3405032,10.0
+2025-03-01,9692,Hyundai of La Quinta,La Quinta,CA,92253,804,"Palm Springs, CA",33.7072313,-116.2852619,8.0
+2025-03-01,8279,Capitol Hyundai,San Jose,CA,95136,807,"San Francisco-Oakland-San Jose, CA",37.274631,-121.8752863,2.0
+2025-03-01,69409,Genesis of Richmond,Richmond,CA,94806,807,"San Francisco-Oakland-San Jose, CA",37.9857273,-122.3202802,2.0
+2025-03-01,100529,Genesis of San Diego,San Diego,CA,92111,825,"San Diego, CA",32.8306319,-117.1434333,2.0
+2025-03-01,7311,Stevens Creek Hyundai,Santa Clara,CA,95051,807,"San Francisco-Oakland-San Jose, CA",37.3235793,-121.9800176,2.0
+2025-03-01,26752,Beach Cities Toyota Westminster,Westminster,CA,92683,803,"Los Angeles, CA",33.7408884,-117.9882786,1.0
+2025-03-01,11903,Cadillac Pasadena,Pasadena,CA,91107,803,"Los Angeles, CA",34.1465853,-118.0788768,1.0
+2025-03-01,74653,CarMax Bakersfield,Bakersfield,CA,93307,800,"Bakersfield, CA",35.2931773,-119.0284246,1.0
+2025-03-01,80993,Driveline Used Cars of Murrieta,Murrieta,CA,92562,803,"Los Angeles, CA",33.5292134,-117.1733988,1.0
+2025-03-01,15434,Folsom Lake Ford,Folsom,CA,95630,862,"Sacramento-Stockton-Modesto, CA",38.6346917,-121.2046807,1.0
+2025-03-01,95718,Genesis of Pasadena,Pasadena,CA,91107,803,"Los Angeles, CA",34.1459718,-118.077746,1.0
+2025-03-01,57993,Roseville Kia,Roseville,CA,95661,862,"Sacramento-Stockton-Modesto, CA",38.7524054,-121.2603762,1.0
+2025-03-01,69397,Tom Bell Chevrolet,Redlands,CA,92374,803,"Los Angeles, CA",34.0637996,-117.2078979,1.0
+2025-03-01,98536,Galpin Genesis of Van Nuys,Los Angeles,CA,91406,803,"Los Angeles, CA",34.2209833,-118.4687863,0.0
+2025-03-01,70476,Genesis of Escondido,Escondido,CA,92029,825,"San Diego, CA",33.1150272,-117.1049655,0.0
+2025-04-01,72517,Genesis of Loma Linda,Ontario,CA,91764,803,"Los Angeles, CA",34.0699402,-117.6059991,220.0
+2025-04-01,62609,Norm Reeves Genesis of Cerritos,Cerritos,CA,90703,803,"Los Angeles, CA",33.8662378,-118.1015234,214.0
+2025-04-01,6767,Tuttle-Click Genesis,Irvine,CA,92618,803,"Los Angeles, CA",33.6342181,-117.7233823,179.0
+2025-04-01,62581,Genesis Santa Monica,Santa Monica,CA,90404,803,"Los Angeles, CA",34.03227,-118.4751279,178.0
+2025-04-01,64605,Genesis of South Bay,Torrance,CA,90505,803,"Los Angeles, CA",33.7991718,-118.3411724,135.0
+2025-04-01,67653,Genesis of Corona,Corona,CA,92882,803,"Los Angeles, CA",33.882918,-117.6138489,122.0
+2025-04-01,74040,Genesis of San Bruno,San Bruno,CA,94066,807,"San Francisco-Oakland-San Jose, CA",37.6372585,-122.419091,95.0
+2025-04-01,61240,Genesis of Palm Springs,Palm Springs,CA,92264,804,"Palm Springs, CA",33.7945577,-116.5032881,72.0
+2025-04-01,96441,Genesis of Rocklin,Rocklin,CA,95677,862,"Sacramento-Stockton-Modesto, CA",38.7952904,-121.2164042,70.0
+2025-04-01,68973,Genesis of Dublin,Dublin,CA,94568,807,"San Francisco-Oakland-San Jose, CA",37.7027037,-121.9030039,62.0
+2025-04-01,9164,Genesis of Kearny Mesa,San Diego,CA,92111,825,"San Diego, CA",32.82812,-117.1528769,56.0
+2025-04-01,56215,Genesis of Westlake,Thousand Oaks,CA,91362,803,"Los Angeles, CA",34.1644513,-118.8296499,55.0
+2025-04-01,65171,Genesis of Selma,Selma,CA,93662,866,"Fresno-Visalia, CA",36.5705206,-119.6297571,42.0
+2025-04-01,69677,Genesis of La Quinta,La Quinta,CA,92253,804,"Palm Springs, CA",33.7072313,-116.2852619,15.0
+2025-04-01,73047,Genesis of Stevens Creek,Santa Clara,CA,95051,807,"San Francisco-Oakland-San Jose, CA",37.3235793,-121.9800176,10.0
+2025-04-01,69701,Genesis of Victorville,Victorville,CA,92392,803,"Los Angeles, CA",34.5060794,-117.3405032,10.0
+2025-04-01,9692,Hyundai of La Quinta,La Quinta,CA,92253,804,"Palm Springs, CA",33.7072313,-116.2852619,9.0
+2025-04-01,100529,Genesis of San Diego,San Diego,CA,92111,825,"San Diego, CA",32.8306319,-117.1434333,2.0
+2025-04-01,7311,Stevens Creek Hyundai,Santa Clara,CA,95051,807,"San Francisco-Oakland-San Jose, CA",37.3235793,-121.9800176,2.0
+2025-04-01,26752,Beach Cities Toyota Westminster,Westminster,CA,92683,803,"Los Angeles, CA",33.7408884,-117.9882786,1.0
+2025-04-01,11903,Cadillac Pasadena,Pasadena,CA,91107,803,"Los Angeles, CA",34.1465853,-118.0788768,1.0
+2025-04-01,8279,Capitol Hyundai,San Jose,CA,95136,807,"San Francisco-Oakland-San Jose, CA",37.274631,-121.8752863,1.0
+2025-04-01,74653,CarMax Bakersfield,Bakersfield,CA,93307,800,"Bakersfield, CA",35.2931773,-119.0284246,1.0
+2025-04-01,80993,Driveline Used Cars of Murrieta,Murrieta,CA,92562,803,"Los Angeles, CA",33.5292134,-117.1733988,1.0
+2025-04-01,15434,Folsom Lake Ford,Folsom,CA,95630,862,"Sacramento-Stockton-Modesto, CA",38.6346917,-121.2046807,1.0
+2025-04-01,69409,Genesis of Richmond,Richmond,CA,94806,807,"San Francisco-Oakland-San Jose, CA",37.9857273,-122.3202802,1.0
+2025-04-01,57993,Roseville Kia,Roseville,CA,95661,862,"Sacramento-Stockton-Modesto, CA",38.7524054,-121.2603762,1.0
+2025-04-01,69397,Tom Bell Chevrolet,Redlands,CA,92374,803,"Los Angeles, CA",34.0637996,-117.2078979,1.0
+2025-04-01,70476,Genesis of Escondido,Escondido,CA,92029,825,"San Diego, CA",33.1150272,-117.1049655,0.0
+2025-05-01,72517,Genesis of Loma Linda,Ontario,CA,91764,803,"Los Angeles, CA",34.0699402,-117.6059991,245.0
+2025-05-01,62609,Norm Reeves Genesis of Cerritos,Cerritos,CA,90703,803,"Los Angeles, CA",33.8662378,-118.1015234,221.0
+2025-05-01,6767,Tuttle-Click Genesis,Irvine,CA,92618,803,"Los Angeles, CA",33.6342181,-117.7233823,202.0
+2025-05-01,62581,Genesis Santa Monica,Santa Monica,CA,90404,803,"Los Angeles, CA",34.03227,-118.4751279,172.0
+2025-05-01,64605,Genesis of South Bay,Torrance,CA,90505,803,"Los Angeles, CA",33.7991718,-118.3411724,134.0
+2025-05-01,67653,Genesis of Corona,Corona,CA,92882,803,"Los Angeles, CA",33.882918,-117.6138489,125.0
+2025-05-01,74040,Genesis of San Bruno,San Bruno,CA,94066,807,"San Francisco-Oakland-San Jose, CA",37.6372585,-122.419091,123.0
+2025-05-01,61240,Genesis of Palm Springs,Palm Springs,CA,92264,804,"Palm Springs, CA",33.7945577,-116.5032881,103.0
+2025-05-01,96441,Genesis of Rocklin,Rocklin,CA,95677,862,"Sacramento-Stockton-Modesto, CA",38.7952904,-121.2164042,81.0
+2025-05-01,68973,Genesis of Dublin,Dublin,CA,94568,807,"San Francisco-Oakland-San Jose, CA",37.7027037,-121.9030039,75.0
+2025-05-01,9164,Genesis of Kearny Mesa,San Diego,CA,92111,825,"San Diego, CA",32.82812,-117.1528769,73.0
+2025-05-01,65171,Genesis of Selma,Selma,CA,93662,866,"Fresno-Visalia, CA",36.5705206,-119.6297571,42.0
+2025-05-01,56215,Genesis of Westlake,Thousand Oaks,CA,91362,803,"Los Angeles, CA",34.1644513,-118.8296499,37.0
+2025-05-01,98536,Galpin Genesis of Van Nuys,Los Angeles,CA,91406,803,"Los Angeles, CA",34.2209833,-118.4687863,17.0
+2025-05-01,69677,Genesis of La Quinta,La Quinta,CA,92253,804,"Palm Springs, CA",33.7072313,-116.2852619,16.0
+2025-05-01,73047,Genesis of Stevens Creek,Santa Clara,CA,95051,807,"San Francisco-Oakland-San Jose, CA",37.3235793,-121.9800176,11.0
+2025-05-01,69701,Genesis of Victorville,Victorville,CA,92392,803,"Los Angeles, CA",34.5060794,-117.3405032,9.0
+2025-05-01,9692,Hyundai of La Quinta,La Quinta,CA,92253,804,"Palm Springs, CA",33.7072313,-116.2852619,8.0
+2025-05-01,100529,Genesis of San Diego,San Diego,CA,92111,825,"San Diego, CA",32.8306319,-117.1434333,2.0
+2025-05-01,7311,Stevens Creek Hyundai,Santa Clara,CA,95051,807,"San Francisco-Oakland-San Jose, CA",37.3235793,-121.9800176,2.0
+2025-05-01,11903,Cadillac Pasadena,Pasadena,CA,91107,803,"Los Angeles, CA",34.1465853,-118.0788768,1.0
+2025-05-01,74653,CarMax Bakersfield,Bakersfield,CA,93307,800,"Bakersfield, CA",35.2931773,-119.0284246,1.0
+2025-05-01,80993,Driveline Used Cars of Murrieta,Murrieta,CA,92562,803,"Los Angeles, CA",33.5292134,-117.1733988,1.0
+2025-05-01,15434,Folsom Lake Ford,Folsom,CA,95630,862,"Sacramento-Stockton-Modesto, CA",38.6346917,-121.2046807,1.0
+2025-05-01,69409,Genesis of Richmond,Richmond,CA,94806,807,"San Francisco-Oakland-San Jose, CA",37.9857273,-122.3202802,1.0
+2025-05-01,57993,Roseville Kia,Roseville,CA,95661,862,"Sacramento-Stockton-Modesto, CA",38.7524054,-121.2603762,1.0
+2025-05-01,69397,Tom Bell Chevrolet,Redlands,CA,92374,803,"Los Angeles, CA",34.0637996,-117.2078979,1.0
+2025-05-01,70476,Genesis of Escondido,Escondido,CA,92029,825,"San Diego, CA",33.1150272,-117.1049655,0.0
+2025-05-01,100307,Genesis of Mountain View,Mountain View,CA,94040,807,"San Francisco-Oakland-San Jose, CA",37.4048603,-122.1093955,0.0
+2025-06-01,72517,Genesis of Loma Linda,Ontario,CA,91764,803,"Los Angeles, CA",34.0699402,-117.6059991,290.0
+2025-06-01,62609,Norm Reeves Genesis of Cerritos,Cerritos,CA,90703,803,"Los Angeles, CA",33.8662378,-118.1015234,231.0
+2025-06-01,6767,Tuttle-Click Genesis,Irvine,CA,92618,803,"Los Angeles, CA",33.6342181,-117.7233823,228.0
+2025-06-01,62581,Genesis Santa Monica,Santa Monica,CA,90404,803,"Los Angeles, CA",34.03227,-118.4751279,188.0
+2025-06-01,74040,Genesis of San Bruno,San Bruno,CA,94066,807,"San Francisco-Oakland-San Jose, CA",37.6372585,-122.419091,167.0
+2025-06-01,64605,Genesis of South Bay,Torrance,CA,90505,803,"Los Angeles, CA",33.7991718,-118.3411724,145.0
+2025-06-01,67653,Genesis of Corona,Corona,CA,92882,803,"Los Angeles, CA",33.882918,-117.6138489,130.0
+2025-06-01,98536,Galpin Genesis of Van Nuys,Los Angeles,CA,91406,803,"Los Angeles, CA",34.2209833,-118.4687863,124.0
+2025-06-01,61240,Genesis of Palm Springs,Palm Springs,CA,92264,804,"Palm Springs, CA",33.7945577,-116.5032881,115.0
+2025-06-01,68973,Genesis of Dublin,Dublin,CA,94568,807,"San Francisco-Oakland-San Jose, CA",37.7027037,-121.9030039,92.0
+2025-06-01,96441,Genesis of Rocklin,Rocklin,CA,95677,862,"Sacramento-Stockton-Modesto, CA",38.7952904,-121.2164042,92.0
+2025-06-01,9164,Genesis of Kearny Mesa,San Diego,CA,92111,825,"San Diego, CA",32.82812,-117.1528769,90.0
+2025-06-01,65171,Genesis of Selma,Selma,CA,93662,866,"Fresno-Visalia, CA",36.5705206,-119.6297571,41.0
+2025-06-01,56215,Genesis of Westlake,Thousand Oaks,CA,91362,803,"Los Angeles, CA",34.1644513,-118.8296499,18.0
+2025-06-01,69677,Genesis of La Quinta,La Quinta,CA,92253,804,"Palm Springs, CA",33.7072313,-116.2852619,14.0
+2025-06-01,69701,Genesis of Victorville,Victorville,CA,92392,803,"Los Angeles, CA",34.5060794,-117.3405032,8.0
+2025-06-01,9692,Hyundai of La Quinta,La Quinta,CA,92253,804,"Palm Springs, CA",33.7072313,-116.2852619,8.0
+2025-06-01,73047,Genesis of Stevens Creek,Santa Clara,CA,95051,807,"San Francisco-Oakland-San Jose, CA",37.3235793,-121.9800176,7.0
+2025-06-01,69409,Genesis of Richmond,Richmond,CA,94806,807,"San Francisco-Oakland-San Jose, CA",37.9857273,-122.3202802,5.0
+2025-06-01,100529,Genesis of San Diego,San Diego,CA,92111,825,"San Diego, CA",32.8306319,-117.1434333,3.0
+2025-06-01,7311,Stevens Creek Hyundai,Santa Clara,CA,95051,807,"San Francisco-Oakland-San Jose, CA",37.3235793,-121.9800176,2.0
+2025-06-01,74653,CarMax Bakersfield,Bakersfield,CA,93307,800,"Bakersfield, CA",35.2931773,-119.0284246,1.0
+2025-06-01,80993,Driveline Used Cars of Murrieta,Murrieta,CA,92562,803,"Los Angeles, CA",33.5292134,-117.1733988,1.0
+2025-06-01,15434,Folsom Lake Ford,Folsom,CA,95630,862,"Sacramento-Stockton-Modesto, CA",38.6346917,-121.2046807,1.0
+2025-06-01,100307,Genesis of Mountain View,Mountain View,CA,94040,807,"San Francisco-Oakland-San Jose, CA",37.4048603,-122.1093955,1.0
+2025-06-01,57993,Roseville Kia,Roseville,CA,95661,862,"Sacramento-Stockton-Modesto, CA",38.7524054,-121.2603762,1.0
+2025-06-01,69397,Tom Bell Chevrolet,Redlands,CA,92374,803,"Los Angeles, CA",34.0637996,-117.2078979,1.0
+2025-06-01,70476,Genesis of Escondido,Escondido,CA,92029,825,"San Diego, CA",33.1150272,-117.1049655,0.0
+2025-07-01,72517,Genesis of Loma Linda,Ontario,CA,91764,803,"Los Angeles, CA",34.0699402,-117.6059991,305.0
+2025-07-01,6767,Tuttle-Click Genesis,Irvine,CA,92618,803,"Los Angeles, CA",33.6342181,-117.7233823,228.0
+2025-07-01,62609,Norm Reeves Genesis of Cerritos,Cerritos,CA,90703,803,"Los Angeles, CA",33.8662378,-118.1015234,198.0
+2025-07-01,62581,Genesis Santa Monica,Santa Monica,CA,90404,803,"Los Angeles, CA",34.03227,-118.4751279,185.0
+2025-07-01,74040,Genesis of San Bruno,San Bruno,CA,94066,807,"San Francisco-Oakland-San Jose, CA",37.6372585,-122.419091,151.0
+2025-07-01,98536,Galpin Genesis of Van Nuys,Los Angeles,CA,91406,803,"Los Angeles, CA",34.2209833,-118.4687863,142.0
+2025-07-01,64605,Genesis of South Bay,Torrance,CA,90505,803,"Los Angeles, CA",33.7991718,-118.3411724,126.0
+2025-07-01,67653,Genesis of Corona,Corona,CA,92882,803,"Los Angeles, CA",33.882918,-117.6138489,125.0
+2025-07-01,61240,Genesis of Palm Springs,Palm Springs,CA,92264,804,"Palm Springs, CA",33.7945577,-116.5032881,118.0
+2025-07-01,96441,Genesis of Rocklin,Rocklin,CA,95677,862,"Sacramento-Stockton-Modesto, CA",38.7952904,-121.2164042,87.0
+2025-07-01,68973,Genesis of Dublin,Dublin,CA,94568,807,"San Francisco-Oakland-San Jose, CA",37.7027037,-121.9030039,85.0
+2025-07-01,9164,Genesis of Kearny Mesa,San Diego,CA,92111,825,"San Diego, CA",32.82812,-117.1528769,84.0
+2025-07-01,65171,Genesis of Selma,Selma,CA,93662,866,"Fresno-Visalia, CA",36.5705206,-119.6297571,40.0
+2025-07-01,56215,Genesis of Westlake,Thousand Oaks,CA,91362,803,"Los Angeles, CA",34.1644513,-118.8296499,29.0
+2025-07-01,69409,Genesis of Richmond,Richmond,CA,94806,807,"San Francisco-Oakland-San Jose, CA",37.9857273,-122.3202802,19.0
+2025-07-01,69677,Genesis of La Quinta,La Quinta,CA,92253,804,"Palm Springs, CA",33.7072313,-116.2852619,12.0
+2025-07-01,69701,Genesis of Victorville,Victorville,CA,92392,803,"Los Angeles, CA",34.5060794,-117.3405032,8.0
+2025-07-01,9692,Hyundai of La Quinta,La Quinta,CA,92253,804,"Palm Springs, CA",33.7072313,-116.2852619,8.0
+2025-07-01,73047,Genesis of Stevens Creek,Santa Clara,CA,95051,807,"San Francisco-Oakland-San Jose, CA",37.3235793,-121.9800176,6.0
+2025-07-01,100529,Genesis of San Diego,San Diego,CA,92111,825,"San Diego, CA",32.8306319,-117.1434333,4.0
+2025-07-01,7311,Stevens Creek Hyundai,Santa Clara,CA,95051,807,"San Francisco-Oakland-San Jose, CA",37.3235793,-121.9800176,2.0
+2025-07-01,74653,CarMax Bakersfield,Bakersfield,CA,93307,800,"Bakersfield, CA",35.2931773,-119.0284246,1.0
+2025-07-01,80993,Driveline Used Cars of Murrieta,Murrieta,CA,92562,803,"Los Angeles, CA",33.5292134,-117.1733988,1.0
+2025-07-01,15434,Folsom Lake Ford,Folsom,CA,95630,862,"Sacramento-Stockton-Modesto, CA",38.6346917,-121.2046807,1.0
+2025-07-01,100307,Genesis of Mountain View,Mountain View,CA,94040,807,"San Francisco-Oakland-San Jose, CA",37.4048603,-122.1093955,1.0
+2025-07-01,57993,Roseville Kia,Roseville,CA,95661,862,"Sacramento-Stockton-Modesto, CA",38.7524054,-121.2603762,1.0
+2025-07-01,69397,Tom Bell Chevrolet,Redlands,CA,92374,803,"Los Angeles, CA",34.0637996,-117.2078979,1.0
+2025-07-01,70476,Genesis of Escondido,Escondido,CA,92029,825,"San Diego, CA",33.1150272,-117.1049655,0.0
+2025-08-01,72517,Genesis of Loma Linda,Ontario,CA,91764,803,"Los Angeles, CA",34.0699402,-117.6059991,268.0
+2025-08-01,6767,Tuttle-Click Genesis,Irvine,CA,92618,803,"Los Angeles, CA",33.6342181,-117.7233823,246.0
+2025-08-01,64605,Genesis of South Bay,Torrance,CA,90505,803,"Los Angeles, CA",33.7991718,-118.3411724,214.0
+2025-08-01,62609,Norm Reeves Genesis of Cerritos,Cerritos,CA,90703,803,"Los Angeles, CA",33.8662378,-118.1015234,197.0
+2025-08-01,62581,Genesis Santa Monica,Santa Monica,CA,90404,803,"Los Angeles, CA",34.03227,-118.4751279,179.0
+2025-08-01,74040,Genesis of San Bruno,San Bruno,CA,94066,807,"San Francisco-Oakland-San Jose, CA",37.6372585,-122.419091,157.0
+2025-08-01,98536,Galpin Genesis of Van Nuys,Los Angeles,CA,91406,803,"Los Angeles, CA",34.2209833,-118.4687863,155.0
+2025-08-01,67653,Genesis of Corona,Corona,CA,92882,803,"Los Angeles, CA",33.882918,-117.6138489,134.0
+2025-08-01,61240,Genesis of Palm Springs,Palm Springs,CA,92264,804,"Palm Springs, CA",33.7945577,-116.5032881,125.0
+2025-08-01,68973,Genesis of Dublin,Dublin,CA,94568,807,"San Francisco-Oakland-San Jose, CA",37.7027037,-121.9030039,87.0
+2025-08-01,9164,Genesis of Kearny Mesa,San Diego,CA,92111,825,"San Diego, CA",32.82812,-117.1528769,81.0
+2025-08-01,96441,Genesis of Rocklin,Rocklin,CA,95677,862,"Sacramento-Stockton-Modesto, CA",38.7952904,-121.2164042,68.0
+2025-08-01,65171,Genesis of Selma,Selma,CA,93662,866,"Fresno-Visalia, CA",36.5705206,-119.6297571,39.0
+2025-08-01,69409,Genesis of Richmond,Richmond,CA,94806,807,"San Francisco-Oakland-San Jose, CA",37.9857273,-122.3202802,36.0
+2025-08-01,56215,Genesis of Westlake,Thousand Oaks,CA,91362,803,"Los Angeles, CA",34.1644513,-118.8296499,24.0
+2025-08-01,69677,Genesis of La Quinta,La Quinta,CA,92253,804,"Palm Springs, CA",33.7072313,-116.2852619,11.0
+2025-08-01,9692,Hyundai of La Quinta,La Quinta,CA,92253,804,"Palm Springs, CA",33.7072313,-116.2852619,8.0
+2025-08-01,73047,Genesis of Stevens Creek,Santa Clara,CA,95051,807,"San Francisco-Oakland-San Jose, CA",37.3235793,-121.9800176,7.0
+2025-08-01,69701,Genesis of Victorville,Victorville,CA,92392,803,"Los Angeles, CA",34.5060794,-117.3405032,6.0
+2025-08-01,100529,Genesis of San Diego,San Diego,CA,92111,825,"San Diego, CA",32.8306319,-117.1434333,4.0
+2025-08-01,100307,Genesis of Mountain View,Mountain View,CA,94040,807,"San Francisco-Oakland-San Jose, CA",37.4048603,-122.1093955,3.0
+2025-08-01,7311,Stevens Creek Hyundai,Santa Clara,CA,95051,807,"San Francisco-Oakland-San Jose, CA",37.3235793,-121.9800176,2.0
+2025-08-01,74653,CarMax Bakersfield,Bakersfield,CA,93307,800,"Bakersfield, CA",35.2931773,-119.0284246,1.0
+2025-08-01,80993,Driveline Used Cars of Murrieta,Murrieta,CA,92562,803,"Los Angeles, CA",33.5292134,-117.1733988,1.0
+2025-08-01,15434,Folsom Lake Ford,Folsom,CA,95630,862,"Sacramento-Stockton-Modesto, CA",38.6346917,-121.2046807,1.0
+2025-08-01,57993,Roseville Kia,Roseville,CA,95661,862,"Sacramento-Stockton-Modesto, CA",38.7524054,-121.2603762,1.0
+2025-08-01,69397,Tom Bell Chevrolet,Redlands,CA,92374,803,"Los Angeles, CA",34.0637996,-117.2078979,1.0
+2025-08-01,70476,Genesis of Escondido,Escondido,CA,92029,825,"San Diego, CA",33.1150272,-117.1049655,0.0
+2025-09-01,64605,Genesis of South Bay,Torrance,CA,90505,803,"Los Angeles, CA",33.7991718,-118.3411724,283.0
+2025-09-01,72517,Genesis of Loma Linda,Ontario,CA,91764,803,"Los Angeles, CA",34.0699402,-117.6059991,276.0
+2025-09-01,6767,Tuttle-Click Genesis,Irvine,CA,92618,803,"Los Angeles, CA",33.6342181,-117.7233823,245.0
+2025-09-01,62609,Norm Reeves Genesis of Cerritos,Cerritos,CA,90703,803,"Los Angeles, CA",33.8662378,-118.1015234,200.0
+2025-09-01,62581,Genesis Santa Monica,Santa Monica,CA,90404,803,"Los Angeles, CA",34.03227,-118.4751279,177.0
+2025-09-01,98536,Galpin Genesis of Van Nuys,Los Angeles,CA,91406,803,"Los Angeles, CA",34.2209833,-118.4687863,168.0
+2025-09-01,74040,Genesis of San Bruno,San Bruno,CA,94066,807,"San Francisco-Oakland-San Jose, CA",37.6372585,-122.419091,156.0
+2025-09-01,67653,Genesis of Corona,Corona,CA,92882,803,"Los Angeles, CA",33.882918,-117.6138489,155.0
+2025-09-01,61240,Genesis of Palm Springs,Palm Springs,CA,92264,804,"Palm Springs, CA",33.7945577,-116.5032881,139.0
+2025-09-01,9164,Genesis of Kearny Mesa,San Diego,CA,92111,825,"San Diego, CA",32.82812,-117.1528769,87.0
+2025-09-01,68973,Genesis of Dublin,Dublin,CA,94568,807,"San Francisco-Oakland-San Jose, CA",37.7027037,-121.9030039,74.0
+2025-09-01,96441,Genesis of Rocklin,Rocklin,CA,95677,862,"Sacramento-Stockton-Modesto, CA",38.7952904,-121.2164042,54.0
+2025-09-01,69409,Genesis of Richmond,Richmond,CA,94806,807,"San Francisco-Oakland-San Jose, CA",37.9857273,-122.3202802,37.0
+2025-09-01,65171,Genesis of Selma,Selma,CA,93662,866,"Fresno-Visalia, CA",36.5705206,-119.6297571,35.0
+2025-09-01,69677,Genesis of La Quinta,La Quinta,CA,92253,804,"Palm Springs, CA",33.7072313,-116.2852619,10.0
+2025-09-01,100307,Genesis of Mountain View,Mountain View,CA,94040,807,"San Francisco-Oakland-San Jose, CA",37.4048603,-122.1093955,9.0
+2025-09-01,9692,Hyundai of La Quinta,La Quinta,CA,92253,804,"Palm Springs, CA",33.7072313,-116.2852619,7.0
+2025-09-01,69701,Genesis of Victorville,Victorville,CA,92392,803,"Los Angeles, CA",34.5060794,-117.3405032,6.0
+2025-09-01,100529,Genesis of San Diego,San Diego,CA,92111,825,"San Diego, CA",32.8306319,-117.1434333,5.0
+2025-09-01,73047,Genesis of Stevens Creek,Santa Clara,CA,95051,807,"San Francisco-Oakland-San Jose, CA",37.3235793,-121.9800176,5.0
+2025-09-01,7311,Stevens Creek Hyundai,Santa Clara,CA,95051,807,"San Francisco-Oakland-San Jose, CA",37.3235793,-121.9800176,3.0
+2025-09-01,74653,CarMax Bakersfield,Bakersfield,CA,93307,800,"Bakersfield, CA",35.2931773,-119.0284246,1.0
+2025-09-01,80993,Driveline Used Cars of Murrieta,Murrieta,CA,92562,803,"Los Angeles, CA",33.5292134,-117.1733988,1.0
+2025-09-01,15434,Folsom Lake Ford,Folsom,CA,95630,862,"Sacramento-Stockton-Modesto, CA",38.6346917,-121.2046807,1.0
+2025-09-01,70476,Genesis of Escondido,Escondido,CA,92029,825,"San Diego, CA",33.1150272,-117.1049655,0.0
+2025-10-01,64605,Genesis of South Bay,Torrance,CA,90505,803,"Los Angeles, CA",33.7991718,-118.3411724,369.0
+2025-10-01,72517,Genesis of Loma Linda,Ontario,CA,91764,803,"Los Angeles, CA",34.0699402,-117.6059991,259.0
+2025-10-01,6767,Tuttle-Click Genesis,Irvine,CA,92618,803,"Los Angeles, CA",33.6342181,-117.7233823,215.0
+2025-10-01,62609,Norm Reeves Genesis of Cerritos,Cerritos,CA,90703,803,"Los Angeles, CA",33.8662378,-118.1015234,181.0
+2025-10-01,98536,Galpin Genesis of Van Nuys,Los Angeles,CA,91406,803,"Los Angeles, CA",34.2209833,-118.4687863,168.0
+2025-10-01,67653,Genesis of Corona,Corona,CA,92882,803,"Los Angeles, CA",33.882918,-117.6138489,161.0
+2025-10-01,74040,Genesis of San Bruno,San Bruno,CA,94066,807,"San Francisco-Oakland-San Jose, CA",37.6372585,-122.419091,154.0
+2025-10-01,62581,Genesis Santa Monica,Santa Monica,CA,90404,803,"Los Angeles, CA",34.03227,-118.4751279,140.0
+2025-10-01,61240,Genesis of Palm Springs,Palm Springs,CA,92264,804,"Palm Springs, CA",33.7945577,-116.5032881,140.0
+2025-10-01,9164,Genesis of Kearny Mesa,San Diego,CA,92111,825,"San Diego, CA",32.82812,-117.1528769,87.0
+2025-10-01,68973,Genesis of Dublin,Dublin,CA,94568,807,"San Francisco-Oakland-San Jose, CA",37.7027037,-121.9030039,66.0
+2025-10-01,96441,Genesis of Rocklin,Rocklin,CA,95677,862,"Sacramento-Stockton-Modesto, CA",38.7952904,-121.2164042,51.0
+2025-10-01,69409,Genesis of Richmond,Richmond,CA,94806,807,"San Francisco-Oakland-San Jose, CA",37.9857273,-122.3202802,40.0
+2025-10-01,65171,Genesis of Selma,Selma,CA,93662,866,"Fresno-Visalia, CA",36.5705206,-119.6297571,36.0
+2025-10-01,100307,Genesis of Mountain View,Mountain View,CA,94040,807,"San Francisco-Oakland-San Jose, CA",37.4048603,-122.1093955,18.0
+2025-10-01,69677,Genesis of La Quinta,La Quinta,CA,92253,804,"Palm Springs, CA",33.7072313,-116.2852619,8.0
+2025-10-01,100529,Genesis of San Diego,San Diego,CA,92111,825,"San Diego, CA",32.8306319,-117.1434333,7.0
+2025-10-01,69701,Genesis of Victorville,Victorville,CA,92392,803,"Los Angeles, CA",34.5060794,-117.3405032,7.0
+2025-10-01,73047,Genesis of Stevens Creek,Santa Clara,CA,95051,807,"San Francisco-Oakland-San Jose, CA",37.3235793,-121.9800176,4.0
+2025-10-01,9692,Hyundai of La Quinta,La Quinta,CA,92253,804,"Palm Springs, CA",33.7072313,-116.2852619,2.0
+2025-10-01,80993,Driveline Used Cars of Murrieta,Murrieta,CA,92562,803,"Los Angeles, CA",33.5292134,-117.1733988,1.0
+2025-10-01,15434,Folsom Lake Ford,Folsom,CA,95630,862,"Sacramento-Stockton-Modesto, CA",38.6346917,-121.2046807,1.0
+2025-10-01,7311,Stevens Creek Hyundai,Santa Clara,CA,95051,807,"San Francisco-Oakland-San Jose, CA",37.3235793,-121.9800176,1.0
+2025-10-01,70476,Genesis of Escondido,Escondido,CA,92029,825,"San Diego, CA",33.1150272,-117.1049655,0.0
+2025-11-01,64605,Genesis of South Bay,Torrance,CA,90505,803,"Los Angeles, CA",33.7991718,-118.3411724,323.0
+2025-11-01,72517,Genesis of Loma Linda,Ontario,CA,91764,803,"Los Angeles, CA",34.0699402,-117.6059991,242.0
+2025-11-01,6767,Tuttle-Click Genesis,Irvine,CA,92618,803,"Los Angeles, CA",33.6342181,-117.7233823,182.0
+2025-11-01,62609,Norm Reeves Genesis of Cerritos,Cerritos,CA,90703,803,"Los Angeles, CA",33.8662378,-118.1015234,160.0
+2025-11-01,74040,Genesis of San Bruno,San Bruno,CA,94066,807,"San Francisco-Oakland-San Jose, CA",37.6372585,-122.419091,154.0
+2025-11-01,67653,Genesis of Corona,Corona,CA,92882,803,"Los Angeles, CA",33.882918,-117.6138489,146.0
+2025-11-01,98536,Galpin Genesis of Van Nuys,Los Angeles,CA,91406,803,"Los Angeles, CA",34.2209833,-118.4687863,144.0
+2025-11-01,62581,Genesis Santa Monica,Santa Monica,CA,90404,803,"Los Angeles, CA",34.03227,-118.4751279,116.0
+2025-11-01,61240,Genesis of Palm Springs,Palm Springs,CA,92264,804,"Palm Springs, CA",33.7945577,-116.5032881,109.0
+2025-11-01,9164,Genesis of Kearny Mesa,San Diego,CA,92111,825,"San Diego, CA",32.82812,-117.1528769,75.0
+2025-11-01,100307,Genesis of Mountain View,Mountain View,CA,94040,807,"San Francisco-Oakland-San Jose, CA",37.4048603,-122.1093955,52.0
+2025-11-01,68973,Genesis of Dublin,Dublin,CA,94568,807,"San Francisco-Oakland-San Jose, CA",37.7027037,-121.9030039,48.0
+2025-11-01,69409,Genesis of Richmond,Richmond,CA,94806,807,"San Francisco-Oakland-San Jose, CA",37.9857273,-122.3202802,47.0
+2025-11-01,96441,Genesis of Rocklin,Rocklin,CA,95677,862,"Sacramento-Stockton-Modesto, CA",38.7952904,-121.2164042,43.0
+2025-11-01,65171,Genesis of Selma,Selma,CA,93662,866,"Fresno-Visalia, CA",36.5705206,-119.6297571,32.0
+2025-11-01,69701,Genesis of Victorville,Victorville,CA,92392,803,"Los Angeles, CA",34.5060794,-117.3405032,9.0
+2025-11-01,100529,Genesis of San Diego,San Diego,CA,92111,825,"San Diego, CA",32.8306319,-117.1434333,7.0
+2025-11-01,69677,Genesis of La Quinta,La Quinta,CA,92253,804,"Palm Springs, CA",33.7072313,-116.2852619,6.0
+2025-11-01,80993,Driveline Used Cars of Murrieta,Murrieta,CA,92562,803,"Los Angeles, CA",33.5292134,-117.1733988,1.0
+2025-11-01,15434,Folsom Lake Ford,Folsom,CA,95630,862,"Sacramento-Stockton-Modesto, CA",38.6346917,-121.2046807,1.0
+2025-11-01,70476,Genesis of Escondido,Escondido,CA,92029,825,"San Diego, CA",33.1150272,-117.1049655,0.0
+2025-11-01,73047,Genesis of Stevens Creek,Santa Clara,CA,95051,807,"San Francisco-Oakland-San Jose, CA",37.3235793,-121.9800176,0.0
+2025-11-01,7311,Stevens Creek Hyundai,Santa Clara,CA,95051,807,"San Francisco-Oakland-San Jose, CA",37.3235793,-121.9800176,0.0
+2025-12-01,64605,Genesis of South Bay,Torrance,CA,90505,803,"Los Angeles, CA",33.7991718,-118.3411724,281.0
+2025-12-01,72517,Genesis of Loma Linda,Ontario,CA,91764,803,"Los Angeles, CA",34.0699402,-117.6059991,260.0
+2025-12-01,6767,Tuttle-Click Genesis,Irvine,CA,92618,803,"Los Angeles, CA",33.6342181,-117.7233823,190.0
+2025-12-01,62609,Norm Reeves Genesis of Cerritos,Cerritos,CA,90703,803,"Los Angeles, CA",33.8662378,-118.1015234,173.0
+2025-12-01,74040,Genesis of San Bruno,San Bruno,CA,94066,807,"San Francisco-Oakland-San Jose, CA",37.6372585,-122.419091,166.0
+2025-12-01,67653,Genesis of Corona,Corona,CA,92882,803,"Los Angeles, CA",33.882918,-117.6138489,154.0
+2025-12-01,98536,Galpin Genesis of Van Nuys,Los Angeles,CA,91406,803,"Los Angeles, CA",34.2209833,-118.4687863,149.0
+2025-12-01,62581,Genesis Santa Monica,Santa Monica,CA,90404,803,"Los Angeles, CA",34.03227,-118.4751279,134.0
+2025-12-01,61240,Genesis of Palm Springs,Palm Springs,CA,92264,804,"Palm Springs, CA",33.7945577,-116.5032881,97.0
+2025-12-01,100307,Genesis of Mountain View,Mountain View,CA,94040,807,"San Francisco-Oakland-San Jose, CA",37.4048603,-122.1093955,91.0
+2025-12-01,96441,Genesis of Rocklin,Rocklin,CA,95677,862,"Sacramento-Stockton-Modesto, CA",38.7952904,-121.2164042,87.0
+2025-12-01,9164,Genesis of Kearny Mesa,San Diego,CA,92111,825,"San Diego, CA",32.82812,-117.1528769,82.0
+2025-12-01,69409,Genesis of Richmond,Richmond,CA,94806,807,"San Francisco-Oakland-San Jose, CA",37.9857273,-122.3202802,50.0
+2025-12-01,68973,Genesis of Dublin,Dublin,CA,94568,807,"San Francisco-Oakland-San Jose, CA",37.7027037,-121.9030039,46.0
+2025-12-01,65171,Genesis of Selma,Selma,CA,93662,866,"Fresno-Visalia, CA",36.5705206,-119.6297571,34.0
+2025-12-01,69701,Genesis of Victorville,Victorville,CA,92392,803,"Los Angeles, CA",34.5060794,-117.3405032,10.0
+2026-01-01,72517,Genesis of Loma Linda,Ontario,CA,91764,803,"Los Angeles, CA",34.0699402,-117.6059991,252.0
+2026-01-01,64605,Genesis of South Bay,Torrance,CA,90505,803,"Los Angeles, CA",33.7991718,-118.3411724,226.0
+2026-01-01,6767,Tuttle-Click Genesis,Irvine,CA,92618,803,"Los Angeles, CA",33.6342181,-117.7233823,182.0
+2026-01-01,98536,Galpin Genesis of Van Nuys,Los Angeles,CA,91406,803,"Los Angeles, CA",34.2209833,-118.4687863,153.0
+2026-01-01,62581,Genesis Santa Monica,Santa Monica,CA,90404,803,"Los Angeles, CA",34.03227,-118.4751279,152.0
+2026-01-01,67653,Genesis of Corona,Corona,CA,92882,803,"Los Angeles, CA",33.882918,-117.6138489,144.0
+2026-01-01,62609,Norm Reeves Genesis of Cerritos,Cerritos,CA,90703,803,"Los Angeles, CA",33.8662378,-118.1015234,143.0
+2026-01-01,74040,Genesis of San Bruno,San Bruno,CA,94066,807,"San Francisco-Oakland-San Jose, CA",37.6372585,-122.419091,141.0
+2026-01-01,61240,Genesis of Palm Springs,Palm Springs,CA,92264,804,"Palm Springs, CA",33.7945577,-116.5032881,84.0
+2026-01-01,100307,Genesis of Mountain View,Mountain View,CA,94040,807,"San Francisco-Oakland-San Jose, CA",37.4048603,-122.1093955,77.0
+2026-01-01,96441,Genesis of Rocklin,Rocklin,CA,95677,862,"Sacramento-Stockton-Modesto, CA",38.7952904,-121.2164042,62.0
+2026-01-01,69409,Genesis of Richmond,Richmond,CA,94806,807,"San Francisco-Oakland-San Jose, CA",37.9857273,-122.3202802,50.0
+2026-01-01,65171,Genesis of Selma,Selma,CA,93662,866,"Fresno-Visalia, CA",36.5705206,-119.6297571,40.0
+2026-01-01,68973,Genesis of Dublin,Dublin,CA,94568,807,"San Francisco-Oakland-San Jose, CA",37.7027037,-121.9030039,32.0
+2026-01-01,69701,Genesis of Victorville,Victorville,CA,92392,803,"Los Angeles, CA",34.5060794,-117.3405032,9.0
+2026-01-01,9164,Genesis of Kearny Mesa,San Diego,CA,92111,825,"San Diego, CA",32.82812,-117.1528769,2.0
+2026-01-01,100529,Genesis of San Diego,San Diego,CA,92111,825,"San Diego, CA",32.8306319,-117.1434333,2.0
+2026-02-01,72517,Genesis of Loma Linda,Ontario,CA,91764,803,"Los Angeles, CA",34.0699402,-117.6059991,231.0
+2026-02-01,64605,Genesis of South Bay,Torrance,CA,90505,803,"Los Angeles, CA",33.7991718,-118.3411724,203.0
+2026-02-01,67653,Genesis of Corona,Corona,CA,92882,803,"Los Angeles, CA",33.882918,-117.6138489,166.0
+2026-02-01,62581,Genesis Santa Monica,Santa Monica,CA,90404,803,"Los Angeles, CA",34.03227,-118.4751279,163.0
+2026-02-01,6767,Tuttle-Click Genesis,Irvine,CA,92618,803,"Los Angeles, CA",33.6342181,-117.7233823,155.0
+2026-02-01,74040,Genesis of San Bruno,San Bruno,CA,94066,807,"San Francisco-Oakland-San Jose, CA",37.6372585,-122.419091,150.0
+2026-02-01,62609,Norm Reeves Genesis of Cerritos,Cerritos,CA,90703,803,"Los Angeles, CA",33.8662378,-118.1015234,145.0
+2026-02-01,98536,Galpin Genesis of Van Nuys,Los Angeles,CA,91406,803,"Los Angeles, CA",34.2209833,-118.4687863,137.0
+2026-02-01,100529,Genesis of San Diego,San Diego,CA,92111,825,"San Diego, CA",32.8306319,-117.1434333,127.0
+2026-02-01,100307,Genesis of Mountain View,Mountain View,CA,94040,807,"San Francisco-Oakland-San Jose, CA",37.4048603,-122.1093955,93.0
+2026-02-01,61240,Genesis of Palm Springs,Palm Springs,CA,92264,804,"Palm Springs, CA",33.7945577,-116.5032881,81.0
+2026-02-01,68973,Genesis of Dublin,Dublin,CA,94568,807,"San Francisco-Oakland-San Jose, CA",37.7027037,-121.9030039,38.0
+2026-02-01,96441,Genesis of Rocklin,Rocklin,CA,95677,862,"Sacramento-Stockton-Modesto, CA",38.7952904,-121.2164042,36.0
+2026-02-01,65171,Genesis of Selma,Selma,CA,93662,866,"Fresno-Visalia, CA",36.5705206,-119.6297571,33.0
+2026-02-01,69677,Genesis of La Quinta,La Quinta,CA,92253,804,"Palm Springs, CA",33.7072313,-116.2852619,31.0
+2026-02-01,69409,Genesis of Richmond,Richmond,CA,94806,807,"San Francisco-Oakland-San Jose, CA",37.9857273,-122.3202802,16.0
+2026-02-01,69701,Genesis of Victorville,Victorville,CA,92392,803,"Los Angeles, CA",34.5060794,-117.3405032,8.0
+2026-03-01,64605,Genesis of South Bay,Torrance,CA,90505,803,"Los Angeles, CA",33.7991718,-118.3411724,326.0
+2026-03-01,72517,Genesis of Loma Linda,Ontario,CA,91764,803,"Los Angeles, CA",34.0699402,-117.6059991,258.0
+2026-03-01,62609,Norm Reeves Genesis of Cerritos,Cerritos,CA,90703,803,"Los Angeles, CA",33.8662378,-118.1015234,194.0
+2026-03-01,6767,Tuttle-Click Genesis,Irvine,CA,92618,803,"Los Angeles, CA",33.6342181,-117.7233823,186.0
+2026-03-01,62581,Genesis Santa Monica,Santa Monica,CA,90404,803,"Los Angeles, CA",34.03227,-118.4751279,171.0
+2026-03-01,98536,Galpin Genesis of Van Nuys,Los Angeles,CA,91406,803,"Los Angeles, CA",34.2209833,-118.4687863,165.0
+2026-03-01,67653,Genesis of Corona,Corona,CA,92882,803,"Los Angeles, CA",33.882918,-117.6138489,165.0
+2026-03-01,74040,Genesis of San Bruno,San Bruno,CA,94066,807,"San Francisco-Oakland-San Jose, CA",37.6372585,-122.419091,99.0
+2026-03-01,100529,Genesis of San Diego,San Diego,CA,92111,825,"San Diego, CA",32.8306319,-117.1434333,87.0
+2026-03-01,61240,Genesis of Palm Springs,Palm Springs,CA,92264,804,"Palm Springs, CA",33.7945577,-116.5032881,80.0
+2026-03-01,100307,Genesis of Mountain View,Mountain View,CA,94040,807,"San Francisco-Oakland-San Jose, CA",37.4048603,-122.1093955,52.0
+2026-03-01,68973,Genesis of Dublin,Dublin,CA,94568,807,"San Francisco-Oakland-San Jose, CA",37.7027037,-121.9030039,35.0
+2026-03-01,65171,Genesis of Selma,Selma,CA,93662,866,"Fresno-Visalia, CA",36.5705206,-119.6297571,35.0
+2026-03-01,69677,Genesis of La Quinta,La Quinta,CA,92253,804,"Palm Springs, CA",33.7072313,-116.2852619,26.0
+2026-03-01,69409,Genesis of Richmond,Richmond,CA,94806,807,"San Francisco-Oakland-San Jose, CA",37.9857273,-122.3202802,17.0
+2026-03-01,69701,Genesis of Victorville,Victorville,CA,92392,803,"Los Angeles, CA",34.5060794,-117.3405032,6.0
+2026-04-01,64605,Genesis of South Bay,Torrance,CA,90505,803,"Los Angeles, CA",33.7991718,-118.3411724,360.0
+2026-04-01,72517,Genesis of Loma Linda,Ontario,CA,91764,803,"Los Angeles, CA",34.0699402,-117.6059991,257.0
+2026-04-01,6767,Tuttle-Click Genesis,Irvine,CA,92618,803,"Los Angeles, CA",33.6342181,-117.7233823,195.0
+2026-04-01,62609,Norm Reeves Genesis of Cerritos,Cerritos,CA,90703,803,"Los Angeles, CA",33.8662378,-118.1015234,190.0
+2026-04-01,62581,Genesis Santa Monica,Santa Monica,CA,90404,803,"Los Angeles, CA",34.03227,-118.4751279,180.0
+2026-04-01,98536,Galpin Genesis of Van Nuys,Los Angeles,CA,91406,803,"Los Angeles, CA",34.2209833,-118.4687863,155.0
+2026-04-01,100529,Genesis of San Diego,San Diego,CA,92111,825,"San Diego, CA",32.8306319,-117.1434333,100.0
+2026-04-01,61240,Genesis of Palm Springs,Palm Springs,CA,92264,804,"Palm Springs, CA",33.7945577,-116.5032881,84.0
+2026-04-01,68973,Genesis of Dublin,Dublin,CA,94568,807,"San Francisco-Oakland-San Jose, CA",37.7027037,-121.9030039,43.0
+2026-04-01,65171,Genesis of Selma,Selma,CA,93662,866,"Fresno-Visalia, CA",36.5705206,-119.6297571,34.0
+2026-04-01,67653,Genesis of Corona,Corona,CA,92882,803,"Los Angeles, CA",33.882918,-117.6138489,28.0
+2026-04-01,69677,Genesis of La Quinta,La Quinta,CA,92253,804,"Palm Springs, CA",33.7072313,-116.2852619,26.0
+2026-04-01,69409,Genesis of Richmond,Richmond,CA,94806,807,"San Francisco-Oakland-San Jose, CA",37.9857273,-122.3202802,20.0
+2026-04-01,69701,Genesis of Victorville,Victorville,CA,92392,803,"Los Angeles, CA",34.5060794,-117.3405032,6.0
+2026-05-01,64605,Genesis of South Bay,Torrance,CA,90505,803,"Los Angeles, CA",33.7991718,-118.3411724,356.0
+2026-05-01,72517,Genesis of Loma Linda,Ontario,CA,91764,803,"Los Angeles, CA",34.0699402,-117.6059991,264.0
+2026-05-01,62609,Norm Reeves Genesis of Cerritos,Cerritos,CA,90703,803,"Los Angeles, CA",33.8662378,-118.1015234,220.0
+2026-05-01,74040,Genesis of San Bruno,San Bruno,CA,94066,807,"San Francisco-Oakland-San Jose, CA",37.6372585,-122.419091,214.0
+2026-05-01,6767,Tuttle-Click Genesis,Irvine,CA,92618,803,"Los Angeles, CA",33.6342181,-117.7233823,207.0
+2026-05-01,62581,Genesis Santa Monica,Santa Monica,CA,90404,803,"Los Angeles, CA",34.03227,-118.4751279,185.0
+2026-05-01,67653,Genesis of Corona,Corona,CA,92882,803,"Los Angeles, CA",33.882918,-117.6138489,173.0
+2026-05-01,98536,Galpin Genesis of Van Nuys,Los Angeles,CA,91406,803,"Los Angeles, CA",34.2209833,-118.4687863,171.0
+2026-05-01,100529,Genesis of San Diego,San Diego,CA,92111,825,"San Diego, CA",32.8306319,-117.1434333,113.0
+2026-05-01,100307,Genesis of Mountain View,Mountain View,CA,94040,807,"San Francisco-Oakland-San Jose, CA",37.4048603,-122.1093955,107.0
+2026-05-01,61240,Genesis of Palm Springs,Palm Springs,CA,92264,804,"Palm Springs, CA",33.7945577,-116.5032881,81.0
+2026-05-01,68973,Genesis of Dublin,Dublin,CA,94568,807,"San Francisco-Oakland-San Jose, CA",37.7027037,-121.9030039,61.0
+2026-05-01,70476,Genesis of Escondido,Escondido,CA,92029,825,"San Diego, CA",33.1150272,-117.1049655,43.0
+2026-05-01,65171,Genesis of Selma,Selma,CA,93662,866,"Fresno-Visalia, CA",36.5705206,-119.6297571,29.0
+2026-05-01,69677,Genesis of La Quinta,La Quinta,CA,92253,804,"Palm Springs, CA",33.7072313,-116.2852619,27.0
+2026-05-01,69409,Genesis of Richmond,Richmond,CA,94806,807,"San Francisco-Oakland-San Jose, CA",37.9857273,-122.3202802,27.0
+2026-05-01,69701,Genesis of Victorville,Victorville,CA,92392,803,"Los Angeles, CA",34.5060794,-117.3405032,7.0
+2026-06-01,64605,Genesis of South Bay,Torrance,CA,90505,803,"Los Angeles, CA",33.7991718,-118.3411724,324.0
+2026-06-01,72517,Genesis of Loma Linda,Ontario,CA,91764,803,"Los Angeles, CA",34.0699402,-117.6059991,262.0
+2026-06-01,62609,Norm Reeves Genesis of Cerritos,Cerritos,CA,90703,803,"Los Angeles, CA",33.8662378,-118.1015234,258.0
+2026-06-01,6767,Tuttle-Click Genesis,Irvine,CA,92618,803,"Los Angeles, CA",33.6342181,-117.7233823,226.0
+2026-06-01,62581,Genesis Santa Monica,Santa Monica,CA,90404,803,"Los Angeles, CA",34.03227,-118.4751279,206.0
+2026-06-01,98536,Galpin Genesis of Van Nuys,Los Angeles,CA,91406,803,"Los Angeles, CA",34.2209833,-118.4687863,205.0
+2026-06-01,74040,Genesis of San Bruno,San Bruno,CA,94066,807,"San Francisco-Oakland-San Jose, CA",37.6372585,-122.419091,198.0
+2026-06-01,67653,Genesis of Corona,Corona,CA,92882,803,"Los Angeles, CA",33.882918,-117.6138489,179.0
+2026-06-01,100307,Genesis of Mountain View,Mountain View,CA,94040,807,"San Francisco-Oakland-San Jose, CA",37.4048603,-122.1093955,151.0
+2026-06-01,100529,Genesis of San Diego,San Diego,CA,92111,825,"San Diego, CA",32.8306319,-117.1434333,116.0
+2026-06-01,61240,Genesis of Palm Springs,Palm Springs,CA,92264,804,"Palm Springs, CA",33.7945577,-116.5032881,75.0
+2026-06-01,68973,Genesis of Dublin,Dublin,CA,94568,807,"San Francisco-Oakland-San Jose, CA",37.7027037,-121.9030039,74.0
+2026-06-01,70476,Genesis of Escondido,Escondido,CA,92029,825,"San Diego, CA",33.1150272,-117.1049655,65.0
+2026-06-01,65171,Genesis of Selma,Selma,CA,93662,866,"Fresno-Visalia, CA",36.5705206,-119.6297571,34.0
+2026-06-01,69677,Genesis of La Quinta,La Quinta,CA,92253,804,"Palm Springs, CA",33.7072313,-116.2852619,24.0
+2026-06-01,69409,Genesis of Richmond,Richmond,CA,94806,807,"San Francisco-Oakland-San Jose, CA",37.9857273,-122.3202802,18.0
+2026-06-01,69701,Genesis of Victorville,Victorville,CA,92392,803,"Los Angeles, CA",34.5060794,-117.3405032,6.0
+2026-07-01,64605,Genesis of South Bay,Torrance,CA,90505,803,"Los Angeles, CA",33.7991718,-118.3411724,315.0
+2026-07-01,62609,Norm Reeves Genesis of Cerritos,Cerritos,CA,90703,803,"Los Angeles, CA",33.8662378,-118.1015234,281.0
+2026-07-01,98536,Galpin Genesis of Van Nuys,Los Angeles,CA,91406,803,"Los Angeles, CA",34.2209833,-118.4687863,240.0
+2026-07-01,72517,Genesis of Loma Linda,Ontario,CA,91764,803,"Los Angeles, CA",34.0699402,-117.6059991,240.0
+2026-07-01,6767,Tuttle-Click Genesis,Irvine,CA,92618,803,"Los Angeles, CA",33.6342181,-117.7233823,221.0
+2026-07-01,100307,Genesis of Mountain View,Mountain View,CA,94040,807,"San Francisco-Oakland-San Jose, CA",37.4048603,-122.1093955,201.0
+2026-07-01,62581,Genesis Santa Monica,Santa Monica,CA,90404,803,"Los Angeles, CA",34.03227,-118.4751279,175.0
+2026-07-01,74040,Genesis of San Bruno,San Bruno,CA,94066,807,"San Francisco-Oakland-San Jose, CA",37.6372585,-122.419091,166.0
+2026-07-01,67653,Genesis of Corona,Corona,CA,92882,803,"Los Angeles, CA",33.882918,-117.6138489,159.0
+2026-07-01,100529,Genesis of San Diego,San Diego,CA,92111,825,"San Diego, CA",32.8306319,-117.1434333,125.0
+2026-07-01,68973,Genesis of Dublin,Dublin,CA,94568,807,"San Francisco-Oakland-San Jose, CA",37.7027037,-121.9030039,80.0
+2026-07-01,61240,Genesis of Palm Springs,Palm Springs,CA,92264,804,"Palm Springs, CA",33.7945577,-116.5032881,71.0
+2026-07-01,70476,Genesis of Escondido,Escondido,CA,92029,825,"San Diego, CA",33.1150272,-117.1049655,49.0
+2026-07-01,65171,Genesis of Selma,Selma,CA,93662,866,"Fresno-Visalia, CA",36.5705206,-119.6297571,33.0
+2026-07-01,69677,Genesis of La Quinta,La Quinta,CA,92253,804,"Palm Springs, CA",33.7072313,-116.2852619,27.0
+2026-07-01,69409,Genesis of Richmond,Richmond,CA,94806,807,"San Francisco-Oakland-San Jose, CA",37.9857273,-122.3202802,14.0
+2026-07-01,69701,Genesis of Victorville,Victorville,CA,92392,803,"Los Angeles, CA",34.5060794,-117.3405032,6.0
+2026-08-01,62609,Norm Reeves Genesis of Cerritos,Cerritos,CA,90703,803,"Los Angeles, CA",33.8662378,-118.1015234,360.0
+2026-08-01,64605,Genesis of South Bay,Torrance,CA,90505,803,"Los Angeles, CA",33.7991718,-118.3411724,286.0
+2026-08-01,100307,Genesis of Mountain View,Mountain View,CA,94040,807,"San Francisco-Oakland-San Jose, CA",37.4048603,-122.1093955,237.0
+2026-08-01,72517,Genesis of Loma Linda,Ontario,CA,91764,803,"Los Angeles, CA",34.0699402,-117.6059991,221.0
+2026-08-01,74040,Genesis of San Bruno,San Bruno,CA,94066,807,"San Francisco-Oakland-San Jose, CA",37.6372585,-122.419091,180.0
+2026-08-01,67653,Genesis of Corona,Corona,CA,92882,803,"Los Angeles, CA",33.882918,-117.6138489,174.0
+2026-08-01,98536,Galpin Genesis of Van Nuys,Los Angeles,CA,91406,803,"Los Angeles, CA",34.2209833,-118.4687863,171.0
+2026-08-01,6767,Tuttle-Click Genesis,Irvine,CA,92618,803,"Los Angeles, CA",33.6342181,-117.7233823,169.0
+2026-08-01,62581,Genesis Santa Monica,Santa Monica,CA,90404,803,"Los Angeles, CA",34.03227,-118.4751279,148.0
+2026-08-01,100529,Genesis of San Diego,San Diego,CA,92111,825,"San Diego, CA",32.8306319,-117.1434333,124.0
+2026-08-01,68973,Genesis of Dublin,Dublin,CA,94568,807,"San Francisco-Oakland-San Jose, CA",37.7027037,-121.9030039,73.0
+2026-08-01,61240,Genesis of Palm Springs,Palm Springs,CA,92264,804,"Palm Springs, CA",33.7945577,-116.5032881,65.0
+2026-08-01,70476,Genesis of Escondido,Escondido,CA,92029,825,"San Diego, CA",33.1150272,-117.1049655,51.0
+2026-08-01,65171,Genesis of Selma,Selma,CA,93662,866,"Fresno-Visalia, CA",36.5705206,-119.6297571,30.0
+2026-08-01,69677,Genesis of La Quinta,La Quinta,CA,92253,804,"Palm Springs, CA",33.7072313,-116.2852619,24.0
+2026-08-01,69701,Genesis of Victorville,Victorville,CA,92392,803,"Los Angeles, CA",34.5060794,-117.3405032,7.0
+2026-08-01,69409,Genesis of Richmond,Richmond,CA,94806,807,"San Francisco-Oakland-San Jose, CA",37.9857273,-122.3202802,3.0
+2026-09-01,62609,Norm Reeves Genesis of Cerritos,Cerritos,CA,90703,803,"Los Angeles, CA",33.8662378,-118.1015234,280.0
+2026-09-01,64605,Genesis of South Bay,Torrance,CA,90505,803,"Los Angeles, CA",33.7991718,-118.3411724,238.0
+2026-09-01,100307,Genesis of Mountain View,Mountain View,CA,94040,807,"San Francisco-Oakland-San Jose, CA",37.4048603,-122.1093955,230.0
+2026-09-01,6767,Tuttle-Click Genesis,Irvine,CA,92618,803,"Los Angeles, CA",33.6342181,-117.7233823,187.0
+2026-09-01,74040,Genesis of San Bruno,San Bruno,CA,94066,807,"San Francisco-Oakland-San Jose, CA",37.6372585,-122.419091,186.0
+2026-09-01,67653,Genesis of Corona,Corona,CA,92882,803,"Los Angeles, CA",33.882918,-117.6138489,184.0
+2026-09-01,72517,Genesis of Loma Linda,Ontario,CA,91764,803,"Los Angeles, CA",34.0699402,-117.6059991,163.0
+2026-09-01,62581,Genesis Santa Monica,Santa Monica,CA,90404,803,"Los Angeles, CA",34.03227,-118.4751279,159.0
+2026-09-01,100529,Genesis of San Diego,San Diego,CA,92111,825,"San Diego, CA",32.8306319,-117.1434333,114.0
+2026-09-01,68973,Genesis of Dublin,Dublin,CA,94568,807,"San Francisco-Oakland-San Jose, CA",37.7027037,-121.9030039,85.0
+2026-09-01,98536,Galpin Genesis of Van Nuys,Los Angeles,CA,91406,803,"Los Angeles, CA",34.2209833,-118.4687863,82.0
+2026-09-01,61240,Genesis of Palm Springs,Palm Springs,CA,92264,804,"Palm Springs, CA",33.7945577,-116.5032881,78.0
+2026-09-01,70476,Genesis of Escondido,Escondido,CA,92029,825,"San Diego, CA",33.1150272,-117.1049655,60.0
+2026-09-01,65171,Genesis of Selma,Selma,CA,93662,866,"Fresno-Visalia, CA",36.5705206,-119.6297571,34.0
+2026-09-01,69677,Genesis of La Quinta,La Quinta,CA,92253,804,"Palm Springs, CA",33.7072313,-116.2852619,24.0
+2026-09-01,69701,Genesis of Victorville,Victorville,CA,92392,803,"Los Angeles, CA",34.5060794,-117.3405032,7.0
+2026-09-01,69409,Genesis of Richmond,Richmond,CA,94806,807,"San Francisco-Oakland-San Jose, CA",37.9857273,-122.3202802,3.0

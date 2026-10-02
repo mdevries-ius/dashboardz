@@ -1,0 +1,22 @@
+{
+  "extracted_at_utc": "2026-09-21T17:51:17.896Z",
+  "source_sql": "sql/export_marcom_funnel_correlations.sql",
+  "source_sql_sha256": "39d0fcd73863bb647d0e0bf412aa379cfb9bfc9c28bba7612f380a9c0860226a",
+  "statement_id": "01f1b5e5-07c1-1290-9274-7d03dc867faa",
+  "row_count": 56,
+  "columns": [
+    "date_month",
+    "rdr_sales_volume",
+    "google_adops_index_volume",
+    "google_adops_make_only_index_volume",
+    "t1_visits",
+    "t3_vdps",
+    "research_actions",
+    "shop_actions",
+    "credit_apps"
+  ],
+  "extract_earliest_month": "2022-01-01",
+  "extract_latest_month": "2026-08-01",
+  "output_csv": "data/marcom_funnel_correlations_national_total.csv",
+  "output_csv_sha256": "6d89fe4e5a50db36df0df46e68a02ffd520494607a87945e1b88dc33afd7dc46"
+}

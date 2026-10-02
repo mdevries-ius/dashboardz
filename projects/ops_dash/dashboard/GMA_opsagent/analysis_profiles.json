@@ -1,0 +1,78 @@
+{
+  "api_key_sources": [
+    ".env",
+    "../../../hma_weekly/.env"
+  ],
+  "default_profile": "cost_controlled",
+  "profiles": {
+    "cost_controlled": {
+      "description": "Default for iteration. Uses a capable lower-cost model and hard response ceilings.",
+      "web_research": false,
+      "limits": {
+        "max_input_characters_per_role": 80000,
+        "max_combined_output_tokens": 4200
+      },
+      "analyst_1": {
+        "model": "gpt-5.6-terra",
+        "reasoning_effort": "low",
+        "max_output_tokens": 1200
+      },
+      "analyst_2": {
+        "model": "gpt-5.6-terra",
+        "reasoning_effort": "low",
+        "max_output_tokens": 1200
+      },
+      "supervisor": {
+        "model": "gpt-5.6-terra",
+        "reasoning_effort": "medium",
+        "max_output_tokens": 1800
+      }
+    },
+    "quality_review": {
+      "description": "Use after the rubric is stable and an executive-quality comparison is needed.",
+      "web_research": false,
+      "limits": {
+        "max_input_characters_per_role": 80000,
+        "max_combined_output_tokens": 5200
+      },
+      "analyst_1": {
+        "model": "gpt-5.6-terra",
+        "reasoning_effort": "medium",
+        "max_output_tokens": 1500
+      },
+      "analyst_2": {
+        "model": "gpt-5.6-terra",
+        "reasoning_effort": "medium",
+        "max_output_tokens": 1500
+      },
+      "supervisor": {
+        "model": "gpt-5.6-sol",
+        "reasoning_effort": "medium",
+        "max_output_tokens": 2200
+      }
+    },
+    "frontier_review": {
+      "description": "High-cost diagnostic pass; use only for a deliberate comparison after lower-cost profiles are judged.",
+      "web_research": false,
+      "limits": {
+        "max_input_characters_per_role": 80000,
+        "max_combined_output_tokens": 6100
+      },
+      "analyst_1": {
+        "model": "gpt-5.6-terra",
+        "reasoning_effort": "medium",
+        "max_output_tokens": 1800
+      },
+      "analyst_2": {
+        "model": "gpt-5.6-terra",
+        "reasoning_effort": "medium",
+        "max_output_tokens": 1800
+      },
+      "supervisor": {
+        "model": "gpt-6-astra",
+        "reasoning_effort": "high",
+        "max_output_tokens": 2500
+      }
+    }
+  }
+}

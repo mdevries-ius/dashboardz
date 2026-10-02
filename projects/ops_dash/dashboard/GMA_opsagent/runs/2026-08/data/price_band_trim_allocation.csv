@@ -1,0 +1,529 @@
+date_month,segment,make,model,trim,average_inventory,weighted_advertised_price
+2026-08-01,Entry Luxury EV SUV,genesis,gv60,"19""""",26,54219.72
+2026-08-01,Entry Luxury EV SUV,genesis,gv60,AWD,2,54239.0
+2026-08-01,Entry Luxury EV SUV,genesis,gv60,"Advanced 20""""",8,58960.875
+2026-08-01,Entry Luxury EV SUV,genesis,gv60,Magma,3,73674.66666666667
+2026-08-01,Entry Luxury EV SUV,genesis,gv60,Performance,11,71096.63636363637
+2026-08-01,Entry Luxury EV SUV,genesis,gv60,"Prestige 20""""",25,60471.68
+2026-08-01,Entry Luxury EV SUV,genesis,gv60,RWD,38,53202.76315789474
+2026-08-01,Entry Luxury EV SUV,genesis,gv60,Standard,6,45315.0
+2026-08-01,Entry Luxury EV SUV,volvo,ec40,Core,1,162000.0
+2026-08-01,Entry Luxury EV SUV,volvo,ex30,Cross Country Ultra,312,47919.179487179485
+2026-08-01,Entry Luxury EV SUV,volvo,ex30,"Cross Country Ultra, Twin Motor Performance, Ful",26,50574.92307692308
+2026-08-01,Entry Luxury EV SUV,volvo,ex30,Plus,13,38728.0
+2026-08-01,Entry Luxury EV SUV,volvo,ex30,"Plus Twin Motor Performance, Fully electric",452,44346.50442477876
+2026-08-01,Entry Luxury EV SUV,volvo,ex30,"Plus, Single Motor, Fuly electric",36,38465.666666666664
+2026-08-01,Entry Luxury EV SUV,volvo,ex30,Twin Motor Plus,17,44114.117647058825
+2026-08-01,Entry Luxury EV SUV,volvo,ex30,Twin Motor Ultra,6,43683.666666666664
+2026-08-01,Entry Luxury EV SUV,volvo,ex30,Ultra,128,47135.3828125
+2026-08-01,Entry Luxury EV SUV,volvo,ex30,"Ultra Twin Motor Performance, Fully electric",352,45446.380681818184
+2026-08-01,Entry Luxury EV SUV,volvo,ex40,Single Motor Extended Range Plus,22,57435.72727272727
+2026-08-01,Entry Luxury EV SUV,volvo,ex40,Twin Motor Plus,7,56587.0
+2026-08-01,Entry Luxury EV SUV,volvo,ex40,Twin Motor Ultra Black Edition,12,58537.333333333336
+2026-08-01,Mid Luxury Car,audi,a6_e_tron,Premium,18,66533.0
+2026-08-01,Mid Luxury Car,audi,a6_e_tron,Premium Plus,51,75615.98039215687
+2026-08-01,Mid Luxury Car,audi,a6_e_tron,Prestige,5,77773.8
+2026-08-01,Mid Luxury Car,audi,a6_s6,Premium Plus quattro S tronic,1463,67812.35133287765
+2026-08-01,Mid Luxury Car,audi,a6_s6,Premium quattro S tronic,118,63169.00847457627
+2026-08-01,Mid Luxury Car,audi,a6_s6,Prestige quattro S tronic,84,73973.52380952382
+2026-08-01,Mid Luxury Car,audi,a6_s6,Technik,371,73914.07277628033
+2026-08-01,Mid Luxury Car,audi,a7_s7_rs_7,4.0T quattro performance,3,134222.33333333334
+2026-08-01,Mid Luxury Car,audi,a7_s7_rs_7,quattro tiptronic,5,151288.2
+2026-08-01,Mid Luxury Car,bmw,5_series,530i,1099,70080.50591446769
+2026-08-01,Mid Luxury Car,bmw,5_series,530i xDrive,1134,72095.40211640211
+2026-08-01,Mid Luxury Car,bmw,5_series,540i xDrive,284,81743.21126760563
+2026-08-01,Mid Luxury Car,bmw,5_series,550e xDrive,545,86900.77981651376
+2026-08-01,Mid Luxury Car,bmw,5_series,xDrive,150,71586.66066666666
+2026-08-01,Mid Luxury Car,bmw,m5,Base,233,136752.09012875537
+2026-08-01,Mid Luxury Car,bmw,m5,Base (A8),19,138397.57894736843
+2026-08-01,Mid Luxury Car,bmw,m5,Touring,8,144389.2857142857
+2026-08-01,Mid Luxury Car,genesis,g80,2.5T,126,63611.80952380953
+2026-08-01,Mid Luxury Car,genesis,g80,2.5T Advanced,211,66626.35545023697
+2026-08-01,Mid Luxury Car,genesis,g80,2.5T Sport Prestige,243,72660.80658436214
+2026-08-01,Mid Luxury Car,genesis,g80,3.5T Prestige Black,225,82293.48888888888
+2026-08-01,Mid Luxury Car,genesis,g80,3.5T Prestige Black AWD,1,81790.0
+2026-08-01,Mid Luxury Car,genesis,g80,3.5T Sport,19,72406.63157894737
+2026-08-01,Mid Luxury Car,genesis,g80,3.5T Sport Advanced,3,61085.0
+2026-08-01,Mid Luxury Car,genesis,g80,3.5T Sport Prestige,309,81247.67313915858
+2026-08-01,Mid Luxury Car,jaguar,xf,P300 R-Dynamic SE,29,49141.75862068965
+2026-08-01,Mid Luxury Car,maserati,ghibli,334 Ultima,1,95810.0
+2026-08-01,Mid Luxury Car,maserati,ghibli,Modena Q4,3,94568.66666666667
+2026-08-01,Mid Luxury Car,maserati,ghibli,Modena Ultima Q4,14,105622.57142857143
+2026-08-01,Mid Luxury Car,mercedes_benz,cle,AMG CLE 53,385,93682.51885714286
+2026-08-01,Mid Luxury Car,mercedes_benz,cle,CLE 300,195,75955.41246153846
+2026-08-01,Mid Luxury Car,mercedes_benz,cle,CLE 300 4MATIC,700,70888.79841428573
+2026-08-01,Mid Luxury Car,mercedes_benz,cle,CLE 450,43,80576.1046511628
+2026-08-01,Mid Luxury Car,mercedes_benz,cle,CLE 450 4MATIC,4,76279.75
+2026-08-01,Mid Luxury Car,mercedes_benz,e_class,AMG E 53,565,108133.00555752212
+2026-08-01,Mid Luxury Car,mercedes_benz,e_class,AMG E 53 E,50,109144.32
+2026-08-01,Mid Luxury Car,mercedes_benz,e_class,E 350,1319,72939.34344200151
+2026-08-01,Mid Luxury Car,mercedes_benz,e_class,E 350 4MATIC,780,75729.30128205128
+2026-08-01,Mid Luxury Car,mercedes_benz,e_class,E 450 4MATIC,716,84963.07832167832
+2026-08-01,Mid Luxury Car,mercedes_benz,e_class,E 450 4MATIC All-Terrain,96,89093.84375
+2026-08-01,Mid Luxury Car,volvo,s90,T8 Ultimate,2,68506.0
+2026-08-01,Mid Luxury Car,volvo,s90,T8 Ultra,1,59493.0
+2026-08-01,Mid Luxury Car,volvo,v90,B6 Ultra,1,77580.0
+2026-08-01,Mid Luxury SUV,acura,mdx,Base,188,54341.80319148936
+2026-08-01,Mid Luxury SUV,acura,mdx,SH-AWD,1021,56220.70177165354
+2026-08-01,Mid Luxury SUV,acura,mdx,SH-AWD Type S w/Advance Package,1943,78303.90758047768
+2026-08-01,Mid Luxury SUV,acura,mdx,SH-AWD w/A-SPEC,356,64859.895774647885
+2026-08-01,Mid Luxury SUV,acura,mdx,SH-AWD w/Advance,115,69183.12173913044
+2026-08-01,Mid Luxury SUV,acura,mdx,SH-AWD w/Platinum Elite w/A-Spec,76,71432.58490566038
+2026-08-01,Mid Luxury SUV,acura,mdx,SH-AWD w/Tech,3014,61569.07796947578
+2026-08-01,Mid Luxury SUV,acura,mdx,Type S Advance Package,14,78408.21428571429
+2026-08-01,Mid Luxury SUV,acura,mdx,w/A-Spec Advance Package,1748,71166.98854524628
+2026-08-01,Mid Luxury SUV,acura,mdx,w/A-Spec Package,1793,64664.12527964206
+2026-08-01,Mid Luxury SUV,acura,mdx,w/Advance Package,3039,69112.44356696281
+2026-08-01,Mid Luxury SUV,acura,mdx,w/Tech,14,58128.53846153846
+2026-08-01,Mid Luxury SUV,acura,mdx,w/Technology Package,1525,59765.39304461942
+2026-08-01,Mid Luxury SUV,audi,q7,Premium,36,65095.555555555555
+2026-08-01,Mid Luxury SUV,audi,q7,Premium Plus S line TFSI quattro tiptronic,73,72633.52054794521
+2026-08-01,Mid Luxury SUV,audi,q7,Premium Plus TFSI quattro tiptronic,983,71365.67650050865
+2026-08-01,Mid Luxury SUV,audi,q7,Premium S line TFSI quattro tiptronic,144,66516.0625
+2026-08-01,Mid Luxury SUV,audi,q7,Prestige,53,79227.22641509434
+2026-08-01,Mid Luxury SUV,audi,q7,Prestige 55 TFSI quattro tiptronic,499,78762.79559118237
+2026-08-01,Mid Luxury SUV,audi,q7,quattro 55 TFSI,1,67381.0
+2026-08-01,Mid Luxury SUV,audi,q7,quattro Premium 45 TFSI,519,60978.72832369942
+2026-08-01,Mid Luxury SUV,audi,q7,quattro Premium 55 TFSI,13,65868.61538461539
+2026-08-01,Mid Luxury SUV,audi,q7,quattro Premium Plus 45 TFSI,552,64428.440217391304
+2026-08-01,Mid Luxury SUV,audi,q7,quattro Premium Plus 55 TFSI,290,70740.1
+2026-08-01,Mid Luxury SUV,audi,q7,quattro Prestige 55 TFSI,1,70197.0
+2026-08-01,Mid Luxury SUV,audi,q7,quattro Progressiv 55 TFSI,16,73860.6875
+2026-08-01,Mid Luxury SUV,audi,q7_sq7,4.0T quattro Premium Plus,125,97698.408
+2026-08-01,Mid Luxury SUV,audi,q7_sq7,4.0T quattro Prestige,94,108269.96808510639
+2026-08-01,Mid Luxury SUV,audi,q7_sq7,Prestige,10,112056.0
+2026-08-01,Mid Luxury SUV,bmw,x5,Competition,498,144173.4939759036
+2026-08-01,Mid Luxury SUV,bmw,x5,M60i,1290,106419.86976744187
+2026-08-01,Mid Luxury SUV,bmw,x5,sDrive40i,2561,80037.68527918782
+2026-08-01,Mid Luxury SUV,bmw,x5,xDrive40i,7818,82846.11115374776
+2026-08-01,Mid Luxury SUV,bmw,x5,xDrive50e,4405,87592.1448354143
+2026-08-01,Mid Luxury SUV,bmw,x5_xdrive45e,Competition,160,149019.81875
+2026-08-01,Mid Luxury SUV,bmw,x6,M60i,409,110953.38875305624
+2026-08-01,Mid Luxury SUV,bmw,x6,xDrive40i,822,90061.11678832117
+2026-08-01,Mid Luxury SUV,cadillac,xt5,Luxury,14,45106.0
+2026-08-01,Mid Luxury SUV,cadillac,xt5,Luxury AWD,391,48558.726342711
+2026-08-01,Mid Luxury SUV,cadillac,xt5,Luxury FWD,221,46158.97737556561
+2026-08-01,Mid Luxury SUV,cadillac,xt5,Premium Luxury,73,53344.5
+2026-08-01,Mid Luxury SUV,cadillac,xt5,Premium Luxury AWD,1452,60023.23760330579
+2026-08-01,Mid Luxury SUV,cadillac,xt5,Premium Luxury FWD,1389,58647.54859611231
+2026-08-01,Mid Luxury SUV,cadillac,xt5,Sport,13,62274.307692307695
+2026-08-01,Mid Luxury SUV,cadillac,xt5,Sport AWD,344,66432.58430232559
+2026-08-01,Mid Luxury SUV,cadillac,xt6,Luxury,23,48989.565217391304
+2026-08-01,Mid Luxury SUV,cadillac,xt6,Premium Luxury,19,60778.73684210526
+2026-08-01,Mid Luxury SUV,cadillac,xt6,Sport,4,67843.75
+2026-08-01,Mid Luxury SUV,genesis,gv80,2.5T,160,64422.6875
+2026-08-01,Mid Luxury SUV,genesis,gv80,2.5T AWD,100,62097.32
+2026-08-01,Mid Luxury SUV,genesis,gv80,2.5T Advanced,862,70878.79234338747
+2026-08-01,Mid Luxury SUV,genesis,gv80,2.5T Prestige,823,75718.1397326853
+2026-08-01,Mid Luxury SUV,genesis,gv80,2.5T RWD,1,58961.0
+2026-08-01,Mid Luxury SUV,genesis,gv80,2.5T Select,512,66376.318359375
+2026-08-01,Mid Luxury SUV,genesis,gv80,2.5T Standard,7,60252.142857142855
+2026-08-01,Mid Luxury SUV,genesis,gv80,2.5T Standard AWD,131,60373.48854961832
+2026-08-01,Mid Luxury SUV,genesis,gv80,3.5T,4,75343.0
+2026-08-01,Mid Luxury SUV,genesis,gv80,3.5T Advanced,607,78011.27182866557
+2026-08-01,Mid Luxury SUV,genesis,gv80,3.5T Prestige,282,86733.56737588653
+2026-08-01,Mid Luxury SUV,genesis,gv80,3.5T Prestige Black,31,87649.3870967742
+2026-08-01,Mid Luxury SUV,genesis,gv80,3.5T Prestige Black AWD,654,84732.08409785933
+2026-08-01,Mid Luxury SUV,genesis,gv80,3.5T Prestige Signature,1748,83773.5
+2026-08-01,Mid Luxury SUV,genesis,gv80_coupe,3.5T,28,82804.96428571429
+2026-08-01,Mid Luxury SUV,genesis,gv80_coupe,3.5T E-SC,228,88370.88157894737
+2026-08-01,Mid Luxury SUV,genesis,gv80_coupe,3.5T E-SC MHEV AWD,291,89032.90034364261
+2026-08-01,Mid Luxury SUV,genesis,gv80_coupe,3.5T E-SC Prestige Black AWD,1,91515.0
+2026-08-01,Mid Luxury SUV,genesis,gv80_coupe,3.5T V6 AWD,2,82904.0
+2026-08-01,Mid Luxury SUV,genesis,gv80_coupe,3.5T e-SC Prestige,2,92182.5
+2026-08-01,Mid Luxury SUV,genesis,gv80_coupe,3.5T e-SC Prestige Black,167,91324.38323353294
+2026-08-01,Mid Luxury SUV,ineos,grenadier,1924 Limited Edition,113,85759.10185185185
+2026-08-01,Mid Luxury SUV,ineos,grenadier,Base,15,81173.06666666667
+2026-08-01,Mid Luxury SUV,ineos,grenadier,Fieldmaster,5,74383.4
+2026-08-01,Mid Luxury SUV,ineos,grenadier,Fieldmaster Edition,599,88261.95959595959
+2026-08-01,Mid Luxury SUV,ineos,grenadier,Trialmaster,1,79565.0
+2026-08-01,Mid Luxury SUV,ineos,grenadier,Trialmaster Edition,192,91943.96774193548
+2026-08-01,Mid Luxury SUV,infiniti,qx60,AUTOGRAPH AWD,9,68144.22222222222
+2026-08-01,Mid Luxury SUV,infiniti,qx60,Autograph,1253,68584.18196328811
+2026-08-01,Mid Luxury SUV,infiniti,qx60,LUXE AWD,4,57631.0
+2026-08-01,Mid Luxury SUV,infiniti,qx60,Luxe,3404,58482.25558166862
+2026-08-01,Mid Luxury SUV,infiniti,qx60,Pure,110,51461.48181818182
+2026-08-01,Mid Luxury SUV,infiniti,qx60,SPORT,1300,62833.43692307692
+2026-08-01,Mid Luxury SUV,infiniti,qx60,SPORT AWD,34,62668.76470588235
+2026-08-01,Mid Luxury SUV,infiniti,qx60,Sensory,1,54325.0
+2026-08-01,Mid Luxury SUV,infiniti,qx65,AUTOGRAPH,1034,66246.3742746615
+2026-08-01,Mid Luxury SUV,infiniti,qx65,LUXE,204,56719.55882352941
+2026-08-01,Mid Luxury SUV,infiniti,qx65,SPORT,897,59717.938684503904
+2026-08-01,Mid Luxury SUV,jaguar,f_pace,P250 R-Dynamic S,560,66089.73035714286
+2026-08-01,Mid Luxury SUV,jaguar,f_pace,P400 R-Dynamic S,209,77088.14354066986
+2026-08-01,Mid Luxury SUV,jaguar,f_pace,SVR 575 EDITION,29,98805.93103448275
+2026-08-01,Mid Luxury SUV,land_rover,defender,110 P300 S,863,76554.74159907301
+2026-08-01,Mid Luxury SUV,land_rover,defender,110 P400 S,1,80945.0
+2026-08-01,Mid Luxury SUV,land_rover,defender,110 P400 X,2,93119.0
+2026-08-01,Mid Luxury SUV,land_rover,defender,110 P400 X-Dynamic SE,1383,89953.78581765557
+2026-08-01,Mid Luxury SUV,land_rover,defender,110 P500 X-Dynamic SE,104,114396.38461538461
+2026-08-01,Mid Luxury SUV,land_rover,defender,110 V8 P500 SE,1,106113.0
+2026-08-01,Mid Luxury SUV,land_rover,defender,110 V8 P525,91,127447.82417582418
+2026-08-01,Mid Luxury SUV,land_rover,defender,130 P300 S,258,88077.48837209302
+2026-08-01,Mid Luxury SUV,land_rover,defender,130 P400 S,7,86391.28571428571
+2026-08-01,Mid Luxury SUV,land_rover,defender,130 P400 X,1,109713.0
+2026-08-01,Mid Luxury SUV,land_rover,defender,130 P400 X-Dynamic SE,493,99862.3995943205
+2026-08-01,Mid Luxury SUV,land_rover,defender,130 P500 V8,5,122092.6
+2026-08-01,Mid Luxury SUV,land_rover,defender,130 V8 P500,131,132535.6030534351
+2026-08-01,Mid Luxury SUV,land_rover,defender,90 P300 S,2,65452.5
+2026-08-01,Mid Luxury SUV,land_rover,defender,90 P400 X-Dynamic SE,45,83662.02272727272
+2026-08-01,Mid Luxury SUV,land_rover,defender,OCTA,192,173681.0
+2026-08-01,Mid Luxury SUV,land_rover,defender,P300 S,10,77413.6
+2026-08-01,Mid Luxury SUV,land_rover,defender,P400 Outbound,5,99365.8
+2026-08-01,Mid Luxury SUV,land_rover,defender,P400 Trophy Edition Deep Sandglow,32,99383.65625
+2026-08-01,Mid Luxury SUV,land_rover,defender,P400 Trophy Edition Keswick,63,97232.12903225806
+2026-08-01,Mid Luxury SUV,land_rover,defender,P400 X,173,108768.57803468208
+2026-08-01,Mid Luxury SUV,land_rover,defender,P400 X-Dynamic SE,15,92831.0
+2026-08-01,Mid Luxury SUV,land_rover,defender,P500 V8,1,135042.0
+2026-08-01,Mid Luxury SUV,land_rover,defender,P500 X-Dynamic SE,1,117507.0
+2026-08-01,Mid Luxury SUV,land_rover,defender,P525 V8,63,122019.74603174604
+2026-08-01,Mid Luxury SUV,land_rover,defender,P635 OCTA,10,176930.3
+2026-08-01,Mid Luxury SUV,land_rover,defender,P635 OCTA Black,126,180050.42857142858
+2026-08-01,Mid Luxury SUV,land_rover,defender,S,32,79280.3125
+2026-08-01,Mid Luxury SUV,land_rover,defender,X,22,108235.40909090909
+2026-08-01,Mid Luxury SUV,land_rover,defender,X-Dynamic SE,79,92398.25316455697
+2026-08-01,Mid Luxury SUV,land_rover,discovery,Gemini Edition,214,80808.24299065421
+2026-08-01,Mid Luxury SUV,land_rover,discovery,P300 Dynamic SE,262,74618.13740458015
+2026-08-01,Mid Luxury SUV,land_rover,discovery,P300 S,215,68248.3488372093
+2026-08-01,Mid Luxury SUV,land_rover,discovery,P360 Dynamic SE,12,74008.5
+2026-08-01,Mid Luxury SUV,land_rover,discovery,P360 Metropolitan,8,82480.125
+2026-08-01,Mid Luxury SUV,land_rover,discovery,Tempest Edition,33,90266.27272727272
+2026-08-01,Mid Luxury SUV,land_rover,range_rover_velar,Autobiography,12,92039.83333333333
+2026-08-01,Mid Luxury SUV,land_rover,range_rover_velar,Belgravia Edition,488,74529.29713114754
+2026-08-01,Mid Luxury SUV,land_rover,range_rover_velar,Belgravia Edition Satin,18,86210.11111111111
+2026-08-01,Mid Luxury SUV,land_rover,range_rover_velar,Dynamic SE,234,75798.61111111111
+2026-08-01,Mid Luxury SUV,land_rover,range_rover_velar,P250 Dynamic SE,117,74573.94017094017
+2026-08-01,Mid Luxury SUV,land_rover,range_rover_velar,P250 S,240,68897.3125
+2026-08-01,Mid Luxury SUV,land_rover,range_rover_velar,P400 Autobiography,9,88567.11111111111
+2026-08-01,Mid Luxury SUV,land_rover,range_rover_velar,P400 Dynamic HSE,3,84719.66666666667
+2026-08-01,Mid Luxury SUV,land_rover,range_rover_velar,P400 Dynamic SE,26,78588.53846153847
+2026-08-01,Mid Luxury SUV,land_rover,range_rover_velar,S,296,68810.59121621621
+2026-08-01,Mid Luxury SUV,lexus,gx_series,Luxury+,208,89539.27403846153
+2026-08-01,Mid Luxury SUV,lexus,gx_series,Overtrail+,108,86104.00925925926
+2026-08-01,Mid Luxury SUV,lexus,gx_series,Premium+,174,77346.77586206897
+2026-08-01,Mid Luxury SUV,lexus,rx_series,Base,35,63046.28571428572
+2026-08-01,Mid Luxury SUV,lexus,rx_series,F SPORT Design,196,63377.449132653055
+2026-08-01,Mid Luxury SUV,lexus,rx_series,F SPORT Handling,131,65894.79389312977
+2026-08-01,Mid Luxury SUV,lexus,rx_series,F SPORT Performance,85,78027.23529411765
+2026-08-01,Mid Luxury SUV,lexus,rx_series,Luxury,971,71764.31316168899
+2026-08-01,Mid Luxury SUV,lexus,rx_series,Premium,682,62454.94272727271
+2026-08-01,Mid Luxury SUV,lexus,rx_series,Premium+,2564,63502.5582332293
+2026-08-01,Mid Luxury SUV,lexus,tx,Base,2,62174.0
+2026-08-01,Mid Luxury SUV,lexus,tx,F SPORT Handling,159,73035.72327044026
+2026-08-01,Mid Luxury SUV,lexus,tx,F SPORT Performance Luxury,73,81273.67123287672
+2026-08-01,Mid Luxury SUV,lexus,tx,F SPORT Performance Premium,784,76474.35586734694
+2026-08-01,Mid Luxury SUV,lexus,tx,Luxury,641,74219.64413416536
+2026-08-01,Mid Luxury SUV,lexus,tx,Premium,2004,66907.97205588823
+2026-08-01,Mid Luxury SUV,lincoln,aviator,Black Label,284,88796.38732394367
+2026-08-01,Mid Luxury SUV,lincoln,aviator,Livery,9,61507.11111111111
+2026-08-01,Mid Luxury SUV,lincoln,aviator,Premiere,1872,60207.346153846156
+2026-08-01,Mid Luxury SUV,lincoln,aviator,Reserve,2038,72745.7088856161
+2026-08-01,Mid Luxury SUV,lincoln,nautilus,Black Label,433,80220.57967667436
+2026-08-01,Mid Luxury SUV,lincoln,nautilus,Premiere,3359,57796.195891634416
+2026-08-01,Mid Luxury SUV,lincoln,nautilus,Reserve,2603,66593.71110257396
+2026-08-01,Mid Luxury SUV,mercedes_benz,benz_amg_gle,4MATIC+,1061,101304.63393025447
+2026-08-01,Mid Luxury SUV,mercedes_benz,benz_amg_gle,S 4MATIC+,446,143418.51569506727
+2026-08-01,Mid Luxury SUV,mercedes_benz,gle_class,4MATIC,356,84177.11612359551
+2026-08-01,Mid Luxury SUV,mercedes_benz,gle_class,AMG GLE 53,519,102192.4238921002
+2026-08-01,Mid Luxury SUV,mercedes_benz,gle_class,AMG GLE 63 S,223,143148.26457399104
+2026-08-01,Mid Luxury SUV,mercedes_benz,gle_class,GLE 350,1438,73396.00208623087
+2026-08-01,Mid Luxury SUV,mercedes_benz,gle_class,GLE 350 4MATIC,7478,75928.15926718374
+2026-08-01,Mid Luxury SUV,mercedes_benz,gle_class,GLE 450 4MATIC,5591,83754.18261491683
+2026-08-01,Mid Luxury SUV,mercedes_benz,gle_class,GLE 450e 4MATIC,2,89345.0
+2026-08-01,Mid Luxury SUV,mercedes_benz,gle_class,GLE 580 4MATIC,380,100608.29210526316
+2026-08-01,Mid Luxury SUV,volvo,xc90,B5 Core,346,60601.38150289017
+2026-08-01,Mid Luxury SUV,volvo,xc90,B5 Plus 6-Seater,18,66052.11111111111
+2026-08-01,Mid Luxury SUV,volvo,xc90,B5 Plus 7-Seater,438,65159.760273972606
+2026-08-01,Mid Luxury SUV,volvo,xc90,B5 Ultra 6-Seater,20,70597.2
+2026-08-01,Mid Luxury SUV,volvo,xc90,B5 Ultra 7-Seater,24,69474.25
+2026-08-01,Mid Luxury SUV,volvo,xc90,B6 Core,102,65379.75490196078
+2026-08-01,Mid Luxury SUV,volvo,xc90,B6 Plus 6-Seater,228,70360.40789473684
+2026-08-01,Mid Luxury SUV,volvo,xc90,B6 Plus 6P,26,72423.11538461539
+2026-08-01,Mid Luxury SUV,volvo,xc90,B6 Plus 7-Seater,3418,69006.74283206553
+2026-08-01,Mid Luxury SUV,volvo,xc90,B6 Plus 7P,10,66186.5
+2026-08-01,Mid Luxury SUV,volvo,xc90,B6 Plus Bright Theme 7P,118,72414.33050847458
+2026-08-01,Mid Luxury SUV,volvo,xc90,B6 Ultimate Bright Theme 7P,1,58907.0
+2026-08-01,Mid Luxury SUV,volvo,xc90,B6 Ultra,5,70182.2
+2026-08-01,Mid Luxury SUV,volvo,xc90,B6 Ultra 6-Seater,62,76075.0
+2026-08-01,Mid Luxury SUV,volvo,xc90,B6 Ultra 6P,1,63051.0
+2026-08-01,Mid Luxury SUV,volvo,xc90,B6 Ultra 7-Seater,1532,72277.2317232376
+2026-08-01,Mid Luxury SUV,volvo,xc90,B6 Ultra 7P,2,67504.5
+2026-08-01,Mid Luxury SUV,volvo,xc90,B6 Ultra Bright Theme 7P,20,78870.2
+2026-08-01,Mid Luxury SUV,volvo,xc90,B6 Ultra Dark Theme 6-Seater,149,75601.74496644296
+2026-08-01,Mid Luxury SUV,volvo,xc90,B6 Ultra Dark Theme 7-Seater,508,74288.36023622047
+2026-08-01,Mid Luxury SUV,volvo,xc90,Core,8,64330.0
+2026-08-01,Mid Luxury SUV,volvo,xc90,"Core, B5 AWD Gas (mild hybrid), Gasoline, Bright",5,61278.2
+2026-08-01,Mid Luxury SUV,volvo,xc90,Plus,1,69413.0
+2026-08-01,Mid Luxury SUV,volvo,xc90,"Plus, B5 AWD Gas (mild hybrid), Gasoline, Bright",3,64783.0
+2026-08-01,Mid Luxury SUV,volvo,xc90,"Plus, B6 AWD Gas (mild hybrid), Gasoline, Bright",20,70690.4
+2026-08-01,Mid Luxury SUV,volvo,xc90,"Plus, T8 AWD, Electric/Gasoline, Bright, 7 Seats",33,79953.06060606061
+2026-08-01,Mid Luxury SUV,volvo,xc90,T8 Core,100,74779.74
+2026-08-01,Mid Luxury SUV,volvo,xc90,T8 Core 7-Seater,7,70077.42857142857
+2026-08-01,Mid Luxury SUV,volvo,xc90,T8 Plus 6-Seater,180,80267.79444444444
+2026-08-01,Mid Luxury SUV,volvo,xc90,T8 Plus 7-Seater,1703,79205.09864944217
+2026-08-01,Mid Luxury SUV,volvo,xc90,T8 Plus Bright Theme 7P,5,71841.0
+2026-08-01,Mid Luxury SUV,volvo,xc90,T8 Ultimate Bright Theme 7P,1,69633.0
+2026-08-01,Mid Luxury SUV,volvo,xc90,T8 Ultra 6-Seater,160,85853.90625
+2026-08-01,Mid Luxury SUV,volvo,xc90,T8 Ultra 6P,1,89355.0
+2026-08-01,Mid Luxury SUV,volvo,xc90,T8 Ultra 7-Seater,1164,83773.9175257732
+2026-08-01,Mid Luxury SUV,volvo,xc90,T8 Ultra 7P,3,74207.66666666667
+2026-08-01,Mid Luxury SUV,volvo,xc90,T8 Ultra Dark Theme 6-Seater,155,84809.50967741935
+2026-08-01,Mid Luxury SUV,volvo,xc90,T8 Ultra Dark Theme 7-Seater,302,85548.58609271524
+2026-08-01,Mid Luxury SUV,volvo,xc90,Ultra Dark Theme,33,77631.78787878787
+2026-08-01,Mid Luxury SUV,volvo,xc90,"Ultra Dark Theme, B6 AWD Gas (mild hybrid), Gaso",1,74170.0
+2026-08-01,Mid Luxury SUV,volvo,xc90,"Ultra, B6 AWD Gas (mild hybrid), Gasoline, Brigh",6,73538.83333333333
+2026-08-01,Mid Luxury SUV,volvo,xc90,"Ultra, T8 AWD, Electric/Gasoline, Bright, 6 Seat",1,96690.0
+2026-08-01,Mid Luxury SUV,volvo,xc90,"Ultra, T8 AWD, Electric/Gasoline, Bright, 7 Seat",25,84591.12
+2026-08-01,Near Luxury Car,acura,tlx,SH-AWD w/A-SPEC,4,52195.0
+2026-08-01,Near Luxury Car,acura,tlx,w/Tech,3,46568.0
+2026-08-01,Near Luxury Car,alfa_romeo,giulia,Base,91,53195.494505494506
+2026-08-01,Near Luxury Car,alfa_romeo,giulia,Quadrifoglio,1,81848.0
+2026-08-01,Near Luxury Car,alfa_romeo,giulia,Special Edition AWD,1,44684.0
+2026-08-01,Near Luxury Car,alfa_romeo,giulia,Sprint,43,44219.93023255814
+2026-08-01,Near Luxury Car,alfa_romeo,giulia,Ti,3,47702.666666666664
+2026-08-01,Near Luxury Car,audi,a5,Premium,67,52554.31343283582
+2026-08-01,Near Luxury Car,audi,a5,Premium Plus,360,56668.322222222225
+2026-08-01,Near Luxury Car,audi,a5,Premium Plus TFSI quattro S tronic,2124,55669.77538606403
+2026-08-01,Near Luxury Car,audi,a5,Premium TFSI quattro S tronic,608,52317.15625
+2026-08-01,Near Luxury Car,audi,a5,Prestige,51,58786.882352941175
+2026-08-01,Near Luxury Car,audi,a5,Prestige TFSI quattro S tronic,282,57779.56028368794
+2026-08-01,Near Luxury Car,audi,a5,quattro S line Prem Plus 45 TFSI,1,58384.0
+2026-08-01,Near Luxury Car,audi,s5,Premium,1,64077.0
+2026-08-01,Near Luxury Car,audi,s5,Premium Plus,179,70979.23463687151
+2026-08-01,Near Luxury Car,audi,s5,Premium Plus TFSI quattro S tronic,1108,69784.20487364622
+2026-08-01,Near Luxury Car,audi,s5,Premium TFSI quattro S tronic,18,64300.0
+2026-08-01,Near Luxury Car,audi,s5,Prestige,33,75816.81818181818
+2026-08-01,Near Luxury Car,audi,s5,Prestige TFSI quattro S tronic,223,73385.39910313902
+2026-08-01,Near Luxury Car,bmw,3_series,330i,983,55682.20244150559
+2026-08-01,Near Luxury Car,bmw,3_series,330i NA,1141,55669.43733567047
+2026-08-01,Near Luxury Car,bmw,3_series,330i NA xDrive,1015,57751.66009852217
+2026-08-01,Near Luxury Car,bmw,3_series,330i xDrive,303,57326.544554455446
+2026-08-01,Near Luxury Car,bmw,3_series,M340i NA,135,70287.85185185185
+2026-08-01,Near Luxury Car,bmw,3_series,M340i NA xDrive,143,73218.26573426573
+2026-08-01,Near Luxury Car,bmw,3_series,M340i xDrive,15,75989.8
+2026-08-01,Near Luxury Car,bmw,3_series,NA,603,55686.41791044776
+2026-08-01,Near Luxury Car,bmw,3_series,xDrive,272,57904.283088235294
+2026-08-01,Near Luxury Car,bmw,3_series,xDrive NA,725,57670.96137931034
+2026-08-01,Near Luxury Car,bmw,4_series,430i,595,64523.52112605041
+2026-08-01,Near Luxury Car,bmw,4_series,430i xDrive,205,67710.14591133005
+2026-08-01,Near Luxury Car,bmw,4_series,M440i,154,77166.21675324676
+2026-08-01,Near Luxury Car,bmw,4_series,M440i Gran Coupe,81,73014.27160493827
+2026-08-01,Near Luxury Car,bmw,4_series,M440i xDrive,84,80193.4930952381
+2026-08-01,Near Luxury Car,bmw,4_series,i,63,73585.48412698413
+2026-08-01,Near Luxury Car,bmw,4_series,i xDrive,67,77110.0895522388
+2026-08-01,Near Luxury Car,bmw,4_series,xDrive,218,64692.1823853211
+2026-08-01,Near Luxury Car,bmw,4_series_gran_coupe,xDrive,467,67830.71383297644
+2026-08-01,Near Luxury Car,bmw,m3,Base,55,96910.85454545454
+2026-08-01,Near Luxury Car,bmw,m3,Base (M6),2,97502.5
+2026-08-01,Near Luxury Car,bmw,m3,Competition,39,94601.05128205128
+2026-08-01,Near Luxury Car,bmw,m3,Competition xDrive,171,103378.18713450292
+2026-08-01,Near Luxury Car,bmw,m3,NA,27,71030.14814814815
+2026-08-01,Near Luxury Car,bmw,m3,xDrive,3,74270.0
+2026-08-01,Near Luxury Car,bmw,m3,xDrive NA,24,72791.95833333333
+2026-08-01,Near Luxury Car,bmw,m4,Base,71,94904.21126760563
+2026-08-01,Near Luxury Car,bmw,m4,Competition,228,106261.11403508772
+2026-08-01,Near Luxury Car,bmw,m4,Competition xDrive,135,104993.94074074074
+2026-08-01,Near Luxury Car,cadillac,ct5,Base,4,68512.25
+2026-08-01,Near Luxury Car,cadillac,ct5,Premium Luxury,34,54481.55882352941
+2026-08-01,Near Luxury Car,cadillac,ct5,Premium Luxury RWD,1752,55670.602739726026
+2026-08-01,Near Luxury Car,cadillac,ct5,Sport,23,54517.30434782609
+2026-08-01,Near Luxury Car,cadillac,ct5,Sport RWD,1297,57964.299151888976
+2026-08-01,Near Luxury Car,cadillac,ct5,V-Series Blackwing RWD,73,132615.301369863
+2026-08-01,Near Luxury Car,cadillac,ct5,V-Series RWD,153,68720.62091503268
+2026-08-01,Near Luxury Car,genesis,g70,2.5T,3,45518.666666666664
+2026-08-01,Near Luxury Car,genesis,g70,2.5T AWD,178,48077.151685393255
+2026-08-01,Near Luxury Car,genesis,g70,2.5T AWD Prestige,4,53213.75
+2026-08-01,Near Luxury Car,genesis,g70,2.5T Prestige,2,51031.5
+2026-08-01,Near Luxury Car,genesis,g70,2.5T RWD,279,46320.77777777778
+2026-08-01,Near Luxury Car,genesis,g70,2.5T RWD Prestige,221,51124.86877828054
+2026-08-01,Near Luxury Car,genesis,g70,2.5T Standard,22,44664.13636363636
+2026-08-01,Near Luxury Car,genesis,g70,3.3T AWD Sport Prestige,874,56331.4771167048
+2026-08-01,Near Luxury Car,genesis,g70,3.3T Prestige Graphite,218,60380.85321100918
+2026-08-01,Near Luxury Car,genesis,g70,3.3T RWD Sport Prestige,618,56463.62621359223
+2026-08-01,Near Luxury Car,genesis,g70,3.3T Sport Advanced,21,53938.52380952381
+2026-08-01,Near Luxury Car,lexus,es_series,Base,2,50074.5
+2026-08-01,Near Luxury Car,lexus,es_series,Luxury,97,62113.0824742268
+2026-08-01,Near Luxury Car,lexus,es_series,Luxury AWD,34,63323.73529411765
+2026-08-01,Near Luxury Car,lexus,es_series,Premium,1216,55327.01430921053
+2026-08-01,Near Luxury Car,lexus,es_series,Premium AWD,1,54166.0
+2026-08-01,Near Luxury Car,lexus,es_series,Premium+,462,58954.357142857145
+2026-08-01,Near Luxury Car,lexus,is_series,F SPORT,1681,56641.913741820346
+2026-08-01,Near Luxury Car,lexus,is_series,F SPORT Design,624,51199.85852564102
+2026-08-01,Near Luxury Car,mercedes_benz,c_class,AMG C 43,445,75299.85168539325
+2026-08-01,Near Luxury Car,mercedes_benz,c_class,AMG C 63 S E Performance,12,104295.66666666667
+2026-08-01,Near Luxury Car,mercedes_benz,c_class,C 300,3468,55956.6291810842
+2026-08-01,Near Luxury Car,mercedes_benz,c_class,C 300 4MATIC,3017,57821.851839575735
+2026-08-01,Near Luxury Car,volvo,s60_v60,B5 Core Dark Theme,2,45317.5
+2026-08-01,Near Luxury Car,volvo,s60_v60,B5 Plus,281,54897.434163701066
+2026-08-01,Near Luxury Car,volvo,s60_v60,B5 Ultra,85,59409.50588235294
+2026-08-01,Near Luxury Car,volvo,s60_v60,"Plus, B5 AWD Gas (mild hybrid)",6,55198.333333333336
+2026-08-01,Near Luxury Car,volvo,s60_v60,T8 Plus Dark Theme,1,58520.0
+2026-08-01,Near Luxury Car,volvo,s60_v60,T8 Ultra,1,145356.0
+2026-08-01,Near Luxury EV SUV,audi,q4_e_tron,Premium,2,58901.0
+2026-08-01,Near Luxury EV SUV,audi,q4_e_tron,quattro Premium 55 TFSI,1,59375.0
+2026-08-01,Near Luxury EV SUV,audi,q4_e_tron,quattro Premium Plus 55,1,62848.0
+2026-08-01,Near Luxury EV SUV,audi,q4_e_tron,quattro Premium Plus 55 TFSI,2,63596.0
+2026-08-01,Near Luxury EV SUV,cadillac,optiq,Luxury,612,55214.37091503268
+2026-08-01,Near Luxury EV SUV,cadillac,optiq,Luxury 1 AWD,3,55409.333333333336
+2026-08-01,Near Luxury EV SUV,cadillac,optiq,Luxury 2 AWD,2,57259.5
+2026-08-01,Near Luxury EV SUV,cadillac,optiq,OPTIQ-V,10,77680.6
+2026-08-01,Near Luxury EV SUV,cadillac,optiq,Premium Luxury,142,59107.00704225352
+2026-08-01,Near Luxury EV SUV,cadillac,optiq,Premium Sport,275,60071.73454545454
+2026-08-01,Near Luxury EV SUV,cadillac,optiq,Sport,805,56409.57142857143
+2026-08-01,Near Luxury EV SUV,cadillac,optiq,Sport 1 AWD,4,55508.75
+2026-08-01,Near Luxury EV SUV,cadillac,optiq,Sport 2 AWD,11,57967.27272727273
+2026-08-01,Near Luxury EV SUV,cadillac,optiq,V-Series,76,75458.48684210527
+2026-08-01,Near Luxury EV SUV,genesis,gv70_ev,"19""""",10,61243.3
+2026-08-01,Near Luxury EV SUV,genesis,gv70_ev,Advanced,3,72410.33333333333
+2026-08-01,Near Luxury EV SUV,genesis,gv70_ev,"Advanced 20""""",7,69589.28571428571
+2026-08-01,Near Luxury EV SUV,genesis,gv70_ev,Base,3,70923.33333333333
+2026-08-01,Near Luxury EV SUV,genesis,gv70_ev,"Prestige 20""""",28,73701.71428571429
+2026-08-01,Near Luxury EV SUV,genesis,gv70_ev,Standard,7,67556.14285714286
+2026-08-01,Near Luxury EV SUV,lexus,rz_series,F SPORT,32,60184.7915625
+2026-08-01,Near Luxury EV SUV,lexus,rz_series,Luxury,6,57256.5
+2026-08-01,Near Luxury EV SUV,lexus,rz_series,Premium,318,51343.27421383647
+2026-08-01,Near Luxury EV SUV,mercedes_benz,eqb,EQB 300 4MATIC,2,53971.5
+2026-08-01,Near Luxury EV SUV,mercedes_benz,eqb,EQB 350 4MATIC,1,63245.0
+2026-08-01,Near Luxury EV SUV,porsche,macan_electric,4S,41,110262.14634146342
+2026-08-01,Near Luxury EV SUV,porsche,macan_electric,GTS,108,124311.70370370371
+2026-08-01,Near Luxury SUV,acura,rdx,A-Spec,4,53459.75
+2026-08-01,Near Luxury SUV,acura,rdx,Advance,1,55555.0
+2026-08-01,Near Luxury SUV,acura,rdx,SH-AWD,10,46537.3
+2026-08-01,Near Luxury SUV,acura,rdx,SH-AWD w/A-SPEC,31,51793.10344827586
+2026-08-01,Near Luxury SUV,acura,rdx,SH-AWD w/Advance,6,54428.6
+2026-08-01,Near Luxury SUV,acura,rdx,SH-AWD w/Advance w/A-SPEC,4,56525.5
+2026-08-01,Near Luxury SUV,acura,rdx,SH-AWD w/Tech,11,49328.9
+2026-08-01,Near Luxury SUV,acura,rdx,Technology,3,50463.0
+2026-08-01,Near Luxury SUV,acura,rdx,w/A-Spec Advance Package,777,56885.78451612903
+2026-08-01,Near Luxury SUV,acura,rdx,w/A-Spec Package,994,52707.46068548387
+2026-08-01,Near Luxury SUV,acura,rdx,w/Advance Package,632,54748.84810126582
+2026-08-01,Near Luxury SUV,acura,rdx,w/Technology Package,1207,49688.82850041425
+2026-08-01,Near Luxury SUV,alfa_romeo,stelvio,AWD,217,58034.5668202765
+2026-08-01,Near Luxury SUV,alfa_romeo,stelvio,Base,25,49221.76
+2026-08-01,Near Luxury SUV,alfa_romeo,stelvio,Quadrifoglio,13,84518.46153846153
+2026-08-01,Near Luxury SUV,alfa_romeo,stelvio,Sprint,52,50776.096153846156
+2026-08-01,Near Luxury SUV,alfa_romeo,stelvio,Ti,1,37298.0
+2026-08-01,Near Luxury SUV,audi,q5_sq5,2.0T,338,56323.7100591716
+2026-08-01,Near Luxury SUV,audi,q5_sq5,2.0T Progressiv,9,59538.11111111111
+2026-08-01,Near Luxury SUV,audi,q5_sq5,2.0T Technik,1,68028.0
+2026-08-01,Near Luxury SUV,audi,q5_sq5,Premium,138,55339.760869565216
+2026-08-01,Near Luxury SUV,audi,q5_sq5,Premium Plus,378,59135.497354497355
+2026-08-01,Near Luxury SUV,audi,q5_sq5,Premium Plus TFSI quattro S tronic,2827,58449.46727980191
+2026-08-01,Near Luxury SUV,audi,q5_sq5,Premium TFSI quattro S tronic,902,55032.031042128605
+2026-08-01,Near Luxury SUV,audi,q5_sq5,Prestige,30,64065.4
+2026-08-01,Near Luxury SUV,audi,q5_sq5,Prestige TFSI quattro S tronic,320,63111.225
+2026-08-01,Near Luxury SUV,audi,q5_sq5,quattro S line Prem Plus 45 TFSI,7,52863.857142857145
+2026-08-01,Near Luxury SUV,audi,sq5,3.0T quattro Premium Plus,1,68794.0
+2026-08-01,Near Luxury SUV,audi,sq5,Premium Plus,240,72633.41666666667
+2026-08-01,Near Luxury SUV,audi,sq5,Premium Plus TFSI quattro S tronic,1630,71595.46319018405
+2026-08-01,Near Luxury SUV,audi,sq5,Premium TFSI quattro S tronic,8,67350.875
+2026-08-01,Near Luxury SUV,audi,sq5,Presige TFSI quattro S tronic,211,75666.85308056872
+2026-08-01,Near Luxury SUV,audi,sq5,Prestige,29,76691.75862068965
+2026-08-01,Near Luxury SUV,bmw,ix3,50 xDrive,213,73805.72300469484
+2026-08-01,Near Luxury SUV,bmw,x3,30 xDrive,11411,59997.13671019192
+2026-08-01,Near Luxury SUV,bmw,x3,M40i,1,69683.0
+2026-08-01,Near Luxury SUV,bmw,x3,M50 xDrive,894,75398.07270693513
+2026-08-01,Near Luxury SUV,cadillac,xt4,Premium Luxury,2,43789.0
+2026-08-01,Near Luxury SUV,cadillac,xt4,Sport,1,47890.0
+2026-08-01,Near Luxury SUV,genesis,gv70,2.5T,764,51600.153141361254
+2026-08-01,Near Luxury SUV,genesis,gv70,2.5T Advanced,2082,59281.48991354467
+2026-08-01,Near Luxury SUV,genesis,gv70,2.5T Prestige,2,61646.5
+2026-08-01,Near Luxury SUV,genesis,gv70,2.5T Select,868,54607.20506912442
+2026-08-01,Near Luxury SUV,genesis,gv70,2.5T Sport Prestige,1597,62420.55792110207
+2026-08-01,Near Luxury SUV,genesis,gv70,2.5T Standard,16,54220.375
+2026-08-01,Near Luxury SUV,genesis,gv70,3.5T Prestige Graphite,297,75202.04377104377
+2026-08-01,Near Luxury SUV,genesis,gv70,3.5T Sport,30,64568.46666666667
+2026-08-01,Near Luxury SUV,genesis,gv70,3.5T Sport Advanced,237,65621.37130801688
+2026-08-01,Near Luxury SUV,genesis,gv70,3.5T Sport Prestige,1255,72244.66215139443
+2026-08-01,Near Luxury SUV,infiniti,qx50,Sport,1,55324.0
+2026-08-01,Near Luxury SUV,infiniti,qx55,Essential,1,56749.0
+2026-08-01,Near Luxury SUV,infiniti,qx55,Luxe,1,47036.0
+2026-08-01,Near Luxury SUV,infiniti,qx55,Sensory,1,57924.0
+2026-08-01,Near Luxury SUV,jaguar,e_pace,P250 R-Dynamic SE,6,52726.0
+2026-08-01,Near Luxury SUV,land_rover,discovery_sport,Landmark,576,55417.42534722222
+2026-08-01,Near Luxury SUV,land_rover,discovery_sport,P250 Dynamic SE,14,57872.357142857145
+2026-08-01,Near Luxury SUV,land_rover,discovery_sport,P250 S,52,51641.61538461538
+2026-08-01,Near Luxury SUV,land_rover,range_rover_evoque,Hoxton Edition,202,62149.16336633663
+2026-08-01,Near Luxury SUV,land_rover,range_rover_evoque,P250 Dynamic SE,69,62150.72463768116
+2026-08-01,Near Luxury SUV,land_rover,range_rover_evoque,P250 S,452,57231.94911504425
+2026-08-01,Near Luxury SUV,lexus,nx_series,Base,448,55740.213147321425
+2026-08-01,Near Luxury SUV,lexus,nx_series,F SPORT Handling,358,62657.3609117647
+2026-08-01,Near Luxury SUV,lexus,nx_series,Luxury,837,59919.04821983273
+2026-08-01,Near Luxury SUV,lexus,nx_series,Premium,1664,54762.90739783652
+2026-08-01,Near Luxury SUV,maserati,grecale,Base,103,74399.7281553398
+2026-08-01,Near Luxury SUV,maserati,grecale,Folgore,3,120769.33333333333
+2026-08-01,Near Luxury SUV,maserati,grecale,GT,13,63887.153846153844
+2026-08-01,Near Luxury SUV,maserati,grecale,Modena,379,91772.27704485488
+2026-08-01,Near Luxury SUV,maserati,grecale,Trofeo,22,123396.22727272728
+2026-08-01,Near Luxury SUV,mercedes_benz,benz_amg_glc,4MATIC,149,84298.11422818791
+2026-08-01,Near Luxury SUV,mercedes_benz,glb,AMG GLB 35,255,66487.50980392157
+2026-08-01,Near Luxury SUV,mercedes_benz,glb,GLB 250,1657,50942.25226312613
+2026-08-01,Near Luxury SUV,mercedes_benz,glb,GLB 250 4MATIC,1623,53592.927911275416
+2026-08-01,Near Luxury SUV,mercedes_benz,glc_class,4MATIC,314,68309.68766773163
+2026-08-01,Near Luxury SUV,mercedes_benz,glc_class,4MATIC SUV,753,60306.0
+2026-08-01,Near Luxury SUV,mercedes_benz,glc_class,AMG GLC 43,524,76517.9713740458
+2026-08-01,Near Luxury SUV,mercedes_benz,glc_class,GLC 300,6510,60222.14362519201
+2026-08-01,Near Luxury SUV,mercedes_benz,glc_class,GLC 300 4MATIC,5596,60589.36579699785
+2026-08-01,Near Luxury SUV,mercedes_benz,glc_class,GLC 350e 4MATIC,30,69440.83333333333
+2026-08-01,Near Luxury SUV,porsche,macan,4 Electric,303,101644.20792079208
+2026-08-01,Near Luxury SUV,porsche,macan,Base,3052,81794.26933158585
+2026-08-01,Near Luxury SUV,porsche,macan,Electric,206,96874.1213592233
+2026-08-01,Near Luxury SUV,porsche,macan,Electric Turbo,76,135201.84210526315
+2026-08-01,Near Luxury SUV,porsche,macan,GTS,216,114339.07943925234
+2026-08-01,Near Luxury SUV,porsche,macan,S,947,98646.92291446673
+2026-08-01,Near Luxury SUV,porsche,macan,T,407,83750.91133004926
+2026-08-01,Near Luxury SUV,porsche,macan,Turbo Electric,19,131644.36842105264
+2026-08-01,Near Luxury SUV,volvo,xc60,B5 Core,481,50059.96465696466
+2026-08-01,Near Luxury SUV,volvo,xc60,B5 Core Dark Theme,1,51125.0
+2026-08-01,Near Luxury SUV,volvo,xc60,B5 Plus,2630,56373.142205323195
+2026-08-01,Near Luxury SUV,volvo,xc60,B5 Ultra,1169,62547.39863130881
+2026-08-01,Near Luxury SUV,volvo,xc60,B5 Ultra Black Edition,287,64035.871080139375
+2026-08-01,Near Luxury SUV,volvo,xc60,"Black Edition Ultra, T8 AWD Electric/Gasoline, D",1,75685.0
+2026-08-01,Near Luxury SUV,volvo,xc60,Core,25,54182.16
+2026-08-01,Near Luxury SUV,volvo,xc60,Plus,56,59740.517857142855
+2026-08-01,Near Luxury SUV,volvo,xc60,Plus Dark Theme,1076,59752.630111524166
+2026-08-01,Near Luxury SUV,volvo,xc60,"Plus, T8 AWD Electric/Gasoline, Dark",20,66113.65
+2026-08-01,Near Luxury SUV,volvo,xc60,T8 Core,96,60629.60638297872
+2026-08-01,Near Luxury SUV,volvo,xc60,T8 Plus,876,66491.61415525114
+2026-08-01,Near Luxury SUV,volvo,xc60,T8 Polestar Engineered,82,80366.65853658537
+2026-08-01,Near Luxury SUV,volvo,xc60,T8 Ultra,745,72519.44429530202
+2026-08-01,Near Luxury SUV,volvo,xc60,T8 Ultra Black Edition,217,73918.2534562212
+2026-08-01,Near Luxury SUV,volvo,xc60,Ultra,48,65276.104166666664
+2026-08-01,Near Luxury SUV,volvo,xc60,Ultra Dark Theme,526,67572.30988593157
+2026-08-01,Near Luxury SUV,volvo,xc60,"Ultra, T8 AWD Electric/Gasoline, Dark",10,73919.0
+2026-08-01,Near Luxury SUV,volvo,xc60_recharge,T8 Polestar Engineered,1,68451.0
+2026-08-01,Premium Luxury Car,audi,a8_s8,4.0T quattro,122,133388.94262295082
+2026-08-01,Premium Luxury Car,audi,a8_s8,55 TFSI quattro Tiptronic,301,96080.11627906977
+2026-08-01,Premium Luxury Car,bentley,flying_spur,Azure Hybrid,141,313774.00746268657
+2026-08-01,Premium Luxury Car,bentley,flying_spur,Black Edition,5,302512.6
+2026-08-01,Premium Luxury Car,bentley,flying_spur,Speed,7,340525.85714285716
+2026-08-01,Premium Luxury Car,bentley,flying_spur,Speed First Edition,5,330862.0
+2026-08-01,Premium Luxury Car,bmw,7_series,740i,347,110024.77233429394
+2026-08-01,Premium Luxury Car,bmw,7_series,740i xDrive,241,116991.69709543568
+2026-08-01,Premium Luxury Car,bmw,7_series,750e xDrive,350,121808.94
+2026-08-01,Premium Luxury Car,bmw,7_series,760i xDrive,167,138515.39520958083
+2026-08-01,Premium Luxury Car,bmw,7_series,xDrive,317,126838.73432176656
+2026-08-01,Premium Luxury Car,genesis,g90,3.5T,14,91209.57142857143
+2026-08-01,Premium Luxury Car,genesis,g90,3.5T E-SC MHEV AWD,348,102171.18103448275
+2026-08-01,Premium Luxury Car,genesis,g90,3.5T e-Supercharger,58,103151.36206896552
+2026-08-01,Premium Luxury Car,genesis,g90,e-SC Prestige Black,122,105295.95901639345
+2026-08-01,Premium Luxury Car,maserati,quattroporte,Modena Ultima Q4,2,120949.0
+2026-08-01,Premium Luxury Car,mercedes_benz,s_class,AMG S 63 E Performance,210,210956.46666666667
+2026-08-01,Premium Luxury Car,mercedes_benz,s_class,Maybach S 680,30,260721.66666666666
+2026-08-01,Premium Luxury Car,mercedes_benz,s_class,Mercedes-Maybach S 580 4MATIC,65,220276.9076923077
+2026-08-01,Premium Luxury Car,mercedes_benz,s_class,Mercedes-Maybach S 680 4MATIC,3,274724.6666666667
+2026-08-01,Premium Luxury Car,mercedes_benz,s_class,S 500,13,121931.30769230769
+2026-08-01,Premium Luxury Car,mercedes_benz,s_class,S 500 4MATIC,27,133999.25925925927
+2026-08-01,Premium Luxury Car,mercedes_benz,s_class,S 580,98,147626.8469387755
+2026-08-01,Premium Luxury Car,mercedes_benz,s_class,S 580 4MATIC,263,146618.46007604562
+2026-08-01,Premium Luxury Car,mercedes_benz,s_class,S 580e 4MATIC,24,140188.75
+2026-08-01,Premium Luxury Car,porsche,panamera,4,503,144489.5347912525
+2026-08-01,Premium Luxury Car,porsche,panamera,4 E-Hybrid,6,153140.0
+2026-08-01,Premium Luxury Car,porsche,panamera,4S,7,175171.14285714287
+2026-08-01,Premium Luxury Car,porsche,panamera,Base,193,136588.9378238342
+2026-08-01,Premium Luxury Car,porsche,panamera,GTS,77,193819.80263157896
+2026-08-01,Premium Luxury Car,porsche,panamera,Turbo,5,243083.2
+2026-08-01,Premium Luxury Car,porsche,panamera,Turbo S E-Hybrid,1,289385.0
+2026-08-01,Premium Luxury Car,rolls_royce,ghost,Base,14,427001.76923076925
+2026-08-01,Premium Luxury Car,rolls_royce,ghost,Black Badge,11,488106.8181818182
+2026-08-01,Premium Luxury Car,rolls_royce,phantom,Base,2,703231.0

@@ -1,0 +1,467 @@
+{
+  "schema_version": "hma_supervisor_context_v1",
+  "generated_at": "2026-09-17T20:07:54.007274+00:00",
+  "data_generated_at": "2026-09-17T06:38:20.209765+00:00",
+  "input_hash": "0e4795e12cbda253d816008f6861677d4010a1ef973423f887ea7d5d5654f24b",
+  "endpoint_role": "explanatory_context_only",
+  "metric_authority": "direct_notebook_table_exports",
+  "invocation_mode": "audit_revalidation",
+  "contexts": {
+    "Elantra|2026-08-01|prior3ma|special": {
+      "selection_key": "Elantra|2026-08-01|prior3ma|special",
+      "status": "ok",
+      "hypotheses": [
+        {
+          "claim_id": "inventory_constraint_vs_corolla_surge",
+          "summary": "Elantra's retail share decline may reflect constrained inventory availability (64.6 days supply, down 7.9 days vs. prior 3-month average) coinciding with Corolla's +2.6 pp retail share gain during a period when Corolla inventory fell sharply to 35.2 days supply.",
+          "support_level": "possible_contributor",
+          "confidence": "medium",
+          "evidence_ids": [
+            "retail_change",
+            "comp_retail_gainer",
+            "inventory_change",
+            "inventory_units_change"
+          ],
+          "agent_sources": [
+            "agent_cloudtheory-max02"
+          ],
+          "source_records": [
+            {
+              "title": "Elantra August 2026 inventory metrics vs. prior 3-month average",
+              "date": "2026-08-01",
+              "locator": "CloudTheory Inventory Agent query result",
+              "evidence_detail": "Elantra average days supply was 64.6 in August 2026, down 7.9 days from the May-July 2026 average of 72.5 days; in-stock inventory units were 26,215, down 4,758 units (-15.4%) from the prior 3-month average of 30,973 units"
+            },
+            {
+              "title": "Corolla August 2026 inventory metrics vs. prior 3-month average",
+              "date": "2026-08-01",
+              "locator": "CloudTheory Inventory Agent query result",
+              "evidence_detail": "Corolla average days supply was 35.2 in August 2026, down 5.1 days (-12.7%) from the prior 3-month average of 40.4 days; in-stock inventory units were 13,983, down 6,005 units (-30.0%) from the prior 3-month average of 19,988 units"
+            }
+          ],
+          "numeric_policy": "context_only; governed dashboard metrics remain authoritative"
+        },
+        {
+          "claim_id": "elantra_pace_strength_vs_civic_weakness",
+          "summary": "Elantra's August 2026 daily sales pace rose 16.2% year-over-year to 349 units per day, while Civic's pace fell 7.8% to 579 units per day, suggesting Elantra's retail share loss may reflect segment-wide dynamics rather than model-specific demand weakness.",
+          "support_level": "contradictory",
+          "confidence": "medium",
+          "evidence_ids": [
+            "retail_change",
+            "retail_units_change",
+            "comp_retail_decliner"
+          ],
+          "agent_sources": [
+            "agent_marketview_2.0"
+          ],
+          "source_records": [
+            {
+              "title": "Elantra MTD sales pace August 2026 vs. August 2025",
+              "date": "2026-08-28",
+              "locator": "MarketView Sales Agent query result",
+              "evidence_detail": "Elantra MTD sales pace was 349.3 units per day through August 28, 2026, up 16.2% (+48.7 units/day) versus August 2025 pace of 300.6 units per day"
+            },
+            {
+              "title": "Civic MTD sales pace August 2026 vs. August 2025",
+              "date": "2026-08-28",
+              "locator": "MarketView Sales Agent query result",
+              "evidence_detail": "Civic MTD sales pace was 579.4 units per day through August 28, 2026, down 7.8% (-49.2 units/day) versus August 2025 pace of 628.6 units per day"
+            }
+          ],
+          "numeric_policy": "context_only; governed dashboard metrics remain authoritative"
+        }
+      ],
+      "warnings": [
+        "hypothesis 2: invalid agent source"
+      ]
+    },
+    "Tucson|2026-08-01|prior3ma|special": {
+      "selection_key": "Tucson|2026-08-01|prior3ma|special",
+      "status": "ok",
+      "hypotheses": [
+        {
+          "claim_id": "tucson_momentum_inventory_constraint",
+          "summary": "Tucson's August search and retail share gains may reflect sustained inventory drawdown easing supply constraints; inventory fell 19.6% versus the prior three-month average while days supply tightened to 51 days, consistent with improving sales velocity.",
+          "support_level": "corroborating",
+          "confidence": "high",
+          "evidence_ids": [
+            "search_change",
+            "retail_change",
+            "inventory_change",
+            "search_volume_change",
+            "retail_units_change",
+            "inventory_units_change"
+          ],
+          "agent_sources": [
+            "agent_cloudtheory-max02",
+            "agent_srs_sales-max02",
+            "agent_googleadops"
+          ],
+          "source_records": [
+            {
+              "title": "CloudTheory Inventory Agent - Tucson inventory trend May-August 2026",
+              "date": "2026-08-01",
+              "locator": "ius_unity_prod.sandbox.agent_cloudtheory_inventory_daily",
+              "evidence_detail": "Tucson inventory declined from 41,888 units in May 2026 to 33,686 units in August 2026, a 19.6% decrease versus the prior three-month average"
+            },
+            {
+              "title": "CloudTheory Inventory Agent - Tucson days supply August 2026",
+              "date": "2026-08-01",
+              "locator": "ius_unity_prod.sandbox.agent_cloudtheory_inventory_daily",
+              "evidence_detail": "Tucson days supply in August 2026 was 50.67 days"
+            },
+            {
+              "title": "SRS Sales Agent - Tucson retail sales units August 2026",
+              "date": "2026-08-01",
+              "locator": "ius_unity_prod.sandbox.agent_srs_sales",
+              "evidence_detail": "Tucson retail sales in August 2026 were 17,542 units, up 6.4% versus the prior three-month average of 16,492 units"
+            }
+          ],
+          "numeric_policy": "context_only; governed dashboard metrics remain authoritative"
+        },
+        {
+          "claim_id": "tucson_search_momentum_product_news",
+          "summary": "Tucson's +20.1% indexed search opportunity growth versus the prior three months coincided with June 2026 product announcements expanding the hybrid lineup with new FWD trims and a Night edition, which may have broadened shopping consideration.",
+          "support_level": "possible_contributor",
+          "confidence": "medium",
+          "evidence_ids": [
+            "search_change",
+            "search_volume_change",
+            "event_35e1ec65f54d"
+          ],
+          "agent_sources": [
+            "agent_googleadops"
+          ],
+          "source_records": [
+            {
+              "title": "Google AdOps Agent - Tucson indexed search opportunity August 2026",
+              "date": "2026-08-01",
+              "locator": "ius_unity_prod.sandbox.agent_googleadops",
+              "evidence_detail": "Tucson indexed search opportunity volume in August 2026 was 205.23, representing a 20.1% increase versus the prior three-month average of 170.88"
+            },
+            {
+              "title": "Hyundai Newsroom - 2026 Tucson Hybrid lineup expansion",
+              "date": "2026-06-01",
+              "locator": "https://www.hyundainews.com/releases/4810",
+              "evidence_detail": "New attainable FWD hybrid trims and a blacked-out Night grade broaden Tucson's price and style coverage, which could support renewed model-specific search activity and retail consideration"
+            }
+          ],
+          "numeric_policy": "context_only; governed dashboard metrics remain authoritative"
+        }
+      ],
+      "warnings": [
+        "hypothesis 3: numeric context is not repeated in a cited source record"
+      ]
+    },
+    "Santa Fe|2026-08-01|prior3ma|special": {
+      "selection_key": "Santa Fe|2026-08-01|prior3ma|special",
+      "status": "ok",
+      "hypotheses": [
+        {
+          "claim_id": "inventory_tightening_retail_surge",
+          "summary": "Santa Fe's +18.9% retail unit surge may reflect constrained in-stock inventory, which fell 9.5% while days supply dropped 25.8%, potentially creating urgency among buyers facing reduced immediate availability.",
+          "support_level": "corroborating",
+          "confidence": "high",
+          "evidence_ids": [
+            "retail_units_change",
+            "inventory_units_change",
+            "inventory_change"
+          ],
+          "agent_sources": [
+            "agent_cloudtheory-max02",
+            "agent_srs_sales-max02"
+          ],
+          "source_records": [
+            {
+              "title": "Santa Fe In-Stock Inventory Analysis",
+              "date": "2026-08-01",
+              "locator": "CloudTheory Inventory Agent - Santa Fe location_status breakdown",
+              "evidence_detail": "In-stock inventory declined 9.47% (37,101 units in August vs 40,983 prior 3-month average) while days supply fell 25.79% (79.4 days vs 107.0 days)"
+            },
+            {
+              "title": "Santa Fe Retail Performance",
+              "date": "2026-08-01",
+              "locator": "SRS Sales Agent - Santa Fe Compact SUV segment analysis",
+              "evidence_detail": "Santa Fe retail units rose to 12,722 in August 2026 from 10,698 prior 3-month average, representing an 18.9% increase"
+            }
+          ],
+          "numeric_policy": "context_only; governed dashboard metrics remain authoritative"
+        }
+      ],
+      "warnings": [
+        "hypothesis 2: numeric context is not repeated in a cited source record",
+        "hypothesis 3: summary lacks cautious explanatory language"
+      ]
+    },
+    "Kona|2026-08-01|prior3ma|special": {
+      "selection_key": "Kona|2026-08-01|prior3ma|special",
+      "status": "ok",
+      "hypotheses": [
+        {
+          "claim_id": "seltos_redesign_momentum",
+          "summary": "Kona's search and retail share declines may reflect the redesigned 2027 Seltos capturing consideration and sales, with Seltos search share climbing from 4.82% in May to 8.64% in August while inventory rose 12.8% versus the prior three months.",
+          "support_level": "corroborating",
+          "confidence": "high",
+          "evidence_ids": [
+            "search_change",
+            "retail_change",
+            "comp_search_gainer",
+            "comp_retail_gainer",
+            "event_dd212aaf1e62"
+          ],
+          "agent_sources": [
+            "agent_googleadops",
+            "agent_cloudtheory-max02"
+          ],
+          "source_records": [
+            {
+              "title": "Kia Seltos monthly indexed search opportunity share, Entry CUV segment",
+              "date": "2026-08-01",
+              "locator": "agent_googleadops query: monthly indexed search opportunity share for Kia Seltos in Entry CUV segment May-August 2026",
+              "evidence_detail": "Seltos search share rose from 4.82% in May 2026 to 8.64% in August 2026, a sustained climb following the June 3 redesigned 2027 model announcement"
+            },
+            {
+              "title": "Kia Seltos and Hyundai Kona average inventory units comparison",
+              "date": "2026-08-01",
+              "locator": "agent_cloudtheory-max02 query: average inventory units for Kia Seltos versus Hyundai Kona in August 2026 versus May-July 2026 average",
+              "evidence_detail": "Seltos average inventory rose from 13,459 units (May-July 2026 average) to 15,185 units in August 2026, a 12.8% increase, while Kona rose 4.4% to 14,832 units"
+            },
+            {
+              "title": "Kia announces pricing for all-new 2027 Seltos",
+              "date": "2026-06-03",
+              "locator": "https://www.kiamedia.com/us/en/media/pressreleases/24758/kia-announces-pricing-for-all-new-2027-seltos",
+              "evidence_detail": "The redesigned Seltos launched June 3, 2026 with larger dimensions, expanded technology, multiple gas powertrains and a $24,990 starting MSRP"
+            }
+          ],
+          "numeric_policy": "context_only; governed dashboard metrics remain authoritative"
+        },
+        {
+          "claim_id": "kona_incentive_pullback",
+          "summary": "Kona's share losses coincided with a sharp incentive reduction—blended incentives fell from $2,245 (May-July average) to $1,341 in August—while Seltos incentives dropped even further to $398, suggesting Kona may have lost relative value appeal despite maintaining higher absolute spending.",
+          "support_level": "possible_contributor",
+          "confidence": "medium",
+          "evidence_ids": [
+            "search_change",
+            "retail_change",
+            "comp_search_gainer",
+            "comp_retail_gainer"
+          ],
+          "agent_sources": [
+            "agent_coxautomotive-max02"
+          ],
+          "source_records": [
+            {
+              "title": "Hyundai Kona and Kia Seltos blended incentive spending comparison",
+              "date": "2026-08-01",
+              "locator": "agent_coxautomotive-max02 query: blended incentive spending for Hyundai Kona versus Kia Seltos in August 2026 versus May-July 2026 average",
+              "evidence_detail": "Kona blended incentives fell from $2,245 (May-July 2026 average) to $1,341 in August 2026; Seltos incentives fell from $1,221 to $398 in the same period"
+            }
+          ],
+          "numeric_policy": "context_only; governed dashboard metrics remain authoritative"
+        },
+        {
+          "claim_id": "segment_demand_softening",
+          "summary": "Kona's 6.0% decline in indexed search opportunity may reflect broader Entry CUV segment demand softening in August, contributing to the search share loss even as Kona retail units grew 2.3% on a smaller total market.",
+          "support_level": "possible_contributor",
+          "confidence": "medium",
+          "evidence_ids": [
+            "search_volume_change",
+            "search_change",
+            "retail_units_change",
+            "retail_change"
+          ],
+          "agent_sources": [
+            "agent_googleadops"
+          ],
+          "source_records": [
+            {
+              "title": "Kona indexed search opportunity change",
+              "date": "2026-08-01",
+              "locator": "Dashboard fact_id: search_volume_change",
+              "evidence_detail": "Kona indexed search opportunity fell 6.0% in August 2026 versus the prior three-month average"
+            },
+            {
+              "title": "Kona retail units change",
+              "date": "2026-08-01",
+              "locator": "Dashboard fact_id: retail_units_change",
+              "evidence_detail": "Kona retail units rose 2.3% in August 2026 versus the prior three-month average, indicating unit growth despite share loss"
+            }
+          ],
+          "numeric_policy": "context_only; governed dashboard metrics remain authoritative"
+        }
+      ],
+      "warnings": []
+    },
+    "Ioniq 5|2026-08-01|prior3ma|special": {
+      "selection_key": "Ioniq 5|2026-08-01|prior3ma|special",
+      "status": "ok",
+      "hypotheses": [
+        {
+          "claim_id": "september_stabilization",
+          "summary": "Ioniq 5's September MTD retail share of 17.6% is consistent with partial recovery from the August constraint period, though this early-month pace remains subject to typical month-end sales concentration in the EV segment.",
+          "support_level": "possible_contributor",
+          "confidence": "low",
+          "evidence_ids": [
+            "retail_change",
+            "inventory_units_change"
+          ],
+          "agent_sources": [
+            "agent_marketview_2.0"
+          ],
+          "source_records": [
+            {
+              "title": "Ioniq 5 September MTD Performance",
+              "date": "2026-09-16",
+              "locator": "MarketView Agent query: MTD retail sales and share September 2026",
+              "evidence_detail": "Ioniq 5 MTD retail share through September 16, 2026 was 17.6% (1,351 units of 7,698 segment sales)"
+            }
+          ],
+          "numeric_policy": "context_only; governed dashboard metrics remain authoritative"
+        }
+      ],
+      "warnings": [
+        "hypothesis 1: numeric context is not repeated in a cited source record",
+        "hypothesis 2: numeric context is not repeated in a cited source record"
+      ]
+    },
+    "Sonata|2026-08-01|prior3ma|special": {
+      "selection_key": "Sonata|2026-08-01|prior3ma|special",
+      "status": "ok",
+      "hypotheses": [
+        {
+          "claim_id": "inventory_velocity_improvement",
+          "summary": "Sonata's share gains may reflect improved inventory velocity and reduced days supply, which fell from 89 days in May-July to 81 days in August 2026, enabling stronger conversion despite lower absolute stock levels.",
+          "support_level": "corroborating",
+          "confidence": "medium",
+          "evidence_ids": [
+            "retail_change",
+            "inventory_change",
+            "inventory_units_change"
+          ],
+          "agent_sources": [
+            "agent_cloudtheory-max02"
+          ],
+          "source_records": [
+            {
+              "title": "CloudTheory Inventory - Sonata days supply and velocity, August 2026",
+              "date": "2026-08-01",
+              "locator": "agent_cloudtheory-max02 query result",
+              "evidence_detail": "Sonata days supply was 81.16 in August 2026 vs 89.25 May-July 2026 average (-9.1% change); inventory velocity was 0.382 in August"
+            }
+          ],
+          "numeric_policy": "context_only; governed dashboard metrics remain authoritative"
+        },
+        {
+          "claim_id": "accord_momentum_divergence",
+          "summary": "Sonata's retail share gain coincided with Accord capturing +4.3 pp retail share while losing -0.5 pp search share, suggesting Accord may have converted existing demand efficiently, leaving competitive search opportunity for Sonata to capture.",
+          "support_level": "possible_contributor",
+          "confidence": "low",
+          "evidence_ids": [
+            "search_change",
+            "retail_change",
+            "comp_search_decliner",
+            "comp_retail_gainer"
+          ],
+          "agent_sources": [
+            "agent_marketview_2.0"
+          ],
+          "source_records": [
+            {
+              "title": "MarketView - Accord daily selling rate acceleration, August 2026",
+              "date": "2026-08-01",
+              "locator": "agent_marketview_2.0 query result",
+              "evidence_detail": "Accord daily selling rate increased 11.6% in August 2026 vs July 2026 (462.5 vs 414.4 units/day)"
+            },
+            {
+              "title": "MarketView - Sonata daily selling rate acceleration, August 2026",
+              "date": "2026-08-01",
+              "locator": "agent_marketview_2.0 query result",
+              "evidence_detail": "Sonata daily selling rate increased 10.8% in August 2026 vs July 2026 (97.4 vs 87.9 units/day)"
+            }
+          ],
+          "numeric_policy": "context_only; governed dashboard metrics remain authoritative"
+        }
+      ],
+      "warnings": [
+        "hypothesis 3: numeric context is not repeated in a cited source record"
+      ]
+    },
+    "Palisade|2026-08-01|prior3ma|special": {
+      "selection_key": "Palisade|2026-08-01|prior3ma|special",
+      "status": "ok",
+      "hypotheses": [
+        {
+          "claim_id": "inventory_availability_advantage",
+          "summary": "Palisade's stable 86-day supply and high in-stock ratio (82.5%) may have supported retail conversion even as search interest declined, particularly against Grand Highlander's constrained availability (45 days, only 11% in-stock).",
+          "support_level": "corroborating",
+          "confidence": "medium",
+          "evidence_ids": [
+            "retail_change",
+            "search_change",
+            "inventory_change",
+            "comp_retail_decliner"
+          ],
+          "agent_sources": [
+            "agent_cloudtheory-max02",
+            "agent_srs_sales-max02"
+          ],
+          "source_records": [
+            {
+              "title": "Palisade inventory availability and location mix, August 2026",
+              "date": "2026-08-01",
+              "locator": "CloudTheory Inventory Agent query result",
+              "evidence_detail": "Palisade maintained 86.15 days supply in August 2026 with 82.52% in-stock availability, compared to 87.77 days in May-July 2026"
+            },
+            {
+              "title": "Grand Highlander inventory constraint, August 2026",
+              "date": "2026-08-01",
+              "locator": "CloudTheory Inventory Agent query result",
+              "evidence_detail": "Grand Highlander had 45.09 days supply with only 11.34% in-stock and 88.66% in-transit in August 2026"
+            },
+            {
+              "title": "Palisade retail share gain and Grand Highlander decline, August 2026",
+              "date": "2026-08-01",
+              "locator": "SRS Sales Agent query result",
+              "evidence_detail": "Palisade achieved 8.46% Midsize SUV segment share (10,088 units) in August 2026 versus 8.26% average in May-July 2026; Grand Highlander held 8.13% share (9,688 units)"
+            }
+          ],
+          "numeric_policy": "context_only; governed dashboard metrics remain authoritative"
+        },
+        {
+          "claim_id": "land_cruiser_search_diversion",
+          "summary": "Land Cruiser's strong search share gain (+0.8 pp) and Telluride's elevated search interest (12.5% share) may have diverted shopping attention from Palisade, while dealer-level availability helped Palisade maintain retail momentum.",
+          "support_level": "possible_contributor",
+          "confidence": "medium",
+          "evidence_ids": [
+            "search_change",
+            "comp_search_gainer",
+            "retail_change",
+            "comp_retail_gainer"
+          ],
+          "agent_sources": [
+            "agent_googleadops",
+            "agent_cloudtheory-max02"
+          ],
+          "source_records": [
+            {
+              "title": "Palisade search share decline versus competitive gainers, August 2026",
+              "date": "2026-08-01",
+              "locator": "Google AdOps Agent query result",
+              "evidence_detail": "Palisade indexed search share was 7.93% in August 2026, down from 8.06% average in May-July 2026 (-0.14 pp), while Telluride held 12.47% search share"
+            },
+            {
+              "title": "Palisade in-stock inventory advantage, August 2026",
+              "date": "2026-08-01",
+              "locator": "CloudTheory Inventory Agent query result",
+              "evidence_detail": "Palisade's in-stock share was 82.52% in August 2026, down 5.7 pp from 88.22% in May-July 2026 but substantially higher than Telluride's 91.48% in-stock"
+            }
+          ],
+          "numeric_policy": "context_only; governed dashboard metrics remain authoritative"
+        }
+      ],
+      "warnings": [
+        "hypothesis 3: numeric context is not repeated in a cited source record"
+      ]
+    }
+  }
+}

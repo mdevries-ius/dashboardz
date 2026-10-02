@@ -1,0 +1,1420 @@
+{
+  "source": {
+    "source_name": "Google AdOps notebook source",
+    "warehouse_id": "4aaf576b2447fe80",
+    "governed_asset": "ius_unity_prod.google_datamart.ad_opportunity_regional_daily"
+  },
+  "statement_id": "01f1b262-4e5b-11f7-8a81-c8f79f1d880e",
+  "columns": [
+    "date_month",
+    "model",
+    "segment",
+    "model_search_volume",
+    "segment_search_volume",
+    "search_share",
+    "standard_segment_search_volume",
+    "standard_search_share"
+  ],
+  "rows": [
+    {
+      "date_month": "2025-01-01",
+      "model": "Elantra",
+      "segment": "Compact Car",
+      "model_search_volume": "111.04449999999999",
+      "segment_search_volume": "1487.6168999999998",
+      "search_share": "0.07464589841645386",
+      "standard_segment_search_volume": "1677.3517999999995",
+      "standard_search_share": "0.06620227193842104"
+    },
+    {
+      "date_month": "2025-01-01",
+      "model": "Ioniq 5",
+      "segment": "Mainstream EV SUV 2 Row",
+      "model_search_volume": "64.07789999999999",
+      "segment_search_volume": "871.5803999999998",
+      "search_share": "0.07351920717813296",
+      "standard_segment_search_volume": "566.9867999999999",
+      "standard_search_share": "0.11301480034455828"
+    },
+    {
+      "date_month": "2025-01-01",
+      "model": "Kona",
+      "segment": "Entry CUV",
+      "model_search_volume": "76.58069999999998",
+      "segment_search_volume": "915.6645999999997",
+      "search_share": "0.08363400747391567",
+      "standard_segment_search_volume": "1055.9099999999999",
+      "standard_search_share": "0.0725257834474529"
+    },
+    {
+      "date_month": "2025-01-01",
+      "model": "Palisade",
+      "segment": "Midsize SUV",
+      "model_search_volume": "166.14659999999992",
+      "segment_search_volume": "2339.6594999999984",
+      "search_share": "0.07101315383712888",
+      "standard_segment_search_volume": "2399.6628999999984",
+      "standard_search_share": "0.06923747498033996"
+    },
+    {
+      "date_month": "2025-01-01",
+      "model": "Santa Fe",
+      "segment": "Compact SUV",
+      "model_search_volume": "148.18239999999994",
+      "segment_search_volume": "1937.2376999999994",
+      "search_share": "0.07649159419104841",
+      "standard_segment_search_volume": "1938.922599999999",
+      "standard_search_share": "0.07642512393222918"
+    },
+    {
+      "date_month": "2025-01-01",
+      "model": "Sonata",
+      "segment": "Midsize Car",
+      "model_search_volume": "74.7535",
+      "segment_search_volume": "949.9383999999998",
+      "search_share": "0.07869299735646018",
+      "standard_segment_search_volume": "1262.5089999999998",
+      "standard_search_share": "0.059210270976286124"
+    },
+    {
+      "date_month": "2025-01-01",
+      "model": "Tucson",
+      "segment": "Sub-Compact SUV",
+      "model_search_volume": "202.49579999999995",
+      "segment_search_volume": "2097.146399999999",
+      "search_share": "0.09655777965715699",
+      "standard_segment_search_volume": "2300.4345999999996",
+      "standard_search_share": "0.0880250192724453"
+    },
+    {
+      "date_month": "2025-02-01",
+      "model": "Elantra",
+      "segment": "Compact Car",
+      "model_search_volume": "97.90689999999996",
+      "segment_search_volume": "1305.8328999999999",
+      "search_share": "0.0749765915684924",
+      "standard_segment_search_volume": "1474.0368999999992",
+      "standard_search_share": "0.06642092881121227"
+    },
+    {
+      "date_month": "2025-02-01",
+      "model": "Ioniq 5",
+      "segment": "Mainstream EV SUV 2 Row",
+      "model_search_volume": "51.47539999999998",
+      "segment_search_volume": "586.5389999999999",
+      "search_share": "0.08776125713720655",
+      "standard_segment_search_volume": "467.35159999999985",
+      "standard_search_share": "0.11014277045376542"
+    },
+    {
+      "date_month": "2025-02-01",
+      "model": "Kona",
+      "segment": "Entry CUV",
+      "model_search_volume": "69.51099999999998",
+      "segment_search_volume": "803.2420999999999",
+      "search_share": "0.08653804376040547",
+      "standard_segment_search_volume": "930.9450999999995",
+      "standard_search_share": "0.07466713128411119"
+    },
+    {
+      "date_month": "2025-02-01",
+      "model": "Palisade",
+      "segment": "Midsize SUV",
+      "model_search_volume": "116.58449999999995",
+      "segment_search_volume": "2027.1598999999985",
+      "search_share": "0.05751125009921518",
+      "standard_segment_search_volume": "2076.175799999999",
+      "standard_search_share": "0.056153481800529606"
+    },
+    {
+      "date_month": "2025-02-01",
+      "model": "Santa Fe",
+      "segment": "Compact SUV",
+      "model_search_volume": "118.14909999999996",
+      "segment_search_volume": "1755.6302999999996",
+      "search_share": "0.06729725500864275",
+      "standard_segment_search_volume": "1759.5365999999997",
+      "standard_search_share": "0.06714785017827989"
+    },
+    {
+      "date_month": "2025-02-01",
+      "model": "Sonata",
+      "segment": "Midsize Car",
+      "model_search_volume": "66.9753",
+      "segment_search_volume": "867.5871",
+      "search_share": "0.07719720590589695",
+      "standard_segment_search_volume": "1057.8935999999997",
+      "standard_search_share": "0.06331005310931083"
+    },
+    {
+      "date_month": "2025-02-01",
+      "model": "Tucson",
+      "segment": "Sub-Compact SUV",
+      "model_search_volume": "185.5018999999999",
+      "segment_search_volume": "1861.2583999999997",
+      "search_share": "0.09966477518650818",
+      "standard_segment_search_volume": "2027.4104",
+      "standard_search_share": "0.09149696578452982"
+    },
+    {
+      "date_month": "2025-03-01",
+      "model": "Elantra",
+      "segment": "Compact Car",
+      "model_search_volume": "125.45809999999994",
+      "segment_search_volume": "1759.0321999999996",
+      "search_share": "0.07132223048560452",
+      "standard_segment_search_volume": "1966.7727999999995",
+      "standard_search_share": "0.06378881180378332"
+    },
+    {
+      "date_month": "2025-03-01",
+      "model": "Ioniq 5",
+      "segment": "Mainstream EV SUV 2 Row",
+      "model_search_volume": "74.15399999999997",
+      "segment_search_volume": "814.9357999999997",
+      "search_share": "0.09099367091248169",
+      "standard_segment_search_volume": "626.9926999999997",
+      "standard_search_share": "0.11826931956305074"
+    },
+    {
+      "date_month": "2025-03-01",
+      "model": "Kona",
+      "segment": "Entry CUV",
+      "model_search_volume": "94.21499999999997",
+      "segment_search_volume": "1046.4666999999997",
+      "search_share": "0.09003153182036275",
+      "standard_segment_search_volume": "1209.9008999999994",
+      "standard_search_share": "0.0778700139821369"
+    },
+    {
+      "date_month": "2025-03-01",
+      "model": "Palisade",
+      "segment": "Midsize SUV",
+      "model_search_volume": "146.37279999999993",
+      "segment_search_volume": "2545.8545999999988",
+      "search_share": "0.05749456390793096",
+      "standard_segment_search_volume": "2604.5495999999985",
+      "standard_search_share": "0.05619889135534221"
+    },
+    {
+      "date_month": "2025-03-01",
+      "model": "Santa Fe",
+      "segment": "Compact SUV",
+      "model_search_volume": "152.09309999999994",
+      "segment_search_volume": "2182.0561999999995",
+      "search_share": "0.06970173362170964",
+      "standard_segment_search_volume": "2178.4896999999996",
+      "standard_search_share": "0.0698158453537788"
+    },
+    {
+      "date_month": "2025-03-01",
+      "model": "Sonata",
+      "segment": "Midsize Car",
+      "model_search_volume": "84.29169999999999",
+      "segment_search_volume": "1055.8316",
+      "search_share": "0.07983441677631167",
+      "standard_segment_search_volume": "1284.7085999999995",
+      "standard_search_share": "0.06561153245179492"
+    },
+    {
+      "date_month": "2025-03-01",
+      "model": "Tucson",
+      "segment": "Sub-Compact SUV",
+      "model_search_volume": "226.5958999999999",
+      "segment_search_volume": "2409.3396999999995",
+      "search_share": "0.09404896287559614",
+      "standard_segment_search_volume": "2616.3566999999994",
+      "standard_search_share": "0.08660741862911886"
+    },
+    {
+      "date_month": "2025-04-01",
+      "model": "Elantra",
+      "segment": "Compact Car",
+      "model_search_volume": "125.43929999999997",
+      "segment_search_volume": "1752.4505999999997",
+      "search_share": "0.07157936434841587",
+      "standard_segment_search_volume": "1943.6345",
+      "standard_search_share": "0.06453852306079151"
+    },
+    {
+      "date_month": "2025-04-01",
+      "model": "Ioniq 5",
+      "segment": "Mainstream EV SUV 2 Row",
+      "model_search_volume": "86.59209999999996",
+      "segment_search_volume": "773.6262999999997",
+      "search_share": "0.11193013991380592",
+      "standard_segment_search_volume": "615.6199999999998",
+      "standard_search_share": "0.14065836067704102"
+    },
+    {
+      "date_month": "2025-04-01",
+      "model": "Kona",
+      "segment": "Entry CUV",
+      "model_search_volume": "89.68479999999998",
+      "segment_search_volume": "1025.8763",
+      "search_share": "0.08742262590528702",
+      "standard_segment_search_volume": "1180.6412",
+      "standard_search_share": "0.07596279038881583"
+    },
+    {
+      "date_month": "2025-04-01",
+      "model": "Palisade",
+      "segment": "Midsize SUV",
+      "model_search_volume": "161.65419999999992",
+      "segment_search_volume": "2401.3282999999983",
+      "search_share": "0.06731865859407897",
+      "standard_segment_search_volume": "2456.2596999999987",
+      "standard_search_share": "0.06581315485492027"
+    },
+    {
+      "date_month": "2025-04-01",
+      "model": "Santa Fe",
+      "segment": "Compact SUV",
+      "model_search_volume": "134.62289999999996",
+      "segment_search_volume": "2105.821499999999",
+      "search_share": "0.06392892275057502",
+      "standard_segment_search_volume": "2100.8505999999993",
+      "standard_search_share": "0.06408018732983678"
+    },
+    {
+      "date_month": "2025-04-01",
+      "model": "Sonata",
+      "segment": "Midsize Car",
+      "model_search_volume": "80.5943",
+      "segment_search_volume": "1012.8437999999996",
+      "search_share": "0.07957228942903144",
+      "standard_segment_search_volume": "1226.5794999999998",
+      "standard_search_share": "0.06570654409273921"
+    },
+    {
+      "date_month": "2025-04-01",
+      "model": "Tucson",
+      "segment": "Sub-Compact SUV",
+      "model_search_volume": "200.5756999999999",
+      "segment_search_volume": "2221.6662999999994",
+      "search_share": "0.09028165030904954",
+      "standard_segment_search_volume": "2415.476699999999",
+      "standard_search_share": "0.08303772915714733"
+    },
+    {
+      "date_month": "2025-05-01",
+      "model": "Elantra",
+      "segment": "Compact Car",
+      "model_search_volume": "132.06699999999995",
+      "segment_search_volume": "1740.0566",
+      "search_share": "0.07589810584322369",
+      "standard_segment_search_volume": "1935.2679999999991",
+      "standard_search_share": "0.06824222794982401"
+    },
+    {
+      "date_month": "2025-05-01",
+      "model": "Ioniq 5",
+      "segment": "Mainstream EV SUV 2 Row",
+      "model_search_volume": "71.16379999999997",
+      "segment_search_volume": "800.4813999999998",
+      "search_share": "0.0889012536706037",
+      "standard_segment_search_volume": "613.7982999999996",
+      "standard_search_share": "0.11594004088965384"
+    },
+    {
+      "date_month": "2025-05-01",
+      "model": "Kona",
+      "segment": "Entry CUV",
+      "model_search_volume": "102.47189999999999",
+      "segment_search_volume": "1055.2572999999998",
+      "search_share": "0.09710608019484918",
+      "standard_segment_search_volume": "1212.0080999999996",
+      "standard_search_share": "0.08454720723401109"
+    },
+    {
+      "date_month": "2025-05-01",
+      "model": "Palisade",
+      "segment": "Midsize SUV",
+      "model_search_volume": "153.9450999999999",
+      "segment_search_volume": "2487.422299999999",
+      "search_share": "0.06188941057575949",
+      "standard_segment_search_volume": "2546.003999999999",
+      "standard_search_share": "0.06046538025863273"
+    },
+    {
+      "date_month": "2025-05-01",
+      "model": "Santa Fe",
+      "segment": "Compact SUV",
+      "model_search_volume": "135.9663",
+      "segment_search_volume": "2067.7874999999995",
+      "search_share": "0.06575448395930435",
+      "standard_segment_search_volume": "2061.6859",
+      "standard_search_share": "0.0659490856487887"
+    },
+    {
+      "date_month": "2025-05-01",
+      "model": "Sonata",
+      "segment": "Midsize Car",
+      "model_search_volume": "78.9703",
+      "segment_search_volume": "1040.9179999999997",
+      "search_share": "0.07586601442188531",
+      "standard_segment_search_volume": "1265.6859999999995",
+      "standard_search_share": "0.06239327921775229"
+    },
+    {
+      "date_month": "2025-05-01",
+      "model": "Tucson",
+      "segment": "Sub-Compact SUV",
+      "model_search_volume": "206.85479999999993",
+      "segment_search_volume": "2405.1665",
+      "search_share": "0.08600435770247089",
+      "standard_segment_search_volume": "2585.357899999999",
+      "standard_search_share": "0.08001012161604396"
+    },
+    {
+      "date_month": "2025-06-01",
+      "model": "Elantra",
+      "segment": "Compact Car",
+      "model_search_volume": "130.47899999999996",
+      "segment_search_volume": "1656.655",
+      "search_share": "0.07876051441006121",
+      "standard_segment_search_volume": "1834.3467",
+      "standard_search_share": "0.07113104627385868"
+    },
+    {
+      "date_month": "2025-06-01",
+      "model": "Ioniq 5",
+      "segment": "Mainstream EV SUV 2 Row",
+      "model_search_volume": "70.69269999999997",
+      "segment_search_volume": "759.4059999999998",
+      "search_share": "0.09308946729417464",
+      "standard_segment_search_volume": "622.4634999999998",
+      "standard_search_share": "0.11356922936043638"
+    },
+    {
+      "date_month": "2025-06-01",
+      "model": "Kona",
+      "segment": "Entry CUV",
+      "model_search_volume": "98.14019999999996",
+      "segment_search_volume": "1025.8398999999997",
+      "search_share": "0.09566814470757083",
+      "standard_segment_search_volume": "1175.7318999999995",
+      "standard_search_share": "0.08347158055335574"
+    },
+    {
+      "date_month": "2025-06-01",
+      "model": "Palisade",
+      "segment": "Midsize SUV",
+      "model_search_volume": "158.01529999999994",
+      "segment_search_volume": "2425.518999999999",
+      "search_share": "0.06514700565116167",
+      "standard_segment_search_volume": "2487.717599999999",
+      "standard_search_share": "0.06351818228885786"
+    },
+    {
+      "date_month": "2025-06-01",
+      "model": "Santa Fe",
+      "segment": "Compact SUV",
+      "model_search_volume": "142.90129999999994",
+      "segment_search_volume": "2013.2466999999995",
+      "search_share": "0.07098052116514085",
+      "standard_segment_search_volume": "2011.4789999999994",
+      "standard_search_share": "0.07104289927958482"
+    },
+    {
+      "date_month": "2025-06-01",
+      "model": "Sonata",
+      "segment": "Midsize Car",
+      "model_search_volume": "80.4517",
+      "segment_search_volume": "985.0961999999996",
+      "search_share": "0.08166887660311757",
+      "standard_segment_search_volume": "1193.0767999999994",
+      "standard_search_share": "0.06743212172091524"
+    },
+    {
+      "date_month": "2025-06-01",
+      "model": "Tucson",
+      "segment": "Sub-Compact SUV",
+      "model_search_volume": "191.04829999999993",
+      "segment_search_volume": "2224.880299999999",
+      "search_share": "0.08586902405491209",
+      "standard_segment_search_volume": "2412.420599999999",
+      "standard_search_share": "0.07919361159492669"
+    },
+    {
+      "date_month": "2025-07-01",
+      "model": "Elantra",
+      "segment": "Compact Car",
+      "model_search_volume": "149.52089999999993",
+      "segment_search_volume": "1839.7069",
+      "search_share": "0.0812743051624147",
+      "standard_segment_search_volume": "2024.7643999999996",
+      "standard_search_share": "0.07384607315300484"
+    },
+    {
+      "date_month": "2025-07-01",
+      "model": "Ioniq 5",
+      "segment": "Mainstream EV SUV 2 Row",
+      "model_search_volume": "89.6078",
+      "segment_search_volume": "915.9530999999997",
+      "search_share": "0.09783011815779653",
+      "standard_segment_search_volume": "715.1667999999997",
+      "standard_search_share": "0.12529636442855013"
+    },
+    {
+      "date_month": "2025-07-01",
+      "model": "Kona",
+      "segment": "Entry CUV",
+      "model_search_volume": "105.40669999999997",
+      "segment_search_volume": "1114.3313999999996",
+      "search_share": "0.09459187814325255",
+      "standard_segment_search_volume": "1265.4206999999994",
+      "standard_search_share": "0.08329775228111885"
+    },
+    {
+      "date_month": "2025-07-01",
+      "model": "Palisade",
+      "segment": "Midsize SUV",
+      "model_search_volume": "225.01069999999982",
+      "segment_search_volume": "2702.1278999999986",
+      "search_share": "0.08327166896874123",
+      "standard_segment_search_volume": "2766.4502999999986",
+      "standard_search_share": "0.08133552950508452"
+    },
+    {
+      "date_month": "2025-07-01",
+      "model": "Santa Fe",
+      "segment": "Compact SUV",
+      "model_search_volume": "167.8962999999999",
+      "segment_search_volume": "2181.6399999999994",
+      "search_share": "0.07695875579839018",
+      "standard_segment_search_volume": "2180.307599999999",
+      "standard_search_share": "0.07700578578912443"
+    },
+    {
+      "date_month": "2025-07-01",
+      "model": "Sonata",
+      "segment": "Midsize Car",
+      "model_search_volume": "84.1962",
+      "segment_search_volume": "1084.3214999999998",
+      "search_share": "0.07764874163244022",
+      "standard_segment_search_volume": "1306.6511999999998",
+      "standard_search_share": "0.06443663006623344"
+    },
+    {
+      "date_month": "2025-07-01",
+      "model": "Tucson",
+      "segment": "Sub-Compact SUV",
+      "model_search_volume": "202.9762999999999",
+      "segment_search_volume": "2399.3436999999994",
+      "search_share": "0.08459659197638085",
+      "standard_segment_search_volume": "2645.4678999999987",
+      "standard_search_share": "0.07672604910458372"
+    },
+    {
+      "date_month": "2025-08-01",
+      "model": "Elantra",
+      "segment": "Compact Car",
+      "model_search_volume": "141.98659999999995",
+      "segment_search_volume": "1747.1419999999996",
+      "search_share": "0.08126792212653579",
+      "standard_segment_search_volume": "1927.1399999999996",
+      "standard_search_share": "0.073677366460143"
+    },
+    {
+      "date_month": "2025-08-01",
+      "model": "Ioniq 5",
+      "segment": "Mainstream EV SUV 2 Row",
+      "model_search_volume": "90.99039999999998",
+      "segment_search_volume": "906.3151",
+      "search_share": "0.10039598810612332",
+      "standard_segment_search_volume": "736.3064",
+      "standard_search_share": "0.1235768153040636"
+    },
+    {
+      "date_month": "2025-08-01",
+      "model": "Kona",
+      "segment": "Entry CUV",
+      "model_search_volume": "92.96579999999999",
+      "segment_search_volume": "1078.0496999999998",
+      "search_share": "0.08623517079036339",
+      "standard_segment_search_volume": "1226.5417999999997",
+      "standard_search_share": "0.07579505239854036"
+    },
+    {
+      "date_month": "2025-08-01",
+      "model": "Palisade",
+      "segment": "Midsize SUV",
+      "model_search_volume": "227.8952999999998",
+      "segment_search_volume": "2651.0196999999985",
+      "search_share": "0.08596514767506251",
+      "standard_segment_search_volume": "2706.7643999999977",
+      "standard_search_share": "0.08419473080109964"
+    },
+    {
+      "date_month": "2025-08-01",
+      "model": "Santa Fe",
+      "segment": "Compact SUV",
+      "model_search_volume": "146.13299999999995",
+      "segment_search_volume": "2116.9344999999994",
+      "search_share": "0.06903047779702207",
+      "standard_segment_search_volume": "2114.935199999999",
+      "standard_search_share": "0.06909573399695651"
+    },
+    {
+      "date_month": "2025-08-01",
+      "model": "Sonata",
+      "segment": "Midsize Car",
+      "model_search_volume": "80.3272",
+      "segment_search_volume": "1089.2563999999998",
+      "search_share": "0.07374498786511607",
+      "standard_segment_search_volume": "1307.2705999999998",
+      "standard_search_share": "0.06144649776412016"
+    },
+    {
+      "date_month": "2025-08-01",
+      "model": "Tucson",
+      "segment": "Sub-Compact SUV",
+      "model_search_volume": "193.04209999999992",
+      "segment_search_volume": "2293.391499999999",
+      "search_share": "0.0841731993861493",
+      "standard_segment_search_volume": "2498.303599999999",
+      "standard_search_share": "0.07726927183709778"
+    },
+    {
+      "date_month": "2025-09-01",
+      "model": "Elantra",
+      "segment": "Compact Car",
+      "model_search_volume": "117.78129999999994",
+      "segment_search_volume": "1526.7995999999998",
+      "search_share": "0.07714260601063817",
+      "standard_segment_search_volume": "1686.6980999999994",
+      "standard_search_share": "0.06982950890855927"
+    },
+    {
+      "date_month": "2025-09-01",
+      "model": "Ioniq 5",
+      "segment": "Mainstream EV SUV 2 Row",
+      "model_search_volume": "80.38399999999999",
+      "segment_search_volume": "787.8504999999998",
+      "search_share": "0.10202950940565501",
+      "standard_segment_search_volume": "659.4296999999998",
+      "standard_search_share": "0.1218992714462209"
+    },
+    {
+      "date_month": "2025-09-01",
+      "model": "Kona",
+      "segment": "Entry CUV",
+      "model_search_volume": "77.22379999999998",
+      "segment_search_volume": "961.0757999999996",
+      "search_share": "0.0803514145294263",
+      "standard_segment_search_volume": "1095.3349999999996",
+      "standard_search_share": "0.0705024490224452"
+    },
+    {
+      "date_month": "2025-09-01",
+      "model": "Palisade",
+      "segment": "Midsize SUV",
+      "model_search_volume": "205.81059999999985",
+      "segment_search_volume": "2361.6376999999984",
+      "search_share": "0.0871474062257729",
+      "standard_segment_search_volume": "2414.476799999999",
+      "standard_search_share": "0.08524024749378413"
+    },
+    {
+      "date_month": "2025-09-01",
+      "model": "Santa Fe",
+      "segment": "Compact SUV",
+      "model_search_volume": "120.71029999999996",
+      "segment_search_volume": "1789.5264999999993",
+      "search_share": "0.06745376500431818",
+      "standard_segment_search_volume": "1788.9695999999994",
+      "standard_search_share": "0.06747476312621523"
+    },
+    {
+      "date_month": "2025-09-01",
+      "model": "Sonata",
+      "segment": "Midsize Car",
+      "model_search_volume": "68.72149999999999",
+      "segment_search_volume": "951.2598999999997",
+      "search_share": "0.07224261213996302",
+      "standard_segment_search_volume": "1165.9921999999997",
+      "standard_search_share": "0.0589382158817186"
+    },
+    {
+      "date_month": "2025-09-01",
+      "model": "Tucson",
+      "segment": "Sub-Compact SUV",
+      "model_search_volume": "172.46459999999993",
+      "segment_search_volume": "2030.8592999999992",
+      "search_share": "0.08492198351702651",
+      "standard_segment_search_volume": "2204.7828999999992",
+      "standard_search_share": "0.07822293977334457"
+    },
+    {
+      "date_month": "2025-10-01",
+      "model": "Elantra",
+      "segment": "Compact Car",
+      "model_search_volume": "115.61649999999999",
+      "segment_search_volume": "1472.9147999999998",
+      "search_share": "0.07849503582963523",
+      "standard_segment_search_volume": "1624.8081999999993",
+      "standard_search_share": "0.07115701410172601"
+    },
+    {
+      "date_month": "2025-10-01",
+      "model": "Ioniq 5",
+      "segment": "Mainstream EV SUV 2 Row",
+      "model_search_volume": "64.68029999999997",
+      "segment_search_volume": "619.0488999999998",
+      "search_share": "0.10448334533830848",
+      "standard_segment_search_volume": "495.23939999999976",
+      "standard_search_share": "0.13060410783148516"
+    },
+    {
+      "date_month": "2025-10-01",
+      "model": "Kona",
+      "segment": "Entry CUV",
+      "model_search_volume": "73.77649999999998",
+      "segment_search_volume": "996.5086999999997",
+      "search_share": "0.07403497831980795",
+      "standard_segment_search_volume": "1137.0993999999996",
+      "standard_search_share": "0.06488131116769563"
+    },
+    {
+      "date_month": "2025-10-01",
+      "model": "Palisade",
+      "segment": "Midsize SUV",
+      "model_search_volume": "187.8246999999999",
+      "segment_search_volume": "2374.2167999999992",
+      "search_share": "0.07911017224711743",
+      "standard_segment_search_volume": "2424.373799999999",
+      "standard_search_share": "0.07747349026787864"
+    },
+    {
+      "date_month": "2025-10-01",
+      "model": "Santa Fe",
+      "segment": "Compact SUV",
+      "model_search_volume": "116.57389999999997",
+      "segment_search_volume": "1729.9492999999993",
+      "search_share": "0.06738573205584696",
+      "standard_segment_search_volume": "1732.019299999999",
+      "standard_search_share": "0.06730519688781761"
+    },
+    {
+      "date_month": "2025-10-01",
+      "model": "Sonata",
+      "segment": "Midsize Car",
+      "model_search_volume": "68.38699999999999",
+      "segment_search_volume": "881.0954999999996",
+      "search_share": "0.077615877053055",
+      "standard_segment_search_volume": "1065.5564999999997",
+      "standard_search_share": "0.06417960943413137"
+    },
+    {
+      "date_month": "2025-10-01",
+      "model": "Tucson",
+      "segment": "Sub-Compact SUV",
+      "model_search_volume": "176.17569999999992",
+      "segment_search_volume": "2018.615399999999",
+      "search_share": "0.08727551568268033",
+      "standard_segment_search_volume": "2180.5886999999993",
+      "standard_search_share": "0.08079272354295883"
+    },
+    {
+      "date_month": "2025-11-01",
+      "model": "Elantra",
+      "segment": "Compact Car",
+      "model_search_volume": "105.66469999999998",
+      "segment_search_volume": "1377.6451999999997",
+      "search_share": "0.07669950143912235",
+      "standard_segment_search_volume": "1538.2283999999997",
+      "standard_search_share": "0.06869246465609398"
+    },
+    {
+      "date_month": "2025-11-01",
+      "model": "Ioniq 5",
+      "segment": "Mainstream EV SUV 2 Row",
+      "model_search_volume": "51.368199999999966",
+      "segment_search_volume": "539.5391999999999",
+      "search_share": "0.09520754006381738",
+      "standard_segment_search_volume": "425.40509999999983",
+      "standard_search_share": "0.12075125568546308"
+    },
+    {
+      "date_month": "2025-11-01",
+      "model": "Kona",
+      "segment": "Entry CUV",
+      "model_search_volume": "73.19029999999998",
+      "segment_search_volume": "874.1451999999998",
+      "search_share": "0.08372785207766398",
+      "standard_segment_search_volume": "995.0228999999998",
+      "standard_search_share": "0.07355639754622732"
+    },
+    {
+      "date_month": "2025-11-01",
+      "model": "Palisade",
+      "segment": "Midsize SUV",
+      "model_search_volume": "165.5873999999999",
+      "segment_search_volume": "2223.431399999999",
+      "search_share": "0.07447380656763233",
+      "standard_segment_search_volume": "2268.2153999999987",
+      "standard_search_share": "0.07300338407013725"
+    },
+    {
+      "date_month": "2025-11-01",
+      "model": "Santa Fe",
+      "segment": "Compact SUV",
+      "model_search_volume": "121.19559999999998",
+      "segment_search_volume": "1656.9237999999998",
+      "search_share": "0.07314494486710856",
+      "standard_segment_search_volume": "1659.5272999999995",
+      "standard_search_share": "0.07303019359789985"
+    },
+    {
+      "date_month": "2025-11-01",
+      "model": "Sonata",
+      "segment": "Midsize Car",
+      "model_search_volume": "65.9532",
+      "segment_search_volume": "860.6897999999997",
+      "search_share": "0.0766283044135065",
+      "standard_segment_search_volume": "1030.4831999999994",
+      "standard_search_share": "0.06400220789625685"
+    },
+    {
+      "date_month": "2025-11-01",
+      "model": "Tucson",
+      "segment": "Sub-Compact SUV",
+      "model_search_volume": "196.1092999999999",
+      "segment_search_volume": "1945.6504999999993",
+      "search_share": "0.10079369342027254",
+      "standard_segment_search_volume": "2108.009899999999",
+      "standard_search_share": "0.09303054032146622"
+    },
+    {
+      "date_month": "2025-12-01",
+      "model": "Elantra",
+      "segment": "Compact Car",
+      "model_search_volume": "109.65189999999998",
+      "segment_search_volume": "1412.8252999999995",
+      "search_share": "0.07761178965297409",
+      "standard_segment_search_volume": "1547.4920999999988",
+      "standard_search_share": "0.07085780922564973"
+    },
+    {
+      "date_month": "2025-12-01",
+      "model": "Ioniq 5",
+      "segment": "Mainstream EV SUV 2 Row",
+      "model_search_volume": "52.52349999999998",
+      "segment_search_volume": "561.2932999999998",
+      "search_share": "0.0935758541924516",
+      "standard_segment_search_volume": "435.55599999999976",
+      "standard_search_share": "0.1205895453167905"
+    },
+    {
+      "date_month": "2025-12-01",
+      "model": "Kona",
+      "segment": "Entry CUV",
+      "model_search_volume": "80.11949999999997",
+      "segment_search_volume": "916.6422999999996",
+      "search_share": "0.08740541430392205",
+      "standard_segment_search_volume": "1038.8019999999995",
+      "standard_search_share": "0.07712682493872751"
+    },
+    {
+      "date_month": "2025-12-01",
+      "model": "Palisade",
+      "segment": "Midsize SUV",
+      "model_search_volume": "168.8899999999999",
+      "segment_search_volume": "2310.627599999999",
+      "search_share": "0.07309269568146766",
+      "standard_segment_search_volume": "2355.360299999999",
+      "standard_search_share": "0.07170452860226946"
+    },
+    {
+      "date_month": "2025-12-01",
+      "model": "Santa Fe",
+      "segment": "Compact SUV",
+      "model_search_volume": "124.03049999999998",
+      "segment_search_volume": "1689.8411999999992",
+      "search_share": "0.07339772518269766",
+      "standard_segment_search_volume": "1692.7415999999992",
+      "standard_search_share": "0.07327196306866922"
+    },
+    {
+      "date_month": "2025-12-01",
+      "model": "Sonata",
+      "segment": "Midsize Car",
+      "model_search_volume": "68.84389999999998",
+      "segment_search_volume": "883.4174999999997",
+      "search_share": "0.07792906524944322",
+      "standard_segment_search_volume": "1050.3230999999996",
+      "standard_search_share": "0.0655454497763593"
+    },
+    {
+      "date_month": "2025-12-01",
+      "model": "Tucson",
+      "segment": "Sub-Compact SUV",
+      "model_search_volume": "207.3025999999999",
+      "segment_search_volume": "2060.3577999999998",
+      "search_share": "0.1006148543714106",
+      "standard_segment_search_volume": "2234.1340999999993",
+      "standard_search_share": "0.09278879007307572"
+    },
+    {
+      "date_month": "2026-01-01",
+      "model": "Elantra",
+      "segment": "Compact Car",
+      "model_search_volume": "106.5889",
+      "segment_search_volume": "1509.7592",
+      "search_share": "0.0705999340822033",
+      "standard_segment_search_volume": "1654.6668999999995",
+      "standard_search_share": "0.06441713434891339"
+    },
+    {
+      "date_month": "2026-01-01",
+      "model": "Ioniq 5",
+      "segment": "Mainstream EV SUV 2 Row",
+      "model_search_volume": "52.01579999999998",
+      "segment_search_volume": "556.5822999999999",
+      "search_share": "0.09345572074426367",
+      "standard_segment_search_volume": "424.36379999999986",
+      "standard_search_share": "0.12257360312071858"
+    },
+    {
+      "date_month": "2026-01-01",
+      "model": "Kona",
+      "segment": "Entry CUV",
+      "model_search_volume": "81.28039999999997",
+      "segment_search_volume": "939.6179999999998",
+      "search_share": "0.08650366425504831",
+      "standard_segment_search_volume": "1068.6549999999997",
+      "standard_search_share": "0.07605859702148962"
+    },
+    {
+      "date_month": "2026-01-01",
+      "model": "Palisade",
+      "segment": "Midsize SUV",
+      "model_search_volume": "197.94979999999987",
+      "segment_search_volume": "2420.0386999999982",
+      "search_share": "0.08179612995445074",
+      "standard_segment_search_volume": "2467.035199999999",
+      "standard_search_share": "0.08023793093831817"
+    },
+    {
+      "date_month": "2026-01-01",
+      "model": "Santa Fe",
+      "segment": "Compact SUV",
+      "model_search_volume": "114.92339999999999",
+      "segment_search_volume": "1800.7843999999993",
+      "search_share": "0.06381852263935651",
+      "standard_segment_search_volume": "1804.9500999999996",
+      "standard_search_share": "0.06367123390280985"
+    },
+    {
+      "date_month": "2026-01-01",
+      "model": "Sonata",
+      "segment": "Midsize Car",
+      "model_search_volume": "69.05089999999998",
+      "segment_search_volume": "895.6939999999995",
+      "search_share": "0.07709206492395843",
+      "standard_segment_search_volume": "1070.9822999999994",
+      "standard_search_share": "0.06447436152773021"
+    },
+    {
+      "date_month": "2026-01-01",
+      "model": "Tucson",
+      "segment": "Sub-Compact SUV",
+      "model_search_volume": "195.23809999999992",
+      "segment_search_volume": "2111.4314999999992",
+      "search_share": "0.09246717215311033",
+      "standard_segment_search_volume": "2299.5021999999994",
+      "standard_search_share": "0.08490450672323774"
+    },
+    {
+      "date_month": "2026-02-01",
+      "model": "Elantra",
+      "segment": "Compact Car",
+      "model_search_volume": "103.01099999999997",
+      "segment_search_volume": "1397.5706999999995",
+      "search_share": "0.07370718347200611",
+      "standard_segment_search_volume": "1531.3752999999997",
+      "standard_search_share": "0.06726698543459594"
+    },
+    {
+      "date_month": "2026-02-01",
+      "model": "Ioniq 5",
+      "segment": "Mainstream EV SUV 2 Row",
+      "model_search_volume": "59.53549999999998",
+      "segment_search_volume": "598.2157999999998",
+      "search_share": "0.09952177792696214",
+      "standard_segment_search_volume": "422.6265999999998",
+      "standard_search_share": "0.14087021498410182"
+    },
+    {
+      "date_month": "2026-02-01",
+      "model": "Kona",
+      "segment": "Entry CUV",
+      "model_search_volume": "75.71159999999999",
+      "segment_search_volume": "911.9330999999997",
+      "search_share": "0.08302319545150846",
+      "standard_segment_search_volume": "1041.4285999999997",
+      "standard_search_share": "0.07269975109191355"
+    },
+    {
+      "date_month": "2026-02-01",
+      "model": "Palisade",
+      "segment": "Midsize SUV",
+      "model_search_volume": "174.0908999999999",
+      "segment_search_volume": "2459.030099999999",
+      "search_share": "0.0707965713799111",
+      "standard_segment_search_volume": "2500.997499999998",
+      "standard_search_share": "0.06960858617411654"
+    },
+    {
+      "date_month": "2026-02-01",
+      "model": "Santa Fe",
+      "segment": "Compact SUV",
+      "model_search_volume": "114.31699999999998",
+      "segment_search_volume": "1692.8464999999994",
+      "search_share": "0.06752945408812909",
+      "standard_segment_search_volume": "1697.1115999999995",
+      "standard_search_share": "0.06735974228212217"
+    },
+    {
+      "date_month": "2026-02-01",
+      "model": "Sonata",
+      "segment": "Midsize Car",
+      "model_search_volume": "60.639499999999984",
+      "segment_search_volume": "856.1903999999997",
+      "search_share": "0.07082478383312871",
+      "standard_segment_search_volume": "1026.4682999999998",
+      "standard_search_share": "0.05907586235249544"
+    },
+    {
+      "date_month": "2026-02-01",
+      "model": "Tucson",
+      "segment": "Sub-Compact SUV",
+      "model_search_volume": "225.94239999999988",
+      "segment_search_volume": "2110.385499999999",
+      "search_share": "0.10706214575488696",
+      "standard_segment_search_volume": "2283.8655999999996",
+      "standard_search_share": "0.09892981443391412"
+    },
+    {
+      "date_month": "2026-03-01",
+      "model": "Elantra",
+      "segment": "Compact Car",
+      "model_search_volume": "132.1443",
+      "segment_search_volume": "1724.7622999999996",
+      "search_share": "0.07661594876001175",
+      "standard_segment_search_volume": "1875.8594999999991",
+      "standard_search_share": "0.0704446681641136"
+    },
+    {
+      "date_month": "2026-03-01",
+      "model": "Ioniq 5",
+      "segment": "Mainstream EV SUV 2 Row",
+      "model_search_volume": "81.83909999999999",
+      "segment_search_volume": "792.7493999999999",
+      "search_share": "0.10323451522006828",
+      "standard_segment_search_volume": "577.1310999999998",
+      "standard_search_share": "0.141803309508013"
+    },
+    {
+      "date_month": "2026-03-01",
+      "model": "Kona",
+      "segment": "Entry CUV",
+      "model_search_volume": "88.28009999999998",
+      "segment_search_volume": "1071.9389999999996",
+      "search_share": "0.08235552582749579",
+      "standard_segment_search_volume": "1215.0123999999992",
+      "standard_search_share": "0.07265777699058877"
+    },
+    {
+      "date_month": "2026-03-01",
+      "model": "Palisade",
+      "segment": "Midsize SUV",
+      "model_search_volume": "202.8341999999999",
+      "segment_search_volume": "2616.735899999999",
+      "search_share": "0.07751420385985454",
+      "standard_segment_search_volume": "2664.968899999999",
+      "standard_search_share": "0.07611128219920314"
+    },
+    {
+      "date_month": "2026-03-01",
+      "model": "Santa Fe",
+      "segment": "Compact SUV",
+      "model_search_volume": "127.01799999999996",
+      "segment_search_volume": "1921.3594999999991",
+      "search_share": "0.06610839876660252",
+      "standard_segment_search_volume": "1922.457199999999",
+      "standard_search_share": "0.06607065166392262"
+    },
+    {
+      "date_month": "2026-03-01",
+      "model": "Sonata",
+      "segment": "Midsize Car",
+      "model_search_volume": "82.08829999999999",
+      "segment_search_volume": "1047.5756999999994",
+      "search_share": "0.07836025597004592",
+      "standard_segment_search_volume": "1250.3701999999994",
+      "standard_search_share": "0.06565119674157303"
+    },
+    {
+      "date_month": "2026-03-01",
+      "model": "Tucson",
+      "segment": "Sub-Compact SUV",
+      "model_search_volume": "221.2339999999999",
+      "segment_search_volume": "2401.195",
+      "search_share": "0.09213495780226091",
+      "standard_segment_search_volume": "2619.109899999999",
+      "standard_search_share": "0.08446915495985868"
+    },
+    {
+      "date_month": "2026-04-01",
+      "model": "Elantra",
+      "segment": "Compact Car",
+      "model_search_volume": "134.51069999999996",
+      "segment_search_volume": "1688.4996999999994",
+      "search_share": "0.0796628509913268",
+      "standard_segment_search_volume": "1830.7890999999995",
+      "standard_search_share": "0.07347143371128875"
+    },
+    {
+      "date_month": "2026-04-01",
+      "model": "Ioniq 5",
+      "segment": "Mainstream EV SUV 2 Row",
+      "model_search_volume": "85.21189999999997",
+      "segment_search_volume": "790.5710999999998",
+      "search_share": "0.10778524537514715",
+      "standard_segment_search_volume": "587.4959999999996",
+      "standard_search_share": "0.14504251943843027"
+    },
+    {
+      "date_month": "2026-04-01",
+      "model": "Kona",
+      "segment": "Entry CUV",
+      "model_search_volume": "81.41699999999999",
+      "segment_search_volume": "1032.5080999999998",
+      "search_share": "0.07885361867863314",
+      "standard_segment_search_volume": "1171.0896999999995",
+      "standard_search_share": "0.06952242855521658"
+    },
+    {
+      "date_month": "2026-04-01",
+      "model": "Palisade",
+      "segment": "Midsize SUV",
+      "model_search_volume": "161.79389999999992",
+      "segment_search_volume": "2417.3390999999992",
+      "search_share": "0.06693057668243564",
+      "standard_segment_search_volume": "2465.491099999999",
+      "standard_search_share": "0.06562339649086545"
+    },
+    {
+      "date_month": "2026-04-01",
+      "model": "Santa Fe",
+      "segment": "Compact SUV",
+      "model_search_volume": "114.33149999999999",
+      "segment_search_volume": "1813.6617999999992",
+      "search_share": "0.06303904068553468",
+      "standard_segment_search_volume": "1813.8885999999995",
+      "standard_search_share": "0.06303115858382925"
+    },
+    {
+      "date_month": "2026-04-01",
+      "model": "Sonata",
+      "segment": "Midsize Car",
+      "model_search_volume": "79.21049999999998",
+      "segment_search_volume": "1001.4563999999997",
+      "search_share": "0.07909530559692864",
+      "standard_segment_search_volume": "1187.5927999999997",
+      "standard_search_share": "0.06669836664553709"
+    },
+    {
+      "date_month": "2026-04-01",
+      "model": "Tucson",
+      "segment": "Sub-Compact SUV",
+      "model_search_volume": "196.4883999999999",
+      "segment_search_volume": "2236.863999999999",
+      "search_share": "0.08784101313267144",
+      "standard_segment_search_volume": "2425.9934999999996",
+      "standard_search_share": "0.08099296226473811"
+    },
+    {
+      "date_month": "2026-05-01",
+      "model": "Elantra",
+      "segment": "Compact Car",
+      "model_search_volume": "139.21499999999997",
+      "segment_search_volume": "1827.1872",
+      "search_share": "0.07619087962087298",
+      "standard_segment_search_volume": "1978.2704",
+      "standard_search_share": "0.0703720785591292"
+    },
+    {
+      "date_month": "2026-05-01",
+      "model": "Ioniq 5",
+      "segment": "Mainstream EV SUV 2 Row",
+      "model_search_volume": "96.30369999999999",
+      "segment_search_volume": "899.2845999999998",
+      "search_share": "0.10708923515425485",
+      "standard_segment_search_volume": "635.8463999999998",
+      "standard_search_share": "0.15145749036245235"
+    },
+    {
+      "date_month": "2026-05-01",
+      "model": "Kona",
+      "segment": "Entry CUV",
+      "model_search_volume": "81.775",
+      "segment_search_volume": "1107.7646999999995",
+      "search_share": "0.07381982834441289",
+      "standard_segment_search_volume": "1243.8976999999995",
+      "standard_search_share": "0.06574093673458842"
+    },
+    {
+      "date_month": "2026-05-01",
+      "model": "Palisade",
+      "segment": "Midsize SUV",
+      "model_search_volume": "180.12349999999992",
+      "segment_search_volume": "2537.548999999998",
+      "search_share": "0.07098325983064763",
+      "standard_segment_search_volume": "2585.0624999999977",
+      "standard_search_share": "0.06967858610768601"
+    },
+    {
+      "date_month": "2026-05-01",
+      "model": "Santa Fe",
+      "segment": "Compact SUV",
+      "model_search_volume": "121.18499999999997",
+      "segment_search_volume": "1921.875099999999",
+      "search_share": "0.06305560647515546",
+      "standard_segment_search_volume": "1920.8370999999995",
+      "standard_search_share": "0.06308968105624366"
+    },
+    {
+      "date_month": "2026-05-01",
+      "model": "Sonata",
+      "segment": "Midsize Car",
+      "model_search_volume": "81.5492",
+      "segment_search_volume": "1095.3115999999998",
+      "search_share": "0.0744529684520825",
+      "standard_segment_search_volume": "1283.2811999999994",
+      "standard_search_share": "0.06354741267930991"
+    },
+    {
+      "date_month": "2026-05-01",
+      "model": "Tucson",
+      "segment": "Sub-Compact SUV",
+      "model_search_volume": "201.8521999999999",
+      "segment_search_volume": "2390.3455999999987",
+      "search_share": "0.08444477652101855",
+      "standard_segment_search_volume": "2597.0667999999996",
+      "standard_search_share": "0.0777231452036582"
+    },
+    {
+      "date_month": "2026-06-01",
+      "model": "Elantra",
+      "segment": "Compact Car",
+      "model_search_volume": "150.15409999999994",
+      "segment_search_volume": "1719.6687999999992",
+      "search_share": "0.08731570869925652",
+      "standard_segment_search_volume": "1858.5832999999996",
+      "standard_search_share": "0.08078954545647751"
+    },
+    {
+      "date_month": "2026-06-01",
+      "model": "Ioniq 5",
+      "segment": "Mainstream EV SUV 2 Row",
+      "model_search_volume": "80.25799999999998",
+      "segment_search_volume": "971.1540999999997",
+      "search_share": "0.08264187938865727",
+      "standard_segment_search_volume": "521.6687999999998",
+      "standard_search_share": "0.15384857212085526"
+    },
+    {
+      "date_month": "2026-06-01",
+      "model": "Kona",
+      "segment": "Entry CUV",
+      "model_search_volume": "82.0426",
+      "segment_search_volume": "1058.9818999999998",
+      "search_share": "0.07747308995555072",
+      "standard_segment_search_volume": "1183.9287999999997",
+      "standard_search_share": "0.06929690366515286"
+    },
+    {
+      "date_month": "2026-06-01",
+      "model": "Palisade",
+      "segment": "Midsize SUV",
+      "model_search_volume": "185.3592999999999",
+      "segment_search_volume": "2430.8571999999995",
+      "search_share": "0.07625264865414552",
+      "standard_segment_search_volume": "2479.4212999999995",
+      "standard_search_share": "0.07475909802017106"
+    },
+    {
+      "date_month": "2026-06-01",
+      "model": "Santa Fe",
+      "segment": "Compact SUV",
+      "model_search_volume": "119.99579999999995",
+      "segment_search_volume": "1911.132299999999",
+      "search_share": "0.06278780385847699",
+      "standard_segment_search_volume": "1913.0420999999994",
+      "standard_search_share": "0.06272512246332686"
+    },
+    {
+      "date_month": "2026-06-01",
+      "model": "Sonata",
+      "segment": "Midsize Car",
+      "model_search_volume": "77.2497",
+      "segment_search_volume": "1040.4156999999996",
+      "search_share": "0.07424887955843039",
+      "standard_segment_search_volume": "1217.9849999999997",
+      "standard_search_share": "0.06342418010074018"
+    },
+    {
+      "date_month": "2026-06-01",
+      "model": "Tucson",
+      "segment": "Sub-Compact SUV",
+      "model_search_volume": "184.67089999999993",
+      "segment_search_volume": "2217.153199999999",
+      "search_share": "0.08329189881871944",
+      "standard_segment_search_volume": "2423.595699999999",
+      "standard_search_share": "0.07619707362907106"
+    },
+    {
+      "date_month": "2026-07-01",
+      "model": "Elantra",
+      "segment": "Compact Car",
+      "model_search_volume": "147.14849999999993",
+      "segment_search_volume": "1720.5180999999998",
+      "search_share": "0.0855256913600618",
+      "standard_segment_search_volume": "1853.9717999999991",
+      "standard_search_share": "0.07936933021311328"
+    },
+    {
+      "date_month": "2026-07-01",
+      "model": "Ioniq 5",
+      "segment": "Mainstream EV SUV 2 Row",
+      "model_search_volume": "85.11189999999998",
+      "segment_search_volume": "867.2636999999997",
+      "search_share": "0.0981384324052765",
+      "standard_segment_search_volume": "512.1783999999998",
+      "standard_search_share": "0.16617627764075957"
+    },
+    {
+      "date_month": "2026-07-01",
+      "model": "Kona",
+      "segment": "Entry CUV",
+      "model_search_volume": "80.71249999999998",
+      "segment_search_volume": "1108.3763",
+      "search_share": "0.07282048524494793",
+      "standard_segment_search_volume": "1242.9065999999993",
+      "standard_search_share": "0.06493850784926239"
+    },
+    {
+      "date_month": "2026-07-01",
+      "model": "Palisade",
+      "segment": "Midsize SUV",
+      "model_search_volume": "179.90809999999993",
+      "segment_search_volume": "2486.6653999999985",
+      "search_share": "0.0723491387301243",
+      "standard_segment_search_volume": "2534.9757999999983",
+      "standard_search_share": "0.07097034220208337"
+    },
+    {
+      "date_month": "2026-07-01",
+      "model": "Santa Fe",
+      "segment": "Compact SUV",
+      "model_search_volume": "129.67469999999997",
+      "segment_search_volume": "1967.4155999999991",
+      "search_share": "0.06591118826139226",
+      "standard_segment_search_volume": "1967.6955999999993",
+      "standard_search_share": "0.06590180920260229"
+    },
+    {
+      "date_month": "2026-07-01",
+      "model": "Sonata",
+      "segment": "Midsize Car",
+      "model_search_volume": "77.83479999999999",
+      "segment_search_volume": "1070.8449999999998",
+      "search_share": "0.07268540264930966",
+      "standard_segment_search_volume": "1261.2921999999996",
+      "standard_search_share": "0.06171036338764325"
+    },
+    {
+      "date_month": "2026-07-01",
+      "model": "Tucson",
+      "segment": "Sub-Compact SUV",
+      "model_search_volume": "205.91649999999993",
+      "segment_search_volume": "2303.160999999999",
+      "search_share": "0.08940603804944595",
+      "standard_segment_search_volume": "2527.2841999999996",
+      "standard_search_share": "0.08147738192641728"
+    },
+    {
+      "date_month": "2026-08-01",
+      "model": "Elantra",
+      "segment": "Compact Car",
+      "model_search_volume": "137.28909999999996",
+      "segment_search_volume": "1644.9160999999995",
+      "search_share": "0.08346267630306495",
+      "standard_segment_search_volume": "1786.3868999999997",
+      "standard_search_share": "0.07685294826109618"
+    },
+    {
+      "date_month": "2026-08-01",
+      "model": "Ioniq 5",
+      "segment": "Mainstream EV SUV 2 Row",
+      "model_search_volume": "72.01919999999997",
+      "segment_search_volume": "801.9627999999997",
+      "search_share": "0.08980366670374236",
+      "standard_segment_search_volume": "466.1238999999998",
+      "standard_search_share": "0.15450655930751458"
+    },
+    {
+      "date_month": "2026-08-01",
+      "model": "Kona",
+      "segment": "Entry CUV",
+      "model_search_volume": "76.62519999999998",
+      "segment_search_volume": "1051.6196999999997",
+      "search_share": "0.07286398305395002",
+      "standard_segment_search_volume": "1182.0684999999996",
+      "standard_search_share": "0.0648229776869953"
+    },
+    {
+      "date_month": "2026-08-01",
+      "model": "Palisade",
+      "segment": "Midsize SUV",
+      "model_search_volume": "169.17629999999988",
+      "segment_search_volume": "2371.220299999998",
+      "search_share": "0.07134566956937743",
+      "standard_segment_search_volume": "2417.2720999999983",
+      "standard_search_share": "0.06998645291111415"
+    },
+    {
+      "date_month": "2026-08-01",
+      "model": "Santa Fe",
+      "segment": "Compact SUV",
+      "model_search_volume": "127.93949999999995",
+      "segment_search_volume": "1860.7022999999992",
+      "search_share": "0.06875871545921129",
+      "standard_segment_search_volume": "1863.432899999999",
+      "standard_search_share": "0.06865795918919325"
+    },
+    {
+      "date_month": "2026-08-01",
+      "model": "Sonata",
+      "segment": "Midsize Car",
+      "model_search_volume": "76.7298",
+      "segment_search_volume": "986.1588999999997",
+      "search_share": "0.0778067307408573",
+      "standard_segment_search_volume": "1171.6690999999996",
+      "standard_search_share": "0.06548760225903373"
+    },
+    {
+      "date_month": "2026-08-01",
+      "model": "Tucson",
+      "segment": "Sub-Compact SUV",
+      "model_search_volume": "233.63239999999988",
+      "segment_search_volume": "2208.475999999999",
+      "search_share": "0.10578896940695753",
+      "standard_segment_search_volume": "2421.1565",
+      "standard_search_share": "0.09649619923371326"
+    }
+  ]
+}

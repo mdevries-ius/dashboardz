@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+@font-face { font-family: Hyundai Head; src: url('/fonts/HyundaiSansHead-Medium.woff2') format('woff2'); font-display: swap; }
+@font-face { font-family: Hyundai Head; src: url('/fonts/HyundaiSansHead-Bold.woff2') format('woff2'); font-weight: 700; font-display: swap; }
+@font-face { font-family: Hyundai Text; src: url('/fonts/HyundaiSansText-Regular.woff2') format('woff2'); font-display: swap; }
+@font-face { font-family: Hyundai Text; src: url('/fonts/HyundaiSansText-Medium.woff2') format('woff2'); font-weight: 600; font-display: swap; }
+
+:root { --navy: #002c5f; --cyan: #00aad2; --ink: #172635; --muted: #647383; --line: #dfe5ea; --bg: #eef2f5; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: Hyundai Text, Arial, sans-serif; }
+button, select { font: inherit; }
+button { cursor: pointer; }
+.app-shell { min-height: 100vh; }
+header { height: 76px; background: white; border-bottom: 1px solid var(--line); display: flex; align-items: center; justify-content: space-between; padding: 0 42px; }
+.brand { display: flex; align-items: center; gap: 14px; }
+.brand-mark { width: 38px; height: 38px; border: 2px solid var(--navy); border-radius: 50%; display: grid; place-items: center; color: var(--navy); font: italic 700 19px Hyundai Head; }
+.brand strong, .brand span { display: block; }
+.brand strong { font: 700 15px Hyundai Head; letter-spacing: .08em; color: var(--navy); }
+.brand span { margin-top: 2px; color: var(--muted); font-size: 12px; }
+.header-actions { display: flex; align-items: center; gap: 24px; }
+.period { background: #eef7fa; color: #00647c; border-radius: 100px; padding: 8px 13px; font-size: 12px; font-weight: 600; }
+.text-button { border: 0; background: transparent; color: var(--navy); font-weight: 600; padding: 8px 0; border-bottom: 1px solid var(--navy); }
+.control-bar { margin: 24px 42px 0; display: grid; grid-template-columns: minmax(220px, 300px) minmax(220px, 1fr) auto; align-items: end; gap: 34px; }
+.control-bar label, .control-bar span { display: block; color: var(--muted); text-transform: uppercase; letter-spacing: .1em; font-size: 10px; font-weight: 600; margin-bottom: 6px; }
+select { width: 100%; height: 48px; border: 1px solid #cbd4dc; border-radius: 4px; color: var(--navy); background: white; padding: 0 40px 0 14px; font: 700 17px Hyundai Head; }
+.segment { padding-bottom: 7px; }
+.segment strong { font: 600 16px Hyundai Head; }
+.freshness { display: flex; align-items: center; gap: 8px; padding-bottom: 10px; color: #4f5e6d; font-size: 12px; }
+.freshness span { margin: 0; }
+.freshness time { color: var(--muted); }
+.status-dot { width: 8px; height: 8px; border-radius: 50%; background: #00a878; }
+.dashboard-grid { margin: 20px 42px 0; display: grid; grid-template-columns: minmax(0, 1fr) 320px; gap: 18px; }
+.hero-card, .metric-card, .model-card { background: white; border: 1px solid var(--line); border-radius: 8px; box-shadow: 0 8px 30px rgba(11, 40, 67, .055); }
+.hero-card { padding: 24px 26px 12px; min-width: 0; }
+.card-heading { display: flex; align-items: flex-end; justify-content: space-between; gap: 20px; }
+.eyebrow { color: var(--cyan); font-size: 10px; letter-spacing: .14em; font-weight: 700; }
+h1, h2 { font-family: Hyundai Head, Arial, sans-serif; color: var(--navy); margin: 0; }
+.card-heading h1 { font-size: clamp(24px, 2.2vw, 34px); margin-top: 5px; }
+.legend { display: flex; gap: 14px; color: var(--muted); font-size: 11px; white-space: nowrap; }
+.legend span { display: flex; align-items: center; gap: 6px; }
+.legend i { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
+.legend .search { background: var(--cyan); }
+.legend .sales { background: var(--navy); }
+.quadrant { width: 100%; max-height: 590px; display: block; overflow: visible; }
+.quad-label { font: 700 9px Hyundai Text; letter-spacing: .1em; fill: #7865a8; }
+.quad-label.positive { fill: #00896e; }
+.quad-label.negative { fill: #d04534; }
+.quad-label.warm { fill: #b07800; }
+.tick { font: 10px Hyundai Text; fill: #71808d; }
+.axis-title { font: 700 10px Hyundai Text; letter-spacing: .06em; fill: #526170; }
+.point-label { font: 600 10px Hyundai Text; fill: #344556; paint-order: stroke; stroke: white; stroke-width: 4px; stroke-linejoin: round; }
+.plot-point { cursor: pointer; outline: none; }
+.plot-point:focus .point-label { fill: var(--cyan); }
+.detail-column { display: grid; grid-template-rows: auto 1fr 1fr; gap: 14px; }
+.model-card { padding: 24px; }
+.model-card.navy { background: var(--navy); color: white; border-color: var(--navy); }
+.model-card h2 { color: white; font-size: 34px; margin-top: 6px; }
+.model-card p { color: #c6d7e7; margin: 3px 0 20px; }
+.signal { display: inline-flex; border-radius: 2px; padding: 7px 9px; font-size: 10px; letter-spacing: .1em; font-weight: 700; }
+.signal.up { background: #dff5ec; color: #00785f; }
+.signal.mixed { background: #fff1cc; color: #805600; }
+.metric-card { padding: 18px 20px 14px; }
+.metric-title { display: flex; justify-content: space-between; align-items: center; gap: 10px; font-size: 12px; color: var(--muted); }
+.metric-title strong { font-size: 12px; border-radius: 3px; padding: 5px 7px; }
+.gain { color: #00775d; background: #e2f5ef; }
+.loss { color: #c14231; background: #fff0ee; }
+.metric-value { color: var(--navy); font: 700 34px Hyundai Head; margin: 5px 0 0; }
+.sparkline { width: 100%; height: 58px; display: block; }
+.metric-card footer { border-top: 1px solid var(--line); padding-top: 10px; color: #455667; font-size: 11px; display: flex; justify-content: space-between; }
+.metric-card footer span { color: #84909b; }
+.audit-strip { margin: 18px 42px 36px; background: white; border-left: 4px solid var(--cyan); border-radius: 4px; display: flex; align-items: center; gap: 22px; padding: 15px 20px; color: var(--muted); font-size: 12px; }
+.audit-strip > div { display: grid; }
+.audit-strip span { font-size: 9px; letter-spacing: .12em; }
+.audit-strip strong { color: var(--navy); }
+.audit-strip small { color: var(--muted); }
+.audit-rule { margin-left: auto; border-left: 1px solid var(--line); padding-left: 22px; }
+.modal-backdrop { position: fixed; inset: 0; background: rgba(0, 26, 56, .55); display: grid; place-items: center; padding: 20px; z-index: 20; }
+.modal { width: min(560px, 100%); max-height: 90vh; overflow: auto; background: white; border-radius: 8px; padding: 34px; position: relative; box-shadow: 0 24px 80px rgba(0,0,0,.25); }
+.modal h2 { font-size: 30px; margin: 7px 0 22px; }
+.close { position: absolute; right: 18px; top: 14px; border: 0; background: transparent; color: var(--muted); font-size: 30px; }
+dl { margin: 0; }
+dl div { border-top: 1px solid var(--line); padding: 14px 0; }
+dt { color: var(--navy); font-weight: 700; margin-bottom: 3px; }
+dd { margin: 0; color: var(--muted); line-height: 1.5; }
+.primary { margin-top: 14px; border: 0; background: var(--navy); color: white; padding: 11px 18px; border-radius: 3px; font-weight: 600; }
+.state { min-height: 100vh; display: grid; place-content: center; text-align: center; gap: 8px; padding: 20px; }
+.state span { color: var(--cyan); letter-spacing: .15em; font-size: 11px; }
+.state p { color: var(--muted); }
+.loader { width: 160px; height: 3px; margin: 20px auto; background: linear-gradient(90deg, var(--navy) 0 40%, var(--cyan) 40% 60%, #dfe5ea 60%); background-size: 240% 100%; animation: load 1.2s infinite linear; }
+@keyframes load { to { background-position: -240% 0; } }
+@media (max-width: 960px) { .dashboard-grid { grid-template-columns: 1fr; } .detail-column { grid-template-columns: repeat(3, 1fr); grid-template-rows: auto; } .metric-card footer { display: block; } .metric-card footer span { display: block; margin-top: 2px; } }
+@media (max-width: 720px) { header { padding: 0 18px; } .brand span, .period { display: none; } .control-bar { margin: 18px; grid-template-columns: 1fr 1fr; gap: 14px; } .freshness { grid-column: 1 / -1; } .dashboard-grid { margin: 18px; } .hero-card { padding: 18px 10px 8px; } .card-heading { padding: 0 8px; align-items: flex-start; } .legend { display: none; } .detail-column { grid-template-columns: 1fr; } .audit-strip { margin: 18px; align-items: flex-start; flex-wrap: wrap; } .audit-rule { width: 100%; margin: 0; border-left: 0; border-top: 1px solid var(--line); padding: 12px 0 0; } }

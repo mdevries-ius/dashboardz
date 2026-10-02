@@ -1,0 +1,26 @@
+{
+  "workspace": "https://innocean-usa-ds-hma-prod.cloud.databricks.com",
+  "profile": "hma-report",
+  "sources": {
+    "search": {
+      "source_name": "Google AdOps notebook source",
+      "warehouse_id": "4aaf576b2447fe80",
+      "governed_asset": "ius_unity_prod.google_datamart.ad_opportunity_regional_daily"
+    },
+    "regional_search": {
+      "source_name": "Google AdOps monthly notebook source",
+      "warehouse_id": "4aaf576b2447fe80",
+      "governed_asset": "ius_unity_prod.sandbox.agent_googleadops_monthly"
+    },
+    "retail_sales": {
+      "source_name": "SRS notebook source",
+      "warehouse_id": "77a3fcdd7c267804",
+      "governed_asset": "ius_unity_prod.sandbox.agent_srs"
+    },
+    "inventory": {
+      "source_name": "Cloud Theory notebook source",
+      "warehouse_id": "77a3fcdd7c267804",
+      "governed_asset": "ius_unity_prod.sandbox.agent_cloudtheory"
+    }
+  }
+}

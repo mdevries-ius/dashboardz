@@ -1,0 +1,62 @@
+{
+  "created_at": "2026-09-11",
+  "source_tables": [
+    "ius_unity_prod.sandbox.agent_cloudtheory",
+    "ius_unity_prod.sandbox.agent_srs"
+  ],
+  "date_range": {
+    "min": "2025-01-01",
+    "max": "2026-09-01"
+  },
+  "row_count": 1328,
+  "columns": [
+    "date_month",
+    "geo_level",
+    "region_code",
+    "region_name",
+    "entity_level",
+    "brand",
+    "model_series",
+    "display_name",
+    "segment",
+    "average_inventory",
+    "market_average_inventory",
+    "inventory_share",
+    "weighted_avg_msrp",
+    "market_weighted_avg_msrp",
+    "msrp_inventory_weighted_index",
+    "weighted_avg_price",
+    "market_weighted_avg_price",
+    "price_inventory_weighted_index",
+    "retail_sales",
+    "market_retail_sales",
+    "retail_share",
+    "inventory_retail_ratio",
+    "average_inventory_mom_pct",
+    "average_inventory_yoy_pct",
+    "inventory_share_mom_pp",
+    "inventory_share_yoy_pp",
+    "weighted_avg_msrp_mom_pct",
+    "weighted_avg_msrp_yoy_pct",
+    "msrp_inventory_weighted_index_mom_delta",
+    "msrp_inventory_weighted_index_yoy_delta",
+    "weighted_avg_price_mom_pct",
+    "weighted_avg_price_yoy_pct",
+    "price_inventory_weighted_index_mom_delta",
+    "price_inventory_weighted_index_yoy_delta",
+    "retail_sales_mom_pct",
+    "retail_sales_yoy_pct",
+    "retail_share_mom_pp",
+    "retail_share_yoy_pp",
+    "inventory_retail_ratio_mom_delta",
+    "inventory_retail_ratio_yoy_delta"
+  ],
+  "definitions": {
+    "average_inventory": "SUM(avginventory) across all CloudTheory location statuses",
+    "brand_share_denominator": "All rows in the Genesis competitive-segment universe for the month and geography; the same segment universe is applied to SOI and SOM",
+    "model_share_denominator": "All rows in the model series' ius_srs_segment",
+    "weighted_avg_msrp": "CloudTheory avg_msrp weighted by avginventory with positive MSRP",
+    "msrp_inventory_weighted_index": "Genesis weighted-average MSRP divided by the relevant luxury-market or segment benchmark, multiplied by 100",
+    "national_scope": "Sum of CE, EA, MA, MS, SC, SO, and WE; NH and Unassigned excluded"
+  }
+}

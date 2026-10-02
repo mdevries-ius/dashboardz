@@ -1,0 +1,41 @@
+# Credentials and machine-local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Installed dependencies and virtual environments
+node_modules/
+.venv/
+venv/
+.pnp
+.pnp.*
+.yarn/
+
+# Build, framework, and test caches
+.next/
+.vinext/
+dist/
+out/
+.wrangler/
+coverage/
+.pytest_cache/
+.mypy_cache/
+__pycache__/
+*.py[cod]
+
+# Generated dashboard packages and temporary work
+outputs/
+artifacts/
+work/
+tmp/
+*.inspect.ndjson
+*.log
+
+# Raw local endpoint audit material
+projects/hma_governance/data/processed/supervisor_audit.json
+
+# Editor and operating-system files
+.DS_Store
+~$*

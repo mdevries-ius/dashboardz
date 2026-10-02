@@ -1,0 +1,448 @@
+{
+  "generated_at": "2026-09-17T06:38:41.362426+00:00",
+  "refresh_cadence": "daily",
+  "window_days": 180,
+  "contexts": {
+    "Tucson": {
+      "target_model": "Tucson",
+      "segment": "SubCompact SUV",
+      "models_considered": [
+        "CR-V",
+        "CX-50 / CX-5",
+        "Forester",
+        "RAV4",
+        "Rogue Sport",
+        "Santa Cruz",
+        "Sportage",
+        "Tucson"
+      ],
+      "signature": "f3b145f694bbcef0",
+      "window_start": "2026-03-19",
+      "window_end": "2026-09-15",
+      "refreshed_at": "2026-09-15T17:44:41.530967+00:00",
+      "bullets": [
+        {
+          "date": "2026-08-26",
+          "headline": "Kia announces pricing for 2027 Sportage gas models",
+          "outlet": "Kia America Newsroom",
+          "url": "https://www.kiamedia.com/us/en/models/sportage/2027",
+          "models": [
+            "Sportage"
+          ],
+          "context": "The 2027 Sportage adds standard panoramic sunroof and smart power liftgate content on X-Line while starting at $28,990, potentially increasing shopping consideration against similarly priced Tucson and other compact SUVs."
+        },
+        {
+          "date": "2026-07-09",
+          "headline": "2026 Mazda CX-5 earns IIHS TOP SAFETY PICK+",
+          "outlet": "Mazda USA Newsroom",
+          "url": "https://news.mazdausa.com/news-releases?l=5&o=5",
+          "models": [
+            "CX-50 / CX-5"
+          ],
+          "context": "The newly redesigned CX-5 receiving IIHS’ highest safety award could provide a timely search and showroom boost as buyers compare safety credentials with Tucson, Sportage and CR-V."
+        },
+        {
+          "date": "2026-06-22",
+          "headline": "Toyota Kentucky begins assembly of all-new 2026 RAV4 Hybrid",
+          "outlet": "Toyota USA Newsroom",
+          "url": "https://pressroom.toyota.com/toyota-kentucky-begins-assembly-of-all-new-rav4-hybrid-breaks-ground-on-advanced-paint-facility/",
+          "models": [
+            "RAV4"
+          ],
+          "context": "Domestic production of the redesigned, hybrid-only RAV4 signals expanding availability for a major electrified competitor and could heighten its visibility in consumer searches and dealer consideration."
+        },
+        {
+          "date": "2026-06-02",
+          "headline": "2026 Kia Sportage receives major design, technology and powertrain updates",
+          "outlet": "Kia America Newsroom",
+          "url": "https://www.kiamedia.com/us/en/media/pressreleases/24749/2026-kia-sportage",
+          "models": [
+            "Sportage"
+          ],
+          "context": "The refreshed Sportage adds revised styling, stronger hybrid output, new trims, expanded displays and U.S. production plans, creating multiple new comparison hooks versus Tucson and CR-V."
+        },
+        {
+          "date": "2026-06-01",
+          "headline": "2026 Hyundai Tucson Hybrid lineup expands with Night and new FWD trims",
+          "outlet": "Hyundai Newsroom",
+          "url": "https://www.hyundainews.com/releases/4810",
+          "models": [
+            "Tucson"
+          ],
+          "context": "New attainable FWD hybrid trims and a blacked-out Night grade broaden Tucson’s price and style coverage, which could support renewed model-specific search activity and retail consideration."
+        }
+      ]
+    },
+    "Elantra": {
+      "target_model": "Elantra",
+      "segment": "Compact Car",
+      "models_considered": [
+        "Civic",
+        "Corolla Gr",
+        "Elantra",
+        "K4",
+        "Sentra"
+      ],
+      "signature": "43ae921a50035e71",
+      "window_start": "2026-03-19",
+      "window_end": "2026-09-15",
+      "refreshed_at": "2026-09-15T17:41:36.805950+00:00",
+      "bullets": [
+        {
+          "date": "2026-08-18",
+          "headline": "Toyota launches 2027 Corolla 60th Anniversary Special Edition",
+          "outlet": "Toyota USA Newsroom",
+          "url": "https://pressroom.toyota.com/built-for-generations-toyota-corolla-celebrates-60-years-with-2027-special-edition/",
+          "models": [
+            "Corolla Gr"
+          ],
+          "context": "The limited 2,500-unit hybrid special edition and new 2027 Corolla messaging could lift Corolla-family search interest and increase showroom consideration versus the Elantra."
+        },
+        {
+          "date": "2026-07-29",
+          "headline": "Toyota introduces the 2026 GRMN Corolla",
+          "outlet": "Toyota USA Newsroom",
+          "url": "https://pressroom.toyota.com/peak-performance-toyota-introduces-the2026-grmn-corolla/",
+          "models": [
+            "Corolla Gr"
+          ],
+          "context": "A higher-performance GRMN variant adds fresh enthusiast-oriented attention to Toyota’s compact-car family, potentially diverting performance-model searches from Elantra N and Civic variants."
+        },
+        {
+          "date": "2026-06-11",
+          "headline": "Kia K4 Hatchback receives MAMA Favorite Affordable Vehicle award",
+          "outlet": "Kia America Newsroom",
+          "url": "https://www.kiamedia.com/us/en/models/k4-hatchback/2026/pressreleases",
+          "models": [
+            "K4"
+          ],
+          "context": "Recognition for the newly launched K4 Hatchback may broaden K4 consideration among value-focused shoppers and strengthen Kia’s visibility in compact-car comparisons."
+        },
+        {
+          "date": "2026-07-01",
+          "headline": "Hyundai outlines 2026 Elantra model-year changes",
+          "outlet": "Hyundai Newsroom",
+          "url": "https://www.hyundainews.com/releases/4513",
+          "models": [
+            "Elantra"
+          ],
+          "context": "The addition of an SEL Sport Premium trim while the broader Elantra lineup carries over gives dealers a modest new merchandising hook that could support Elantra search and retail interest."
+        }
+      ]
+    },
+    "Santa Fe": {
+      "target_model": "Santa Fe",
+      "segment": "Compact SUV",
+      "models_considered": [
+        "Blazer",
+        "Cherokee",
+        "Edge",
+        "Outback",
+        "Passport",
+        "Santa Fe",
+        "Sorento"
+      ],
+      "signature": "5d16b0583b61e464",
+      "window_start": "2026-03-19",
+      "window_end": "2026-09-15",
+      "refreshed_at": "2026-09-15T17:42:12.372582+00:00",
+      "bullets": [
+        {
+          "date": "2026-08-26",
+          "headline": "Hyundai confirms U.S.-built Santa Fe extended-range EV for 2027",
+          "outlet": "Road & Track",
+          "url": "https://www.roadandtrack.com/news/a73532773/hyundai-genesis-range-extended-ev-suvs-2027/",
+          "models": [
+            "Santa Fe"
+          ],
+          "context": "The confirmed 2027 Santa Fe EREV could lift forward-looking searches and cause some shoppers to delay or compare current Santa Fe purchases against the upcoming electrified model."
+        },
+        {
+          "date": "2026-08-11",
+          "headline": "Compact-SUV incentives remain elevated as vehicle prices rise",
+          "outlet": "Kelley Blue Book",
+          "url": "https://mediaroom.kbb.com/2026-08-11-Kelley-Blue-Book-Report-New-Vehicle-Prices-Trend-Higher-in-July-as-Incentives-Decline-and-Sales-Pace-Slows",
+          "models": [
+            "Santa Fe",
+            "Sorento",
+            "Blazer",
+            "Outback",
+            "Passport"
+          ],
+          "context": "Kelley Blue Book reported compact SUVs carried above-average incentive spending, which may intensify value-driven searches and retail competition across these models."
+        },
+        {
+          "date": "2026-08-05",
+          "headline": "2026 Chevrolet Blazer production set to end before assembly shift",
+          "outlet": "Autoblog",
+          "url": "https://www.autoblog.com/news/2026-chevy-blazer-buyers-have-one-week-before-factory-orders-close",
+          "models": [
+            "Blazer"
+          ],
+          "context": "The expected September 30 production cutoff could create urgency for remaining Blazer inventory while also suppressing searches from shoppers unwilling to buy during a model-year transition."
+        },
+        {
+          "date": "2026-07-29",
+          "headline": "Chevrolet Blazer expected to skip the 2027 model year",
+          "outlet": "MotorTrend",
+          "url": "https://www.motortrend.com/features/2027-chevrolet-suvs-lineup-updates-changes",
+          "models": [
+            "Blazer"
+          ],
+          "context": "A one-year model absence and planned return as a substantially updated vehicle could redirect near-term shoppers toward available rivals such as Santa Fe, Outback, Passport, and Sorento."
+        }
+      ]
+    },
+    "Kona": {
+      "target_model": "Kona",
+      "segment": "Entry CUV",
+      "models_considered": [
+        "CX-30 / CX-3",
+        "Corolla Cross",
+        "Crosstrek",
+        "HR-V",
+        "Kicks",
+        "Kona",
+        "Seltos",
+        "Trailblazer",
+        "Trax",
+        "Venue"
+      ],
+      "signature": "1a4fd0b126f46184",
+      "window_start": "2026-03-19",
+      "window_end": "2026-09-15",
+      "refreshed_at": "2026-09-15T17:42:46.295079+00:00",
+      "bullets": [
+        {
+          "date": "2026-07-30",
+          "headline": "Mazda reports June CX-30 production and global sales results",
+          "outlet": "Mazda Newsroom",
+          "url": "https://newsroom.mazda.com/en/publicity/release/2026/202607/260730b.html",
+          "models": [
+            "CX-30 / CX-3"
+          ],
+          "context": "Mazda reported mixed CX-30 production but higher June global sales, a supply-and-visibility signal that could influence near-term consideration and retail availability versus newer rivals."
+        },
+        {
+          "date": "2026-07-09",
+          "headline": "Subaru holds 2027 Crosstrek starting MSRP at $26,995",
+          "outlet": "Subaru of America",
+          "url": "https://www.subaru.net/subaru-crosstrek-pricing-holds-steady-at-26995-msrp-for-2027-model-year/",
+          "models": [
+            "Crosstrek"
+          ],
+          "context": "Maintaining the prior entry price while advancing the 2027 model year could preserve Crosstrek’s value positioning and prompt renewed comparison shopping in the entry-CUV set."
+        },
+        {
+          "date": "2026-06-15",
+          "headline": "Hyundai launches 2026 Kona campaign featuring Regina Hall",
+          "outlet": "Hyundai News",
+          "url": "https://www.hyundainews.com/releases/2807",
+          "models": [
+            "Kona"
+          ],
+          "context": "A dedicated national campaign for the 2026 Kona may increase model awareness and branded search activity, although the clipping does not establish a sales or search effect."
+        },
+        {
+          "date": "2026-06-03",
+          "headline": "Kia announces pricing for all-new 2027 Seltos",
+          "outlet": "Kia America",
+          "url": "https://www.kiamedia.com/us/en/media/pressreleases/24758/kia-announces-pricing-for-all-new-2027-seltos",
+          "models": [
+            "Seltos"
+          ],
+          "context": "The redesigned Seltos brings larger dimensions, expanded technology, multiple gas powertrains and a $24,990 starting MSRP, creating a strong new-product reason for shoppers to revisit the model and compare it with Kona and other entry CUVs."
+        }
+      ]
+    },
+    "Ioniq 5": {
+      "target_model": "Ioniq 5",
+      "segment": "Mainstream EV SUV 2 Row",
+      "models_considered": [
+        "Ariya",
+        "Blazer Ev",
+        "EV6",
+        "Equinox Ev",
+        "Ioniq 5",
+        "Leaf",
+        "Mach-E",
+        "Model Y",
+        "Prologue"
+      ],
+      "signature": "1e61644454fdd0e3",
+      "window_start": "2026-03-19",
+      "window_end": "2026-09-15",
+      "refreshed_at": "2026-09-15T17:43:18.871139+00:00",
+      "bullets": [
+        {
+          "date": "2026-07-08",
+          "headline": "Hyundai launches 2026 Getaway Summer Sales Event with targeted EV incentives",
+          "outlet": "Hyundai Newsroom",
+          "url": "https://www.hyundainews.com/releases/4288",
+          "models": [
+            "Ioniq 5"
+          ],
+          "context": "A manufacturer-backed financing and incentive push could increase Ioniq 5 shopping activity and near-term dealer conversion relative to rivals without proving a sales-ranking effect."
+        },
+        {
+          "date": "2026-06-10",
+          "headline": "Hyundai Ioniq 5 recognized in 2026 family-vehicle and EV-experience awards",
+          "outlet": "Hyundai Newsroom",
+          "url": "https://www.hyundainews.com/releases/3892",
+          "models": [
+            "Ioniq 5"
+          ],
+          "context": "Fresh third-party recognition may reinforce Ioniq 5 consideration among mainstream family-EV shoppers, potentially supporting search visibility and retail momentum."
+        },
+        {
+          "date": "2026-06-02",
+          "headline": "Hyundai confirms 2026 Ioniq 5 as a carryover model with NACS charging support and added equipment",
+          "outlet": "Hyundai Newsroom",
+          "url": "https://www.hyundainews.com/releases/4513",
+          "models": [
+            "Ioniq 5"
+          ],
+          "context": "The absence of a major redesign limits novelty, but continued NACS compatibility and equipment updates help preserve the model’s competitiveness against newer EV launches."
+        },
+        {
+          "date": "2026-05-20",
+          "headline": "Nissan recovery plan prioritizes hybrids and a narrower U.S. EV strategy",
+          "outlet": "Axios",
+          "url": "https://www.axios.com/2026/05/20/nissan-recovery-plan-hybrids-tariffs",
+          "models": [
+            "Ariya",
+            "Leaf"
+          ],
+          "context": "A more selective electrification strategy may shift Nissan’s promotional and consumer attention toward the redesigned Leaf while reducing visibility and availability for Ariya."
+        },
+        {
+          "date": "2026-05-04",
+          "headline": "Kia cuts 2026 EV6 pricing and adds standard charging equipment",
+          "outlet": "Kia Media",
+          "url": "https://www.kiamedia.com/us/en/models/ev6/2026",
+          "models": [
+            "EV6"
+          ],
+          "context": "Lower entry pricing and simplified charging support could draw value-oriented EV shoppers away from similarly positioned Ioniq 5, Mach-E, and Prologue models."
+        }
+      ]
+    },
+    "Sonata": {
+      "target_model": "Sonata",
+      "segment": "Midsize Car",
+      "models_considered": [
+        "Accord",
+        "Altima",
+        "Camry",
+        "K5",
+        "Sonata"
+      ],
+      "signature": "4632232cf6066243",
+      "window_start": "2026-03-19",
+      "window_end": "2026-09-15",
+      "refreshed_at": "2026-09-15T17:43:47.348411+00:00",
+      "bullets": [
+        {
+          "date": "2026-07-31",
+          "headline": "Honda’s major Accord facelift remains planned for a later model year",
+          "outlet": "Autoblog",
+          "url": "https://www.autoblog.com/news/hondas-major-accord-facelift-is-almost-impossible-to-spot",
+          "models": [
+            "Accord"
+          ],
+          "context": "The report keeps future Accord product news in the competitive conversation, potentially encouraging shoppers to compare current inventory with an anticipated redesign."
+        },
+        {
+          "date": "2026-07-15",
+          "headline": "Nissan signals the Altima may be nearing the end of its U.S. run",
+          "outlet": "Car and Driver",
+          "url": "https://www.caranddriver.com/news/a71942548/nissan-altima-officially-being-discontinued/",
+          "models": [
+            "Altima"
+          ],
+          "context": "Conflicting statements about the Altima’s future could create urgency among shoppers seeking the nameplate while weakening its longer-term search and retail momentum."
+        },
+        {
+          "date": "2026-06-10",
+          "headline": "Honda reportedly preparing a substantial Accord overhaul for 2027",
+          "outlet": "MotorTrend",
+          "url": "https://www.motortrend.com/news/2028-honda-accord-passport-overhaul-report",
+          "models": [
+            "Accord"
+          ],
+          "context": "Advance coverage of sharper styling and broader changes may pull search interest toward the Accord while causing some buyers to defer purchases awaiting the updated model."
+        },
+        {
+          "date": "2026-06-06",
+          "headline": "Toyota reveals high-profile Camry project builds tied to its Japan-market launch",
+          "outlet": "Car and Driver",
+          "url": "https://www.caranddriver.com/news/a71511121/toyota-camry-fighter-build/",
+          "models": [
+            "Camry"
+          ],
+          "context": "The unusual GR-themed Camry publicity could broaden awareness of the nameplate and reinforce its visibility relative to more conventional midsize-sedan rivals."
+        }
+      ]
+    },
+    "Palisade": {
+      "target_model": "Palisade",
+      "segment": "Midsize SUV",
+      "models_considered": [
+        "Explorer",
+        "Grand Cherokee",
+        "Grand Highlander",
+        "Highlander",
+        "Palisade",
+        "Pilot",
+        "Telluride",
+        "Traverse"
+      ],
+      "signature": "b994754d62a333d8",
+      "window_start": "2026-03-19",
+      "window_end": "2026-09-15",
+      "refreshed_at": "2026-09-15T17:44:13.930542+00:00",
+      "bullets": [
+        {
+          "date": "2026-09-03",
+          "headline": "2027 Kia Telluride earns IIHS Top Safety Pick+ rating",
+          "outlet": "Kia America Newsroom",
+          "url": "https://www.kiamedia.com/us/en/media/pressreleases/25048/2027-kia-telluride-earns-2026-iihs-top-safety-pick-rating",
+          "models": [
+            "Telluride"
+          ],
+          "context": "The safety designation may reinforce attention to the newly redesigned Telluride and support consideration among family-SUV shoppers, without establishing a direct sales effect."
+        },
+        {
+          "date": "2026-08-25",
+          "headline": "Chevrolet adds an evolved High Country trim to the 2027 Traverse",
+          "outlet": "General Motors",
+          "url": "https://news.gm.com/home.detail.html/Pages/news/us/en/2026/aug/0825-traverse.html",
+          "models": [
+            "Traverse"
+          ],
+          "context": "The new premium-oriented trim and September production timing could increase Traverse visibility and broaden its appeal against established three-row competitors."
+        },
+        {
+          "date": "2026-07-08",
+          "headline": "Toyota recalls certain 2026 Grand Highlander vehicles over rear-axle carriers",
+          "outlet": "Toyota USA Newsroom",
+          "url": "https://pressroom.toyota.com/toyota-recalls-certain-model-year-2026-toyota-grand-highlander-and-lexus-tx-vehicles/",
+          "models": [
+            "Grand Highlander"
+          ],
+          "context": "A safety recall may temporarily affect consumer confidence, dealer discussions, or vehicle availability for affected Grand Highlander units, though the clipping does not prove a ranking impact."
+        },
+        {
+          "date": "2026-07-31",
+          "headline": "Kia reports record July sales and continued interest in the redesigned Telluride",
+          "outlet": "Kia America Newsroom",
+          "url": "https://www.kiamedia.com/us/en/media/pressreleases/24999/kia-america-posts-record-july-sales",
+          "models": [
+            "Telluride"
+          ],
+          "context": "Kia’s reported record July performance and emphasis on interest in the redesigned Telluride could help sustain search visibility and showroom momentum for the nameplate."
+        }
+      ]
+    }
+  }
+}

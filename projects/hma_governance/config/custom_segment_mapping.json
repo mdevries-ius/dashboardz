@@ -1,0 +1,15 @@
+{
+  "source": "../../../dbx_ingestion/search_customsegmentation/cleaned_outputs/governance_list_revised_full_set.csv",
+  "source_workbook": "Governance List Revised.xlsx",
+  "source_sheet": "Full Set",
+  "rule": "Every row in the governed Full Set segment is included. Non-Hyundai models remain exact ius_make_model matches; Hyundai variants roll up only within the same segment.",
+  "model_segments": {
+    "Elantra": {"segment": "Compact Car"},
+    "Santa Fe": {"segment": "Compact SUV"},
+    "Kona": {"segment": "Entry CUV"},
+    "Ioniq 5": {"segment": "Mainstream EV SUV 2 Row"},
+    "Sonata": {"segment": "Midsize Car"},
+    "Palisade": {"segment": "Midsize SUV"},
+    "Tucson": {"segment": "Sub-Compact SUV"}
+  }
+}

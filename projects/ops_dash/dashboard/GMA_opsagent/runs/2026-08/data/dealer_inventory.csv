@@ -1,0 +1,200 @@
+month,seller_id,dealer_name,city,state_province,postal_code,dma_code,dma_name,latitude,longitude,average_inventory
+2026-08-01,61186,Braman Genesis,Miami,FL,33137,528,"Miami-Ft. Lauderdale, FL",25.7954893,-80.1910373,753.0
+2026-08-01,73396,Genesis of Cherry Hill,Evesham,NJ,08053,504,"Philadelphia, PA",39.8831146,-74.9226358,389.0
+2026-08-01,29179,Genesis of White Plains,White Plains,NY,10606,501,"New York, NY",41.0350081,-73.7836873,377.0
+2026-08-01,62609,Norm Reeves Genesis of Cerritos,Cerritos,CA,90703,803,"Los Angeles, CA",33.8662378,-118.1015234,360.0
+2026-08-01,68783,Coconut Creek Genesis,Coconut Creek,FL,33073,528,"Miami-Ft. Lauderdale, FL",26.2914037,-80.2009677,333.0
+2026-08-01,99817,Genesis Ring 1,Derwood,MD,20855,511,"Washington, DC (Hagerstown, MD)",39.10844,-77.1511615,305.0
+2026-08-01,69264,Genesis of Naples,Naples,FL,34109,571,"Ft. Myers-Naples, FL",26.2279083,-81.7660554,290.0
+2026-08-01,64605,Genesis of South Bay,Torrance,CA,90505,803,"Los Angeles, CA",33.7991718,-118.3411724,286.0
+2026-08-01,10409,Genesis of Southwest Houston,Houston,TX,77074,618,"Houston, TX",29.6691333,-95.5474174,249.0
+2026-08-01,28092,Genesis of Las Vegas,Las Vegas,NV,89117,839,"Las Vegas, NV",36.1449418,-115.2489832,247.0
+2026-08-01,73840,Genesis of Braintree,Quincy,MA,02169,506,"Boston, MA-Manchester, NH",42.2364548,-70.9785026,237.0
+2026-08-01,72010,Genesis of Charlotte,Charlotte,NC,28227,517,"Charlotte, NC",35.1428872,-80.7216186,237.0
+2026-08-01,100307,Genesis of Mountain View,Mountain View,CA,94040,807,"San Francisco-Oakland-San Jose, CA",37.4048603,-122.1093955,237.0
+2026-08-01,7692,Genesis of The South Shore,West Islip,NY,11795,501,"New York, NY",40.7207062,-73.3044797,229.0
+2026-08-01,57353,Jenkins Genesis of North East Jacksonville,Jacksonville,FL,32225,561,"Jacksonville, FL",30.3253588,-81.5105439,228.0
+2026-08-01,64037,Universal Genesis,Orlando,FL,32837,534,"Orlando-Daytona Beach-Melbourne, FL",28.3794594,-81.4033691,228.0
+2026-08-01,72517,Genesis of Loma Linda,Ontario,CA,91764,803,"Los Angeles, CA",34.0699402,-117.6059991,221.0
+2026-08-01,72673,Earnhardt Genesis North Scottsdale,Scottsdale,AZ,85260,753,"Phoenix, AZ",33.631299,-111.8982196,209.0
+2026-08-01,69118,Hudson Hyundai,Jersey City,NJ,07304,501,"New York, NY",40.7234737,-74.0888952,203.0
+2026-08-01,73041,Gettel Genesis of Sarasota,Sarasota,FL,34233,539,"Tampa-St Petersburg (Sarasota), FL",27.2695206,-82.4746827,202.0
+2026-08-01,9001,Genesis of Chandler,Chandler,AZ,85286,753,"Phoenix, AZ",33.2846933,-111.7910889,196.0
+2026-08-01,7006,Genesis of Atlanta,Atlanta,GA,30341,524,"Atlanta, GA",33.9080158,-84.2909986,187.0
+2026-08-01,69570,Genesis of Cary,Cary,NC,27511,560,"Raleigh-Durham (Fayetteville), NC",35.7384809,-78.8093998,187.0
+2026-08-01,73682,Wallace Genesis,Stuart,FL,34997,548,"West Palm Beach-Ft. Pierce, FL",27.1605832,-80.2229084,185.0
+2026-08-01,4941,Genesis of Conshohocken,Conshohocken,PA,19428,504,"Philadelphia, PA",40.1028837,-75.3064312,184.0
+2026-08-01,74040,Genesis of San Bruno,San Bruno,CA,94066,807,"San Francisco-Oakland-San Jose, CA",37.6372585,-122.419091,180.0
+2026-08-01,62585,Genesis of the North Shore,Hicksville,NY,11801,501,"New York, NY",40.7702089,-73.5027249,178.0
+2026-08-01,1531,Genesis of Manchester,Bedford,NH,03110,506,"Boston, MA-Manchester, NH",42.944374,-71.472789,177.0
+2026-08-01,67653,Genesis of Corona,Corona,CA,92882,803,"Los Angeles, CA",33.882918,-117.6138489,174.0
+2026-08-01,98536,Galpin Genesis of Van Nuys,Los Angeles,CA,91406,803,"Los Angeles, CA",34.2209833,-118.4687863,171.0
+2026-08-01,6767,Tuttle-Click Genesis,Irvine,CA,92618,803,"Los Angeles, CA",33.6342181,-117.7233823,169.0
+2026-08-01,71490,Genesis of West Houston,Houston,TX,77094,618,"Houston, TX",29.7836158,-95.673582,165.0
+2026-08-01,3156,Genesis of Schaumburg,Schaumburg,IL,60173,602,"Chicago, IL",42.0509027,-88.053118,164.0
+2026-08-01,1393,Genesis of Plano,Plano,TX,75093,623,"Dallas-Ft. Worth, TX",33.0102218,-96.7668456,163.0
+2026-08-01,71992,Genesis of Brooklyn,Brooklyn,NY,11232,501,"New York, NY",40.6571085,-74.014405,161.0
+2026-08-01,70287,Genesis of St. Charles,St. Peters,MO,63376,609,"St. Louis, MO",38.7975346,-90.5978187,159.0
+2026-08-01,57975,Genesis of Kennesaw,Kennesaw,GA,30144,524,"Atlanta, GA",34.0233261,-84.5734338,158.0
+2026-08-01,9004,Genesis of Littleton,Englewood,CO,80113,751,"Denver, CO",39.6200977,-104.9885845,157.0
+2026-08-01,2734,Genesis of Carmel,Indianapolis,IN,46240,527,"Indianapolis, IN",39.9293455,-86.0966346,153.0
+2026-08-01,53667,Genesis Of Cumming,Cumming,GA,30041,524,"Atlanta, GA",34.1439728,-84.1730152,152.0
+2026-08-01,62581,Genesis Santa Monica,Santa Monica,CA,90404,803,"Los Angeles, CA",34.03227,-118.4751279,148.0
+2026-08-01,66836,Genesis of Peoria,Peoria,AZ,85382,753,"Phoenix, AZ",33.6372458,-112.2451079,148.0
+2026-08-01,94375,Castle Genesis of Downers Grove,Oakbrook Terrace,IL,60181,602,"Chicago, IL",41.8582742,-87.9545485,142.0
+2026-08-01,103030,Genesis of Schererville,Schererville,IN,46375,602,"Chicago, IL",41.476484,-87.4051332,141.0
+2026-08-01,71052,Lakeland Genesis,Lakeland,FL,33815,539,"Tampa-St Petersburg (Sarasota), FL",28.054301,-81.9758413,138.0
+2026-08-01,69062,Genesis of Lindon,Lindon,UT,84042,770,"Salt Lake City, UT",40.3293405,-111.7338433,137.0
+2026-08-01,52440,Genesis of Mentor,Mentor,OH,44060,510,"Cleveland-Akron (Canton), OH",41.6834521,-81.3348422,137.0
+2026-08-01,4349,Jenkins Genesis of Leesburg,Leesburg,FL,34788,534,"Orlando-Daytona Beach-Melbourne, FL",28.8228437,-81.7874886,136.0
+2026-08-01,73389,Genesis of Freehold,Freehold,NJ,07728,501,"New York, NY",40.2641336,-74.2924834,134.0
+2026-08-01,61239,Genesis of Central Florida,Clermont,FL,34711,534,"Orlando-Daytona Beach-Melbourne, FL",28.5478492,-81.6689649,130.0
+2026-08-01,3102,Genesis of Alexandria,Alexandria,VA,22301,511,"Washington, DC (Hagerstown, MD)",38.8213866,-77.0576309,128.0
+2026-08-01,62587,Genesis of Aurora,Aurora,IL,60504,602,"Chicago, IL",41.7515762,-88.213844,124.0
+2026-08-01,70074,Genesis of Fort Myers,Fort Myers,FL,33907,571,"Ft. Myers-Naples, FL",26.596538,-81.8605256,124.0
+2026-08-01,100529,Genesis of San Diego,San Diego,CA,92111,825,"San Diego, CA",32.8306319,-117.1434333,124.0
+2026-08-01,12986,Genesis of Buffalo,Williamsville,NY,14221,514,"Buffalo, NY",42.960953,-78.691081,123.0
+2026-08-01,69980,Genesis of Minneapolis,Golden Valley,MN,55426,613,"Minneapolis-St. Paul, MN",44.9724585,-93.3935748,119.0
+2026-08-01,10212,Genesis of Edmond,Edmond,OK,73013,650,"Oklahoma City, OK",35.6128747,-97.4967472,117.0
+2026-08-01,99734,Genesis of Tampa,Tampa,FL,33613,539,"Tampa-St Petersburg (Sarasota), FL",28.0872094,-82.4521026,116.0
+2026-08-01,4457,Genesis of Spring,Spring,TX,77373,618,"Houston, TX",30.0627988,-95.4322263,114.0
+2026-08-01,71985,Genesis of Columbus,Columbus,OH,43230,535,"Columbus, OH",40.0598318,-82.9433206,113.0
+2026-08-01,73379,Genesis of Milford,Milford,CT,06460,533,"Hartford & New Haven, CT",41.2076083,-73.0884209,112.0
+2026-08-01,26003,Genesis of Elgin,Elgin,IL,60120,602,"Chicago, IL",42.0317119,-88.2445971,111.0
+2026-08-01,103298,Grubbs Genesis of Grapevine,Grapevine,TX,76051,623,"Dallas-Ft. Worth, TX",32.9211932,-97.0637092,111.0
+2026-08-01,67535,Genesis of Wolfchase,Memphis,TN,38133,640,"Memphis, TN",35.2032351,-89.8071642,110.0
+2026-08-01,72695,Rick Case Genesis,Plantation,FL,33317,528,"Miami-Ft. Lauderdale, FL",26.1351086,-80.2031534,110.0
+2026-08-01,17853,Genesis of Winston-Salem,Winston-Salem,NC,27127,518,"Greensboro-High Point-Winston Salem, NC",36.0674142,-80.2606633,107.0
+2026-08-01,16023,Genesis of Baton Rouge,Baton Rouge,LA,70809,716,"Baton Rouge, LA",30.3805348,-91.0404825,105.0
+2026-08-01,67522,Genesis of Wexford,Wexford,PA,15090,508,"Pittsburgh, PA",40.6143612,-80.0568103,105.0
+2026-08-01,71564,Clay Cooley Genesis of Mesquite,Mesquite,TX,75150,623,"Dallas-Ft. Worth, TX",32.8336891,-96.6306212,101.0
+2026-08-01,4899,Genesis of Conway,Conway,AR,72032,693,"Little Rock-Pine Bluff, AR",35.093494,-92.421864,101.0
+2026-08-01,69670,Rick Case Genesis Davie,Davie,FL,33331,528,"Miami-Ft. Lauderdale, FL",26.0758729,-80.3619504,101.0
+2026-08-01,2584,Genesis Of Norman,Norman,OK,73069,650,"Oklahoma City, OK",35.2248696,-97.4845549,100.0
+2026-08-01,4844,Genesis of Miami Lakes,Miami Lakes,FL,33014,528,"Miami-Ft. Lauderdale, FL",25.9235071,-80.3016669,100.0
+2026-08-01,70696,Genesis of Round Rock,Round Rock,TX,78665,635,"Austin, TX",30.5322484,-97.6891408,100.0
+2026-08-01,72126,Genesis of Ocala,Ocala,FL,34471,534,"Orlando-Daytona Beach-Melbourne, FL",29.1773171,-82.1519073,99.0
+2026-08-01,73680,Genesis of Wayne,Wayne,NJ,07470,501,"New York, NY",40.948967,-74.276307,98.0
+2026-08-01,69032,Genesis Of NW San Antonio,Boerne,TX,78006,641,"San Antonio, TX",29.6844593,-98.6411438,95.0
+2026-08-01,99924,Genesis of Avon,Simsbury,CT,06092,533,"Hartford & New Haven, CT",41.8203914,-72.8690454,95.0
+2026-08-01,100501,Genesis Macon,Macon,GA,31210,503,"Macon, GA",32.8866204,-83.675043,94.0
+2026-08-01,97787,Genesis Montgomery,Montgomery,AL,36106,698,"Montgomery (Selma), AL",32.3606235,-86.2242999,94.0
+2026-08-01,64003,Genesis of Bel Air,Fallston,MD,21047,512,"Baltimore, MD",39.5065574,-76.3858171,94.0
+2026-08-01,4919,Genesis of North Aurora,North Aurora,IL,60542,602,"Chicago, IL",41.80082,-88.3739138,93.0
+2026-08-01,68812,Genesis of South Knoxville,Alcoa,TN,37701,557,"Knoxville, TN",35.8245636,-83.9755837,93.0
+2026-08-01,61284,Genesis of Springfield,Springfield,VA,22150,511,"Washington, DC (Hagerstown, MD)",38.7503466,-77.1828597,93.0
+2026-08-01,70835,Genesis of Tulsa,Tulsa,OK,74133,671,"Tulsa, OK",36.022119,-95.8852819,93.0
+2026-08-01,1130,Genesis of Kirkland,Kirkland,WA,98034,819,"Seattle-Tacoma, WA",47.7072771,-122.1748634,92.0
+2026-08-01,61217,Genesis of Weatherford,Hudson Oaks,TX,76087,623,"Dallas-Ft. Worth, TX",32.7558051,-97.6929673,91.0
+2026-08-01,69823,Genesis Of Charleston,Charleston,SC,29414,519,"Charleston, SC",32.7982545,-80.0859341,90.0
+2026-08-01,3566,Genesis of Highland Park,Highland Park,IL,60035,602,"Chicago, IL",42.1609423,-87.8081446,90.0
+2026-08-01,69883,Genesis of North Plainfield,North Plainfield,NJ,07060,501,"New York, NY",40.6165806,-74.4551273,90.0
+2026-08-01,8533,Genesis North Orlando,Winter Park,FL,32789,534,"Orlando-Daytona Beach-Melbourne, FL",28.6088331,-81.3648614,86.0
+2026-08-01,10129,Genesis of Covington,Covington,LA,70433,622,"New Orleans, LA",30.4321,-90.0886416,85.0
+2026-08-01,6996,Genesis of Lafayette,Lafayette,LA,70506,642,"Lafayette, LA",30.1552098,-92.0910284,84.0
+2026-08-01,70876,Doral Genesis,Doral,FL,33172,528,"Miami-Ft. Lauderdale, FL",25.7843093,-80.3669404,82.0
+2026-08-01,11303,Genesis of Appleton,Appleton,WI,54913,658,"Green Bay-Appleton, WI",44.2887964,-88.4759736,81.0
+2026-08-01,65747,Genesis Of Clear Lake,Webster,TX,77598,618,"Houston, TX",29.5340161,-95.13376,79.0
+2026-08-01,71661,Allen Turner Genesis,Pensacola,FL,32505,686,"Mobile, AL-Pensacola (Ft. Walton Beach), FL",30.4750621,-87.247943,78.0
+2026-08-01,2525,Genesis of Cool Springs,Franklin,TN,37067,659,"Nashville, TN",35.9580609,-86.8090467,78.0
+2026-08-01,71829,Genesis of Chantilly,Chantilly,VA,20151,511,"Washington, DC (Hagerstown, MD)",38.903778,-77.4621301,76.0
+2026-08-01,68256,Genesis of Lexington,Lexington,KY,40509,541,"Lexington, KY",37.9960356,-84.441848,76.0
+2026-08-01,67536,Genesis of Omaha,Omaha,NE,68118,652,"Omaha, NE",41.2639237,-96.1858719,76.0
+2026-08-01,69382,Genesis of West Chester,West Chester,PA,19382,504,"Philadelphia, PA",39.9023291,-75.5655602,75.0
+2026-08-01,68973,Genesis of Dublin,Dublin,CA,94568,807,"San Francisco-Oakland-San Jose, CA",37.7027037,-121.9030039,73.0
+2026-08-01,96075,Genesis of Smithtown,Saint James,NY,11780,501,"New York, NY",40.861595,-73.159573,73.0
+2026-08-01,96938,Genesis of North Cincinnati,Cincinnati,OH,45249,515,"Cincinnati, OH",39.2926575,-84.3036044,72.0
+2026-08-01,93460,Genesis of Portland,Portland,OR,97225,820,"Portland, OR",45.4962782,-122.7698208,72.0
+2026-08-01,73795,Crown Genesis,St. Petersburg,FL,33714,539,"Tampa-St Petersburg (Sarasota), FL",27.8204635,-82.6786673,71.0
+2026-08-01,72560,Genesis of West Knoxville,Knoxville,TN,37923,557,"Knoxville, TN",35.9181977,-84.0733877,70.0
+2026-08-01,81842,Genesis of West Warwick,West Warwick,RI,02893,521,"Providence, RI-New Bedford, MA",41.684535,-71.5014056,70.0
+2026-08-01,91447,Genesis of Albany,Albany,NY,12205,532,"Albany-Schenectady-Troy, NY",42.7296031,-73.8529553,69.0
+2026-08-01,68961,Genesis of Hampton,Hampton,VA,23666,544,"Norfolk-Portsmouth-Newport News,VA",37.0619771,-76.4003949,69.0
+2026-08-01,70631,Genesis of Lake Norman,Cornelius,NC,28031,517,"Charlotte, NC",35.467345,-80.872696,69.0
+2026-08-01,10916,Genesis of Louisville,Jeffersontown,KY,40299,529,"Louisville, KY",38.2125896,-85.5378392,69.0
+2026-08-01,73042,Gettel Genesis of Lakewood,Bradenton,FL,34208,539,"Tampa-St Petersburg (Sarasota), FL",27.4953171,-82.4871204,68.0
+2026-08-01,69375,Genesis of Hilton Head,Bluffton,SC,29910,507,"Savannah, GA",32.2898537,-80.9132918,67.0
+2026-08-01,60611,Genesis of Huntsville,Huntsville,AL,35816,691,"Huntsville-Decatur (Florence), AL",34.7342382,-86.6214927,67.0
+2026-08-01,94567,Genesis of Kansas City,Overland Park,KS,66204,616,"Kansas City, MO",38.9882713,-94.6681597,67.0
+2026-08-01,94705,Genesis of Ridgefield,Norwalk,CT,06851,501,"New York, NY",41.1261307,-73.4233158,67.0
+2026-08-01,70573,Genesis of Gwinnett,Duluth,GA,30096,524,"Atlanta, GA",33.9606012,-84.1164625,65.0
+2026-08-01,61240,Genesis of Palm Springs,Palm Springs,CA,92264,804,"Palm Springs, CA",33.7945577,-116.5032881,65.0
+2026-08-01,69447,King Genesis,Deerfield Beach,FL,33441,528,"Miami-Ft. Lauderdale, FL",26.29967,-80.0946749,65.0
+2026-08-01,73383,Genesis of Newnan,Newnan,GA,30263,524,"Atlanta, GA",33.3980326,-84.751469,64.0
+2026-08-01,68945,Genesis of San Antonio East,San Antonio,TX,78233,641,"San Antonio, TX",29.5452956,-98.3688609,62.0
+2026-08-01,61567,Genesis of Monroeville,Monroeville,PA,15146,508,"Pittsburgh, PA",40.4308948,-79.7170895,60.0
+2026-08-01,61515,Genesis Of Madison,Madison,WI,53713,669,"Madison, WI",43.0341872,-89.4116586,59.0
+2026-08-01,61326,Genesis of Denville,Denville,NJ,07834,501,"New York, NY",40.8681668,-74.5137571,59.0
+2026-08-01,68840,Genesis of Golden,Golden,CO,80401,751,"Denver, CO",39.730479,-105.1754951,58.0
+2026-08-01,98745,Genesis of Danvers,Danvers,MA,01923,506,"Boston, MA-Manchester, NH",42.5595013,-70.9786915,57.0
+2026-08-01,9171,Genesis of Longview,Longview,TX,75605,709,"Tyler-Longview(Lufkin & Nacogdoches), TX",32.5633713,-94.7310184,57.0
+2026-08-01,67498,Genesis of West Palm Beach,West Palm Beach,FL,33409,548,"West Palm Beach-Ft. Pierce, FL",26.7072233,-80.0873646,57.0
+2026-08-01,69757,Genesis of Wilkes-Barre,Wilkes-Barre,PA,18702,577,"Wilkes Barre-Scranton, PA",41.2549421,-75.8381435,56.0
+2026-08-01,7375,Genesis of Bedford,Bedford,OH,44146,510,"Cleveland-Akron (Canton), OH",41.4061393,-81.5482726,55.0
+2026-08-01,94818,Genesis of Milwaukee,Waukesha,WI,53186,617,"Milwaukee, WI",43.0244944,-88.2038863,55.0
+2026-08-01,61459,Genesis of Augusta,Augusta,GA,30907,520,"Augusta, GA",33.5157506,-82.0641493,54.0
+2026-08-01,9594,Genesis of Orange Park,Jacksonville,FL,32244,561,"Jacksonville, FL",30.2100757,-81.7391104,54.0
+2026-08-01,2157,Genesis of Suitland,Bowie,MD,20716,511,"Washington, DC (Hagerstown, MD)",38.9227402,-76.7179222,54.0
+2026-08-01,8947,Genesis of Wichita,Wichita,KS,67206,678,"Wichita-Hutchinson, KS",37.7055104,-97.2084739,54.0
+2026-08-01,2687,Genesis of Parma,Parma,OH,44129,510,"Cleveland-Akron (Canton), OH",41.4180454,-81.7339114,53.0
+2026-08-01,69737,Genesis of Richmond,Bon Air,VA,23235,556,"Richmond-Petersburg, VA",37.5013145,-77.5717929,52.0
+2026-08-01,36300,Delray Genesis,Delray Beach,FL,33483,548,"West Palm Beach-Ft. Pierce, FL",26.4720932,-80.0668508,51.0
+2026-08-01,70476,Genesis of Escondido,Escondido,CA,92029,825,"San Diego, CA",33.1150272,-117.1049655,51.0
+2026-08-01,1691,Genesis of Fairfield,Fairfield,CT,06825,501,"New York, NY",41.1661525,-73.2298512,51.0
+2026-08-01,73353,Genesis of Annapolis,Annapolis,MD,21401,512,"Baltimore, MD",38.976603,-76.5095064,49.0
+2026-08-01,71974,Genesis of Columbia,Columbia,SC,29203,546,"Columbia, SC",34.1430845,-80.9485594,49.0
+2026-08-01,72712,Genesis of Roswell,Roswell,GA,30076,524,"Atlanta, GA",34.056201,-84.32906,49.0
+2026-08-01,4571,Genesis of Nashua,Nashua,NH,03060,506,"Boston, MA-Manchester, NH",42.7272329,-71.4464946,48.0
+2026-08-01,42325,Genesis Memphis Covington Pike,Memphis,TN,38134,640,"Memphis, TN",35.1781733,-89.8953093,46.0
+2026-08-01,64426,Genesis of Algonquin,Algonquin,IL,60102,602,"Chicago, IL",42.1629985,-88.3344476,46.0
+2026-08-01,83168,Genesis of Framingham,Framingham,MA,01702,506,"Boston, MA-Manchester, NH",42.2974046,-71.417428,46.0
+2026-08-01,67547,Genesis of Ogden,Ogden,UT,84401,770,"Salt Lake City, UT",41.2030548,-111.9799594,46.0
+2026-08-01,3536,Genesis of Rockville,North Bethesda,MD,20852,511,"Washington, DC (Hagerstown, MD)",39.0438363,-77.1107675,46.0
+2026-08-01,36882,Genesis of Virginia Beach,Virginia Beach,VA,23452,544,"Norfolk-Portsmouth-Newport News,VA",36.8356924,-76.0987758,46.0
+2026-08-01,70290,Genesis of Greer,Greer,SC,29651,567,"Greenville-Spartanburg, SC-Asheville, NC-Anderson, SC",34.949924,-82.198468,43.0
+2026-08-01,73375,Genesis of Melbourne,Melbourne,FL,32901,534,"Orlando-Daytona Beach-Melbourne, FL",28.0781199,-80.6372008,43.0
+2026-08-01,66747,Genesis Of Southfield,Southfield,MI,48034,505,"Detroit, MI",42.4941876,-83.2830437,42.0
+2026-08-01,9254,Genesis of Bloomington-Normal,Normal,IL,61761,675,"Peoria-Bloomington, IL",40.5165466,-88.9541909,41.0
+2026-08-01,61112,Homestead Genesis,Homestead,FL,33030,528,"Miami-Ft. Lauderdale, FL",25.4674062,-80.472177,41.0
+2026-08-01,61176,Headquarter Genesis,Lake Mary,FL,32746,534,"Orlando-Daytona Beach-Melbourne, FL",28.7885443,-81.3466546,39.0
+2026-08-01,73893,Genesis of Brunswick,South Brunswick Township,NJ,08852,501,"New York, NY",40.4111541,-74.5423003,38.0
+2026-08-01,91019,Genesis of Hickory,Hickory,NC,28602,517,"Charlotte, NC",35.7151389,-81.3379647,38.0
+2026-08-01,71271,Genesis of Cartersville,Cartersville,GA,30120,524,"Atlanta, GA",34.1915656,-84.7876903,37.0
+2026-08-01,73397,Genesis of Daytona Beach,Daytona Beach,FL,32117,534,"Orlando-Daytona Beach-Melbourne, FL",29.2235952,-81.0481335,37.0
+2026-08-01,72197,Genesis of Doylestown,Doylestown,PA,18902,504,"Philadelphia, PA",40.3335783,-75.1370158,37.0
+2026-08-01,71500,Genesis of Waterloo,Waterloo,IA,50702,637,"Cedar Rapids-Waterloo-Iowa City & Dubuque, IA",42.4906379,-92.3401956,37.0
+2026-08-01,72341,Genesis of Auburn,Auburn,AL,36830,522,"Columbus, GA",32.6179594,-85.4635689,34.0
+2026-08-01,1250,Genesis of New Orleans,Metairie,LA,70003,622,"New Orleans, LA",30.0058423,-90.2210481,33.0
+2026-08-01,9530,Genesis of Brunswick,Brunswick,OH,44212,510,"Cleveland-Akron (Canton), OH",41.2391403,-81.7926475,32.0
+2026-08-01,69370,Genesis of Northampton,Northampton,MA,01060,543,"Springfield-Holyoke, MA",42.3359481,-72.6356287,32.0
+2026-08-01,103247,Genesis of South Nashville,Nashville,TN,37211,659,"Nashville, TN",36.0456523,-86.7012321,32.0
+2026-08-01,68698,GENESIS OF BAYSIDE,Queens,NY,11361,501,"New York, NY",40.7573441,-73.7811612,31.0
+2026-08-01,65171,Genesis of Selma,Selma,CA,93662,866,"Fresno-Visalia, CA",36.5705206,-119.6297571,30.0
+2026-08-01,70200,Genesis of Chattanooga,Chattanooga,TN,37421,575,"Chattanooga, TN",35.0602866,-85.1922179,27.0
+2026-08-01,8386,Genesis of Huntington,Huntington,NY,11743,501,"New York, NY",40.8332861,-73.3617156,27.0
+2026-08-01,8750,Sid Dillon Genesis of Lincoln,Lincoln,NE,68512,722,"Lincoln & Hastings-Kearney, NE",40.7364094,-96.6846163,27.0
+2026-08-01,2511,Genesis of Clearwater,Clearwater,FL,33761,539,"Tampa-St Petersburg (Sarasota), FL",28.0222085,-82.7380372,26.0
+2026-08-01,69677,Genesis of La Quinta,La Quinta,CA,92253,804,"Palm Springs, CA",33.7072313,-116.2852619,24.0
+2026-08-01,6292,Genesis of Harlingen,Harlingen,TX,78552,636,"Harlingen-Weslaco-Brownsville-McAllen, TX",26.1864793,-97.7753841,22.0
+2026-08-01,3152,Genesis of St. Cloud,Waite Park,MN,56387,613,"Minneapolis-St. Paul, MN",45.5485676,-94.2285831,20.0
+2026-08-01,6832,Genesis of Denton,Denton,TX,76210,623,"Dallas-Ft. Worth, TX",33.1691755,-97.0819556,19.0
+2026-08-01,73395,Genesis of Union City,Riverdale,GA,30274,524,"Atlanta, GA",33.5645576,-84.4132949,19.0
+2026-08-01,793,Genesis of Hazelwood,Hazelwood,MO,63042,609,"St. Louis, MO",38.7811015,-90.3650463,18.0
+2026-08-01,69414,Genesis of Olive Branch,Olive Branch,MS,38654,640,"Memphis, TN",34.9790497,-89.8645852,18.0
+2026-08-01,61127,Genesis of Hattiesburg,Hattiesburg,MS,39402,710,"Hattiesburg-Laurel, MS",31.3166979,-89.407095,17.0
+2026-08-01,70356,Hampton Genesis,Fort Walton Beach,FL,32548,686,"Mobile, AL-Pensacola (Ft. Walton Beach), FL",30.4123712,-86.6281688,16.0
+2026-08-01,648,Genesis of Calumet City,Calumet City,IL,60409,602,"Chicago, IL",41.6004518,-87.5734156,15.0
+2026-08-01,5541,Genesis Glenview,Glenview,IL,60026,602,"Chicago, IL",42.1061877,-87.8216753,14.0
+2026-08-01,52776,Genesis Of Macomb,Macomb,MI,48044,505,"Detroit, MI",42.6294783,-82.9318824,14.0
+2026-08-01,3992,Genesis of New Bern,New Bern,NC,28560,545,"Greenville-New Bern-Washington, NC",35.0579658,-77.0170433,12.0
+2026-08-01,103263,Genesis of Kalamazoo,Kalamazoo,MI,49009,563,"Grand Rapids-Kalamazoo-Battle Creek, MI",42.2973018,-85.6584362,9.0
+2026-08-01,49527,Genesis of Urbana,Urbana,IL,61802,648,"Champaign & Springfield-Decatur,IL",40.1386655,-88.1960739,9.0
+2026-08-01,64724,Genesis of Groveport,Groveport,OH,43125,535,"Columbus, OH",39.8895794,-82.8876146,8.0
+2026-08-01,69701,Genesis of Victorville,Victorville,CA,92392,803,"Los Angeles, CA",34.5060794,-117.3405032,7.0
+2026-08-01,69409,Genesis of Richmond,Richmond,CA,94806,807,"San Francisco-Oakland-San Jose, CA",37.9857273,-122.3202802,3.0
+2026-08-01,84406,Genesis at Long of Chattanooga,Chattanooga,TN,37421,575,"Chattanooga, TN",35.059805,-85.190767,2.0
+2026-08-01,68638,Genesis of Downtown Chicago,Chicago,IL,60616,602,"Chicago, IL",41.8442199,-87.6240557,1.0
+2026-08-01,69498,Genesis of Eastern Shore,Daphne,AL,36526,686,"Mobile, AL-Pensacola (Ft. Walton Beach), FL",30.6607867,-87.8567477,1.0
+2026-08-01,61156,Genesis of Mattoon,Mattoon,IL,61938,648,"Champaign & Springfield-Decatur,IL",39.4823346,-88.3786268,1.0
+2026-08-01,69102,Orlando Genesis,Orlando,FL,32808,534,"Orlando-Daytona Beach-Melbourne, FL",28.5521196,-81.4309809,1.0
+2026-08-01,100081,Spicer's Boat City,Houghton Lake,MI,48629,540,"Traverse City-Cadillac, MI",44.2970658,-84.7217605,1.0

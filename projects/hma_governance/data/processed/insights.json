@@ -1,0 +1,903 @@
+{
+  "schema_version": "hma_quadchart_headline_cache_v2",
+  "generated_at": "2026-09-17T20:08:25.722735+00:00",
+  "data_generated_at": "2026-09-17T06:38:20.209765+00:00",
+  "input_hash": "b54b8c4e54ebddb764b58f58291056dab44622c58beb7784c345617fdc35d6e1",
+  "coverage": {
+    "month": "2026-08-01",
+    "comparison": "prior3ma",
+    "segment_mode": "special",
+    "views": [
+      "momentum",
+      "positions",
+      "efficiency",
+      "conversion"
+    ]
+  },
+  "editor": {
+    "model": "gpt-5.6-terra",
+    "error": null
+  },
+  "insights": {
+    "Elantra|2026-08-01|prior3ma|momentum|special": {
+      "selection_key": "Elantra|2026-08-01|prior3ma|momentum|special",
+      "headline": "Elantra's retail share decline may reflect constrained inventory availability (64.6 days supply, down 7.9 days vs. prior 3-month average) coinciding with Corolla's +2.6 pp retail share gain during a period when Corolla inventory fell sharply to 35.2 days supply.",
+      "detail": "Elantra's August 2026 daily sales pace rose 16.2% year-over-year to 349 units per day, while Civic's pace fell 7.8% to 579 units per day, suggesting Elantra's retail share loss may reflect segment-wide dynamics rather than model-specific demand weakness.",
+      "evidence_ids": [
+        "search_change",
+        "retail_change",
+        "inventory_change",
+        "comp_search_gainer",
+        "comp_search_decliner",
+        "comp_retail_decliner",
+        "retail_units_change"
+      ],
+      "context_event_ids": [
+        "event_dd6fe2c19efb",
+        "event_125b6f586585"
+      ],
+      "supervisor_claim_ids": [
+        "inventory_constraint_vs_corolla_surge",
+        "elantra_pace_strength_vs_civic_weakness"
+      ],
+      "sources": [
+        "Google AdOps",
+        "SRS Sales",
+        "CloudTheory Inventory",
+        "Product & Release Context",
+        "Cloud Theory Agent",
+        "MarketView Agent"
+      ],
+      "confidence": "medium",
+      "source": "supervisor_context_cache"
+    },
+    "Elantra|2026-08-01|prior3ma|positions|special": {
+      "selection_key": "Elantra|2026-08-01|prior3ma|positions|special",
+      "headline": "Elantra's retail share decline may reflect constrained inventory availability (64.6 days supply, down 7.9 days vs. prior 3-month average) coinciding with Corolla's +2.6 pp retail share gain during a period when Corolla inventory fell sharply to 35.2 days supply.",
+      "detail": "Elantra's August 2026 daily sales pace rose 16.2% year-over-year to 349 units per day, while Civic's pace fell 7.8% to 579 units per day, suggesting Elantra's retail share loss may reflect segment-wide dynamics rather than model-specific demand weakness.",
+      "evidence_ids": [
+        "search_share",
+        "retail_share",
+        "inventory_change",
+        "comp_search_gainer",
+        "comp_search_decliner",
+        "comp_retail_decliner",
+        "retail_units_change"
+      ],
+      "context_event_ids": [
+        "event_dd6fe2c19efb",
+        "event_125b6f586585"
+      ],
+      "supervisor_claim_ids": [
+        "inventory_constraint_vs_corolla_surge",
+        "elantra_pace_strength_vs_civic_weakness"
+      ],
+      "sources": [
+        "Google AdOps",
+        "SRS Sales",
+        "CloudTheory Inventory",
+        "Product & Release Context",
+        "Cloud Theory Agent",
+        "MarketView Agent"
+      ],
+      "confidence": "medium",
+      "source": "supervisor_context_cache"
+    },
+    "Elantra|2026-08-01|prior3ma|efficiency|special": {
+      "selection_key": "Elantra|2026-08-01|prior3ma|efficiency|special",
+      "headline": "Elantra's retail share decline may reflect constrained inventory availability (64.6 days supply, down 7.9 days vs. prior 3-month average) coinciding with Corolla's +2.6 pp retail share gain during a period when Corolla inventory fell sharply to 35.2 days supply.",
+      "detail": "Elantra's August 2026 daily sales pace rose 16.2% year-over-year to 349 units per day, while Civic's pace fell 7.8% to 579 units per day, suggesting Elantra's retail share loss may reflect segment-wide dynamics rather than model-specific demand weakness.",
+      "evidence_ids": [
+        "search_retail_ratio",
+        "inventory_retail_ratio",
+        "inventory_change",
+        "comp_search_gainer",
+        "comp_search_decliner",
+        "comp_retail_decliner",
+        "retail_units_change"
+      ],
+      "context_event_ids": [
+        "event_dd6fe2c19efb",
+        "event_125b6f586585"
+      ],
+      "supervisor_claim_ids": [
+        "inventory_constraint_vs_corolla_surge",
+        "elantra_pace_strength_vs_civic_weakness"
+      ],
+      "sources": [
+        "Google AdOps",
+        "SRS Sales",
+        "CloudTheory Inventory",
+        "Product & Release Context",
+        "Cloud Theory Agent",
+        "MarketView Agent"
+      ],
+      "confidence": "medium",
+      "source": "supervisor_context_cache"
+    },
+    "Elantra|2026-08-01|prior3ma|conversion|special": {
+      "selection_key": "Elantra|2026-08-01|prior3ma|conversion|special",
+      "headline": "Elantra's retail share decline may reflect constrained inventory availability (64.6 days supply, down 7.9 days vs. prior 3-month average) coinciding with Corolla's +2.6 pp retail share gain during a period when Corolla inventory fell sharply to 35.2 days supply.",
+      "detail": "Elantra's August 2026 daily sales pace rose 16.2% year-over-year to 349 units per day, while Civic's pace fell 7.8% to 579 units per day, suggesting Elantra's retail share loss may reflect segment-wide dynamics rather than model-specific demand weakness.",
+      "evidence_ids": [
+        "sales_velocity",
+        "conversion",
+        "inventory_change",
+        "comp_search_gainer",
+        "comp_search_decliner",
+        "comp_retail_decliner",
+        "retail_units_change"
+      ],
+      "context_event_ids": [
+        "event_dd6fe2c19efb",
+        "event_125b6f586585"
+      ],
+      "supervisor_claim_ids": [
+        "inventory_constraint_vs_corolla_surge",
+        "elantra_pace_strength_vs_civic_weakness"
+      ],
+      "sources": [
+        "SRS Sales",
+        "CloudTheory Inventory",
+        "Google AdOps",
+        "Product & Release Context",
+        "Cloud Theory Agent",
+        "MarketView Agent"
+      ],
+      "confidence": "medium",
+      "source": "supervisor_context_cache"
+    },
+    "Santa Fe|2026-08-01|prior3ma|momentum|special": {
+      "selection_key": "Santa Fe|2026-08-01|prior3ma|momentum|special",
+      "headline": "Santa Fe's +18.9% retail unit surge may reflect constrained in-stock inventory, which fell 9.5% while days supply dropped 25.8%, potentially creating urgency among buyers facing reduced immediate availability.",
+      "detail": "Atlas Cross Sport led competitive search gains at +0.3 pp; Wrangler led search declines at -1.3 pp; Bronco had the largest retail-share decline at -2.3 pp.",
+      "evidence_ids": [
+        "search_change",
+        "retail_change",
+        "inventory_change",
+        "comp_search_gainer",
+        "comp_search_decliner",
+        "comp_retail_decliner",
+        "retail_units_change"
+      ],
+      "context_event_ids": [
+        "event_b005fd7035c0"
+      ],
+      "supervisor_claim_ids": [
+        "inventory_tightening_retail_surge"
+      ],
+      "sources": [
+        "Google AdOps",
+        "SRS Sales",
+        "CloudTheory Inventory",
+        "Product & Release Context",
+        "Cloud Theory Agent",
+        "SRS Sales Agent"
+      ],
+      "confidence": "high",
+      "source": "supervisor_context_cache"
+    },
+    "Santa Fe|2026-08-01|prior3ma|positions|special": {
+      "selection_key": "Santa Fe|2026-08-01|prior3ma|positions|special",
+      "headline": "Santa Fe's +18.9% retail unit surge may reflect constrained in-stock inventory, which fell 9.5% while days supply dropped 25.8%, potentially creating urgency among buyers facing reduced immediate availability.",
+      "detail": "Atlas Cross Sport led competitive search gains at +0.3 pp; Wrangler led search declines at -1.3 pp; Bronco had the largest retail-share decline at -2.3 pp.",
+      "evidence_ids": [
+        "search_share",
+        "retail_share",
+        "inventory_change",
+        "comp_search_gainer",
+        "comp_search_decliner",
+        "comp_retail_decliner",
+        "retail_units_change"
+      ],
+      "context_event_ids": [
+        "event_b005fd7035c0"
+      ],
+      "supervisor_claim_ids": [
+        "inventory_tightening_retail_surge"
+      ],
+      "sources": [
+        "Google AdOps",
+        "SRS Sales",
+        "CloudTheory Inventory",
+        "Product & Release Context",
+        "Cloud Theory Agent",
+        "SRS Sales Agent"
+      ],
+      "confidence": "high",
+      "source": "supervisor_context_cache"
+    },
+    "Santa Fe|2026-08-01|prior3ma|efficiency|special": {
+      "selection_key": "Santa Fe|2026-08-01|prior3ma|efficiency|special",
+      "headline": "Santa Fe's +18.9% retail unit surge may reflect constrained in-stock inventory, which fell 9.5% while days supply dropped 25.8%, potentially creating urgency among buyers facing reduced immediate availability.",
+      "detail": "Atlas Cross Sport led competitive search gains at +0.3 pp; Wrangler led search declines at -1.3 pp; Bronco had the largest retail-share decline at -2.3 pp.",
+      "evidence_ids": [
+        "search_retail_ratio",
+        "inventory_retail_ratio",
+        "inventory_change",
+        "comp_search_gainer",
+        "comp_search_decliner",
+        "comp_retail_decliner",
+        "retail_units_change"
+      ],
+      "context_event_ids": [
+        "event_b005fd7035c0"
+      ],
+      "supervisor_claim_ids": [
+        "inventory_tightening_retail_surge"
+      ],
+      "sources": [
+        "Google AdOps",
+        "SRS Sales",
+        "CloudTheory Inventory",
+        "Product & Release Context",
+        "Cloud Theory Agent",
+        "SRS Sales Agent"
+      ],
+      "confidence": "high",
+      "source": "supervisor_context_cache"
+    },
+    "Santa Fe|2026-08-01|prior3ma|conversion|special": {
+      "selection_key": "Santa Fe|2026-08-01|prior3ma|conversion|special",
+      "headline": "Santa Fe's +18.9% retail unit surge may reflect constrained in-stock inventory, which fell 9.5% while days supply dropped 25.8%, potentially creating urgency among buyers facing reduced immediate availability.",
+      "detail": "Atlas Cross Sport led competitive search gains at +0.3 pp; Wrangler led search declines at -1.3 pp; Bronco had the largest retail-share decline at -2.3 pp.",
+      "evidence_ids": [
+        "sales_velocity",
+        "conversion",
+        "inventory_change",
+        "comp_search_gainer",
+        "comp_search_decliner",
+        "comp_retail_decliner",
+        "retail_units_change"
+      ],
+      "context_event_ids": [
+        "event_b005fd7035c0"
+      ],
+      "supervisor_claim_ids": [
+        "inventory_tightening_retail_surge"
+      ],
+      "sources": [
+        "SRS Sales",
+        "CloudTheory Inventory",
+        "Google AdOps",
+        "Product & Release Context",
+        "Cloud Theory Agent",
+        "SRS Sales Agent"
+      ],
+      "confidence": "high",
+      "source": "supervisor_context_cache"
+    },
+    "Kona|2026-08-01|prior3ma|momentum|special": {
+      "selection_key": "Kona|2026-08-01|prior3ma|momentum|special",
+      "headline": "Kona's search and retail share declines may reflect the redesigned 2027 Seltos capturing consideration and sales, with Seltos search share climbing from 4.82% in May to 8.64% in August while inventory rose 12.8% versus the prior three months.",
+      "detail": "Kona's share losses coincided with a sharp incentive reduction—blended incentives fell from $2,245 (May-July average) to $1,341 in August—while Seltos incentives dropped even further to $398, suggesting Kona may have lost relative value appeal despite maintaining higher absolute spending.",
+      "evidence_ids": [
+        "search_change",
+        "retail_change",
+        "inventory_change",
+        "comp_search_gainer",
+        "comp_search_decliner",
+        "comp_retail_decliner",
+        "retail_units_change"
+      ],
+      "context_event_ids": [
+        "event_9c82bde0257e",
+        "event_dd212aaf1e62"
+      ],
+      "supervisor_claim_ids": [
+        "seltos_redesign_momentum",
+        "kona_incentive_pullback"
+      ],
+      "sources": [
+        "Google AdOps",
+        "SRS Sales",
+        "CloudTheory Inventory",
+        "Product & Release Context",
+        "Google AdOps Agent",
+        "Cloud Theory Agent",
+        "Cox Automotive Agent"
+      ],
+      "confidence": "high",
+      "source": "supervisor_context_cache"
+    },
+    "Kona|2026-08-01|prior3ma|positions|special": {
+      "selection_key": "Kona|2026-08-01|prior3ma|positions|special",
+      "headline": "Kona's search and retail share declines may reflect the redesigned 2027 Seltos capturing consideration and sales, with Seltos search share climbing from 4.82% in May to 8.64% in August while inventory rose 12.8% versus the prior three months.",
+      "detail": "Kona's share losses coincided with a sharp incentive reduction—blended incentives fell from $2,245 (May-July average) to $1,341 in August—while Seltos incentives dropped even further to $398, suggesting Kona may have lost relative value appeal despite maintaining higher absolute spending.",
+      "evidence_ids": [
+        "search_share",
+        "retail_share",
+        "inventory_change",
+        "comp_search_gainer",
+        "comp_search_decliner",
+        "comp_retail_decliner",
+        "retail_units_change"
+      ],
+      "context_event_ids": [
+        "event_9c82bde0257e",
+        "event_dd212aaf1e62"
+      ],
+      "supervisor_claim_ids": [
+        "seltos_redesign_momentum",
+        "kona_incentive_pullback"
+      ],
+      "sources": [
+        "Google AdOps",
+        "SRS Sales",
+        "CloudTheory Inventory",
+        "Product & Release Context",
+        "Google AdOps Agent",
+        "Cloud Theory Agent",
+        "Cox Automotive Agent"
+      ],
+      "confidence": "high",
+      "source": "supervisor_context_cache"
+    },
+    "Kona|2026-08-01|prior3ma|efficiency|special": {
+      "selection_key": "Kona|2026-08-01|prior3ma|efficiency|special",
+      "headline": "Kona's search and retail share declines may reflect the redesigned 2027 Seltos capturing consideration and sales, with Seltos search share climbing from 4.82% in May to 8.64% in August while inventory rose 12.8% versus the prior three months.",
+      "detail": "Kona's share losses coincided with a sharp incentive reduction—blended incentives fell from $2,245 (May-July average) to $1,341 in August—while Seltos incentives dropped even further to $398, suggesting Kona may have lost relative value appeal despite maintaining higher absolute spending.",
+      "evidence_ids": [
+        "search_retail_ratio",
+        "inventory_retail_ratio",
+        "inventory_change",
+        "comp_search_gainer",
+        "comp_search_decliner",
+        "comp_retail_decliner",
+        "retail_units_change"
+      ],
+      "context_event_ids": [
+        "event_9c82bde0257e",
+        "event_dd212aaf1e62"
+      ],
+      "supervisor_claim_ids": [
+        "seltos_redesign_momentum",
+        "kona_incentive_pullback"
+      ],
+      "sources": [
+        "Google AdOps",
+        "SRS Sales",
+        "CloudTheory Inventory",
+        "Product & Release Context",
+        "Google AdOps Agent",
+        "Cloud Theory Agent",
+        "Cox Automotive Agent"
+      ],
+      "confidence": "high",
+      "source": "supervisor_context_cache"
+    },
+    "Kona|2026-08-01|prior3ma|conversion|special": {
+      "selection_key": "Kona|2026-08-01|prior3ma|conversion|special",
+      "headline": "Kona's search and retail share declines may reflect the redesigned 2027 Seltos capturing consideration and sales, with Seltos search share climbing from 4.82% in May to 8.64% in August while inventory rose 12.8% versus the prior three months.",
+      "detail": "Kona's share losses coincided with a sharp incentive reduction—blended incentives fell from $2,245 (May-July average) to $1,341 in August—while Seltos incentives dropped even further to $398, suggesting Kona may have lost relative value appeal despite maintaining higher absolute spending.",
+      "evidence_ids": [
+        "sales_velocity",
+        "conversion",
+        "inventory_change",
+        "comp_search_gainer",
+        "comp_search_decliner",
+        "comp_retail_decliner",
+        "retail_units_change"
+      ],
+      "context_event_ids": [
+        "event_9c82bde0257e",
+        "event_dd212aaf1e62"
+      ],
+      "supervisor_claim_ids": [
+        "seltos_redesign_momentum",
+        "kona_incentive_pullback"
+      ],
+      "sources": [
+        "SRS Sales",
+        "CloudTheory Inventory",
+        "Google AdOps",
+        "Product & Release Context",
+        "Google AdOps Agent",
+        "Cloud Theory Agent",
+        "Cox Automotive Agent"
+      ],
+      "confidence": "high",
+      "source": "supervisor_context_cache"
+    },
+    "Ioniq 5|2026-08-01|prior3ma|momentum|special": {
+      "selection_key": "Ioniq 5|2026-08-01|prior3ma|momentum|special",
+      "headline": "Ioniq 5's September MTD retail share of 17.6% is consistent with partial recovery from the August constraint period, though this early-month pace remains subject to typical month-end sales concentration in the EV segment.",
+      "detail": "Model Y led competitive search gains at +3.4 pp; R2 led search declines at -1.4 pp; Equinox EV had the largest retail-share decline at -2.0 pp.",
+      "evidence_ids": [
+        "search_change",
+        "retail_change",
+        "inventory_change",
+        "comp_search_gainer",
+        "comp_search_decliner",
+        "comp_retail_decliner",
+        "retail_units_change"
+      ],
+      "context_event_ids": [
+        "event_cbae84f334d8"
+      ],
+      "supervisor_claim_ids": [
+        "september_stabilization"
+      ],
+      "sources": [
+        "Google AdOps",
+        "SRS Sales",
+        "CloudTheory Inventory",
+        "Product & Release Context",
+        "MarketView Agent"
+      ],
+      "confidence": "low",
+      "source": "supervisor_context_cache"
+    },
+    "Ioniq 5|2026-08-01|prior3ma|positions|special": {
+      "selection_key": "Ioniq 5|2026-08-01|prior3ma|positions|special",
+      "headline": "Ioniq 5's September MTD retail share of 17.6% is consistent with partial recovery from the August constraint period, though this early-month pace remains subject to typical month-end sales concentration in the EV segment.",
+      "detail": "Model Y led competitive search gains at +3.4 pp; R2 led search declines at -1.4 pp; Equinox EV had the largest retail-share decline at -2.0 pp.",
+      "evidence_ids": [
+        "search_share",
+        "retail_share",
+        "inventory_change",
+        "comp_search_gainer",
+        "comp_search_decliner",
+        "comp_retail_decliner",
+        "retail_units_change"
+      ],
+      "context_event_ids": [
+        "event_cbae84f334d8"
+      ],
+      "supervisor_claim_ids": [
+        "september_stabilization"
+      ],
+      "sources": [
+        "Google AdOps",
+        "SRS Sales",
+        "CloudTheory Inventory",
+        "Product & Release Context",
+        "MarketView Agent"
+      ],
+      "confidence": "low",
+      "source": "supervisor_context_cache"
+    },
+    "Ioniq 5|2026-08-01|prior3ma|efficiency|special": {
+      "selection_key": "Ioniq 5|2026-08-01|prior3ma|efficiency|special",
+      "headline": "Ioniq 5's September MTD retail share of 17.6% is consistent with partial recovery from the August constraint period, though this early-month pace remains subject to typical month-end sales concentration in the EV segment.",
+      "detail": "Model Y led competitive search gains at +3.4 pp; R2 led search declines at -1.4 pp; Equinox EV had the largest retail-share decline at -2.0 pp.",
+      "evidence_ids": [
+        "search_retail_ratio",
+        "inventory_retail_ratio",
+        "inventory_change",
+        "comp_search_gainer",
+        "comp_search_decliner",
+        "comp_retail_decliner",
+        "retail_units_change"
+      ],
+      "context_event_ids": [
+        "event_cbae84f334d8"
+      ],
+      "supervisor_claim_ids": [
+        "september_stabilization"
+      ],
+      "sources": [
+        "Google AdOps",
+        "SRS Sales",
+        "CloudTheory Inventory",
+        "Product & Release Context",
+        "MarketView Agent"
+      ],
+      "confidence": "low",
+      "source": "supervisor_context_cache"
+    },
+    "Ioniq 5|2026-08-01|prior3ma|conversion|special": {
+      "selection_key": "Ioniq 5|2026-08-01|prior3ma|conversion|special",
+      "headline": "Ioniq 5's September MTD retail share of 17.6% is consistent with partial recovery from the August constraint period, though this early-month pace remains subject to typical month-end sales concentration in the EV segment.",
+      "detail": "Model Y led competitive search gains at +3.4 pp; R2 led search declines at -1.4 pp; Equinox EV had the largest retail-share decline at -2.0 pp.",
+      "evidence_ids": [
+        "sales_velocity",
+        "conversion",
+        "inventory_change",
+        "comp_search_gainer",
+        "comp_search_decliner",
+        "comp_retail_decliner",
+        "retail_units_change"
+      ],
+      "context_event_ids": [
+        "event_cbae84f334d8"
+      ],
+      "supervisor_claim_ids": [
+        "september_stabilization"
+      ],
+      "sources": [
+        "SRS Sales",
+        "CloudTheory Inventory",
+        "Google AdOps",
+        "Product & Release Context",
+        "MarketView Agent"
+      ],
+      "confidence": "low",
+      "source": "supervisor_context_cache"
+    },
+    "Sonata|2026-08-01|prior3ma|momentum|special": {
+      "selection_key": "Sonata|2026-08-01|prior3ma|momentum|special",
+      "headline": "Sonata's share gains may reflect improved inventory velocity and reduced days supply, which fell from 89 days in May-July to 81 days in August 2026, enabling stronger conversion despite lower absolute stock levels.",
+      "detail": "Sonata's retail share gain coincided with Accord capturing +4.3 pp retail share while losing -0.5 pp search share, suggesting Accord may have converted existing demand efficiently, leaving competitive search opportunity for Sonata to capture.",
+      "evidence_ids": [
+        "search_change",
+        "retail_change",
+        "inventory_change",
+        "comp_search_gainer",
+        "comp_search_decliner",
+        "comp_retail_decliner",
+        "retail_units_change"
+      ],
+      "context_event_ids": [
+        "event_8c9e543112b5"
+      ],
+      "supervisor_claim_ids": [
+        "inventory_velocity_improvement",
+        "accord_momentum_divergence"
+      ],
+      "sources": [
+        "Google AdOps",
+        "SRS Sales",
+        "CloudTheory Inventory",
+        "Product & Release Context",
+        "Cloud Theory Agent",
+        "MarketView Agent"
+      ],
+      "confidence": "medium",
+      "source": "supervisor_context_cache"
+    },
+    "Sonata|2026-08-01|prior3ma|positions|special": {
+      "selection_key": "Sonata|2026-08-01|prior3ma|positions|special",
+      "headline": "Sonata's share gains may reflect improved inventory velocity and reduced days supply, which fell from 89 days in May-July to 81 days in August 2026, enabling stronger conversion despite lower absolute stock levels.",
+      "detail": "Sonata's retail share gain coincided with Accord capturing +4.3 pp retail share while losing -0.5 pp search share, suggesting Accord may have converted existing demand efficiently, leaving competitive search opportunity for Sonata to capture.",
+      "evidence_ids": [
+        "search_share",
+        "retail_share",
+        "inventory_change",
+        "comp_search_gainer",
+        "comp_search_decliner",
+        "comp_retail_decliner",
+        "retail_units_change"
+      ],
+      "context_event_ids": [
+        "event_8c9e543112b5"
+      ],
+      "supervisor_claim_ids": [
+        "inventory_velocity_improvement",
+        "accord_momentum_divergence"
+      ],
+      "sources": [
+        "Google AdOps",
+        "SRS Sales",
+        "CloudTheory Inventory",
+        "Product & Release Context",
+        "Cloud Theory Agent",
+        "MarketView Agent"
+      ],
+      "confidence": "medium",
+      "source": "supervisor_context_cache"
+    },
+    "Sonata|2026-08-01|prior3ma|efficiency|special": {
+      "selection_key": "Sonata|2026-08-01|prior3ma|efficiency|special",
+      "headline": "Sonata's share gains may reflect improved inventory velocity and reduced days supply, which fell from 89 days in May-July to 81 days in August 2026, enabling stronger conversion despite lower absolute stock levels.",
+      "detail": "Sonata's retail share gain coincided with Accord capturing +4.3 pp retail share while losing -0.5 pp search share, suggesting Accord may have converted existing demand efficiently, leaving competitive search opportunity for Sonata to capture.",
+      "evidence_ids": [
+        "search_retail_ratio",
+        "inventory_retail_ratio",
+        "inventory_change",
+        "comp_search_gainer",
+        "comp_search_decliner",
+        "comp_retail_decliner",
+        "retail_units_change"
+      ],
+      "context_event_ids": [
+        "event_8c9e543112b5"
+      ],
+      "supervisor_claim_ids": [
+        "inventory_velocity_improvement",
+        "accord_momentum_divergence"
+      ],
+      "sources": [
+        "Google AdOps",
+        "SRS Sales",
+        "CloudTheory Inventory",
+        "Product & Release Context",
+        "Cloud Theory Agent",
+        "MarketView Agent"
+      ],
+      "confidence": "medium",
+      "source": "supervisor_context_cache"
+    },
+    "Sonata|2026-08-01|prior3ma|conversion|special": {
+      "selection_key": "Sonata|2026-08-01|prior3ma|conversion|special",
+      "headline": "Sonata's share gains may reflect improved inventory velocity and reduced days supply, which fell from 89 days in May-July to 81 days in August 2026, enabling stronger conversion despite lower absolute stock levels.",
+      "detail": "Sonata's retail share gain coincided with Accord capturing +4.3 pp retail share while losing -0.5 pp search share, suggesting Accord may have converted existing demand efficiently, leaving competitive search opportunity for Sonata to capture.",
+      "evidence_ids": [
+        "sales_velocity",
+        "conversion",
+        "inventory_change",
+        "comp_search_gainer",
+        "comp_search_decliner",
+        "comp_retail_decliner",
+        "retail_units_change"
+      ],
+      "context_event_ids": [
+        "event_8c9e543112b5"
+      ],
+      "supervisor_claim_ids": [
+        "inventory_velocity_improvement",
+        "accord_momentum_divergence"
+      ],
+      "sources": [
+        "SRS Sales",
+        "CloudTheory Inventory",
+        "Google AdOps",
+        "Product & Release Context",
+        "Cloud Theory Agent",
+        "MarketView Agent"
+      ],
+      "confidence": "medium",
+      "source": "supervisor_context_cache"
+    },
+    "Palisade|2026-08-01|prior3ma|momentum|special": {
+      "selection_key": "Palisade|2026-08-01|prior3ma|momentum|special",
+      "headline": "Palisade's stable 86-day supply and high in-stock ratio (82.5%) may have supported retail conversion even as search interest declined, particularly against Grand Highlander's constrained availability (45 days, only 11% in-stock).",
+      "detail": "Land Cruiser's strong search share gain (+0.8 pp) and Telluride's elevated search interest (12.5% share) may have diverted shopping attention from Palisade, while dealer-level availability helped Palisade maintain retail momentum.",
+      "evidence_ids": [
+        "search_change",
+        "retail_change",
+        "inventory_change",
+        "comp_search_gainer",
+        "comp_search_decliner",
+        "comp_retail_decliner",
+        "retail_units_change"
+      ],
+      "context_event_ids": [
+        "event_256d50cc9661"
+      ],
+      "supervisor_claim_ids": [
+        "inventory_availability_advantage",
+        "land_cruiser_search_diversion"
+      ],
+      "sources": [
+        "Google AdOps",
+        "SRS Sales",
+        "CloudTheory Inventory",
+        "Product & Release Context",
+        "Cloud Theory Agent",
+        "SRS Sales Agent",
+        "Google AdOps Agent"
+      ],
+      "confidence": "medium",
+      "source": "supervisor_context_cache"
+    },
+    "Palisade|2026-08-01|prior3ma|positions|special": {
+      "selection_key": "Palisade|2026-08-01|prior3ma|positions|special",
+      "headline": "Palisade's stable 86-day supply and high in-stock ratio (82.5%) may have supported retail conversion even as search interest declined, particularly against Grand Highlander's constrained availability (45 days, only 11% in-stock).",
+      "detail": "Land Cruiser's strong search share gain (+0.8 pp) and Telluride's elevated search interest (12.5% share) may have diverted shopping attention from Palisade, while dealer-level availability helped Palisade maintain retail momentum.",
+      "evidence_ids": [
+        "search_share",
+        "retail_share",
+        "inventory_change",
+        "comp_search_gainer",
+        "comp_search_decliner",
+        "comp_retail_decliner",
+        "retail_units_change"
+      ],
+      "context_event_ids": [
+        "event_256d50cc9661"
+      ],
+      "supervisor_claim_ids": [
+        "inventory_availability_advantage",
+        "land_cruiser_search_diversion"
+      ],
+      "sources": [
+        "Google AdOps",
+        "SRS Sales",
+        "CloudTheory Inventory",
+        "Product & Release Context",
+        "Cloud Theory Agent",
+        "SRS Sales Agent",
+        "Google AdOps Agent"
+      ],
+      "confidence": "medium",
+      "source": "supervisor_context_cache"
+    },
+    "Palisade|2026-08-01|prior3ma|efficiency|special": {
+      "selection_key": "Palisade|2026-08-01|prior3ma|efficiency|special",
+      "headline": "Palisade's stable 86-day supply and high in-stock ratio (82.5%) may have supported retail conversion even as search interest declined, particularly against Grand Highlander's constrained availability (45 days, only 11% in-stock).",
+      "detail": "Land Cruiser's strong search share gain (+0.8 pp) and Telluride's elevated search interest (12.5% share) may have diverted shopping attention from Palisade, while dealer-level availability helped Palisade maintain retail momentum.",
+      "evidence_ids": [
+        "search_retail_ratio",
+        "inventory_retail_ratio",
+        "inventory_change",
+        "comp_search_gainer",
+        "comp_search_decliner",
+        "comp_retail_decliner",
+        "retail_units_change"
+      ],
+      "context_event_ids": [
+        "event_256d50cc9661"
+      ],
+      "supervisor_claim_ids": [
+        "inventory_availability_advantage",
+        "land_cruiser_search_diversion"
+      ],
+      "sources": [
+        "Google AdOps",
+        "SRS Sales",
+        "CloudTheory Inventory",
+        "Product & Release Context",
+        "Cloud Theory Agent",
+        "SRS Sales Agent",
+        "Google AdOps Agent"
+      ],
+      "confidence": "medium",
+      "source": "supervisor_context_cache"
+    },
+    "Palisade|2026-08-01|prior3ma|conversion|special": {
+      "selection_key": "Palisade|2026-08-01|prior3ma|conversion|special",
+      "headline": "Palisade's stable 86-day supply and high in-stock ratio (82.5%) may have supported retail conversion even as search interest declined, particularly against Grand Highlander's constrained availability (45 days, only 11% in-stock).",
+      "detail": "Land Cruiser's strong search share gain (+0.8 pp) and Telluride's elevated search interest (12.5% share) may have diverted shopping attention from Palisade, while dealer-level availability helped Palisade maintain retail momentum.",
+      "evidence_ids": [
+        "sales_velocity",
+        "conversion",
+        "inventory_change",
+        "comp_search_gainer",
+        "comp_search_decliner",
+        "comp_retail_decliner",
+        "retail_units_change"
+      ],
+      "context_event_ids": [
+        "event_256d50cc9661"
+      ],
+      "supervisor_claim_ids": [
+        "inventory_availability_advantage",
+        "land_cruiser_search_diversion"
+      ],
+      "sources": [
+        "SRS Sales",
+        "CloudTheory Inventory",
+        "Google AdOps",
+        "Product & Release Context",
+        "Cloud Theory Agent",
+        "SRS Sales Agent",
+        "Google AdOps Agent"
+      ],
+      "confidence": "medium",
+      "source": "supervisor_context_cache"
+    },
+    "Tucson|2026-08-01|prior3ma|momentum|special": {
+      "selection_key": "Tucson|2026-08-01|prior3ma|momentum|special",
+      "headline": "Tucson's August search and retail share gains may reflect sustained inventory drawdown easing supply constraints; inventory fell 19.6% versus the prior three-month average while days supply tightened to 51 days, consistent with improving sales velocity.",
+      "detail": "Tucson's +20.1% indexed search opportunity growth versus the prior three months coincided with June 2026 product announcements expanding the hybrid lineup with new FWD trims and a Night edition, which may have broadened shopping consideration.",
+      "evidence_ids": [
+        "search_change",
+        "retail_change",
+        "inventory_change",
+        "comp_search_gainer",
+        "comp_search_decliner",
+        "comp_retail_decliner",
+        "retail_units_change"
+      ],
+      "context_event_ids": [
+        "event_35e1ec65f54d",
+        "event_a7ac50e946bd"
+      ],
+      "supervisor_claim_ids": [
+        "tucson_momentum_inventory_constraint",
+        "tucson_search_momentum_product_news"
+      ],
+      "sources": [
+        "Google AdOps",
+        "SRS Sales",
+        "CloudTheory Inventory",
+        "Product & Release Context",
+        "Cloud Theory Agent",
+        "SRS Sales Agent",
+        "Google AdOps Agent"
+      ],
+      "confidence": "high",
+      "source": "supervisor_context_cache"
+    },
+    "Tucson|2026-08-01|prior3ma|positions|special": {
+      "selection_key": "Tucson|2026-08-01|prior3ma|positions|special",
+      "headline": "Tucson's August search and retail share gains may reflect sustained inventory drawdown easing supply constraints; inventory fell 19.6% versus the prior three-month average while days supply tightened to 51 days, consistent with improving sales velocity.",
+      "detail": "Tucson's +20.1% indexed search opportunity growth versus the prior three months coincided with June 2026 product announcements expanding the hybrid lineup with new FWD trims and a Night edition, which may have broadened shopping consideration.",
+      "evidence_ids": [
+        "search_share",
+        "retail_share",
+        "inventory_change",
+        "comp_search_gainer",
+        "comp_search_decliner",
+        "comp_retail_decliner",
+        "retail_units_change"
+      ],
+      "context_event_ids": [
+        "event_35e1ec65f54d",
+        "event_a7ac50e946bd"
+      ],
+      "supervisor_claim_ids": [
+        "tucson_momentum_inventory_constraint",
+        "tucson_search_momentum_product_news"
+      ],
+      "sources": [
+        "Google AdOps",
+        "SRS Sales",
+        "CloudTheory Inventory",
+        "Product & Release Context",
+        "Cloud Theory Agent",
+        "SRS Sales Agent",
+        "Google AdOps Agent"
+      ],
+      "confidence": "high",
+      "source": "supervisor_context_cache"
+    },
+    "Tucson|2026-08-01|prior3ma|efficiency|special": {
+      "selection_key": "Tucson|2026-08-01|prior3ma|efficiency|special",
+      "headline": "Tucson's August search and retail share gains may reflect sustained inventory drawdown easing supply constraints; inventory fell 19.6% versus the prior three-month average while days supply tightened to 51 days, consistent with improving sales velocity.",
+      "detail": "Tucson's +20.1% indexed search opportunity growth versus the prior three months coincided with June 2026 product announcements expanding the hybrid lineup with new FWD trims and a Night edition, which may have broadened shopping consideration.",
+      "evidence_ids": [
+        "search_retail_ratio",
+        "inventory_retail_ratio",
+        "inventory_change",
+        "comp_search_gainer",
+        "comp_search_decliner",
+        "comp_retail_decliner",
+        "retail_units_change"
+      ],
+      "context_event_ids": [
+        "event_35e1ec65f54d",
+        "event_a7ac50e946bd"
+      ],
+      "supervisor_claim_ids": [
+        "tucson_momentum_inventory_constraint",
+        "tucson_search_momentum_product_news"
+      ],
+      "sources": [
+        "Google AdOps",
+        "SRS Sales",
+        "CloudTheory Inventory",
+        "Product & Release Context",
+        "Cloud Theory Agent",
+        "SRS Sales Agent",
+        "Google AdOps Agent"
+      ],
+      "confidence": "high",
+      "source": "supervisor_context_cache"
+    },
+    "Tucson|2026-08-01|prior3ma|conversion|special": {
+      "selection_key": "Tucson|2026-08-01|prior3ma|conversion|special",
+      "headline": "Tucson's August search and retail share gains may reflect sustained inventory drawdown easing supply constraints; inventory fell 19.6% versus the prior three-month average while days supply tightened to 51 days, consistent with improving sales velocity.",
+      "detail": "Tucson's +20.1% indexed search opportunity growth versus the prior three months coincided with June 2026 product announcements expanding the hybrid lineup with new FWD trims and a Night edition, which may have broadened shopping consideration.",
+      "evidence_ids": [
+        "sales_velocity",
+        "conversion",
+        "inventory_change",
+        "comp_search_gainer",
+        "comp_search_decliner",
+        "comp_retail_decliner",
+        "retail_units_change"
+      ],
+      "context_event_ids": [
+        "event_35e1ec65f54d",
+        "event_a7ac50e946bd"
+      ],
+      "supervisor_claim_ids": [
+        "tucson_momentum_inventory_constraint",
+        "tucson_search_momentum_product_news"
+      ],
+      "sources": [
+        "SRS Sales",
+        "CloudTheory Inventory",
+        "Google AdOps",
+        "Product & Release Context",
+        "Cloud Theory Agent",
+        "SRS Sales Agent",
+        "Google AdOps Agent"
+      ],
+      "confidence": "high",
+      "source": "supervisor_context_cache"
+    }
+  }
+}
