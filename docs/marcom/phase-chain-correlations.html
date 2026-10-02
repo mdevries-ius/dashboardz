@@ -1,0 +1,1173 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GMA Marketing Phase Chain Correlations</title>
+<script>
+(() => {
+  let savedTheme = null;
+  try { savedTheme = localStorage.getItem('gma-phase-chain-theme'); } catch {}
+  const initialTheme = savedTheme === 'light' || savedTheme === 'dark'
+    ? savedTheme
+    : (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+  document.documentElement.dataset.theme = initialTheme;
+})();
+</script>
+<style>
+:root {
+  color-scheme: light dark;
+  --background: light-dark(#ffffff, #181818);
+  --foreground: light-dark(#1a1c1f, #ffffff);
+  --muted-foreground: light-dark(#667085, #aab2c0);
+  --border: light-dark(#d7dee8, #394150);
+  --popover: light-dark(#ffffff, #2d2d2d);
+  --popover-foreground: var(--foreground);
+  --viz-series-1: light-dark(#1677d2, #83c3ff);
+  --viz-series-2: light-dark(#e17b2d, #f59a56);
+  --viz-series-3: light-dark(#2a9d5b, #74d58b);
+  --viz-series-4: light-dark(#a653d7, #c59af2);
+  --viz-series-5: light-dark(#d44883, #f08fc0);
+  --viz-series-6: light-dark(#168f88, #5acbc2);
+  --phase-funnel-1: light-dark(#b7dcf6, #bddfff);
+  --phase-funnel-2: light-dark(#7bbce8, #83c3ff);
+  --phase-funnel-3: light-dark(#388ec9, #58a8e8);
+  --phase-funnel-4: light-dark(#135f9b, #2b88cb);
+  --phase-sales-1: light-dark(#dac8f4, #decdf8);
+  --phase-sales-2: light-dark(#b699e1, #c1a7eb);
+  --phase-sales-3: light-dark(#8965bd, #9a75cf);
+  --phase-sales-4: light-dark(#603c94, #7e5ab4);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: var(--background);
+  color: var(--foreground);
+}
+:root[data-theme="light"] {
+  color-scheme: light;
+  --background: #ffffff;
+  --foreground: #1a1c1f;
+  --muted-foreground: #667085;
+  --border: #d7dee8;
+  --popover: #ffffff;
+  --popover-foreground: #1a1c1f;
+  --viz-series-1: #1677d2;
+  --viz-series-2: #e17b2d;
+  --viz-series-3: #2a9d5b;
+  --viz-series-4: #a653d7;
+  --viz-series-5: #d44883;
+  --viz-series-6: #168f88;
+  --phase-funnel-1: #b7dcf6;
+  --phase-funnel-2: #7bbce8;
+  --phase-funnel-3: #388ec9;
+  --phase-funnel-4: #135f9b;
+  --phase-sales-1: #dac8f4;
+  --phase-sales-2: #b699e1;
+  --phase-sales-3: #8965bd;
+  --phase-sales-4: #603c94;
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --background: #181818;
+  --foreground: #ffffff;
+  --muted-foreground: #aab2c0;
+  --border: #394150;
+  --popover: #2d2d2d;
+  --popover-foreground: #ffffff;
+  --viz-series-1: #83c3ff;
+  --viz-series-2: #f59a56;
+  --viz-series-3: #74d58b;
+  --viz-series-4: #c59af2;
+  --viz-series-5: #f08fc0;
+  --viz-series-6: #5acbc2;
+  --phase-funnel-1: #bddfff;
+  --phase-funnel-2: #83c3ff;
+  --phase-funnel-3: #58a8e8;
+  --phase-funnel-4: #2b88cb;
+  --phase-sales-1: #decdf8;
+  --phase-sales-2: #c1a7eb;
+  --phase-sales-3: #9a75cf;
+  --phase-sales-4: #7e5ab4;
+}
+* { box-sizing: border-box; }
+body { margin: 0; padding: 22px; overflow-x: hidden; background: var(--background); color: var(--foreground); }
+.dashboard-layout { display: grid; grid-template-columns: minmax(0, 1500px) minmax(220px, 260px); gap: 28px; max-width: 1800px; margin: 0 auto; align-items: start; }
+#phase-chain-dashboard { width: 100%; min-width: 0; overflow: hidden; }
+.page-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 18px; }
+.header-actions { display: flex; align-items: center; gap: 8px; }
+.title-group { min-width: 0; }
+h1 { margin: 0; font-size: clamp(22px, 3vw, 34px); font-weight: 620; letter-spacing: -0.02em; }
+.subtitle { margin: 5px 0 16px; color: var(--muted-foreground); font-size: 14px; }
+.theme-toggle { flex: 0 0 auto; padding: 7px 10px; border: 1px solid var(--border); border-radius: 6px; background: var(--background); color: var(--foreground); font: inherit; font-size: 12px; font-weight: 600; cursor: pointer; }
+.theme-toggle:hover { background: var(--popover); }
+.controls { display: grid; grid-template-columns: minmax(0, 1fr); gap: 22px; padding: 12px 0 18px; border-block: 1px solid var(--border); }
+.control { width: 100%; max-width: 700px; }
+.control label { display: flex; justify-content: space-between; gap: 12px; margin-bottom: 7px; font-size: 13px; font-weight: 600; }
+.control output { color: var(--viz-series-1); font-variant-numeric: tabular-nums; }
+.control input { width: 100%; accent-color: var(--viz-series-1); }
+.control select { width: 100%; padding: 8px 9px; border: 1px solid var(--border); border-radius: 6px; background: var(--background); color: var(--foreground); font: inherit; }
+.scope-toggle { width: fit-content; padding: 7px 10px; border: 1px solid var(--border); border-radius: 6px; background: var(--background); color: var(--foreground); font: inherit; font-size: 12px; font-weight: 600; cursor: pointer; }
+.scope-toggle:hover { background: var(--popover); }
+.control-note { margin-top: 6px; color: var(--muted-foreground); font-size: 11px; }
+.ticks { display: flex; justify-content: space-between; color: var(--muted-foreground); font-size: 11px; }
+.yoy-readout { margin: 14px 0 0 68px; color: var(--muted-foreground); font-size: 11px; font-variant-numeric: tabular-nums; }
+.phase-map { margin: 18px 0 4px; padding: 16px 0 18px; border-bottom: 1px solid var(--border); }
+.phase-map-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; margin-bottom: 7px; }
+.phase-map h2 { margin: 0; font-size: 17px; font-weight: 620; }
+.phase-map-note { margin: 0; color: var(--muted-foreground); font-size: 11px; line-height: 1.4; }
+.phase-map-controls { display: grid; grid-template-columns: minmax(240px, 620px); gap: 10px; margin: 12px 0 8px; }
+.phase-map-window { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.phase-map-window label { display: grid; gap: 5px; color: var(--foreground); font-size: 12px; font-weight: 600; }
+.phase-map-window output { color: var(--viz-series-1); font-variant-numeric: tabular-nums; }
+.phase-map-window input { width: 100%; accent-color: var(--viz-series-1); }
+.phase-map-exclusions { margin: 2px 0 10px; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.phase-map-exclusions summary { padding: 9px 0; cursor: pointer; color: var(--foreground); font-size: 12px; font-weight: 600; }
+.phase-map-r2 { width: fit-content; max-width: 100%; overflow-x: auto; margin-top: 2px; }
+.phase-map-r2 table { width: fit-content; border-collapse: collapse; color: var(--muted-foreground); font-size: 11px; font-variant-numeric: tabular-nums; }
+.phase-map-r2 th, .phase-map-r2 td { padding: 5px 8px; border: 1px solid var(--border); text-align: right; white-space: nowrap; }
+.phase-map-r2 th:first-child, .phase-map-r2 tbody th { text-align: left; color: var(--foreground); font-weight: 600; }
+.phase-map svg { min-height: 250px; }
+.phase-map-node { fill: var(--popover); stroke: var(--border); stroke-width: 1.2; }
+.phase-map-node-title { fill: var(--foreground); font-size: 13px; font-weight: 650; }
+.phase-map-node-value { fill: var(--foreground); font-size: 12px; font-weight: 600; }
+.phase-map-node-detail, .phase-map-edge-detail { fill: var(--muted-foreground); font-size: 10.5px; }
+.phase-map-edge { fill: none; stroke-linecap: round; }
+.phase-map-edge.positive { stroke: var(--phase-funnel-4); }
+.phase-map-edge.negative { stroke: var(--viz-series-5); }
+.phase-map-edge.neutral { stroke: var(--muted-foreground); }
+.phase-map-sales-branch { fill: none; stroke: var(--phase-sales-4); stroke-linecap: round; stroke-dasharray: 3 4; }
+.phase-map-sales-branch.positive { stroke: var(--phase-sales-4); }
+.phase-map-sales-branch.negative { stroke: var(--viz-series-5); }
+.phase-map-sales-branch.neutral { stroke: var(--muted-foreground); }
+.phase-map-branch-label { fill: var(--phase-sales-4); font-size: 10.5px; font-weight: 650; }
+.phase-map-r2 tr.sales-branch-row th { color: var(--phase-sales-4); }
+.phase-map-edge-label { fill: var(--foreground); font-size: 12px; font-weight: 650; }
+.yoy-readout-grid { display: grid; grid-template-columns: 34px repeat(3, minmax(96px, max-content)); gap: 3px 12px; width: fit-content; line-height: 1.5; }
+.yoy-readout-grid > div { white-space: nowrap; }
+.yoy-readout-title { grid-column: 2 / -1; margin-bottom: 2px; color: var(--foreground); font-weight: 650; text-align: center; }
+.yoy-readout-header { color: var(--muted-foreground); font-weight: 650; }
+.yoy-readout-month { color: var(--foreground); font-weight: 650; }
+.yoy-shop { color: var(--viz-series-3); }
+.yoy-sales { color: var(--viz-series-1); }
+.yoy-ratio { color: var(--foreground); }
+.yoy-readout-legend { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 5px; font-size: 10.5px; }
+.yoy-readout-legend span::before { content: ""; display: inline-block; width: 11px; height: 3px; margin-right: 5px; vertical-align: middle; background: var(--swatch); }
+.method { margin: 10px 0 4px; color: var(--muted-foreground); font-size: 12px; }
+.chart-grid { display: grid; min-width: 0; grid-template-columns: minmax(0, .9fr) minmax(0, 1.45fr); gap: 24px; }
+.trend-stack { min-width: 0; }
+.conversion-wrap { grid-column: 1 / -1; }
+.metric-section { min-width: 0; padding: 24px 0 26px; border-bottom: 1px solid var(--border); }
+.metric-section h2 { margin: 0; font-size: 21px; font-weight: 610; }
+.metric-heading-row { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.export-data { position: relative; flex: 0 0 auto; }
+.export-data summary { list-style: none; padding: 5px 7px; color: var(--muted-foreground); font-size: 11px; font-weight: 600; cursor: pointer; white-space: nowrap; }
+.export-data summary::-webkit-details-marker { display: none; }
+.export-data summary::after { content: " ▾"; font-size: 10px; }
+.export-data[open] summary::after { content: " ▴"; }
+.export-data-menu { position: absolute; z-index: 5; top: calc(100% + 3px); right: 0; min-width: 142px; padding: 5px; border: 1px solid var(--border); border-radius: 6px; background: var(--popover); box-shadow: 0 5px 18px rgb(0 0 0 / .12); }
+.export-data-menu button { width: 100%; padding: 6px 8px; border: 0; border-radius: 4px; background: transparent; color: var(--popover-foreground); font: inherit; font-size: 11px; text-align: left; cursor: pointer; }
+.export-data-menu button:hover { background: color-mix(in srgb, var(--foreground) 7%, transparent); }
+.chart-wrap { min-width: 0; }
+.chart-wrap h3 { margin: 0 0 3px; font-size: 14px; font-weight: 600; }
+.period-stats { margin: 4px 0 8px; min-height: 20px; color: var(--muted-foreground); font-size: 13px; font-variant-numeric: tabular-nums; }
+.pair-date-controls { display: grid; grid-template-columns: repeat(2, minmax(150px, 240px)); gap: 14px; margin: 10px 0 8px; }
+.pair-date-controls label { display: grid; gap: 5px; color: var(--foreground); font-size: 12px; font-weight: 600; }
+.pair-date-controls select { width: 100%; padding: 7px 8px; border: 1px solid var(--border); border-radius: 6px; background: var(--background); color: var(--foreground); font: inherit; }
+.media-measure-control { display: grid; grid-template-columns: minmax(120px, max-content) minmax(190px, 280px); align-items: center; gap: 10px; width: fit-content; margin: 9px 0 10px; color: var(--foreground); font-size: 12px; font-weight: 600; }
+.media-measure-control select { width: 100%; padding: 7px 8px; border: 1px solid var(--border); border-radius: 6px; background: var(--background); color: var(--foreground); font: inherit; }
+.exclusion-control { margin: 8px 0 14px; border-block: 1px solid var(--border); }
+.exclusion-control summary { padding: 9px 0; cursor: pointer; color: var(--foreground); font-size: 13px; font-weight: 600; }
+.exclusion-body { padding: 2px 0 12px; }
+.exclusion-note { margin: 0 0 8px; color: var(--muted-foreground); font-size: 11px; }
+.month-checklist { display: grid; grid-template-columns: repeat(auto-fill, minmax(125px, 1fr)); gap: 6px 14px; }
+.month-option { display: flex; align-items: center; gap: 6px; min-width: 0; font-size: 12px; }
+.month-option input { flex: 0 0 auto; accent-color: var(--viz-series-1); }
+.clear-exclusions { margin-top: 10px; padding: 6px 9px; border: 1px solid var(--border); border-radius: 6px; background: var(--background); color: var(--foreground); font: inherit; font-size: 12px; cursor: pointer; }
+.clear-exclusions:disabled { cursor: default; opacity: .5; }
+.margin-notes { position: sticky; top: 18px; padding-left: 18px; border-left: 1px solid var(--border); color: var(--muted-foreground); font-size: 12px; line-height: 1.45; }
+.margin-notes h2 { margin: 0 0 8px; color: var(--foreground); font-size: 14px; font-weight: 650; }
+.margin-notes h3 { margin: 15px 0 4px; color: var(--foreground); font-size: 12px; font-weight: 650; }
+.margin-notes p { margin: 0 0 8px; }
+.annual-stats { margin: 7px 0 4px; color: var(--muted-foreground); font-size: 11px; font-variant-numeric: tabular-nums; }
+.annual-stats strong { display: block; margin-bottom: 3px; color: var(--foreground); font-weight: 600; }
+.annual-values { display: flex; flex-wrap: wrap; gap: 4px 12px; min-height: 16px; line-height: 1.35; }
+.chart-note { min-height: 18px; color: var(--muted-foreground); font-size: 11px; }
+svg { display: block; width: 100%; max-width: 100%; min-height: 360px; overflow: visible; }
+.axis text, .axis-title { fill: var(--foreground); font-size: 12px; }
+.axis path, .axis line, [data-chart-frame] { stroke: var(--border); }
+.grid line { stroke: var(--border); stroke-opacity: .5; }
+.grid path { display: none; }
+.regression { stroke: var(--viz-series-2); stroke-width: 2; stroke-dasharray: 7 5; }
+.regression-label { fill: var(--viz-series-2); stroke: var(--background); stroke-width: 4px; paint-order: stroke; font-size: 12px; font-weight: 600; }
+.upstream-line { fill: none; stroke: var(--viz-series-3); stroke-width: 2.2; }
+.downstream-line { fill: none; stroke: var(--viz-series-1); stroke-width: 2.2; stroke-dasharray: 6 4; }
+.conversion-line { fill: none; stroke: var(--viz-series-2); stroke-width: 2.2; }
+.conversion-point { fill: var(--viz-series-2); stroke: var(--background); stroke-width: 1.2; }
+.conversion-average { stroke: var(--muted-foreground); stroke-width: 1.4; stroke-dasharray: 5 5; }
+.conversion-average-label { fill: var(--muted-foreground); stroke: var(--background); stroke-width: 4px; paint-order: stroke; font-size: 11px; }
+.scatter-point { stroke: var(--background); stroke-width: 1.2; opacity: .9; }
+.year-2023 { fill: var(--viz-series-4); }
+.year-2024 { fill: var(--viz-series-5); }
+.year-2025 { fill: var(--viz-series-6); }
+.year-2026 { fill: var(--viz-series-1); }
+.year-bracket { fill: none; stroke: var(--border); stroke-width: 1.2; }
+.year-label { fill: var(--foreground); font-size: 12px; }
+.legend { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 3px; color: var(--muted-foreground); font-size: 11px; }
+.scatter-wrap .legend { margin-left: 76px; }
+.line-wrap .legend { margin-left: 68px; }
+.conversion-wrap .legend { margin-left: 68px; }
+.legend span::before { content: ""; display: inline-block; width: 11px; height: 7px; margin-right: 5px; vertical-align: middle; border-radius: 50%; background: var(--swatch); }
+.legend .regression-key::before { height: 3px; border-radius: 0; }
+.empty { display: grid; place-items: center; min-height: 360px; color: var(--muted-foreground); border: 1px solid var(--border); }
+.tooltip { position: fixed; z-index: 20; pointer-events: none; display: none; min-width: 180px; padding: 8px 10px; border: 1px solid var(--border); background: var(--popover); color: var(--popover-foreground); font-size: 12px; line-height: 1.45; box-shadow: 0 5px 20px rgb(0 0 0 / .12); }
+.tooltip strong { font-weight: 650; }
+@media (max-width: 1160px) {
+  .dashboard-layout { grid-template-columns: 1fr; max-width: 1500px; }
+  .margin-notes { position: static; padding: 18px 0 0; border-top: 1px solid var(--border); border-left: 0; }
+}
+@media (max-width: 900px) {
+  .chart-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 760px) {
+  body { padding: 14px; }
+  .page-header { align-items: center; }
+  .controls { grid-template-columns: 1fr; gap: 14px; }
+  .control { min-width: 0; }
+  .pair-date-controls { grid-template-columns: 1fr 1fr; }
+  svg { min-height: 330px; }
+}
+</style>
+</head>
+<body>
+<div class="dashboard-layout">
+<main id="phase-chain-dashboard">
+  <header class="page-header">
+    <div class="title-group">
+      <h1>Marketing phase-chain correlations</h1>
+      <p class="subtitle">National Total monthly observations · Spend → Google AdOps → Research → Shop → Credit Apps → Retail outcomes · Pair-specific histories through August 2026</p>
+    </div>
+    <div class="header-actions">
+      <a class="theme-toggle" href="phase-chart-studio.html" target="_blank" rel="noopener">Chart Studio</a>
+      <button type="button" id="theme-toggle" class="theme-toggle" aria-pressed="false">Dark mode</button>
+    </div>
+  </header>
+  <div class="controls" aria-label="Correlation controls">
+    <div class="control">
+      <label for="decay-slider"><span>Geometric adstock decay</span><output id="decay-output">0.00</output></label>
+      <input id="decay-slider" type="range" min="0" max="0.90" step="0.05" value="0">
+      <div class="ticks"><span>0.00</span><span>0.45</span><span>0.90</span></div>
+    </div>
+    <div class="control">
+      <label for="month-alignment-toggle"><span>Month alignment</span><output id="month-alignment-output">Sales month allocation</output></label>
+      <button type="button" id="month-alignment-toggle" class="scope-toggle" aria-pressed="true">Use Gregorian month</button>
+      <div class="control-note">Sales-month mode reallocates monthly upstream totals using HCA sales-period day overlap. Retail Sales and Used/CPO Sales are already sales-month measures and do not change.</div>
+    </div>
+    <div class="control">
+      <label for="adops-scope-toggle"><span>Genesis Google AdOps scope</span><output id="adops-scope-output">Includes make_only</output></label>
+      <button type="button" id="adops-scope-toggle" class="scope-toggle" aria-pressed="false">Exclude make_only</button>
+      <div class="control-note">Switches every Google AdOps correlation between luxury-model volume alone and luxury-model + Genesis make_only volume.</div>
+    </div>
+  </div>
+  <section class="phase-map" aria-labelledby="phase-map-title">
+    <div class="phase-map-heading"><h2 id="phase-map-title">Phase connection maps</h2><p class="phase-map-note">Blue links show consecutive funnel-phase r. Purple branches show each upstream phase directly to the sales outcome; link weight shows absolute r and node labels show average monthly activity.</p></div>
+    <div class="phase-map-controls" aria-label="Phase connection map controls">
+      <div class="phase-map-window">
+        <label for="phase-map-start-slider"><span>Start month</span><output id="phase-map-start-output"></output><input id="phase-map-start-slider" type="range"></label>
+        <label for="phase-map-end-slider"><span>End month</span><output id="phase-map-end-output"></output><input id="phase-map-end-slider" type="range"></label>
+      </div>
+      <details class="phase-map-exclusions">
+        <summary>Exclude months (0)</summary>
+        <div class="exclusion-body"><p class="exclusion-note">Checked months are removed from every map link and its R² calculation; the pair-level charts are unchanged.</p><div id="phase-map-month-checklist" class="month-checklist"></div><button type="button" id="phase-map-clear-exclusions" class="clear-exclusions">Restore all months</button></div>
+      </details>
+    </div>
+    <h3>Retail Sales chain</h3>
+    <svg id="retail-phase-map-svg" role="img" aria-label="Marketing phase connection map ending in retail sales"></svg>
+    <div class="phase-map-r2"><table aria-label="Retail Sales phase connection correlation by year"><thead id="retail-phase-map-r2-head"></thead><tbody id="retail-phase-map-r2-body"></tbody></table></div>
+    <h3>Total Retail Sales chain</h3>
+    <svg id="retail-plus-used-cpo-phase-map-svg" role="img" aria-label="Marketing phase connection map ending in total retail sales"></svg>
+    <div class="phase-map-r2"><table aria-label="Total Retail Sales phase connection correlation by year"><thead id="retail-plus-used-cpo-phase-map-r2-head"></thead><tbody id="retail-plus-used-cpo-phase-map-r2-body"></tbody></table></div>
+  </section>
+  <p class="method">Adstock is applied to the upstream phase on the scatter and phase-trend charts: adjusted phaseₜ = phaseₜ + decay × adjusted phaseₜ₋₁. Carry resets to zero at each pair’s selected start month. Conversion is downstream ÷ raw upstream, so it is not affected by adstock. Missing or zero phase observations are excluded. Manually excluded points are removed from all charts and correlation calculations but remain in the continuous adstock carry. Each scatter point is colored by observation year.</p>
+  <div id="metric-sections"></div>
+  <div class="tooltip" role="tooltip"></div>
+</main>
+<aside class="margin-notes" aria-label="Correlation diagnostic notes">
+  <h2>Diagnostic notes</h2>
+  <div id="diagnostic-notes"></div>
+</aside>
+</div>
+
+<script src="vendor/d3.v7.9.0.min.js"></script>
+<script>
+(() => {
+  const root = document.getElementById('phase-chain-dashboard');
+  const tooltip = root.querySelector('.tooltip');
+  const themeToggle = document.getElementById('theme-toggle');
+  const raw = [{"date":"2023-01-01","media_t1t2_spend":null,"media_t1_spend":null,"media_t1_lifestyle_spend":null,"media_t1_in_market_spend":null,"media_t2_spend":null,"media_t1t2_impressions":null,"media_t1_impressions":null,"media_t2_impressions":null,"adops_index_including_make_only":null,"adops_index_excluding_make_only":null,"research_actions":null,"shop_actions":null,"credit_apps":2962,"retail_sales":3905,"used_cpo_sales":null,"retail_plus_used_cpo_sales":null,"pure_retail":null,"non_pure_retail":null,"media_t1t2_spend_sales_month":null,"media_t1_spend_sales_month":null,"media_t1_lifestyle_spend_sales_month":null,"media_t1_in_market_spend_sales_month":null,"media_t2_spend_sales_month":null,"media_t1t2_impressions_sales_month":null,"media_t1_impressions_sales_month":null,"media_t2_impressions_sales_month":null,"adops_index_including_make_only_sales_month":null,"adops_index_excluding_make_only_sales_month":null,"research_actions_sales_month":null,"shop_actions_sales_month":null},{"date":"2023-02-01","media_t1t2_spend":null,"media_t1_spend":null,"media_t1_lifestyle_spend":null,"media_t1_in_market_spend":null,"media_t2_spend":null,"media_t1t2_impressions":null,"media_t1_impressions":null,"media_t2_impressions":null,"adops_index_including_make_only":null,"adops_index_excluding_make_only":null,"research_actions":null,"shop_actions":null,"credit_apps":3410,"retail_sales":4208,"used_cpo_sales":null,"retail_plus_used_cpo_sales":null,"pure_retail":null,"non_pure_retail":null,"media_t1t2_spend_sales_month":null,"media_t1_spend_sales_month":null,"media_t1_lifestyle_spend_sales_month":null,"media_t1_in_market_spend_sales_month":null,"media_t2_spend_sales_month":null,"media_t1t2_impressions_sales_month":null,"media_t1_impressions_sales_month":null,"media_t2_impressions_sales_month":null,"adops_index_including_make_only_sales_month":null,"adops_index_excluding_make_only_sales_month":null,"research_actions_sales_month":null,"shop_actions_sales_month":null},{"date":"2023-03-01","media_t1t2_spend":null,"media_t1_spend":null,"media_t1_lifestyle_spend":null,"media_t1_in_market_spend":null,"media_t2_spend":null,"media_t1t2_impressions":null,"media_t1_impressions":null,"media_t2_impressions":null,"adops_index_including_make_only":null,"adops_index_excluding_make_only":null,"research_actions":null,"shop_actions":null,"credit_apps":4398,"retail_sales":5191,"used_cpo_sales":null,"retail_plus_used_cpo_sales":null,"pure_retail":null,"non_pure_retail":null,"media_t1t2_spend_sales_month":null,"media_t1_spend_sales_month":null,"media_t1_lifestyle_spend_sales_month":null,"media_t1_in_market_spend_sales_month":null,"media_t2_spend_sales_month":null,"media_t1t2_impressions_sales_month":null,"media_t1_impressions_sales_month":null,"media_t2_impressions_sales_month":null,"adops_index_including_make_only_sales_month":null,"adops_index_excluding_make_only_sales_month":null,"research_actions_sales_month":null,"shop_actions_sales_month":null},{"date":"2023-04-01","media_t1t2_spend":null,"media_t1_spend":null,"media_t1_lifestyle_spend":null,"media_t1_in_market_spend":null,"media_t2_spend":null,"media_t1t2_impressions":null,"media_t1_impressions":null,"media_t2_impressions":null,"adops_index_including_make_only":null,"adops_index_excluding_make_only":null,"research_actions":null,"shop_actions":null,"credit_apps":4691,"retail_sales":5557,"used_cpo_sales":null,"retail_plus_used_cpo_sales":null,"pure_retail":null,"non_pure_retail":null,"media_t1t2_spend_sales_month":null,"media_t1_spend_sales_month":null,"media_t1_lifestyle_spend_sales_month":null,"media_t1_in_market_spend_sales_month":null,"media_t2_spend_sales_month":null,"media_t1t2_impressions_sales_month":null,"media_t1_impressions_sales_month":null,"media_t2_impressions_sales_month":null,"adops_index_including_make_only_sales_month":null,"adops_index_excluding_make_only_sales_month":null,"research_actions_sales_month":null,"shop_actions_sales_month":null},{"date":"2023-05-01","media_t1t2_spend":null,"media_t1_spend":null,"media_t1_lifestyle_spend":null,"media_t1_in_market_spend":null,"media_t2_spend":null,"media_t1t2_impressions":null,"media_t1_impressions":null,"media_t2_impressions":null,"adops_index_including_make_only":null,"adops_index_excluding_make_only":null,"research_actions":null,"shop_actions":null,"credit_apps":4345,"retail_sales":5102,"used_cpo_sales":null,"retail_plus_used_cpo_sales":null,"pure_retail":null,"non_pure_retail":null,"media_t1t2_spend_sales_month":null,"media_t1_spend_sales_month":null,"media_t1_lifestyle_spend_sales_month":null,"media_t1_in_market_spend_sales_month":null,"media_t2_spend_sales_month":null,"media_t1t2_impressions_sales_month":null,"media_t1_impressions_sales_month":null,"media_t2_impressions_sales_month":null,"adops_index_including_make_only_sales_month":null,"adops_index_excluding_make_only_sales_month":null,"research_actions_sales_month":null,"shop_actions_sales_month":null},{"date":"2023-06-01","media_t1t2_spend":null,"media_t1_spend":null,"media_t1_lifestyle_spend":null,"media_t1_in_market_spend":null,"media_t2_spend":null,"media_t1t2_impressions":null,"media_t1_impressions":null,"media_t2_impressions":null,"adops_index_including_make_only":null,"adops_index_excluding_make_only":null,"research_actions":null,"shop_actions":null,"credit_apps":4110,"retail_sales":4929,"used_cpo_sales":null,"retail_plus_used_cpo_sales":null,"pure_retail":null,"non_pure_retail":null,"media_t1t2_spend_sales_month":null,"media_t1_spend_sales_month":null,"media_t1_lifestyle_spend_sales_month":null,"media_t1_in_market_spend_sales_month":null,"media_t2_spend_sales_month":null,"media_t1t2_impressions_sales_month":null,"media_t1_impressions_sales_month":null,"media_t2_impressions_sales_month":null,"adops_index_including_make_only_sales_month":null,"adops_index_excluding_make_only_sales_month":null,"research_actions_sales_month":null,"shop_actions_sales_month":null},{"date":"2023-07-01","media_t1t2_spend":null,"media_t1_spend":null,"media_t1_lifestyle_spend":null,"media_t1_in_market_spend":null,"media_t2_spend":null,"media_t1t2_impressions":null,"media_t1_impressions":null,"media_t2_impressions":null,"adops_index_including_make_only":null,"adops_index_excluding_make_only":null,"research_actions":null,"shop_actions":null,"credit_apps":4802,"retail_sales":5530,"used_cpo_sales":null,"retail_plus_used_cpo_sales":null,"pure_retail":null,"non_pure_retail":null,"media_t1t2_spend_sales_month":null,"media_t1_spend_sales_month":null,"media_t1_lifestyle_spend_sales_month":null,"media_t1_in_market_spend_sales_month":null,"media_t2_spend_sales_month":null,"media_t1t2_impressions_sales_month":null,"media_t1_impressions_sales_month":null,"media_t2_impressions_sales_month":null,"adops_index_including_make_only_sales_month":null,"adops_index_excluding_make_only_sales_month":null,"research_actions_sales_month":null,"shop_actions_sales_month":null},{"date":"2023-08-01","media_t1t2_spend":null,"media_t1_spend":null,"media_t1_lifestyle_spend":null,"media_t1_in_market_spend":null,"media_t2_spend":null,"media_t1t2_impressions":null,"media_t1_impressions":null,"media_t2_impressions":null,"adops_index_including_make_only":null,"adops_index_excluding_make_only":null,"research_actions":null,"shop_actions":null,"credit_apps":4639,"retail_sales":5746,"used_cpo_sales":null,"retail_plus_used_cpo_sales":null,"pure_retail":null,"non_pure_retail":null,"media_t1t2_spend_sales_month":null,"media_t1_spend_sales_month":null,"media_t1_lifestyle_spend_sales_month":null,"media_t1_in_market_spend_sales_month":null,"media_t2_spend_sales_month":null,"media_t1t2_impressions_sales_month":null,"media_t1_impressions_sales_month":null,"media_t2_impressions_sales_month":null,"adops_index_including_make_only_sales_month":null,"adops_index_excluding_make_only_sales_month":null,"research_actions_sales_month":null,"shop_actions_sales_month":null},{"date":"2023-09-01","media_t1t2_spend":null,"media_t1_spend":null,"media_t1_lifestyle_spend":null,"media_t1_in_market_spend":null,"media_t2_spend":null,"media_t1t2_impressions":null,"media_t1_impressions":null,"media_t2_impressions":null,"adops_index_including_make_only":null,"adops_index_excluding_make_only":null,"research_actions":null,"shop_actions":null,"credit_apps":4277,"retail_sales":5413,"used_cpo_sales":null,"retail_plus_used_cpo_sales":null,"pure_retail":null,"non_pure_retail":null,"media_t1t2_spend_sales_month":null,"media_t1_spend_sales_month":null,"media_t1_lifestyle_spend_sales_month":null,"media_t1_in_market_spend_sales_month":null,"media_t2_spend_sales_month":null,"media_t1t2_impressions_sales_month":null,"media_t1_impressions_sales_month":null,"media_t2_impressions_sales_month":null,"adops_index_including_make_only_sales_month":null,"adops_index_excluding_make_only_sales_month":null,"research_actions_sales_month":null,"shop_actions_sales_month":null},{"date":"2023-10-01","media_t1t2_spend":null,"media_t1_spend":null,"media_t1_lifestyle_spend":null,"media_t1_in_market_spend":null,"media_t2_spend":null,"media_t1t2_impressions":null,"media_t1_impressions":null,"media_t2_impressions":null,"adops_index_including_make_only":null,"adops_index_excluding_make_only":null,"research_actions":null,"shop_actions":null,"credit_apps":3565,"retail_sales":4902,"used_cpo_sales":null,"retail_plus_used_cpo_sales":null,"pure_retail":null,"non_pure_retail":null,"media_t1t2_spend_sales_month":null,"media_t1_spend_sales_month":null,"media_t1_lifestyle_spend_sales_month":null,"media_t1_in_market_spend_sales_month":null,"media_t2_spend_sales_month":null,"media_t1t2_impressions_sales_month":null,"media_t1_impressions_sales_month":null,"media_t2_impressions_sales_month":null,"adops_index_including_make_only_sales_month":null,"adops_index_excluding_make_only_sales_month":null,"research_actions_sales_month":null,"shop_actions_sales_month":null},{"date":"2023-11-01","media_t1t2_spend":null,"media_t1_spend":null,"media_t1_lifestyle_spend":null,"media_t1_in_market_spend":null,"media_t2_spend":null,"media_t1t2_impressions":null,"media_t1_impressions":null,"media_t2_impressions":null,"adops_index_including_make_only":null,"adops_index_excluding_make_only":null,"research_actions":null,"shop_actions":null,"credit_apps":4120,"retail_sales":5434,"used_cpo_sales":null,"retail_plus_used_cpo_sales":null,"pure_retail":null,"non_pure_retail":null,"media_t1t2_spend_sales_month":null,"media_t1_spend_sales_month":null,"media_t1_lifestyle_spend_sales_month":null,"media_t1_in_market_spend_sales_month":null,"media_t2_spend_sales_month":null,"media_t1t2_impressions_sales_month":null,"media_t1_impressions_sales_month":null,"media_t2_impressions_sales_month":null,"adops_index_including_make_only_sales_month":null,"adops_index_excluding_make_only_sales_month":null,"research_actions_sales_month":null,"shop_actions_sales_month":null},{"date":"2023-12-01","media_t1t2_spend":null,"media_t1_spend":null,"media_t1_lifestyle_spend":null,"media_t1_in_market_spend":null,"media_t2_spend":null,"media_t1t2_impressions":null,"media_t1_impressions":null,"media_t2_impressions":null,"adops_index_including_make_only":null,"adops_index_excluding_make_only":null,"research_actions":null,"shop_actions":null,"credit_apps":5683,"retail_sales":6636,"used_cpo_sales":null,"retail_plus_used_cpo_sales":null,"pure_retail":null,"non_pure_retail":null,"media_t1t2_spend_sales_month":null,"media_t1_spend_sales_month":null,"media_t1_lifestyle_spend_sales_month":null,"media_t1_in_market_spend_sales_month":null,"media_t2_spend_sales_month":null,"media_t1t2_impressions_sales_month":null,"media_t1_impressions_sales_month":null,"media_t2_impressions_sales_month":null,"adops_index_including_make_only_sales_month":null,"adops_index_excluding_make_only_sales_month":null,"research_actions_sales_month":null,"shop_actions_sales_month":null},{"date":"2024-01-01","media_t1t2_spend":7253720.080000002,"media_t1_spend":5793681.760000002,"media_t1_lifestyle_spend":2369047.8,"media_t1_in_market_spend":3424633.9599999995,"media_t2_spend":1460038.32,"media_t1t2_impressions":620262712.1211984,"media_t1_impressions":576687674.0000004,"media_t2_impressions":43575038.121197976,"adops_index_including_make_only":null,"adops_index_excluding_make_only":null,"research_actions":null,"shop_actions":null,"credit_apps":2919,"retail_sales":4269,"used_cpo_sales":1684,"retail_plus_used_cpo_sales":5953,"pure_retail":null,"non_pure_retail":null,"media_t1t2_spend_sales_month":6785738.13935484,"media_t1_spend_sales_month":5419895.840000001,"media_t1_lifestyle_spend_sales_month":2216206.006451613,"media_t1_in_market_spend_sales_month":3203689.8335483866,"media_t2_spend_sales_month":1365842.2993548387,"media_t1t2_impressions_sales_month":580245762.9520888,"media_t1_impressions_sales_month":539482017.6129035,"media_t2_impressions_sales_month":40763745.3391852,"adops_index_including_make_only_sales_month":null,"adops_index_excluding_make_only_sales_month":null,"research_actions_sales_month":null,"shop_actions_sales_month":null},{"date":"2024-02-01","media_t1t2_spend":12020068.46,"media_t1_spend":9433682.280000001,"media_t1_lifestyle_spend":5103189.54,"media_t1_in_market_spend":4330492.740000001,"media_t2_spend":2586386.1799999997,"media_t1t2_impressions":664652572.586635,"media_t1_impressions":599915051.9999999,"media_t2_impressions":64737520.586635135,"adops_index_including_make_only":null,"adops_index_excluding_make_only":null,"research_actions":null,"shop_actions":null,"credit_apps":3414,"retail_sales":4463,"used_cpo_sales":1834,"retail_plus_used_cpo_sales":6297,"pure_retail":null,"non_pure_retail":null,"media_t1t2_spend_sales_month":12020068.46,"media_t1_spend_sales_month":9433682.280000001,"media_t1_lifestyle_spend_sales_month":5103189.54,"media_t1_in_market_spend_sales_month":4330492.740000001,"media_t2_spend_sales_month":2586386.1799999997,"media_t1t2_impressions_sales_month":664652572.586635,"media_t1_impressions_sales_month":599915051.9999999,"media_t2_impressions_sales_month":64737520.586635135,"adops_index_including_make_only_sales_month":null,"adops_index_excluding_make_only_sales_month":null,"research_actions_sales_month":null,"shop_actions_sales_month":null},{"date":"2024-03-01","media_t1t2_spend":14138346.379999999,"media_t1_spend":9948728.430000002,"media_t1_lifestyle_spend":5408904.110000001,"media_t1_in_market_spend":4539824.32,"media_t2_spend":4189617.9499999997,"media_t1t2_impressions":878044849.0274551,"media_t1_impressions":797639609.5532482,"media_t2_impressions":80405239.47420707,"adops_index_including_make_only":null,"adops_index_excluding_make_only":null,"research_actions":null,"shop_actions":null,"credit_apps":4150,"retail_sales":5156,"used_cpo_sales":1971,"retail_plus_used_cpo_sales":7127,"pure_retail":null,"non_pure_retail":null,"media_t1t2_spend_sales_month":14629200.581666665,"media_t1_spend_sales_month":10343294.053000001,"media_t1_lifestyle_spend_sales_month":5641666.169666668,"media_t1_in_market_spend_sales_month":4701627.883333334,"media_t2_spend_sales_month":4285906.528666667,"media_t1t2_impressions_sales_month":904423225.4346305,"media_t1_impressions_sales_month":821598400.754277,"media_t2_impressions_sales_month":82824824.68035357,"adops_index_including_make_only_sales_month":null,"adops_index_excluding_make_only_sales_month":null,"research_actions_sales_month":null,"shop_actions_sales_month":null},{"date":"2024-04-01","media_t1t2_spend":14725626.049999999,"media_t1_spend":11836968.69,"media_t1_lifestyle_spend":6982861.79,"media_t1_in_market_spend":4854106.899999999,"media_t2_spend":2888657.3600000003,"media_t1t2_impressions":791351292.2152612,"media_t1_impressions":718763736.0308665,"media_t2_impressions":72587556.18439463,"adops_index_including_make_only":null,"adops_index_excluding_make_only":null,"research_actions":null,"shop_actions":1506377,"credit_apps":3818,"retail_sales":4626,"used_cpo_sales":1956,"retail_plus_used_cpo_sales":6582,"pure_retail":null,"non_pure_retail":null,"media_t1t2_spend_sales_month":14234771.848333333,"media_t1_spend_sales_month":11442403.067,"media_t1_lifestyle_spend_sales_month":6750099.730333334,"media_t1_in_market_spend_sales_month":4692303.336666666,"media_t2_spend_sales_month":2792368.781333334,"media_t1t2_impressions_sales_month":764972915.8080858,"media_t1_impressions_sales_month":694804944.8298377,"media_t2_impressions_sales_month":70167970.97824813,"adops_index_including_make_only_sales_month":null,"adops_index_excluding_make_only_sales_month":null,"research_actions_sales_month":null,"shop_actions_sales_month":1456164.4333333333},{"date":"2024-05-01","media_t1t2_spend":16837905.36,"media_t1_spend":13622760.64,"media_t1_lifestyle_spend":9878825.91,"media_t1_in_market_spend":3743934.7299999995,"media_t2_spend":3215144.72,"media_t1t2_impressions":856995881.4898723,"media_t1_impressions":784591991.2577698,"media_t2_impressions":72403890.2321025,"adops_index_including_make_only":null,"adops_index_excluding_make_only":null,"research_actions":null,"shop_actions":1542312,"credit_apps":4675,"retail_sales":5476,"used_cpo_sales":2246,"retail_plus_used_cpo_sales":7722,"pure_retail":null,"non_pure_retail":null,"media_t1t2_spend_sales_month":16837905.36,"media_t1_spend_sales_month":13622760.64,"media_t1_lifestyle_spend_sales_month":9878825.91,"media_t1_in_market_spend_sales_month":3743934.7299999995,"media_t2_spend_sales_month":3215144.72,"media_t1t2_impressions_sales_month":856995881.4898723,"media_t1_impressions_sales_month":784591991.2577698,"media_t2_impressions_sales_month":72403890.2321025,"adops_index_including_make_only_sales_month":null,"adops_index_excluding_make_only_sales_month":null,"research_actions_sales_month":null,"shop_actions_sales_month":1542312},{"date":"2024-06-01","media_t1t2_spend":16294746.63,"media_t1_spend":13522817.56,"media_t1_lifestyle_spend":9952988.79,"media_t1_in_market_spend":3569828.7700000005,"media_t2_spend":2771929.0700000003,"media_t1t2_impressions":832671320.0375284,"media_t1_impressions":752870381.9393798,"media_t2_impressions":79800938.09814857,"adops_index_including_make_only":null,"adops_index_excluding_make_only":null,"research_actions":null,"shop_actions":1508226,"credit_apps":4176,"retail_sales":5529,"used_cpo_sales":1855,"retail_plus_used_cpo_sales":7384,"pure_retail":null,"non_pure_retail":null,"media_t1t2_spend_sales_month":16930237.868064515,"media_t1_spend_sales_month":14039595.963225806,"media_t1_lifestyle_spend_sales_month":10352491.858387096,"media_t1_in_market_spend_sales_month":3687104.1048387103,"media_t2_spend_sales_month":2890641.90483871,"media_t1t2_impressions_sales_month":859325299.124802,"media_t1_impressions_sales_month":776858667.7205237,"media_t2_impressions_sales_month":82466631.40427826,"adops_index_including_make_only_sales_month":null,"adops_index_excluding_make_only_sales_month":null,"research_actions_sales_month":null,"shop_actions_sales_month":1560021.4838709678},{"date":"2024-07-01","media_t1t2_spend":19700228.380000003,"media_t1_spend":16020130.500000002,"media_t1_lifestyle_spend":12384595.120000001,"media_t1_in_market_spend":3635535.3800000004,"media_t2_spend":3680097.88,"media_t1t2_impressions":826273351.7054821,"media_t1_impressions":743636859.2154619,"media_t2_impressions":82636492.4900204,"adops_index_including_make_only":null,"adops_index_excluding_make_only":null,"research_actions":null,"shop_actions":1605660,"credit_apps":4457,"retail_sales":6120,"used_cpo_sales":2492,"retail_plus_used_cpo_sales":8612,"pure_retail":null,"non_pure_retail":null,"media_t1t2_spend_sales_month":19064737.141935486,"media_t1_spend_sales_month":15503352.096774196,"media_t1_lifestyle_spend_sales_month":11985092.051612904,"media_t1_in_market_spend_sales_month":3518260.0451612906,"media_t2_spend_sales_month":3561385.04516129,"media_t1t2_impressions_sales_month":799619372.6182085,"media_t1_impressions_sales_month":719648573.434318,"media_t2_impressions_sales_month":79970799.1838907,"adops_index_including_make_only_sales_month":null,"adops_index_excluding_make_only_sales_month":null,"research_actions_sales_month":null,"shop_actions_sales_month":1553864.5161290322},{"date":"2024-08-01","media_t1t2_spend":20791731.504285716,"media_t1_spend":16291833.19,"media_t1_lifestyle_spend":11813359.19,"media_t1_in_market_spend":4478474,"media_t2_spend":4499898.314285715,"media_t1t2_impressions":1110370320.0853329,"media_t1_impressions":1021461496.534889,"media_t2_impressions":88908823.55044389,"adops_index_including_make_only":null,"adops_index_excluding_make_only":null,"research_actions":null,"shop_actions":1606726,"credit_apps":5236,"retail_sales":6712,"used_cpo_sales":2963,"retail_plus_used_cpo_sales":9675,"pure_retail":null,"non_pure_retail":null,"media_t1t2_spend_sales_month":22549627.793857142,"media_t1_spend_sales_month":17718662.742,"media_t1_lifestyle_spend_sales_month":12875809.476,"media_t1_in_market_spend_sales_month":4842853.266,"media_t2_spend_sales_month":4830965.051857144,"media_t1t2_impressions_sales_month":1186722346.744647,"media_t1_impressions_sales_month":1089433917.9324188,"media_t2_impressions_sales_month":97288428.81222823,"adops_index_including_make_only_sales_month":null,"adops_index_excluding_make_only_sales_month":null,"research_actions_sales_month":null,"shop_actions_sales_month":1761421.2},{"date":"2024-09-01","media_t1t2_spend":17578962.895714287,"media_t1_spend":14268295.520000001,"media_t1_lifestyle_spend":10624502.859999998,"media_t1_in_market_spend":3643792.659999999,"media_t2_spend":3310667.375714286,"media_t1t2_impressions":763520266.593141,"media_t1_impressions":679724213.9752976,"media_t2_impressions":83796052.61784342,"adops_index_including_make_only":276.59709999999995,"adops_index_excluding_make_only":210.7743999999999,"research_actions":null,"shop_actions":1546952,"credit_apps":3963,"retail_sales":5218,"used_cpo_sales":2549,"retail_plus_used_cpo_sales":7767,"pure_retail":null,"non_pure_retail":null,"media_t1t2_spend_sales_month":15821066.606142858,"media_t1_spend_sales_month":12841465.968000002,"media_t1_lifestyle_spend_sales_month":9562052.573999997,"media_t1_in_market_spend_sales_month":3279413.3939999994,"media_t2_spend_sales_month":2979600.6381428577,"media_t1t2_impressions_sales_month":687168239.9338269,"media_t1_impressions_sales_month":611751792.5777678,"media_t2_impressions_sales_month":75416447.35605907,"adops_index_including_make_only_sales_month":248.93738999999997,"adops_index_excluding_make_only_sales_month":189.6969599999999,"research_actions_sales_month":null,"shop_actions_sales_month":1392256.8},{"date":"2024-10-01","media_t1t2_spend":20710051.87,"media_t1_spend":17604353.86,"media_t1_lifestyle_spend":14255405.07,"media_t1_in_market_spend":3348948.7899999996,"media_t2_spend":3105698.01,"media_t1t2_impressions":896229776.4227041,"media_t1_impressions":820183347.372659,"media_t2_impressions":76046429.05004516,"adops_index_including_make_only":490.85180000000025,"adops_index_excluding_make_only":240.68279999999993,"research_actions":null,"shop_actions":1591742,"credit_apps":4673,"retail_sales":5940,"used_cpo_sales":2567,"retail_plus_used_cpo_sales":8507,"pure_retail":null,"non_pure_retail":null,"media_t1t2_spend_sales_month":20710051.87,"media_t1_spend_sales_month":17604353.86,"media_t1_lifestyle_spend_sales_month":14255405.07,"media_t1_in_market_spend_sales_month":3348948.7899999996,"media_t2_spend_sales_month":3105698.01,"media_t1t2_impressions_sales_month":896229776.4227041,"media_t1_impressions_sales_month":820183347.372659,"media_t2_impressions_sales_month":76046429.05004516,"adops_index_including_make_only_sales_month":490.85180000000025,"adops_index_excluding_make_only_sales_month":240.68279999999993,"research_actions_sales_month":null,"shop_actions_sales_month":1591742},{"date":"2024-11-01","media_t1t2_spend":23560636.35,"media_t1_spend":17512320.400000002,"media_t1_lifestyle_spend":12599479.48,"media_t1_in_market_spend":4912840.920000002,"media_t2_spend":6048315.950000001,"media_t1t2_impressions":944123501.244367,"media_t1_impressions":858206332.3627615,"media_t2_impressions":85917168.8816053,"adops_index_including_make_only":485.7543000000002,"adops_index_excluding_make_only":233.0719999999999,"research_actions":null,"shop_actions":1730219,"credit_apps":5335,"retail_sales":6534,"used_cpo_sales":2745,"retail_plus_used_cpo_sales":9279,"pure_retail":null,"non_pure_retail":null,"media_t1t2_spend_sales_month":24651907.96182796,"media_t1_spend_sales_month":18241767.321290325,"media_t1_lifestyle_spend_sales_month":13132565.983225808,"media_t1_in_market_spend_sales_month":5109201.338064518,"media_t2_spend_sales_month":6410140.640537635,"media_t1t2_impressions_sales_month":1000186798.3749026,"media_t1_impressions_sales_month":908274059.2354714,"media_t2_impressions_sales_month":91912739.13943098,"adops_index_including_make_only_sales_month":515.8110290322583,"adops_index_excluding_make_only_sales_month":247.11309677419342,"research_actions_sales_month":null,"shop_actions_sales_month":1850068.8064516129},{"date":"2024-12-01","media_t1t2_spend":16914709.98333333,"media_t1_spend":11306427.28,"media_t1_lifestyle_spend":8262840.800000001,"media_t1_in_market_spend":3043586.48,"media_t2_spend":5608282.703333332,"media_t1t2_impressions":868981105.5233016,"media_t1_impressions":776049766.5270035,"media_t2_impressions":92931338.99629809,"adops_index_including_make_only":465.8793,"adops_index_excluding_make_only":217.637,"research_actions":null,"shop_actions":1857672,"credit_apps":6000,"retail_sales":7358,"used_cpo_sales":2749,"retail_plus_used_cpo_sales":10107,"pure_retail":null,"non_pure_retail":null,"media_t1t2_spend_sales_month":16576125.639247308,"media_t1_spend_sales_month":11199600.80516129,"media_t1_lifestyle_spend_sales_month":8170795.458064516,"media_t1_in_market_spend_sales_month":3028805.347096774,"media_t2_spend_sales_month":5376524.8340860205,"media_t1t2_impressions_sales_month":852978955.9305216,"media_t1_impressions_sales_month":763231894.4100363,"media_t2_impressions_sales_month":89747061.52048518,"adops_index_including_make_only_sales_month":466.73144838709675,"adops_index_excluding_make_only_sales_month":218.30556129032254,"research_actions_sales_month":null,"shop_actions_sales_month":1853639.4193548386},{"date":"2025-01-01","media_t1t2_spend":11666652.649999999,"media_t1_spend":9650616.92,"media_t1_lifestyle_spend":6836138,"media_t1_in_market_spend":2814478.92,"media_t2_spend":2016035.73,"media_t1t2_impressions":620947786.8352119,"media_t1_impressions":577372748.7140139,"media_t2_impressions":43575038.12119798,"adops_index_including_make_only":479.08760000000007,"adops_index_excluding_make_only":227.99969999999982,"research_actions":558207,"shop_actions":1795167,"credit_apps":3553,"retail_sales":4547,"used_cpo_sales":2280,"retail_plus_used_cpo_sales":6827,"pure_retail":null,"non_pure_retail":null,"media_t1t2_spend_sales_month":10913965.382258063,"media_t1_spend_sales_month":9027996.473548386,"media_t1_lifestyle_spend_sales_month":6395096.838709677,"media_t1_in_market_spend_sales_month":2632899.6348387096,"media_t2_spend_sales_month":1885968.9087096774,"media_t1t2_impressions_sales_month":580886639.2974563,"media_t1_impressions_sales_month":540122893.958271,"media_t2_impressions_sales_month":40763745.33918521,"adops_index_including_make_only_sales_month":448.17872258064517,"adops_index_excluding_make_only_sales_month":213.29004193548369,"research_actions_sales_month":522193.6451612903,"shop_actions_sales_month":1679349.7741935484},{"date":"2025-02-01","media_t1t2_spend":12059604,"media_t1_spend":8883435.989999998,"media_t1_lifestyle_spend":5863056,"media_t1_in_market_spend":3020379.9900000007,"media_t2_spend":3176168.01,"media_t1t2_impressions":669203617.8073857,"media_t1_impressions":604466097.2207506,"media_t2_impressions":64737520.58663514,"adops_index_including_make_only":470.5698000000002,"adops_index_excluding_make_only":201.18789999999996,"research_actions":555567,"shop_actions":1712761,"credit_apps":4033,"retail_sales":5096,"used_cpo_sales":2401,"retail_plus_used_cpo_sales":7497,"pure_retail":null,"non_pure_retail":null,"media_t1t2_spend_sales_month":12059604,"media_t1_spend_sales_month":8883435.989999998,"media_t1_lifestyle_spend_sales_month":5863056,"media_t1_in_market_spend_sales_month":3020379.9900000007,"media_t2_spend_sales_month":3176168.01,"media_t1t2_impressions_sales_month":669203617.8073857,"media_t1_impressions_sales_month":604466097.2207506,"media_t2_impressions_sales_month":64737520.58663514,"adops_index_including_make_only_sales_month":470.5698000000002,"adops_index_excluding_make_only_sales_month":201.18789999999996,"research_actions_sales_month":555567,"shop_actions_sales_month":1712761},{"date":"2025-03-01","media_t1t2_spend":17590080.29,"media_t1_spend":12935068.240000002,"media_t1_lifestyle_spend":8713034,"media_t1_in_market_spend":4222034.24,"media_t2_spend":4655012.050000001,"media_t1t2_impressions":877132945.7909875,"media_t1_impressions":796727706.3167806,"media_t2_impressions":80405239.47420707,"adops_index_including_make_only":526.5129000000004,"adops_index_excluding_make_only":244.70719999999994,"research_actions":717043,"shop_actions":1951795,"credit_apps":5604,"retail_sales":6840,"used_cpo_sales":3017,"retail_plus_used_cpo_sales":9857,"pure_retail":null,"non_pure_retail":null,"media_t1t2_spend_sales_month":17590080.29,"media_t1_spend_sales_month":12935068.240000002,"media_t1_lifestyle_spend_sales_month":8713034,"media_t1_in_market_spend_sales_month":4222034.24,"media_t2_spend_sales_month":4655012.050000001,"media_t1t2_impressions_sales_month":877132945.7909875,"media_t1_impressions_sales_month":796727706.3167806,"media_t2_impressions_sales_month":80405239.47420707,"adops_index_including_make_only_sales_month":526.5129000000004,"adops_index_excluding_make_only_sales_month":244.70719999999994,"research_actions_sales_month":717043,"shop_actions_sales_month":1951795},{"date":"2025-04-01","media_t1t2_spend":17518943,"media_t1_spend":13966778.69,"media_t1_lifestyle_spend":10414051,"media_t1_in_market_spend":3552727.69,"media_t2_spend":3552164.3100000005,"media_t1t2_impressions":810612250.728379,"media_t1_impressions":738024694.5439844,"media_t2_impressions":72587556.18439463,"adops_index_including_make_only":492.9976000000004,"adops_index_excluding_make_only":230.43720000000002,"research_actions":639916,"shop_actions":1846231,"credit_apps":4362,"retail_sales":5736,"used_cpo_sales":3307,"retail_plus_used_cpo_sales":9043,"pure_retail":null,"non_pure_retail":null,"media_t1t2_spend_sales_month":17518943,"media_t1_spend_sales_month":13966778.69,"media_t1_lifestyle_spend_sales_month":10414051,"media_t1_in_market_spend_sales_month":3552727.69,"media_t2_spend_sales_month":3552164.3100000005,"media_t1t2_impressions_sales_month":810612250.728379,"media_t1_impressions_sales_month":738024694.5439844,"media_t2_impressions_sales_month":72587556.18439463,"adops_index_including_make_only_sales_month":492.9976000000004,"adops_index_excluding_make_only_sales_month":230.43720000000002,"research_actions_sales_month":639916,"shop_actions_sales_month":1846231},{"date":"2025-05-01","media_t1t2_spend":15696672.19,"media_t1_spend":12218313.12,"media_t1_lifestyle_spend":8302374,"media_t1_in_market_spend":3915939.12,"media_t2_spend":3478359.0700000003,"media_t1t2_impressions":859845333.0929447,"media_t1_impressions":787441442.8608421,"media_t2_impressions":72403890.23210251,"adops_index_including_make_only":500.8013000000003,"adops_index_excluding_make_only":246.42589999999998,"research_actions":649000,"shop_actions":1794818,"credit_apps":4595,"retail_sales":6323,"used_cpo_sales":3028,"retail_plus_used_cpo_sales":9351,"pure_retail":null,"non_pure_retail":null,"media_t1t2_spend_sales_month":16724721.277999999,"media_t1_spend_sales_month":12990635.698666666,"media_t1_lifestyle_spend_sales_month":8830967.533333333,"media_t1_in_market_spend_sales_month":4159668.1653333334,"media_t2_spend_sales_month":3734085.5793333338,"media_t1t2_impressions_sales_month":919136452.2150435,"media_t1_impressions_sales_month":841412499.4430643,"media_t2_impressions_sales_month":77723952.77197908,"adops_index_including_make_only_sales_month":532.1261733333337,"adops_index_excluding_make_only_sales_month":262.2088133333333,"research_actions_sales_month":690414.6666666666,"shop_actions_sales_month":1912808.4},{"date":"2025-06-01","media_t1t2_spend":15420736.32,"media_t1_spend":11584838.68,"media_t1_lifestyle_spend":7928903,"media_t1_in_market_spend":3655935.6799999997,"media_t2_spend":3835897.6400000006,"media_t1t2_impressions":889366786.8314822,"media_t1_impressions":809565848.7333338,"media_t2_impressions":79800938.09814857,"adops_index_including_make_only":469.8731000000002,"adops_index_excluding_make_only":236.7437,"research_actions":621220,"shop_actions":1769856,"credit_apps":3858,"retail_sales":5823,"used_cpo_sales":2527,"retail_plus_used_cpo_sales":8350,"pure_retail":null,"non_pure_retail":null,"media_t1t2_spend_sales_month":14392687.232,"media_t1_spend_sales_month":10812516.101333333,"media_t1_lifestyle_spend_sales_month":7400309.466666667,"media_t1_in_market_spend_sales_month":3412206.6346666664,"media_t2_spend_sales_month":3580171.130666667,"media_t1t2_impressions_sales_month":830075667.7093834,"media_t1_impressions_sales_month":755594792.1511116,"media_t2_impressions_sales_month":74480875.558272,"adops_index_including_make_only_sales_month":438.54822666666684,"adops_index_excluding_make_only_sales_month":220.96078666666665,"research_actions_sales_month":579805.3333333334,"shop_actions_sales_month":1651865.6},{"date":"2025-07-01","media_t1t2_spend":14714704.229999997,"media_t1_spend":11216716.129999999,"media_t1_lifestyle_spend":6959449,"media_t1_in_market_spend":4257267.13,"media_t2_spend":3497988.0999999996,"media_t1t2_impressions":849427639.4265835,"media_t1_impressions":766791146.9365631,"media_t2_impressions":82636492.4900204,"adops_index_including_make_only":493.95420000000024,"adops_index_excluding_make_only":242.73439999999997,"research_actions":726185,"shop_actions":1937843,"credit_apps":4719,"retail_sales":6100,"used_cpo_sales":2615,"retail_plus_used_cpo_sales":8715,"pure_retail":null,"non_pure_retail":null,"media_t1t2_spend_sales_month":14714704.229999997,"media_t1_spend_sales_month":11216716.129999999,"media_t1_lifestyle_spend_sales_month":6959449,"media_t1_in_market_spend_sales_month":4257267.13,"media_t2_spend_sales_month":3497988.0999999996,"media_t1t2_impressions_sales_month":849427639.4265835,"media_t1_impressions_sales_month":766791146.9365631,"media_t2_impressions_sales_month":82636492.4900204,"adops_index_including_make_only_sales_month":493.95420000000024,"adops_index_excluding_make_only_sales_month":242.73439999999997,"research_actions_sales_month":726185,"shop_actions_sales_month":1937843},{"date":"2025-08-01","media_t1t2_spend":19644370.779999997,"media_t1_spend":15627871.470000003,"media_t1_lifestyle_spend":10487517,"media_t1_in_market_spend":5140354.469999999,"media_t2_spend":4016499.31,"media_t1t2_impressions":1034306329.2745347,"media_t1_impressions":945397505.7240908,"media_t2_impressions":88908823.55044389,"adops_index_including_make_only":505.42250000000024,"adops_index_excluding_make_only":239.4810999999999,"research_actions":805095,"shop_actions":2011223,"credit_apps":5701,"retail_sales":7345,"used_cpo_sales":2842,"retail_plus_used_cpo_sales":10187,"pure_retail":null,"non_pure_retail":null,"media_t1t2_spend_sales_month":20824649.764666665,"media_t1_spend_sales_month":16530246.62866667,"media_t1_lifestyle_spend_sales_month":11154889.6,"media_t1_in_market_spend_sales_month":5375357.028666666,"media_t2_spend_sales_month":4294403.136,"media_t1t2_impressions_sales_month":1093327818.294193,"media_t1_impressions_sales_month":998832591.2358928,"media_t2_impressions_sales_month":94495227.05830011,"adops_index_including_make_only_sales_month":538.6194533333336,"adops_index_excluding_make_only_sales_month":254.60121333333325,"research_actions_sales_month":852616.4666666667,"shop_actions_sales_month":2137565.7333333334},{"date":"2025-09-01","media_t1t2_spend":17704184.770000003,"media_t1_spend":13535627.38,"media_t1_lifestyle_spend":10010589,"media_t1_in_market_spend":3525038.3800000004,"media_t2_spend":4168557.3899999997,"media_t1t2_impressions":885322335.2948736,"media_t1_impressions":801526282.6770302,"media_t2_impressions":83796052.61784342,"adops_index_including_make_only":497.9543000000004,"adops_index_excluding_make_only":226.80170000000004,"research_actions":712822,"shop_actions":1895141,"credit_apps":3993,"retail_sales":5891,"used_cpo_sales":2727,"retail_plus_used_cpo_sales":8618,"pure_retail":null,"non_pure_retail":null,"media_t1t2_spend_sales_month":16523905.785333337,"media_t1_spend_sales_month":12633252.221333334,"media_t1_lifestyle_spend_sales_month":9343216.4,"media_t1_in_market_spend_sales_month":3290035.821333334,"media_t2_spend_sales_month":3890653.564,"media_t1t2_impressions_sales_month":826300846.2752154,"media_t1_impressions_sales_month":748091197.1652282,"media_t2_impressions_sales_month":78209649.1099872,"adops_index_including_make_only_sales_month":464.75734666666705,"adops_index_excluding_make_only_sales_month":211.6815866666667,"research_actions_sales_month":665300.5333333333,"shop_actions_sales_month":1768798.2666666666},{"date":"2025-10-01","media_t1t2_spend":18835941.970000006,"media_t1_spend":15069827.719999997,"media_t1_lifestyle_spend":10854597,"media_t1_in_market_spend":4215230.720000001,"media_t2_spend":3766114.25,"media_t1t2_impressions":900870885.422704,"media_t1_impressions":824824456.372659,"media_t2_impressions":76046429.05004516,"adops_index_including_make_only":481.1409000000001,"adops_index_excluding_make_only":230.08829999999986,"research_actions":699373,"shop_actions":1899390,"credit_apps":4306,"retail_sales":5751,"used_cpo_sales":3064,"retail_plus_used_cpo_sales":8815,"pure_retail":null,"non_pure_retail":null,"media_t1t2_spend_sales_month":18835941.970000006,"media_t1_spend_sales_month":15069827.719999997,"media_t1_lifestyle_spend_sales_month":10854597,"media_t1_in_market_spend_sales_month":4215230.720000001,"media_t2_spend_sales_month":3766114.25,"media_t1t2_impressions_sales_month":900870885.422704,"media_t1_impressions_sales_month":824824456.372659,"media_t2_impressions_sales_month":76046429.05004516,"adops_index_including_make_only_sales_month":481.1409000000001,"adops_index_excluding_make_only_sales_month":230.08829999999986,"research_actions_sales_month":699373,"shop_actions_sales_month":1899390},{"date":"2025-11-01","media_t1t2_spend":19902123.42,"media_t1_spend":15239562.430000002,"media_t1_lifestyle_spend":10654460,"media_t1_in_market_spend":4585102.43,"media_t2_spend":4662560.99,"media_t1t2_impressions":922624263.2443671,"media_t1_impressions":836707094.3627619,"media_t2_impressions":85917168.8816053,"adops_index_including_make_only":514.7790000000005,"adops_index_excluding_make_only":244.45820000000003,"research_actions":707951,"shop_actions":1926211,"credit_apps":6102,"retail_sales":6732,"used_cpo_sales":3020,"retail_plus_used_cpo_sales":9752,"pure_retail":null,"non_pure_retail":null,"media_t1t2_spend_sales_month":20569353.435483873,"media_t1_spend_sales_month":15749644.951612905,"media_t1_lifestyle_spend_sales_month":11012074.41935484,"media_t1_in_market_spend_sales_month":4737570.5322580645,"media_t2_spend_sales_month":4819708.483870968,"media_t1t2_impressions_sales_month":950937315.1967317,"media_t1_impressions_sales_month":862022361.1862136,"media_t2_impressions_sales_month":88914954.01051813,"adops_index_including_make_only_sales_month":531.3559161290327,"adops_index_excluding_make_only_sales_month":252.3313161290323,"research_actions_sales_month":733655.6451612903,"shop_actions_sales_month":1992621.5806451612},{"date":"2025-12-01","media_t1t2_spend":20684130.479999997,"media_t1_spend":15812558.170000002,"media_t1_lifestyle_spend":11086047,"media_t1_in_market_spend":4726511.17,"media_t2_spend":4871572.31,"media_t1t2_impressions":877704610.5233011,"media_t1_impressions":784773271.527003,"media_t2_impressions":92931338.99629807,"adops_index_including_make_only":513.8844000000004,"adops_index_excluding_make_only":244.06659999999994,"research_actions":796844,"shop_actions":2058728,"credit_apps":7165,"retail_sales":7903,"used_cpo_sales":3196,"retail_plus_used_cpo_sales":11099,"pure_retail":null,"non_pure_retail":null,"media_t1t2_spend_sales_month":20698001.620645158,"media_t1_spend_sales_month":15870513.592903228,"media_t1_lifestyle_spend_sales_month":11093624.984516129,"media_t1_in_market_spend_sales_month":4776888.608387097,"media_t2_spend_sales_month":4827488.027741935,"media_t1t2_impressions_sales_month":891082062.9536722,"media_t1_impressions_sales_month":798804703.993874,"media_t2_impressions_sales_month":92277358.95979823,"adops_index_including_make_only_sales_month":529.8282709677424,"adops_index_excluding_make_only_sales_month":252.03958709677414,"research_actions_sales_month":816544.7096774194,"shop_actions_sales_month":2130585.935483871},{"date":"2026-01-01","media_t1t2_spend":10557067.919999998,"media_t1_spend":8804588.14,"media_t1_lifestyle_spend":5660482.26,"media_t1_in_market_spend":3144105.88,"media_t2_spend":1752479.78,"media_t1t2_impressions":646202817.9324013,"media_t1_impressions":609873839,"media_t2_impressions":36328978.9324013,"adops_index_including_make_only":504.0722000000003,"adops_index_excluding_make_only":245.61459999999994,"research_actions":703783,"shop_actions":2143162,"credit_apps":4247,"retail_sales":5050,"used_cpo_sales":2921,"retail_plus_used_cpo_sales":7971,"pure_retail":null,"non_pure_retail":null,"media_t1t2_spend_sales_month":10812048.917442394,"media_t1_spend_sales_month":8955250.671912443,"media_t1_lifestyle_spend_sales_month":5770276.706129031,"media_t1_in_market_spend_sales_month":3184973.96578341,"media_t2_spend_sales_month":1856798.2455299539,"media_t1t2_impressions_sales_month":653372773.4890347,"media_t1_impressions_sales_month":615002216.6382488,"media_t2_impressions_sales_month":38370556.85078581,"adops_index_including_make_only_sales_month":507.13876290322605,"adops_index_excluding_make_only_sales_month":246.06713963133632,"research_actions_sales_month":703675.8594470046,"shop_actions_sales_month":2143793.1267281105},{"date":"2026-02-01","media_t1t2_spend":13105150.15,"media_t1_spend":10061806.67,"media_t1_lifestyle_spend":6649815.9,"media_t1_in_market_spend":3411990.77,"media_t2_spend":3043343.4799999995,"media_t1t2_impressions":684046439.1511649,"media_t1_impressions":622651077,"media_t2_impressions":61395362.151164904,"adops_index_including_make_only":498.2229000000004,"adops_index_excluding_make_only":228.18099999999993,"research_actions":634175,"shop_actions":1944595,"credit_apps":4299,"retail_sales":5228,"used_cpo_sales":3064,"retail_plus_used_cpo_sales":8292,"pure_retail":null,"non_pure_retail":null,"media_t1t2_spend_sales_month":13278948.427396314,"media_t1_spend_sales_month":10140811.990990784,"media_t1_lifestyle_spend_sales_month":6688718.322903226,"media_t1_in_market_spend_sales_month":3452093.6680875574,"media_t2_spend_sales_month":3138136.4364055293,"media_t1t2_impressions_sales_month":675383816.5193888,"media_t1_impressions_sales_month":611464879.813364,"media_t2_impressions_sales_month":63918936.70602468,"adops_index_including_make_only_sales_month":497.0493500000004,"adops_index_excluding_make_only_sales_month":228.6588152073732,"research_actions_sales_month":634789.1728110599,"shop_actions_sales_month":1945359.4861751152},{"date":"2026-03-01","media_t1t2_spend":17203146.68,"media_t1_spend":12364439.860000001,"media_t1_lifestyle_spend":7965283.73,"media_t1_in_market_spend":4399156.129999999,"media_t2_spend":4838706.819999999,"media_t1t2_impressions":623066478.2676876,"media_t1_impressions":515977636,"media_t2_impressions":107088842.26768759,"adops_index_including_make_only":533.4139000000006,"adops_index_excluding_make_only":260.0351,"research_actions":711642,"shop_actions":2164794,"credit_apps":6157,"retail_sales":6866,"used_cpo_sales":3415,"retail_plus_used_cpo_sales":10281,"pure_retail":null,"non_pure_retail":null,"media_t1t2_spend_sales_month":16093266.249032257,"media_t1_spend_sales_month":11566734.062580645,"media_t1_lifestyle_spend_sales_month":7451394.457096774,"media_t1_in_market_spend_sales_month":4115339.6054838696,"media_t2_spend_sales_month":4526532.186451612,"media_t1t2_impressions_sales_month":582868640.9600948,"media_t1_impressions_sales_month":482688756.2580645,"media_t2_impressions_sales_month":100179884.70203032,"adops_index_including_make_only_sales_month":499.0001000000005,"adops_index_excluding_make_only_sales_month":243.25864193548387,"research_actions_sales_month":665729.6129032258,"shop_actions_sales_month":2025129.8709677418},{"date":"2026-04-01","media_t1t2_spend":15035037.129999999,"media_t1_spend":11675249.09,"media_t1_lifestyle_spend":7200903.87,"media_t1_in_market_spend":4474345.22,"media_t2_spend":3359788.04,"media_t1t2_impressions":700238188.5826132,"media_t1_impressions":624145164,"media_t2_impressions":76093024.58261321,"adops_index_including_make_only":524.6708000000004,"adops_index_excluding_make_only":258.73759999999993,"research_actions":698624,"shop_actions":2087158,"credit_apps":4972,"retail_sales":5473,"used_cpo_sales":3219,"retail_plus_used_cpo_sales":8692,"pure_retail":null,"non_pure_retail":null,"media_t1t2_spend_sales_month":15035037.129999999,"media_t1_spend_sales_month":11675249.09,"media_t1_lifestyle_spend_sales_month":7200903.87,"media_t1_in_market_spend_sales_month":4474345.22,"media_t2_spend_sales_month":3359788.04,"media_t1t2_impressions_sales_month":700238188.5826132,"media_t1_impressions_sales_month":624145164,"media_t2_impressions_sales_month":76093024.58261321,"adops_index_including_make_only_sales_month":524.6708000000004,"adops_index_excluding_make_only_sales_month":258.73759999999993,"research_actions_sales_month":698624,"shop_actions_sales_month":2087158},{"date":"2026-05-01","media_t1t2_spend":17051263.500000004,"media_t1_spend":14109481.05,"media_t1_lifestyle_spend":9364665.23,"media_t1_in_market_spend":4744815.82,"media_t2_spend":2941782.4499999997,"media_t1t2_impressions":765173432.9736705,"media_t1_impressions":693762751,"media_t2_impressions":71410681.97367057,"adops_index_including_make_only":540.1162000000003,"adops_index_excluding_make_only":250.60239999999993,"research_actions":671211,"shop_actions":2097406,"credit_apps":6046,"retail_sales":6622,"used_cpo_sales":3166,"retail_plus_used_cpo_sales":9788,"pure_retail":null,"non_pure_retail":null,"media_t1t2_spend_sales_month":17565058.148305744,"media_t1_spend_sales_month":14514907.308,"media_t1_lifestyle_spend_sales_month":9631184.987333333,"media_t1_in_market_spend_sales_month":4883722.320666667,"media_t2_spend_sales_month":3050150.8403057395,"media_t1t2_impressions_sales_month":791905562.4840842,"media_t1_impressions_sales_month":718011877,"media_t2_impressions_sales_month":73893685.4840843,"adops_index_including_make_only_sales_month":558.1330700000003,"adops_index_excluding_make_only_sales_month":258.9065166666666,"research_actions_sales_month":693175.5333333333,"shop_actions_sales_month":2166351.533333333},{"date":"2026-06-01","media_t1t2_spend":15413839.449172191,"media_t1_spend":12162787.739999998,"media_t1_lifestyle_spend":7995592.72,"media_t1_in_market_spend":4167195.0200000005,"media_t2_spend":3251051.709172192,"media_t1t2_impressions":801963885.3124118,"media_t1_impressions":727473780,"media_t2_impressions":74490105.31241177,"adops_index_including_make_only":540.5061000000004,"adops_index_excluding_make_only":249.12349999999998,"research_actions":658936,"shop_actions":2068366,"credit_apps":5620,"retail_sales":6601,"used_cpo_sales":3179,"retail_plus_used_cpo_sales":9780,"pure_retail":null,"non_pure_retail":null,"media_t1t2_spend_sales_month":14900044.800866451,"media_t1_spend_sales_month":11757361.481999999,"media_t1_lifestyle_spend_sales_month":7729072.962666666,"media_t1_in_market_spend_sales_month":4028288.5193333337,"media_t2_spend_sales_month":3142683.318866452,"media_t1t2_impressions_sales_month":775231755.801998,"media_t1_impressions_sales_month":703224654,"media_t2_impressions_sales_month":72007101.80199805,"adops_index_including_make_only_sales_month":522.4892300000004,"adops_index_excluding_make_only_sales_month":240.81938333333332,"research_actions_sales_month":636971.4666666667,"shop_actions_sales_month":1999420.4666666668},{"date":"2026-07-01","media_t1t2_spend":15869625.142370269,"media_t1_spend":12306809.940000001,"media_t1_lifestyle_spend":7934718.590000001,"media_t1_in_market_spend":4372091.35,"media_t2_spend":3562815.2023702674,"media_t1t2_impressions":917952051.4000447,"media_t1_impressions":828984407,"media_t2_impressions":88967644.4000448,"adops_index_including_make_only":573.9540000000007,"adops_index_excluding_make_only":277.30640000000005,"research_actions":828540,"shop_actions":2260324,"credit_apps":5916,"retail_sales":5908,"used_cpo_sales":3446,"retail_plus_used_cpo_sales":9354,"pure_retail":null,"non_pure_retail":null,"media_t1t2_spend_sales_month":15869625.142370269,"media_t1_spend_sales_month":12306809.940000001,"media_t1_lifestyle_spend_sales_month":7934718.590000001,"media_t1_in_market_spend_sales_month":4372091.35,"media_t2_spend_sales_month":3562815.2023702674,"media_t1t2_impressions_sales_month":917952051.4000447,"media_t1_impressions_sales_month":828984407,"media_t2_impressions_sales_month":88967644.4000448,"adops_index_including_make_only_sales_month":573.9540000000007,"adops_index_excluding_make_only_sales_month":277.30640000000005,"research_actions_sales_month":828540,"shop_actions_sales_month":2260324},{"date":"2026-08-01","media_t1t2_spend":20487197.244406827,"media_t1_spend":16315136.13,"media_t1_lifestyle_spend":11579811.71,"media_t1_in_market_spend":4735324.420000001,"media_t2_spend":4172061.114406827,"media_t1t2_impressions":817400083.3069954,"media_t1_impressions":721772405,"media_t2_impressions":95627678.30699544,"adops_index_including_make_only":569.4115000000005,"adops_index_excluding_make_only":253.27669999999983,"research_actions":883871,"shop_actions":1739966,"credit_apps":6246,"retail_sales":6629,"used_cpo_sales":3783,"retail_plus_used_cpo_sales":10412,"pure_retail":null,"non_pure_retail":null,"media_t1t2_spend_sales_month":20487197.244406827,"media_t1_spend_sales_month":16315136.13,"media_t1_lifestyle_spend_sales_month":11579811.71,"media_t1_in_market_spend_sales_month":4735324.420000001,"media_t2_spend_sales_month":4172061.114406827,"media_t1t2_impressions_sales_month":817400083.3069954,"media_t1_impressions_sales_month":721772405,"media_t2_impressions_sales_month":95627678.30699544,"adops_index_including_make_only_sales_month":569.4115000000005,"adops_index_excluding_make_only_sales_month":253.27669999999983,"research_actions_sales_month":883871,"shop_actions_sales_month":1739966}].map(row => ({
+    ...row,
+    date: new Date(row.date + 'T00:00:00'),
+    adops_index: row.adops_index_including_make_only,
+  }));
+  const links = [
+    {
+      key: 'media_adops',
+      summaryLabel: 'Media → Google AdOps',
+      xKey: 'media_t1t2_spend',
+      xLabel: 'T1 + T2 Spend',
+      xUnit: 'dollars',
+      yKey: 'adops_index',
+      yLabel: 'Google AdOps',
+      yUnit: 'index volume',
+      investigate: 'Review channel mix, buying efficiency, impression delivery, and timing where paid-media inputs do not translate into Google AdOps activity.',
+      measures: [
+        {key: 'media_t1t2_spend', label: 'T1 + T2 Spend', unit: 'dollars'},
+        {key: 'media_t1_spend', label: 'T1 Spend', unit: 'dollars'},
+        {key: 'media_t1_lifestyle_spend', label: 'T1 Lifestyle Spend', unit: 'dollars'},
+        {key: 'media_t1_in_market_spend', label: 'T1 In-Market Spend', unit: 'dollars'},
+        {key: 'media_t2_spend', label: 'T2 Spend', unit: 'dollars'},
+        {key: 'media_t1t2_impressions', label: 'T1 + T2 Impressions', unit: 'impressions'},
+        {key: 'media_t1_impressions', label: 'T1 Impressions', unit: 'impressions'},
+        {key: 'media_t2_impressions', label: 'T2 Impressions', unit: 'impressions'},
+      ],
+    },
+    {key: 'adops_research', xKey: 'adops_index', xLabel: 'Google AdOps', xUnit: 'index volume', yKey: 'research_actions', yLabel: 'Research', yUnit: 'actions', investigate: 'Review media mix, audience quality, campaign timing, and measurement changes where indexed ad opportunity volume does not translate into research activity.'},
+    {key: 'research_shop', xKey: 'research_actions', xLabel: 'Research', xUnit: 'actions', yKey: 'shop_actions', yLabel: 'Shop', yUnit: 'actions', investigate: 'Check site paths, action taxonomy, and model or offer mix where research activity does not translate into shopping activity.'},
+    {key: 'shop_credit', xKey: 'shop_actions', xLabel: 'Shop', xUnit: 'actions', yKey: 'credit_apps', yLabel: 'Credit Apps', yUnit: 'applications', investigate: 'Review finance-entry visibility, form starts and completions, eligibility friction, offer mix, and tracking changes where shopping activity does not translate into credit applications.'},
+    {key: 'credit_retail_sales', xKey: 'credit_apps', xLabel: 'Credit Apps', xUnit: 'applications', yKey: 'retail_sales', yLabel: 'Retail Sales', yUnit: 'vehicles', investigate: 'Review application quality, approval outcomes, deal completion, and retail availability where credit applications do not translate into retail sales.'},
+  ];
+  const fmtMonth = d3.timeFormat('%b %Y');
+  const fmtR = value => Number.isFinite(value) ? d3.format('.3f')(value) : 'n/a';
+  const fmtValue = d3.format(',');
+  const yearColors = new Map([[2023, 'var(--viz-series-4)'], [2024, 'var(--viz-series-5)'], [2025, 'var(--viz-series-6)'], [2026, 'var(--viz-series-1)']]);
+  let includeAdopsMakeOnly = true;
+  let useSalesMonth = true;
+
+  const fixedSalesMonthMetrics = new Set(['retail_sales', 'used_cpo_sales', 'retail_plus_used_cpo_sales', 'credit_apps']);
+  function metricValue(row, key) {
+    if (key === 'adops_index') {
+      const sourceKey = includeAdopsMakeOnly ? 'adops_index_including_make_only' : 'adops_index_excluding_make_only';
+      return useSalesMonth ? row[`${sourceKey}_sales_month`] : row[sourceKey];
+    }
+    if (key === 'retail_plus_used_cpo_sales') {
+      return Number.isFinite(row.retail_sales) && Number.isFinite(row.used_cpo_sales)
+        ? row.retail_sales + row.used_cpo_sales
+        : null;
+    }
+    if (useSalesMonth && !fixedSalesMonthMetrics.has(key)) return row[`${key}_sales_month`];
+    return row[key];
+  }
+
+  function updateAdopsScope() {
+    const button = document.getElementById('adops-scope-toggle');
+    button.textContent = includeAdopsMakeOnly ? 'Exclude make_only' : 'Include make_only';
+    button.setAttribute('aria-pressed', String(!includeAdopsMakeOnly));
+    document.getElementById('adops-scope-output').value = includeAdopsMakeOnly ? 'Includes make_only' : 'Luxury models only';
+  }
+
+  function updateMonthAlignment() {
+    const button = document.getElementById('month-alignment-toggle');
+    button.textContent = useSalesMonth ? 'Use Gregorian month' : 'Use sales month';
+    button.setAttribute('aria-pressed', String(useSalesMonth));
+    document.getElementById('month-alignment-output').value = useSalesMonth ? 'Sales month allocation' : 'Gregorian';
+  }
+
+  const combinedSalesLink = {
+    key: 'credit_retail_plus_used_cpo_sales',
+    xKey: 'credit_apps', xLabel: 'Credit Apps', xUnit: 'applications',
+    yKey: 'retail_plus_used_cpo_sales', yLabel: 'Total Retail Sales', yUnit: 'vehicles',
+  };
+  const funnelMapColors = ['var(--phase-funnel-1)', 'var(--phase-funnel-2)', 'var(--phase-funnel-3)', 'var(--phase-funnel-4)'];
+  const salesMapColors = ['var(--phase-sales-1)', 'var(--phase-sales-2)', 'var(--phase-sales-3)', 'var(--phase-sales-4)', 'var(--phase-sales-4)'];
+  const fmtMapRate = value => Number.isFinite(value) ? d3.format('.3f')(value) : 'n/a';
+
+  function updateThemeToggle() {
+    const dark = document.documentElement.dataset.theme === 'dark';
+    themeToggle.textContent = dark ? 'Light mode' : 'Dark mode';
+    themeToggle.setAttribute('aria-pressed', String(dark));
+    themeToggle.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
+  }
+
+  themeToggle.addEventListener('click', () => {
+    const nextTheme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+    document.documentElement.dataset.theme = nextTheme;
+    try { localStorage.setItem('gma-phase-chain-theme', nextTheme); } catch {}
+    updateThemeToggle();
+  });
+  updateThemeToggle();
+
+  const sections = d3.select('#metric-sections').selectAll('section').data(links).join('section')
+    .attr('class', 'metric-section').attr('data-link', link => link.key);
+  sections.html(link => `
+    <div class="metric-heading-row">
+      <h2>${link.xLabel} → ${link.yLabel}</h2>
+      <details class="export-data">
+        <summary>Export data</summary>
+        <div class="export-data-menu"><button type="button" class="export-data-button">Download CSV</button></div>
+      </details>
+    </div>
+    <div class="period-stats" aria-live="polite"></div>
+    <div class="pair-date-controls" aria-label="${link.xLabel} to ${link.yLabel} date range">
+      <label><span>Start month</span><select class="pair-start"></select></label>
+      <label><span>End month</span><select class="pair-end"></select></label>
+    </div>
+    ${link.measures ? `<label class="media-measure-control"><span>Media measure</span><select>${link.measures.map(measure => `<option value="${measure.key}">${measure.label}</option>`).join('')}</select></label>` : ''}
+    <details class="exclusion-control">
+      <summary>Exclude months (0)</summary>
+      <div class="exclusion-body">
+        <p class="exclusion-note">Checked months are removed from this pair’s charts and correlation calculations.</p>
+        <div class="month-checklist"></div>
+        <button type="button" class="clear-exclusions">Restore all months</button>
+      </div>
+    </details>
+    <div class="chart-grid">
+        <div class="chart-wrap scatter-wrap">
+          <div class="annual-stats"><strong>r by year</strong><div class="annual-values"></div></div>
+          <svg class="scatter" role="img" aria-label="${link.xLabel} and ${link.yLabel} scatter chart"></svg>
+          <div class="legend year-legend"></div>
+        </div>
+        <div class="trend-stack">
+          <div class="chart-wrap line-wrap">
+            <h3>Monthly phase trends</h3>
+            <svg class="line" role="img" aria-label="${link.xLabel} and ${link.yLabel} monthly trend chart"></svg>
+            <div class="legend"><span style="--swatch:var(--viz-series-1)">${link.yLabel}</span><span style="--swatch:var(--viz-series-3)">${link.xLabel}</span></div>
+          </div>
+          ${link.key === 'shop_sales' ? '<div class="yoy-readout" aria-live="polite"></div>' : ''}
+        </div>
+        <div class="chart-wrap conversion-wrap">
+          <h3>Monthly phase-to-phase conversion rate</h3>
+          <svg class="conversion" role="img" aria-label="${link.xLabel} to ${link.yLabel} monthly conversion rate chart"></svg>
+          <div class="legend"><span style="--swatch:var(--viz-series-2)">${link.yLabel} ÷ raw ${link.xLabel}</span><span class="regression-key" style="--swatch:var(--muted-foreground)">Period average</span></div>
+        </div>
+    </div>`);
+
+  const monthOptions = raw.map(row => ({value: d3.timeFormat('%Y-%m')(row.date), label: fmtMonth(row.date)}));
+  const excludedByLink = new Map(links.map(link => [link.key, new Set()]));
+  const currentRowsByLink = new Map();
+  const mapRowsByLink = new Map();
+  const mapExcludedMonths = new Set();
+  let mapStartIndex = Math.max(0, monthOptions.findIndex(month => month.value === '2025-01'));
+  let mapEndIndex = monthOptions.length - 1;
+
+  function mapDateRange() {
+    return {
+      start: new Date(`${monthOptions[mapStartIndex].value}-01T00:00:00`),
+      end: new Date(`${monthOptions[mapEndIndex].value}-01T00:00:00`),
+    };
+  }
+
+  function renderMapControls() {
+    const startSlider = document.getElementById('phase-map-start-slider');
+    const endSlider = document.getElementById('phase-map-end-slider');
+    [startSlider, endSlider].forEach(slider => {
+      slider.min = 0;
+      slider.max = monthOptions.length - 1;
+      slider.step = 1;
+    });
+    startSlider.value = mapStartIndex;
+    endSlider.value = mapEndIndex;
+    document.getElementById('phase-map-start-output').value = monthOptions[mapStartIndex].label;
+    document.getElementById('phase-map-end-output').value = monthOptions[mapEndIndex].label;
+    const activeMonths = monthOptions.slice(mapStartIndex, mapEndIndex + 1);
+    const activeExcluded = activeMonths.filter(month => mapExcludedMonths.has(month.value)).length;
+    document.querySelector('.phase-map-exclusions summary').textContent = `Exclude months (${activeExcluded})`;
+    const checklist = document.getElementById('phase-map-month-checklist');
+    checklist.innerHTML = activeMonths.map(month => `<label class="month-option"><input type="checkbox" value="${month.value}" ${mapExcludedMonths.has(month.value) ? 'checked' : ''}><span>${month.label}</span></label>`).join('');
+    checklist.querySelectorAll('input').forEach(input => input.addEventListener('change', () => {
+      if (input.checked) mapExcludedMonths.add(input.value);
+      else mapExcludedMonths.delete(input.value);
+      render();
+    }));
+    const clear = document.getElementById('phase-map-clear-exclusions');
+    clear.disabled = activeExcluded === 0;
+    clear.onclick = () => {
+      activeMonths.forEach(month => mapExcludedMonths.delete(month.value));
+      render();
+    };
+  }
+
+  document.getElementById('phase-map-start-slider').addEventListener('input', event => {
+    mapStartIndex = Math.min(Number(event.target.value), mapEndIndex);
+    render();
+  });
+  document.getElementById('phase-map-end-slider').addEventListener('input', event => {
+    mapEndIndex = Math.max(Number(event.target.value), mapStartIndex);
+    render();
+  });
+
+  function csvCell(value) {
+    if (value === null || value === undefined || Number.isNaN(value)) return '';
+    const text = String(value);
+    return /[",\r\n]/.test(text) ? `"${text.replaceAll('"', '""')}"` : text;
+  }
+
+  function exportLinkData(link, section) {
+    const rows = currentRowsByLink.get(link.key) ?? [];
+    const decay = Number(document.getElementById('decay-slider').value);
+    const periodR = pearson(rows);
+    const headers = [
+      'date_month', 'year', 'upstream_metric', 'upstream_unit', 'raw_upstream',
+      'adstocked_upstream', 'downstream_metric', 'downstream_unit', 'downstream_value',
+      'conversion_rate', 'adstock_decay', 'period_r', 'month_alignment', 'google_adops_scope',
+    ];
+    const dataRows = rows.map(row => [
+      d3.timeFormat('%Y-%m-%d')(row.date), row.year, link.xLabel, link.xUnit, row.rawX,
+      row.x, link.yLabel, link.yUnit, row.y, row.y / row.rawX, decay, periodR,
+      useSalesMonth ? 'sales_month_overlap_allocation' : 'gregorian_month',
+      includeAdopsMakeOnly ? 'luxury_models_plus_make_only' : 'luxury_models_only',
+    ]);
+    const csv = `${[headers, ...dataRows].map(values => values.map(csvCell).join(',')).join('\n')}\n`;
+    const blobUrl = URL.createObjectURL(new Blob([csv], {type: 'text/csv;charset=utf-8'}));
+    const anchor = document.createElement('a');
+    const slug = `${link.xLabel}-to-${link.yLabel}`.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+    anchor.href = blobUrl;
+    anchor.download = `${slug}-correlation-data.csv`;
+    document.body.appendChild(anchor);
+    anchor.click();
+    anchor.remove();
+    setTimeout(() => URL.revokeObjectURL(blobUrl), 1000);
+    section.querySelector('.export-data').open = false;
+  }
+
+  function refreshPairDates(link, preserve = false) {
+    const section = root.querySelector(`[data-link="${link.key}"]`);
+    const validMonths = monthOptions.filter(month => {
+      const row = raw.find(value => d3.timeFormat('%Y-%m')(value.date) === month.value);
+      return row && Number.isFinite(metricValue(row, link.xKey)) && metricValue(row, link.xKey) > 0 && Number.isFinite(metricValue(row, link.yKey)) && metricValue(row, link.yKey) > 0;
+    });
+    const options = validMonths.map(month => `<option value="${month.value}">${month.label}</option>`).join('');
+    const startSelect = section.querySelector('.pair-start');
+    const endSelect = section.querySelector('.pair-end');
+    const priorStart = startSelect.value;
+    const priorEnd = endSelect.value;
+    startSelect.innerHTML = options;
+    endSelect.innerHTML = options;
+    const defaultStart = validMonths.find(month => month.value === '2025-01') ?? validMonths[0];
+    startSelect.value = preserve && validMonths.some(month => month.value === priorStart) ? priorStart : defaultStart.value;
+    endSelect.value = preserve && validMonths.some(month => month.value === priorEnd) ? priorEnd : validMonths.at(-1).value;
+  }
+
+  links.forEach(link => {
+    const section = root.querySelector(`[data-link="${link.key}"]`);
+    refreshPairDates(link);
+    const startSelect = section.querySelector('.pair-start');
+    const endSelect = section.querySelector('.pair-end');
+    startSelect.addEventListener('change', () => {
+      if (startSelect.value > endSelect.value) endSelect.value = startSelect.value;
+      render();
+    });
+    endSelect.addEventListener('change', () => {
+      if (endSelect.value < startSelect.value) startSelect.value = endSelect.value;
+      render();
+    });
+    const measureSelect = section.querySelector('.media-measure-control select');
+    if (measureSelect) {
+      measureSelect.addEventListener('change', () => {
+        const measure = link.measures.find(value => value.key === measureSelect.value);
+        link.xKey = measure.key;
+        link.xLabel = measure.label;
+        link.xUnit = measure.unit;
+        render();
+      });
+    }
+    section.querySelector('.export-data-button').addEventListener('click', () => exportLinkData(link, section));
+  });
+
+  function pearson(rows) {
+    if (rows.length < 2) return NaN;
+    const meanX = d3.mean(rows, row => row.x);
+    const meanY = d3.mean(rows, row => row.y);
+    const numerator = d3.sum(rows, row => (row.x - meanX) * (row.y - meanY));
+    const denominator = Math.sqrt(
+      d3.sum(rows, row => (row.x - meanX) ** 2) * d3.sum(rows, row => (row.y - meanY) ** 2),
+    );
+    return denominator ? numerator / denominator : NaN;
+  }
+
+  function rSquared(rows) {
+    const r = pearson(rows);
+    return Number.isFinite(r) ? r ** 2 : NaN;
+  }
+
+  function upstreamTooltip(row, link) {
+    if (Math.abs(row.x - row.rawX) < 1e-9) return `${link.xLabel}: ${fmtValue(Math.round(row.rawX))}`;
+    return `Raw ${link.xLabel}: ${fmtValue(Math.round(row.rawX))}<br>After adstock: ${fmtValue(Math.round(row.x))}`;
+  }
+
+  function renderShopSalesYoy(section, link, start, end, excluded) {
+    const node = section.querySelector('.yoy-readout');
+    if (!node) return;
+    const priorByMonth = new Map(raw.filter(row => row.date.getFullYear() === 2025)
+      .map(row => [row.date.getMonth(), row]));
+    const comparisons = raw.filter(row =>
+      row.date.getFullYear() === 2026
+      && row.date >= start
+      && row.date <= end
+      && !excluded.has(d3.timeFormat('%Y-%m')(row.date))
+    ).map(row => ({row, prior: priorByMonth.get(row.date.getMonth())}))
+      .filter(({row, prior}) => prior
+        && !excluded.has(d3.timeFormat('%Y-%m')(prior.date))
+        && metricValue(row, 'shop_actions') > 0 && metricValue(row, link.yKey) > 0
+        && metricValue(prior, 'shop_actions') > 0 && metricValue(prior, link.yKey) > 0);
+    node.hidden = comparisons.length === 0;
+    if (!comparisons.length) { node.innerHTML = ''; return; }
+    const percent = value => d3.format('+.0%')(value);
+    node.innerHTML = `
+      <div class="yoy-readout-grid">
+        <div></div><div class="yoy-readout-title">2026 Y/Y</div>
+        <div></div><div class="yoy-readout-header">Shop Y/Y</div><div class="yoy-readout-header">${link.yLabel} Y/Y</div><div class="yoy-readout-header">Outcome p/action Y/Y</div>
+        ${comparisons.map(({row, prior}) => {
+          const shopChange = metricValue(row, 'shop_actions') / metricValue(prior, 'shop_actions') - 1;
+          const salesChange = metricValue(row, link.yKey) / metricValue(prior, link.yKey) - 1;
+          const salesPerAction = metricValue(row, link.yKey) / metricValue(row, 'shop_actions');
+          const priorSalesPerAction = metricValue(prior, link.yKey) / metricValue(prior, 'shop_actions');
+          return `<div class="yoy-readout-month">${d3.timeFormat('%b')(row.date)}</div><div class="yoy-shop">${percent(shopChange)}</div><div class="yoy-sales">${percent(salesChange)}</div><div class="yoy-ratio">${percent(salesPerAction / priorSalesPerAction - 1)}</div>`;
+        }).join('')}
+      </div>
+      <div class="yoy-readout-legend"><span style="--swatch:var(--viz-series-1)">${link.yLabel}</span><span style="--swatch:var(--viz-series-3)">Shop actions</span></div>`;
+  }
+
+  function transformed(link, start, end, decay) {
+    let carry = 0;
+    return raw.filter(row => row.date >= start && row.date <= end).flatMap(row => {
+      const rawX = metricValue(row, link.xKey);
+      const y = metricValue(row, link.yKey);
+      if (!Number.isFinite(rawX) || rawX <= 0) {
+        carry = 0;
+        return [];
+      }
+      carry = rawX + decay * carry;
+      if (!Number.isFinite(y) || y <= 0) return [];
+      return [{date: row.date, year: row.date.getFullYear(), rawX, x: carry, y}];
+    });
+  }
+
+  function renderExclusionControl(section, link, candidateRows) {
+    const excluded = excludedByLink.get(link.key);
+    const activeExcluded = candidateRows.filter(row => excluded.has(d3.timeFormat('%Y-%m')(row.date))).length;
+    section.querySelector('.exclusion-control summary').textContent = `Exclude months (${activeExcluded})`;
+    const checklist = section.querySelector('.month-checklist');
+    checklist.innerHTML = candidateRows.map(row => {
+      const key = d3.timeFormat('%Y-%m')(row.date);
+      return `<label class="month-option"><input type="checkbox" value="${key}" ${excluded.has(key) ? 'checked' : ''}><span>${fmtMonth(row.date)}</span></label>`;
+    }).join('');
+    checklist.querySelectorAll('input').forEach(input => {
+      input.addEventListener('change', () => {
+        if (input.checked) excluded.add(input.value);
+        else excluded.delete(input.value);
+        render();
+      });
+    });
+    const clearButton = section.querySelector('.clear-exclusions');
+    clearButton.disabled = activeExcluded === 0;
+    clearButton.onclick = () => {
+      excluded.clear();
+      render();
+    };
+  }
+
+  function regression(rows) {
+    const meanX = d3.mean(rows, row => row.x);
+    const meanY = d3.mean(rows, row => row.y);
+    const slope = d3.sum(rows, row => (row.x - meanX) * (row.y - meanY)) / d3.sum(rows, row => (row.x - meanX) ** 2);
+    const intercept = meanY - slope * meanX;
+    const [x0, x1] = d3.extent(rows, row => row.x);
+    return [{x: x0, y: intercept + slope * x0}, {x: x1, y: intercept + slope * x1}];
+  }
+
+  function buildFindings(rows, link) {
+    if (rows.length < 4 || !Number.isFinite(pearson(rows))) {
+      return {
+        overview: 'Not enough observations remain to assess the relationship.',
+        yearPattern: 'Not enough observations remain to compare annual correlation.',
+        seasonalPattern: 'Not enough observations remain to assess recurring seasonality.',
+        divergence: 'Not enough observations remain to identify meaningful departures.',
+        investigate: link.investigate,
+      };
+    }
+    const periodR = pearson(rows);
+    const magnitude = Math.abs(periodR);
+    const strengthLabel = magnitude >= .70 ? 'strong' : magnitude >= .50 ? 'moderate' : magnitude >= .30 ? 'limited' : 'very limited';
+    const directionLabel = periodR >= 0 ? 'positive' : 'negative';
+    const findings = {
+      overview: `The selected period shows a ${strengthLabel} ${directionLabel} linear relationship (r ${fmtR(periodR)}).`,
+      yearPattern: 'Not enough complete years are present to compare annual correlation.',
+      seasonalPattern: 'Not enough repeated month-of-year observations are present to establish a seasonal pattern.',
+      divergence: '',
+      investigate: link.investigate,
+    };
+
+    const annual = d3.groups(rows, row => row.year)
+      .filter(([, values]) => values.length >= 3 && Number.isFinite(pearson(values)))
+      .map(([year, values]) => ({year, r: pearson(values)}));
+    if (annual.length >= 2) {
+      const strongest = d3.greatest(annual, value => Math.abs(value.r));
+      const weakest = d3.least(annual, value => Math.abs(value.r));
+      const medianAnnual = d3.median(annual, value => Math.abs(value.r));
+      let annualNote = `Correlation varies by year: strongest in ${strongest.year} (r ${fmtR(strongest.r)}) and weakest in ${weakest.year} (r ${fmtR(weakest.r)}).`;
+      if (magnitude > medianAnnual + .15) annualNote += ' The pooled result may be partly driven by a shared long-term level trend.';
+      else if (medianAnnual > magnitude + .15) annualNote += ' Within-year movement is stronger than the pooled result, suggesting year-level shifts in the relationship.';
+      findings.yearPattern = annualNote;
+    }
+
+    const meanX = d3.mean(rows, row => row.x);
+    const meanY = d3.mean(rows, row => row.y);
+    const slope = d3.sum(rows, row => (row.x - meanX) * (row.y - meanY)) / d3.sum(rows, row => (row.x - meanX) ** 2);
+    const intercept = meanY - slope * meanX;
+    const residualRows = rows.map(row => ({
+      ...row,
+      residual: row.y - (intercept + slope * row.x),
+    }));
+    const seasonal = d3.groups(residualRows, row => row.date.getMonth())
+      .filter(([, values]) => values.length >= 2)
+      .map(([month, values]) => ({month, ratio: d3.mean(values, value => value.residual) / meanY}));
+    if (seasonal.length >= 2) {
+      const above = d3.greatest(seasonal, value => value.ratio);
+      const below = d3.least(seasonal, value => value.ratio);
+      const monthName = month => d3.timeFormat('%B')(new Date(2024, month, 1));
+      findings.seasonalPattern = `${monthName(above.month)} averages ${d3.format('.0%')(Math.abs(above.ratio))} above the fitted relationship; ${monthName(below.month)} averages ${d3.format('.0%')(Math.abs(below.ratio))} below it across repeated years.`;
+    }
+
+    const divergences = [...residualRows]
+      .sort((left, right) => Math.abs(right.residual) - Math.abs(left.residual))
+      .slice(0, 2);
+    findings.divergence = `${divergences.map(row => `${fmtMonth(row.date)} (${link.yLabel} ${row.residual >= 0 ? 'above' : 'below'} fit)`).join('; ')}.`;
+    return findings;
+  }
+
+  function findingsMarkup(link, findings) {
+    return `<section>
+      <h3>${link.xLabel} → ${link.yLabel}</h3>
+      <p><strong>Relationship:</strong> ${findings.overview}</p>
+      <p><strong>Year pattern:</strong> ${findings.yearPattern}</p>
+      <p><strong>Seasonal pattern:</strong> ${findings.seasonalPattern}</p>
+      <p><strong>Largest departures:</strong> ${findings.divergence}</p>
+      <p><strong>Investigate:</strong> ${findings.investigate}</p>
+    </section>`;
+  }
+
+  function paddedExtent(values, ratio = .08) {
+    let [min, max] = d3.extent(values);
+    if (min === max) return [min - 1, max + 1];
+    const pad = (max - min) * ratio;
+    return [min - pad, max + pad];
+  }
+
+  function showTooltip(event, html) {
+    tooltip.style.display = 'block';
+    tooltip.innerHTML = html;
+    tooltip.style.left = `${Math.min(window.innerWidth - tooltip.offsetWidth - 8, event.clientX + 13)}px`;
+    tooltip.style.top = `${Math.max(8, event.clientY - tooltip.offsetHeight - 12)}px`;
+  }
+
+  function hideTooltip() {
+    tooltip.style.display = 'none';
+  }
+
+  function maxAxisTickWidth(axisGroup) {
+    return d3.max(axisGroup.selectAll('.tick text').nodes(), node => {
+      try { return node.getComputedTextLength(); } catch { return node.getBBox?.().width ?? 0; }
+    }) ?? 0;
+  }
+
+  const axisMeasureContext = document.createElement('canvas').getContext('2d');
+  function requiredYMargin(scale, formatter, tickSize = 12, titleSize = 12, minimum = 0) {
+    axisMeasureContext.font = `${tickSize}px -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif`;
+    const width = d3.max(scale.ticks(6), value => axisMeasureContext.measureText(formatter(value)).width) ?? 0;
+    return Math.max(minimum, Math.ceil(8 + titleSize + 8 + 9 + width));
+  }
+
+  function yAxisTitleX(axisGroup, axisX, side = 'left', fontSize = 12, chartWidth = 0) {
+    const offset = 9 + maxAxisTickWidth(axisGroup) + 8 + fontSize / 2;
+    return side === 'left'
+      ? Math.max(4 + fontSize / 2, axisX - offset)
+      : Math.min(chartWidth - 4 - fontSize / 2, axisX + offset);
+  }
+
+  function xAxisTitleY(axisGroup, axisY, fontSize = 12, chartHeight = 0) {
+    const tickHeight = d3.max(axisGroup.selectAll('.tick text').nodes(), node => {
+      try { return node.getBBox().height; } catch { return fontSize; }
+    }) ?? fontSize;
+    return Math.min(chartHeight - 4, axisY + 9 + tickHeight + 8 + fontSize * .8);
+  }
+
+  function drawScatter(node, rows, link) {
+    const width = Math.max(320, Math.floor(node.getBoundingClientRect().width));
+    const height = width < 480 ? 340 : 380;
+    const margin = {top: 18, right: 20, bottom: 62, left: 76};
+    const svg = d3.select(node).attr('viewBox', `0 0 ${width} ${height}`).attr('height', height);
+    svg.selectAll('*').remove();
+    if (rows.length < 2 || !Number.isFinite(pearson(rows))) {
+      svg.append('text').attr('class', 'axis-title').attr('x', width / 2).attr('y', height / 2)
+        .attr('text-anchor', 'middle').text('Not enough observations for this period');
+      return;
+    }
+
+    const reg = regression(rows);
+    const yDomain = paddedExtent([...rows.map(row => row.y), ...reg.map(point => point.y)]);
+    margin.left = requiredYMargin(d3.scaleLinear().domain(yDomain).nice(), d3.format('~s'), 12, 12, margin.left);
+    const innerWidth = width - margin.left - margin.right;
+    const innerHeight = height - margin.top - margin.bottom;
+    const x = d3.scaleLinear().domain(paddedExtent(rows.map(row => row.x))).nice().range([margin.left, width - margin.right]);
+    const y = d3.scaleLinear().domain(yDomain).nice().range([height - margin.bottom, margin.top]);
+    svg.append('rect').attr('data-chart-frame', '').attr('x', margin.left).attr('y', margin.top)
+      .attr('width', innerWidth).attr('height', innerHeight).attr('fill', 'none');
+    svg.append('g').attr('class', 'grid').attr('transform', `translate(${margin.left},0)`)
+      .call(d3.axisLeft(y).ticks(6).tickSize(-innerWidth).tickFormat(''));
+    const xAxis = svg.append('g').attr('class', 'axis').attr('transform', `translate(0,${height - margin.bottom})`)
+      .call(d3.axisBottom(x).ticks(width < 480 ? 4 : 6).tickFormat(d3.format('~s')));
+    const yAxis = svg.append('g').attr('class', 'axis').attr('transform', `translate(${margin.left},0)`)
+      .call(d3.axisLeft(y).ticks(6).tickFormat(d3.format('~s')));
+    svg.append('path').datum(reg).attr('class', 'regression').attr('fill', 'none')
+      .attr('d', d3.line().x(point => x(point.x)).y(point => y(point.y)));
+    svg.append('text').attr('class', 'regression-label').attr('x', width - margin.right - 8).attr('y', margin.top + 19)
+      .attr('text-anchor', 'end').text(`r = ${fmtR(pearson(rows))}`);
+    svg.selectAll('.scatter-point').data(rows).join('circle').attr('class', row => `scatter-point year-${row.year}`)
+      .attr('cx', row => x(row.x)).attr('cy', row => y(row.y)).attr('r', 4.8)
+      .on('pointermove', (event, row) => showTooltip(event,
+        `<strong>${fmtMonth(row.date)}</strong><br>${upstreamTooltip(row, link)}<br>${link.yLabel}: ${fmtValue(Math.round(row.y))}`,
+      ))
+      .on('pointerleave', hideTooltip);
+    svg.append('text').attr('class', 'axis-title').attr('data-axis', 'x')
+      .attr('x', margin.left + innerWidth / 2).attr('y', xAxisTitleY(xAxis, height - margin.bottom, 12, height)).attr('text-anchor', 'middle')
+      .text(`${link.xLabel} (${link.xUnit})`);
+    const yTitleX = yAxisTitleX(yAxis, margin.left, 'left', 12, width);
+    svg.append('text').attr('class', 'axis-title').attr('data-axis', 'y')
+      .attr('transform', `translate(${yTitleX},${margin.top + innerHeight / 2}) rotate(-90)`).attr('text-anchor', 'middle')
+      .text(`${link.yLabel} (${link.yUnit})`);
+  }
+
+  function drawLine(node, rows, link) {
+    const width = Math.max(320, Math.floor(node.getBoundingClientRect().width));
+    const height = width < 480 ? 340 : 380;
+    const margin = {top: 58, right: 78, bottom: 62, left: 68};
+    const svg = d3.select(node).attr('viewBox', `0 0 ${width} ${height}`).attr('height', height);
+    svg.selectAll('*').remove();
+    if (!rows.length) {
+      svg.append('text').attr('class', 'axis-title').attr('x', width / 2).attr('y', height / 2)
+        .attr('text-anchor', 'middle').text('No observations for this period');
+      return;
+    }
+
+    const downstreamDomain = [0, d3.max(rows, row => row.y) * 1.08];
+    const upstreamDomain = [0, d3.max(rows, row => row.x) * 1.08];
+    margin.left = requiredYMargin(d3.scaleLinear().domain(downstreamDomain).nice(), d3.format('~s'), 12, 12, margin.left);
+    margin.right = requiredYMargin(d3.scaleLinear().domain(upstreamDomain).nice(), d3.format('~s'), 12, 12, margin.right);
+    const innerWidth = width - margin.left - margin.right;
+    const innerHeight = height - margin.top - margin.bottom;
+    const x = d3.scaleTime().domain(d3.extent(rows, row => row.date)).range([margin.left, width - margin.right]);
+    const yDownstream = d3.scaleLinear().domain(downstreamDomain).nice()
+      .range([height - margin.bottom, margin.top]);
+    const yUpstream = d3.scaleLinear().domain(upstreamDomain).nice()
+      .range([height - margin.bottom, margin.top]);
+    svg.append('rect').attr('data-chart-frame', '').attr('x', margin.left).attr('y', margin.top)
+      .attr('width', innerWidth).attr('height', innerHeight).attr('fill', 'none');
+    svg.append('g').attr('class', 'grid').attr('transform', `translate(${margin.left},0)`)
+      .call(d3.axisLeft(yDownstream).ticks(6).tickSize(-innerWidth).tickFormat(''));
+    const xAxis = svg.append('g').attr('class', 'axis').attr('transform', `translate(0,${height - margin.bottom})`)
+      .call(d3.axisBottom(x).ticks(width < 520 ? 4 : 7).tickFormat(d3.timeFormat('%b %y')));
+    const downstreamAxis = svg.append('g').attr('class', 'axis').attr('transform', `translate(${margin.left},0)`)
+      .call(d3.axisLeft(yDownstream).ticks(6).tickFormat(d3.format('~s')));
+    const upstreamAxis = svg.append('g').attr('class', 'axis').attr('transform', `translate(${width - margin.right},0)`)
+      .call(d3.axisRight(yUpstream).ticks(6).tickFormat(d3.format('~s')));
+    svg.append('path').datum(rows).attr('class', 'downstream-line')
+      .attr('d', d3.line().x(row => x(row.date)).y(row => yDownstream(row.y)));
+    svg.append('path').datum(rows).attr('class', 'upstream-line')
+      .attr('d', d3.line().x(row => x(row.date)).y(row => yUpstream(row.x)));
+
+    const yearGroups = d3.groups(rows, row => row.year);
+    const brackets = svg.selectAll('.year-group').data(yearGroups).join('g').attr('class', 'year-group');
+    brackets.append('path').attr('class', 'year-bracket').attr('d', ([, values]) => {
+      const x0 = x(values[0].date);
+      const x1 = x(values.at(-1).date);
+      return `M${x0},${margin.top - 8}V${margin.top - 17}H${x1}V${margin.top - 8}`;
+    });
+    brackets.append('text').attr('class', 'year-label')
+      .attr('x', ([, values]) => (x(values[0].date) + x(values.at(-1).date)) / 2)
+      .attr('y', margin.top - 25).attr('text-anchor', 'middle')
+      .text(([year, values]) => `${year} r=${fmtR(pearson(values))}`);
+
+    svg.append('text').attr('class', 'axis-title').attr('data-axis', 'x')
+      .attr('x', margin.left + innerWidth / 2).attr('y', xAxisTitleY(xAxis, height - margin.bottom, 12, height)).attr('text-anchor', 'middle')
+      .text('Observation month');
+    const downstreamTitleX = yAxisTitleX(downstreamAxis, margin.left, 'left', 12, width);
+    const upstreamTitleX = yAxisTitleX(upstreamAxis, width - margin.right, 'right', 12, width);
+    svg.append('text').attr('class', 'axis-title').attr('data-axis', 'y')
+      .attr('transform', `translate(${downstreamTitleX},${margin.top + innerHeight / 2}) rotate(-90)`).attr('text-anchor', 'middle')
+      .text(`${link.yLabel} (${link.yUnit})`);
+    svg.append('text').attr('class', 'axis-title').attr('data-axis', 'y')
+      .attr('transform', `translate(${upstreamTitleX},${margin.top + innerHeight / 2}) rotate(90)`).attr('text-anchor', 'middle')
+      .text(link.xLabel);
+
+    const overlay = svg.append('rect').attr('data-chart-hit', '').attr('data-chart-hover-overlay', 'cross-series')
+      .attr('x', margin.left).attr('y', margin.top).attr('width', innerWidth).attr('height', innerHeight).attr('fill', 'transparent');
+    overlay.on('pointermove', event => {
+      const [pointerX] = d3.pointer(event, node);
+      const date = x.invert(pointerX);
+      const index = d3.bisector(row => row.date).center(rows, date);
+      const row = rows[index];
+      showTooltip(event, `<strong>${fmtMonth(row.date)}</strong><br>${link.yLabel}: ${fmtValue(Math.round(row.y))}<br>${upstreamTooltip(row, link)}`);
+    }).on('pointerleave', hideTooltip);
+  }
+
+  function drawConversion(node, rows, link) {
+    const width = Math.max(320, Math.floor(node.getBoundingClientRect().width));
+    const height = width < 480 ? 330 : 360;
+    const margin = {top: 28, right: 28, bottom: 62, left: 68};
+    const svg = d3.select(node).attr('viewBox', `0 0 ${width} ${height}`).attr('height', height);
+    svg.selectAll('*').remove();
+    const values = rows
+      .filter(row => Number.isFinite(row.rawX) && row.rawX > 0 && Number.isFinite(row.y))
+      .map(row => ({...row, rate: row.y / row.rawX}));
+    if (!values.length) {
+      svg.append('text').attr('class', 'axis-title').attr('x', width / 2).attr('y', height / 2)
+        .attr('text-anchor', 'middle').text('No observations for this period');
+      return;
+    }
+
+    const yDomain = [0, d3.max(values, row => row.rate) * 1.12];
+    margin.left = requiredYMargin(d3.scaleLinear().domain(yDomain).nice(), d3.format('.2%'), 12, 12, margin.left);
+    const innerWidth = width - margin.left - margin.right;
+    const innerHeight = height - margin.top - margin.bottom;
+    const x = d3.scaleTime().domain(d3.extent(values, row => row.date)).range([margin.left, width - margin.right]);
+    const y = d3.scaleLinear().domain(yDomain).nice()
+      .range([height - margin.bottom, margin.top]);
+    const average = d3.mean(values, row => row.rate);
+    svg.append('rect').attr('data-chart-frame', '').attr('x', margin.left).attr('y', margin.top)
+      .attr('width', innerWidth).attr('height', innerHeight).attr('fill', 'none');
+    svg.append('g').attr('class', 'grid').attr('transform', `translate(${margin.left},0)`)
+      .call(d3.axisLeft(y).ticks(6).tickSize(-innerWidth).tickFormat(''));
+    const xAxis = svg.append('g').attr('class', 'axis').attr('transform', `translate(0,${height - margin.bottom})`)
+      .call(d3.axisBottom(x).ticks(width < 520 ? 4 : 8).tickFormat(d3.timeFormat('%b %y')));
+    const yAxis = svg.append('g').attr('class', 'axis').attr('transform', `translate(${margin.left},0)`)
+      .call(d3.axisLeft(y).ticks(6).tickFormat(d3.format('.2%')));
+    svg.append('line').attr('class', 'conversion-average')
+      .attr('x1', margin.left).attr('x2', width - margin.right)
+      .attr('y1', y(average)).attr('y2', y(average));
+    svg.append('text').attr('class', 'conversion-average-label')
+      .attr('x', width - margin.right - 6).attr('y', Math.max(margin.top + 12, y(average) - 7))
+      .attr('text-anchor', 'end').text(`Average ${d3.format('.2%')(average)}`);
+    svg.append('path').datum(values).attr('class', 'conversion-line')
+      .attr('d', d3.line().x(row => x(row.date)).y(row => y(row.rate)));
+    svg.selectAll('.conversion-point').data(values).join('circle').attr('class', 'conversion-point')
+      .attr('cx', row => x(row.date)).attr('cy', row => y(row.rate)).attr('r', 3.8)
+      .on('pointermove', (event, row) => showTooltip(event,
+        `<strong>${fmtMonth(row.date)}</strong><br>Conversion: ${d3.format('.2%')(row.rate)}<br>${link.yLabel}: ${fmtValue(Math.round(row.y))}<br>Raw ${link.xLabel}: ${fmtValue(Math.round(row.rawX))}`,
+      ))
+      .on('pointerleave', hideTooltip);
+    svg.append('text').attr('class', 'axis-title').attr('data-axis', 'x')
+      .attr('x', margin.left + innerWidth / 2).attr('y', xAxisTitleY(xAxis, height - margin.bottom, 12, height)).attr('text-anchor', 'middle')
+      .text('Observation month');
+    const yTitleX = yAxisTitleX(yAxis, margin.left, 'left', 12, width);
+    svg.append('text').attr('class', 'axis-title').attr('data-axis', 'y')
+      .attr('transform', `translate(${yTitleX},${margin.top + innerHeight / 2}) rotate(-90)`).attr('text-anchor', 'middle')
+      .text(`${link.yLabel} ÷ ${link.xLabel}`);
+  }
+
+  function salesBranchesFor(mapKey, chainLinks) {
+    const salesLink = chainLinks.at(-1);
+    return chainLinks.slice(0, -1).map((link, index) => ({
+      key: `${mapKey}-phase-${index}-to-sales`,
+      xKey: link.xKey,
+      xLabel: link.xLabel,
+      xUnit: link.xUnit,
+      yKey: salesLink.yKey,
+      yLabel: salesLink.yLabel,
+      yUnit: salesLink.yUnit,
+    }));
+  }
+
+  function drawPhaseMap(mapKey, chainLinks, salesBranches) {
+    const node = document.getElementById(`${mapKey}-phase-map-svg`);
+    const width = Math.max(320, Math.floor(node.getBoundingClientRect().width));
+    const compact = width < 620;
+    const height = compact ? 580 : 245;
+    const svg = d3.select(node).attr('viewBox', `0 0 ${width} ${height}`).attr('height', height);
+    svg.selectAll('*').remove();
+    const rowsFor = key => mapRowsByLink.get(key) ?? [];
+    const average = (key, accessor) => {
+      const rows = rowsFor(key);
+      return rows.length ? d3.mean(rows, accessor) : NaN;
+    };
+    const compactValue = value => {
+      if (!Number.isFinite(value)) return 'n/a';
+      const absolute = Math.abs(value);
+      if (absolute >= 1e9) return `${d3.format('.1f')(value / 1e9)}B`;
+      if (absolute >= 1e6) return `${d3.format('.1f')(value / 1e6)}M`;
+      if (absolute >= 1e3) return `${d3.format('.1f')(value / 1e3)}K`;
+      return d3.format('.1f')(value);
+    };
+    const nodeData = chainLinks.map((link, index) => index === 0
+      ? {key: 'node-0', label: link.xLabel, unit: link.xUnit, value: average(link.key, row => row.rawX), n: rowsFor(link.key).length}
+      : {key: `node-${index}`, label: link.xLabel, unit: link.xUnit, value: average(link.key, row => row.rawX), n: rowsFor(link.key).length}
+    );
+    const finalLink = chainLinks.at(-1);
+    nodeData.push({key: `node-${chainLinks.length}`, label: finalLink.yLabel, unit: finalLink.yUnit, value: average(finalLink.key, row => row.y), n: rowsFor(finalLink.key).length});
+    const boxWidth = compact ? Math.min(190, width - 40) : Math.min(138, Math.max(108, width * .14));
+    const boxHeight = 62;
+    const nodeStep = nodeData.length > 1 ? .84 / (nodeData.length - 1) : 0;
+    const positions = new Map(nodeData.map((item, index) => [item.key, compact ? {
+      x: Math.round(width / 2 - boxWidth / 2),
+      y: Math.round((.08 + index * nodeStep) * height - boxHeight / 2),
+    } : {
+      x: Math.round((.08 + index * nodeStep) * width - boxWidth / 2),
+      y: 10,
+    }]));
+    const edgeData = chainLinks.map((link, index) => ({link, index, rows: rowsFor(link.key)}));
+    const branchData = salesBranches.map((link, index) => ({link, index, rows: rowsFor(link.key)}));
+    const pointFor = (key, side) => {
+      const p = positions.get(key);
+      if (!p) return null;
+      return side === 'left' ? [p.x, p.y + boxHeight / 2] : side === 'right' ? [p.x + boxWidth, p.y + boxHeight / 2] : [p.x + boxWidth / 2, p.y + boxHeight / 2];
+    };
+    branchData.forEach(({link, index, rows}) => {
+      const fromKey = `node-${index}`;
+      const from = positions.get(fromKey);
+      const to = positions.get(`node-${chainLinks.length}`);
+      if (!from || !to) return;
+      const source = compact ? [from.x + boxWidth / 2, from.y + boxHeight] : [from.x + boxWidth / 2, from.y + boxHeight];
+      const target = compact
+        ? [to.x + boxWidth / 2, to.y]
+        : [to.x, to.y + 13 + index * 16];
+      const r = pearson(rows);
+      const state = !Number.isFinite(r) ? 'neutral' : r >= 0 ? 'positive' : 'negative';
+      const arcDepth = compact ? 38 + index * 18 : 72 + index * 18;
+      const path = compact
+        ? `M${source[0]},${source[1]} C${source[0]},${source[1] + arcDepth} ${target[0]},${target[1] - arcDepth} ${target[0]},${target[1]}`
+        : `M${source[0]},${source[1]} C${source[0] + 28},${source[1] + arcDepth} ${target[0] - 40},${target[1] + arcDepth} ${target[0]},${target[1]}`;
+      const branchColor = state === 'positive' ? salesMapColors[index] : null;
+      svg.append('path').attr('class', `phase-map-sales-branch ${state}`).attr('d', path)
+        .attr('stroke', branchColor)
+        .attr('stroke-width', Number.isFinite(r) ? 1.5 + 6 * Math.abs(r) : 1.5)
+        .attr('stroke-opacity', Number.isFinite(r) ? .30 + .42 * Math.abs(r) : .3)
+        .on('pointermove', event => showTooltip(event, `<strong>${link.xLabel} → ${link.yLabel}</strong><br>Direct phase-to-sales r: ${fmtMapRate(r)}`))
+        .on('pointerleave', hideTooltip);
+      const labelX = compact ? source[0] + 72 : (source[0] + target[0]) / 2;
+      const labelY = compact ? Math.min(height - 8, source[1] + arcDepth + 10) : Math.min(height - 10, source[1] + arcDepth + 12);
+      svg.append('text').attr('class', 'phase-map-branch-label').attr('fill', branchColor).attr('stroke', 'var(--background)').attr('stroke-width', 5).attr('paint-order', 'stroke')
+        .attr('x', labelX).attr('y', labelY).attr('text-anchor', 'middle').text(`${link.xLabel} → sales: r ${fmtMapRate(r)}`);
+    });
+    edgeData.forEach(({link, index, rows}) => {
+      const fromKey = `node-${index}`;
+      const toKey = `node-${index + 1}`;
+      const from = positions.get(fromKey);
+      const to = positions.get(toKey);
+      if (!from || !to) return;
+      const source = compact ? pointFor(fromKey, 'bottom') : pointFor(fromKey, 'right');
+      const target = compact ? pointFor(toKey, 'top') : pointFor(toKey, 'left');
+      if (compact) { source[1] = from.y + boxHeight; target[1] = to.y; }
+      const r = pearson(rows);
+      const state = !Number.isFinite(r) ? 'neutral' : r >= 0 ? 'positive' : 'negative';
+      const midX = (source[0] + target[0]) / 2;
+      const midY = (source[1] + target[1]) / 2;
+      const path = compact
+        ? `M${source[0]},${source[1]} C${source[0]},${midY} ${target[0]},${midY} ${target[0]},${target[1]}`
+        : `M${source[0]},${source[1]} C${midX},${source[1]} ${midX},${target[1]} ${target[0]},${target[1]}`;
+      // The last solid connection closes the funnel into the outcome, so it
+      // belongs to the phase-to-sales (purple) family rather than the blue
+      // consecutive-funnel gradient.
+      const edgeColor = state === 'positive'
+        ? (index === edgeData.length - 1 ? salesMapColors.at(-1) : funnelMapColors[index])
+        : null;
+      svg.append('path').attr('class', `phase-map-edge ${state}`).attr('d', path)
+        .attr('stroke', edgeColor)
+        .attr('stroke-width', Number.isFinite(r) ? 2 + 9 * Math.abs(r) : 2).attr('stroke-opacity', Number.isFinite(r) ? .45 + .5 * Math.abs(r) : .5)
+        .on('pointermove', event => showTooltip(event, `<strong>${link.xLabel} → ${link.yLabel}</strong><br>Period r: ${fmtMapRate(r)}`))
+        .on('pointerleave', hideTooltip);
+      const labelY = compact ? midY - 5 : source[1] - 12;
+      const edgeLabel = svg.append('text').attr('class', 'phase-map-edge-label').attr('x', midX).attr('y', labelY).attr('text-anchor', 'middle');
+      edgeLabel.text(`r ${fmtMapRate(r)}`);
+    });
+    const groups = svg.selectAll('.phase-map-node-group').data(nodeData).join('g').attr('class', 'phase-map-node-group')
+      .attr('transform', item => `translate(${positions.get(item.key).x},${positions.get(item.key).y})`);
+    groups.append('rect').attr('class', 'phase-map-node').attr('width', boxWidth).attr('height', boxHeight).attr('rx', 4);
+    groups.append('text').attr('class', 'phase-map-node-title').attr('x', 10).attr('y', 19).text(item => item.label);
+    groups.append('text').attr('class', 'phase-map-node-value').attr('x', 10).attr('y', 37).text(item => `${compactValue(item.value)} / month`);
+    groups.on('pointermove', (event, item) => showTooltip(event, `<strong>${item.label}</strong><br>Average monthly activity: ${Number.isFinite(item.value) ? fmtValue(Math.round(item.value)) : 'n/a'} ${item.unit}`))
+      .on('pointerleave', hideTooltip);
+    const mapYears = [...new Set(monthOptions.map(month => Number(month.value.slice(0, 4))))];
+    document.getElementById(`${mapKey}-phase-map-r2-head`).innerHTML = `<tr><th scope="col">Connection</th>${mapYears.map(year => `<th scope="col">${year} r</th>`).join('')}<th scope="col">Period r</th></tr>`;
+    document.getElementById(`${mapKey}-phase-map-r2-body`).innerHTML = [...edgeData, ...branchData].map(({link, rows, index}) => {
+      const annual = mapYears.map(year => fmtR(pearson(rows.filter(row => row.year === year))));
+      const isBranch = link.yKey === finalLink.yKey;
+      return `<tr class="${isBranch ? 'sales-branch-row' : ''}"><th scope="row">${link.xLabel} → ${link.yLabel}${isBranch ? ' (direct)' : ''}</th>${annual.map(value => `<td>${value}</td>`).join('')}<td>${fmtR(pearson(rows))}</td></tr>`;
+    }).join('');
+  }
+
+  function render() {
+    const decay = Number(document.getElementById('decay-slider').value);
+    document.getElementById('decay-output').value = decay.toFixed(2);
+    const diagnosticSections = [];
+    const visibleLinks = links;
+
+    links.forEach(link => {
+      const section = root.querySelector(`[data-link="${link.key}"]`);
+      section.querySelector('h2').textContent = `${link.xLabel} → ${link.yLabel}`;
+      section.querySelector('.scatter').setAttribute('aria-label', `${link.xLabel} and ${link.yLabel} scatter chart`);
+      section.querySelector('.line').setAttribute('aria-label', `${link.xLabel} and ${link.yLabel} monthly trend chart`);
+      section.querySelector('.conversion').setAttribute('aria-label', `${link.xLabel} to ${link.yLabel} monthly conversion rate chart`);
+      section.querySelector('.line-wrap .legend').innerHTML = `<span style="--swatch:var(--viz-series-1)">${link.yLabel}</span><span style="--swatch:var(--viz-series-3)">${link.xLabel}</span>`;
+      section.querySelector('.conversion-wrap .legend').innerHTML = `<span style="--swatch:var(--viz-series-2)">${link.yLabel} ÷ raw ${link.xLabel}</span><span class="regression-key" style="--swatch:var(--muted-foreground)">Period average</span>`;
+      const start = new Date(`${section.querySelector('.pair-start').value}-01T00:00:00`);
+      const end = new Date(`${section.querySelector('.pair-end').value}-01T00:00:00`);
+      const candidateRows = transformed(link, start, end, decay);
+      renderExclusionControl(section, link, candidateRows);
+      const excluded = excludedByLink.get(link.key);
+      const rows = candidateRows.filter(row => !excluded.has(d3.timeFormat('%Y-%m')(row.date)));
+      currentRowsByLink.set(link.key, rows);
+      const byYear = d3.groups(rows, row => row.year);
+      const actualPeriod = rows.length ? `${fmtMonth(rows[0].date)}–${fmtMonth(rows.at(-1).date)}` : 'No valid period';
+      section.querySelector('.period-stats').textContent = `${actualPeriod} · Period r = ${fmtR(pearson(rows))} · n = ${rows.length}`;
+      section.querySelector('.annual-values').innerHTML = byYear.length
+        ? byYear.map(([year, values]) => `<span>${year}: ${fmtR(pearson(values))}</span>`).join('')
+        : '<span>n/a</span>';
+      section.querySelector('.year-legend').innerHTML = `${byYear.map(([year]) => `<span style="--swatch:${yearColors.get(year)}">${year}</span>`).join('')}<span class="regression-key" style="--swatch:var(--viz-series-2)">Regression</span>`;
+      diagnosticSections.push(findingsMarkup(link, buildFindings(rows, link)));
+      drawScatter(section.querySelector('.scatter'), rows, link);
+      drawLine(section.querySelector('.line'), rows, link);
+      drawConversion(section.querySelector('.conversion'), rows, link);
+    });
+    const {start: mapStart, end: mapEnd} = mapDateRange();
+    [...visibleLinks, combinedSalesLink].forEach(link => {
+      const mapRows = transformed(link, mapStart, mapEnd, decay)
+        .filter(row => !mapExcludedMonths.has(d3.timeFormat('%Y-%m')(row.date)));
+      mapRowsByLink.set(link.key, mapRows);
+    });
+    const funnelChain = links.filter(link => !['credit_retail_sales'].includes(link.key));
+    const retailChain = [...funnelChain, links.find(link => link.key === 'credit_retail_sales')];
+    const retailPlusUsedCpoChain = [...funnelChain, combinedSalesLink];
+    const mapSalesBranches = [
+      ...salesBranchesFor('retail', retailChain),
+      ...salesBranchesFor('retail-plus-used-cpo', retailPlusUsedCpoChain),
+    ];
+    mapSalesBranches.forEach(link => {
+      const mapRows = transformed(link, mapStart, mapEnd, decay)
+        .filter(row => !mapExcludedMonths.has(d3.timeFormat('%Y-%m')(row.date)));
+      mapRowsByLink.set(link.key, mapRows);
+    });
+    renderMapControls();
+    drawPhaseMap('retail', retailChain, salesBranchesFor('retail', retailChain));
+    drawPhaseMap('retail-plus-used-cpo', retailPlusUsedCpoChain, salesBranchesFor('retail-plus-used-cpo', retailPlusUsedCpoChain));
+    document.getElementById('diagnostic-notes').innerHTML = diagnosticSections.join('');
+  }
+
+  document.getElementById('decay-slider').addEventListener('input', render);
+  document.getElementById('adops-scope-toggle').addEventListener('click', () => {
+    includeAdopsMakeOnly = !includeAdopsMakeOnly;
+    updateAdopsScope();
+    render();
+  });
+  document.getElementById('month-alignment-toggle').addEventListener('click', () => {
+    useSalesMonth = !useSalesMonth;
+    updateMonthAlignment();
+    render();
+  });
+  updateAdopsScope();
+  updateMonthAlignment();
+  let resizeTimer;
+  new ResizeObserver(() => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(render, 80);
+  }).observe(root);
+  render();
+})();
+</script>
+</body>
+</html>
