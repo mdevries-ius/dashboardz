@@ -171,6 +171,12 @@ function comparisonText(metric: MetricKey, current: number, comparison?: number)
   return `${delta >= 0 ? "+" : ""}${delta.toFixed(1)}%`;
 }
 
+function comparisonClass(value: string) {
+  if (value.startsWith("+")) return "comparison-positive";
+  if (value.startsWith("-")) return "comparison-negative";
+  return "comparison-neutral";
+}
+
 function ytdComparison(metric: MetricKey, rows: SummaryRecord[], period: string) {
   const year = Number(period.slice(0, 4));
   const monthNumber = Number(period.slice(5, 7));
@@ -206,6 +212,9 @@ function MetricCard({ stage, model, region, period, onOpen }: { stage: (typeof s
   const chartValues = trend.map((row) => formatChartValue(stage.key, row.value));
   const priorMonth = allRecords.find((row) => row.month === shiftMonth(period, -1));
   const priorYear = allRecords.find((row) => row.month === shiftMonth(period, -12));
+  const momText = current ? comparisonText(stage.key, current.value, priorMonth?.value) : "—";
+  const yoyText = current ? comparisonText(stage.key, current.value, priorYear?.value) : "—";
+  const cytdText = current ? ytdComparison(stage.key, allRecords, period) : "—";
   const source = sourceContracts[stage.key];
   return (
     <button className="metric-card" type="button" onClick={onOpen} aria-label={`Open ${stage.label} stage`}>
@@ -216,7 +225,11 @@ function MetricCard({ stage, model, region, period, onOpen }: { stage: (typeof s
       <PlaceholderChart bars={bars.length ? bars : [8]} accent={stage.accent} labels={labels.length ? labels : ["—"]} values={chartValues} label={`${stage.title} governed trend`} />
       <div className="metric-footer">
         <div className="metric-current"><small>{periods.find(([value]) => value === period)?.[1]}</small><strong>{current ? formatValue(stage.key, current.value, current.range) : "—"}</strong></div>
-        <div className="metric-comparisons"><span><small>M/M</small>{current ? comparisonText(stage.key, current.value, priorMonth?.value) : "—"}</span><span><small>Y/Y</small>{current ? comparisonText(stage.key, current.value, priorYear?.value) : "—"}</span><span><small>CYTD</small>{current ? ytdComparison(stage.key, allRecords, period) : "—"}</span></div>
+        <div className="metric-comparisons">
+          <span className={comparisonClass(momText)}><small>M/M</small><strong>{momText}</strong></span>
+          <span className={comparisonClass(yoyText)}><small>Y/Y</small><strong>{yoyText}</strong></span>
+          <span className={comparisonClass(cytdText)}><small>CYTD</small><strong>{cytdText}</strong></span>
+        </div>
       </div>
       <span className="metric-source">{current ? `${scope.note} · through ${source.through}` : `No ${period} record · through ${source.through}`}</span>
     </button>
@@ -254,11 +267,13 @@ export function TommyDashboard() {
 
       <nav className="stage-nav" aria-label="Dashboard stages">
         <div className="stage-track" role="tablist" aria-label="Select dashboard stage">
-          {stages.map((stage) => (
-            <button key={stage.id} type="button" role="tab" aria-selected={activeStage === stage.id} className={activeStage === stage.id ? "selected" : ""} onClick={() => setActiveStage(stage.id)}>
+          {stages.map((stage, index) => {
+            const groupClass = index === 0 ? "nav-summary" : index <= 5 ? "nav-influence" : `nav-funnel funnel-${index - 6}`;
+            return (
+            <button key={stage.id} type="button" role="tab" aria-selected={activeStage === stage.id} className={`${groupClass}${activeStage === stage.id ? " selected" : ""}`} onClick={() => setActiveStage(stage.id)}>
               {stage.label}
             </button>
-          ))}
+          )})}
         </div>
       </nav>
 

@@ -19,10 +19,19 @@ main { min-height:100vh; }
 .status-dot { width:7px; height:7px; border-radius:50%; background:var(--green); box-shadow:0 0 0 4px #00866b18; }
 .stage-nav { background:var(--paper); border-bottom:1px solid var(--line); padding:0 34px; overflow-x:auto; }
 .stage-track { width:100%; min-width:1180px; display:flex; }
-.stage-track button { position:relative; flex:1 1 0; min-width:104px; height:58px; padding:0 10px; border:0; border-right:1px solid #c5d7e6; background:#4f95d2; color:white; font:700 11px/1.14 HyundaiHead; text-transform:uppercase; text-wrap:balance; cursor:pointer; }
+.stage-track button { position:relative; flex:1 1 0; min-width:104px; height:58px; padding:0 10px; border:0; border-right:1px solid #c5d7e6; color:white; font:700 11px/1.14 HyundaiHead; text-transform:uppercase; text-wrap:balance; cursor:pointer; transition:filter .15s ease,transform .15s ease; }
 .stage-track button:first-child { border-left:1px solid var(--line); }
-.stage-track button:hover { background:#3e86c5; }
-.stage-track button.selected { color:var(--navy); background:#f0f1f2; box-shadow:inset 0 -4px var(--cyan); }
+.stage-track button:hover { filter:brightness(.94); }
+.stage-track button.selected::after { content:""; position:absolute; left:11px; right:11px; bottom:0; height:4px; background:var(--cyan); }
+.stage-track .nav-summary { flex:.9 1 0; background:#eef1f3; color:var(--navy); border-color:var(--line); }
+.stage-track .nav-influence { background:#5598d1; }
+.stage-track .nav-funnel { margin-left:-7px; padding:0 20px; border-right:0; clip-path:polygon(0 0,calc(100% - 14px) 0,100% 50%,calc(100% - 14px) 100%,0 100%,14px 50%); }
+.stage-track .funnel-0 { z-index:5; background:#4c92cb; }
+.stage-track .funnel-1 { z-index:4; background:#4084bd; }
+.stage-track .funnel-2 { z-index:3; background:#3475ae; }
+.stage-track .funnel-3 { z-index:2; background:#28669e; }
+.stage-track .funnel-4 { z-index:1; background:#1d568d; }
+.stage-track .nav-influence.selected,.stage-track .nav-funnel.selected { color:#fff; }
 .control-shell { margin:10px 34px 0; padding:10px 12px; background:var(--paper); border:1px solid var(--line); border-radius:8px; box-shadow:0 8px 28px #0b28430b; display:flex; gap:14px; align-items:end; }
 .eyebrow,.rail-label { color:var(--cyan); font-size:10px; font-weight:700; letter-spacing:.14em; }
 .selectors { flex:1 1 620px; display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:10px; }
@@ -31,9 +40,9 @@ main { min-height:100vh; }
 .dashboard-layout { margin:12px 34px 24px; display:grid; grid-template-columns:minmax(0,1fr) 380px; gap:14px; align-items:start; }
 .workspace { min-width:0; }
 .executive-placeholder { min-height:164px; margin-bottom:12px; padding:22px 24px 18px; display:flex; flex-direction:column; align-items:stretch; background:linear-gradient(120deg,var(--navy),#06467e); color:white; border-radius:9px; box-shadow:0 8px 25px #001b3620; }
-.executive-heading { max-width:850px; }
-.executive-placeholder h2 { margin:6px 0 0; color:white; font:700 23px/1.18 HyundaiHead; }
-.executive-placeholder p { max-width:1050px; margin:13px 0 0; color:#e0edf4; font-size:14px; line-height:1.55; }
+.executive-heading { width:100%; max-width:none; }
+.executive-placeholder h2 { width:100%; margin:6px 0 0; color:white; font:700 23px/1.18 HyundaiHead; }
+.executive-placeholder p { width:100%; max-width:none; margin:13px 0 0; color:#e0edf4; font-size:14px; line-height:1.55; }
 .executive-source { margin-top:15px; padding-top:10px; border-top:1px solid #ffffff22; color:#aebdcc; font-size:9px; line-height:1.4; letter-spacing:.045em; text-transform:uppercase; }
 .future-badge,.data-state { padding:8px 10px; border:1px solid #ffffff3d; border-radius:4px; color:white; font-size:9px; font-weight:700; line-height:1.45; letter-spacing:.1em; }
 .summary-bands { display:grid; gap:8px; }
@@ -58,14 +67,18 @@ main { min-height:100vh; }
 .bar.navy { background:var(--navy); }.bar.blue { background:#477fba; }.bar.teal { background:#208b87; }.bar.amber { background:#d69a28; }.bar.violet { background:#7764a0; }
 .chart-axis { position:absolute; left:7px; right:7px; bottom:-18px; display:flex; justify-content:space-around; gap:4px; color:#71808d; font-size:8px; }
 .chart-axis span { flex:1 1 0; text-align:center; }
-.metric-footer { margin-top:auto; padding-top:17px; display:flex; align-items:end; justify-content:flex-end; gap:13px; color:var(--muted); font-size:11px; text-align:right; }
-.metric-current { display:grid; justify-items:end; gap:2px; margin-left:auto; }
-.metric-current>small { color:var(--muted); font:600 8px HyundaiText; letter-spacing:.06em; text-transform:uppercase; }
-.metric-current>strong { color:var(--navy); font:700 27px HyundaiHead; }
+.metric-footer { width:100%; margin-top:auto; padding:13px 12px 10px; display:flex; align-items:end; justify-content:space-between; gap:20px; border-radius:6px; background:#f5f8fa; color:var(--muted); font-size:11px; text-align:right; }
+.metric-current { display:grid; justify-items:start; gap:2px; min-width:0; text-align:left; }
+.metric-current>small { color:var(--muted); font:600 9px HyundaiText; letter-spacing:.08em; text-transform:uppercase; }
+.metric-current>strong { color:var(--navy); font:700 33px/1 HyundaiHead; }
 .metric-footer>strong { color:var(--navy); font:700 27px HyundaiHead; }
-.metric-comparisons { flex:0 0 auto; min-width:76px; padding-left:11px; display:grid; gap:2px; border-left:1px solid var(--line); }
-.metric-comparisons span { display:flex; align-items:baseline; justify-content:space-between; gap:9px; color:var(--navy); font:700 10px HyundaiHead; white-space:nowrap; }
-.metric-comparisons small { color:var(--muted); font:600 8px HyundaiText; letter-spacing:.08em; }
+.metric-comparisons { flex:0 0 125px; padding-left:15px; display:grid; gap:4px; border-left:1px solid #cbd6de; }
+.metric-comparisons span { display:flex; align-items:baseline; justify-content:space-between; gap:12px; white-space:nowrap; }
+.metric-comparisons small { color:var(--muted); font:600 9px HyundaiText; letter-spacing:.09em; }
+.metric-comparisons strong { font:700 13px HyundaiHead; }
+.metric-comparisons .comparison-positive strong { color:#00866b; }
+.metric-comparisons .comparison-negative strong { color:#c44545; }
+.metric-comparisons .comparison-neutral strong { color:var(--navy); }
 .metric-source { margin-top:10px; padding-top:8px; border-top:1px solid #edf1f4; color:var(--muted); font-size:9px; }
 .stage-detail-card { min-height:510px; padding:24px; background:var(--paper); border:1px solid var(--line); border-radius:9px; box-shadow:0 8px 28px #0b28430b; }
 .detail-heading { display:flex; justify-content:space-between; align-items:start; gap:20px; }
