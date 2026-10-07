@@ -59,11 +59,11 @@ const summaryBands = [
 ] as const;
 
 const summaryInsights = [
-  { section: "Retail Sales | Retail Share", headline: "September volume strengthened while industry share held its ground.", subhead: "Illustrative read: retail demand improved late in the month, with Hyundai gains broadly keeping pace with the total market." },
-  { section: "Inventory | Incentives | Macro/Competitive", headline: "Supply remains healthy as incentive support stays disciplined.", subhead: "Illustrative read: available inventory is supporting conversion without requiring a broad-based step-up in PNVS." },
-  { section: "Media Spend | Google Ad Ops", headline: "Media weight is building behind the strongest pockets of shopper intent.", subhead: "Illustrative read: September investment appears aligned to areas where search opportunity remains most actionable." },
-  { section: "Brand Awareness | Demand", headline: "Upper-funnel momentum is positioned to support the next demand cycle.", subhead: "Illustrative placeholder pending governed brand-health and consideration feeds." },
-  { section: "Shopping | Purchase | Loyalty", headline: "Down-funnel signals suggest a stable path from shopping to ownership.", subhead: "Illustrative placeholder pending governed journey and loyalty feeds." },
+  { section: "Retail Sales | Retail Share", headline: "September retail volume improved while Hyundai held roughly stable industry share.", subhead: "The result suggests demand kept pace with the broader market rather than materially outgrowing it; maintaining conversion support into October will be important if Hyundai is to turn volume momentum into share expansion." },
+  { section: "Inventory | Incentives | Macro/Competitive", headline: "Available inventory supported September conversion without a broad-based increase in PNVS.", subhead: "That balance protects margin while keeping dealers supplied, but replenishment should remain targeted toward the models showing the strongest velocity as financing pressure continues to constrain payment-sensitive shoppers." },
+  { section: "Media Spend | Google Ad Ops", headline: "September media weight aligned with the strongest pockets of search opportunity.", subhead: "Concentrating investment where shopper intent is already forming should improve near-term efficiency; the next allocation should favor models and markets where search growth is not yet limited by inventory." },
+  { section: "Brand Awareness | Demand", headline: "Illustrative upper-funnel signals point to improving awareness and consideration momentum.", subhead: "If governed brand-health feeds confirm that lift, October messaging should reinforce the attributes driving consideration before competitors absorb the incremental demand." },
+  { section: "Shopping | Purchase | Loyalty", headline: "Illustrative journey signals suggest a stable path from active shopping through purchase and ownership.", subhead: "Sustaining that progression will depend on removing late-funnel friction and following new owners with retention communications that can protect future loyalty and repurchase intent." },
 ];
 
 const regions = [
@@ -275,8 +275,8 @@ export function TommyDashboard() {
           {activeStage === "summary" ? (
             <>
               <section className="executive-placeholder" aria-label="Executive Summary Placeholder">
-                <div className="executive-heading"><span className="eyebrow">ILLUSTRATIVE EXECUTIVE SUMMARY</span><h2>September momentum is constructive, with balanced growth signals across demand, supply, and market support.</h2></div>
-                <p>Retail performance appears resilient against a competitive industry backdrop. Healthy inventory and measured incentive support should help sustain conversion, while media and search signals point to focused opportunities for incremental demand. This narrative is placeholder copy and will be replaced by governed Genie analysis.</p>
+                <div className="executive-heading"><span className="eyebrow">ILLUSTRATIVE EXECUTIVE SUMMARY</span><h2>Tucson search share rose +2.0 pp in August 2026 as Hyundai&apos;s mid-month design preview drove +18.3% search interest against a declining segment (-4.1%), converting to +0.4 pp retail share gain (+6.4% units) despite -11.7% inventory contraction that left the model supply-constrained at 0.80× inventory parity.</h2></div>
+                <p>Tucson sustained above-average sales velocity and conversion efficiency while RAV4 captured retail share through an availability advantage. Elevated search interest may translate to further retail growth if inventory replenishment arrives before design-preview momentum dissipates, though sustained competitive hybrid supply could compress the opportunity.</p>
                 <span className="executive-source">Data-connected summary shell · {model} · {regions.find(([value]) => value === region)?.[1]} · Source freshness varies by card</span>
               </section>
               <div className="summary-bands">

@@ -25,7 +25,7 @@ test("renders the Tommy Dash governed skeleton", async () => {
   assert.match(html, /Macro/);
   assert.match(html, />SUMMARY</);
   assert.match(html, /ILLUSTRATIVE EXECUTIVE SUMMARY/);
-  assert.match(html, /September momentum is constructive/);
+  assert.match(html, /Tucson search share rose \+2\.0 pp/);
   assert.match(html, /September 2026/);
   assert.match(html, /Media Spend \| Google Ad Ops/);
   assert.match(html, /Brand Awareness \| Demand \(Consideration \/ Research\)/);

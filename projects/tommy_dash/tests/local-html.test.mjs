@@ -15,7 +15,7 @@ test("builds one self-contained local dashboard HTML file", async () => {
   assert.match(html, /PRODUCT & RELEASE CONTEXT/);
   assert.match(html, /MACRO & INDUSTRY CONTEXT/);
   assert.match(html, /ILLUSTRATIVE EXECUTIVE SUMMARY/);
-  assert.match(html, /September momentum is constructive/);
+  assert.match(html, /Tucson search share rose \+2\.0 pp/);
   assert.match(html, /Illustrative headlines/);
   assert.match(html, /Retail Sales \| Retail Share/);
   assert.match(html, /Inventory \| Incentives \| Macro\/Competitive/);
