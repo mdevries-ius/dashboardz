@@ -1,0 +1,89 @@
+{
+  "generated_at": "2026-10-05T20:27:43.898297+00:00",
+  "refresh_cadence": "daily",
+  "window_days": 180,
+  "context": {
+    "signature": "dcee2305c7420839",
+    "window_start": "2026-04-08",
+    "window_end": "2026-10-05",
+    "refreshed_at": "2026-10-05T16:47:43.910662+00:00",
+    "market": "United States new-vehicle market",
+    "bullets": [
+      {
+        "date": "2026-10-02",
+        "headline": "September payroll employment increased by 29,000 and unemployment held at 4.2%; July and August payroll gains were revised lower by a combined 60,000.",
+        "outlet": "U.S. Bureau of Labor Statistics",
+        "url": "https://www.bls.gov/news.release/archives/empsit_10022026.htm",
+        "category": "labor_income",
+        "direction": "mixed",
+        "affected_segments": [
+          "entry-level vehicles",
+          "used-vehicle cross-shoppers",
+          "near-prime financing customers",
+          "fleet-dependent segments"
+        ],
+        "context": "Stable unemployment and 3.0% year-over-year private-sector wage growth provide some income support, but weak job creation and downward revisions could increase caution among lower- and middle-income buyers."
+      },
+      {
+        "date": "2026-09-30",
+        "headline": "August personal income rose 0.2%, disposable income rose 0.3%, and consumer spending increased 0.9%.",
+        "outlet": "U.S. Bureau of Economic Analysis",
+        "url": "https://www.bea.gov/data/income-saving/personal-income",
+        "category": "labor_income",
+        "direction": "supportive",
+        "affected_segments": [
+          "mainstream SUVs",
+          "hybrids",
+          "higher-trim vehicles",
+          "retail-focused segments"
+        ],
+        "context": "Income and spending growth indicate continued consumer capacity to support durable-goods purchases, although the 4.1% saving rate suggests limited cushion for households facing elevated vehicle prices and financing costs."
+      },
+      {
+        "date": "2026-09-28",
+        "headline": "U.S. regular gasoline averaged $4.465 per gallon, up from $4.085 on August 24.",
+        "outlet": "U.S. Energy Information Administration",
+        "url": "https://www.eia.gov/dnav/pet/PET_PRI_GND_A_EPMR_PTE_DPGAL_W.htm",
+        "category": "fuel_energy",
+        "direction": "restrictive",
+        "affected_segments": [
+          "full-size pickups",
+          "large SUVs",
+          "performance vehicles",
+          "high-mileage households"
+        ],
+        "context": "The increase raises operating costs and may shift consideration toward more fuel-efficient cars, hybrids, and smaller crossovers, while potentially reducing discretionary spending available for vehicle purchases."
+      },
+      {
+        "date": "2026-09-24",
+        "headline": "Cox Automotive raised its full-year U.S. new-vehicle sales forecast to 16.1 million units; September sales were expected to rise 6.5% year over year, while August inventory stood at 2.68 million units and 73 days’ supply.",
+        "outlet": "Cox Automotive",
+        "url": "https://www.coxautoinc.com/press-releases/q3-september-2026-cox-automotive-new-vehicle-sales-forecast-press-release/",
+        "category": "industry_sales_inventory",
+        "direction": "mixed",
+        "affected_segments": [
+          "affordable vehicles",
+          "Asian-brand hybrids",
+          "passenger cars",
+          "mainstream light trucks"
+        ],
+        "context": "Resilient demand and improving credit availability are supportive for industry volume, but inventory is becoming more constrained in affordable segments; Cox also reported an average new-vehicle listing price of $49,486 in August, limiting accessibility for payment-sensitive buyers."
+      },
+      {
+        "date": "2026-09-16",
+        "headline": "Federal Reserve raised the federal-funds target range by 25 basis points to 3.75%–4.00%.",
+        "outlet": "Federal Reserve",
+        "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm",
+        "category": "interest_rates",
+        "direction": "restrictive",
+        "affected_segments": [
+          "entry-level vehicles",
+          "subcompact and compact cars",
+          "mainstream SUVs",
+          "high-payment EVs"
+        ],
+        "context": "Higher policy rates can keep auto-financing costs elevated and constrain monthly-payment affordability, with the greatest exposure among rate-sensitive shoppers and higher loan-to-value transactions."
+      }
+    ]
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "source": "Federal Reserve Bank of St. Louis FRED",
+  "series": {
+    "lower": "DFEDTARL",
+    "upper": "DFEDTARU"
+  },
+  "url": "https://fred.stlouisfed.org/",
+  "values": [
+    { "month": "2025-01", "lower": 4.25, "upper": 4.50 },
+    { "month": "2025-02", "lower": 4.25, "upper": 4.50 },
+    { "month": "2025-03", "lower": 4.25, "upper": 4.50 },
+    { "month": "2025-04", "lower": 4.25, "upper": 4.50 },
+    { "month": "2025-05", "lower": 4.25, "upper": 4.50 },
+    { "month": "2025-06", "lower": 4.25, "upper": 4.50 },
+    { "month": "2025-07", "lower": 4.25, "upper": 4.50 },
+    { "month": "2025-08", "lower": 4.25, "upper": 4.50 },
+    { "month": "2025-09", "lower": 4.00, "upper": 4.25 },
+    { "month": "2026-01", "lower": 3.50, "upper": 3.75 },
+    { "month": "2026-02", "lower": 3.50, "upper": 3.75 },
+    { "month": "2026-03", "lower": 3.50, "upper": 3.75 },
+    { "month": "2026-04", "lower": 3.50, "upper": 3.75 },
+    { "month": "2026-05", "lower": 3.50, "upper": 3.75 },
+    { "month": "2026-06", "lower": 3.50, "upper": 3.75 },
+    { "month": "2026-07", "lower": 3.50, "upper": 3.75 },
+    { "month": "2026-08", "lower": 3.50, "upper": 3.75 },
+    { "month": "2026-09", "lower": 3.75, "upper": 4.00 }
+  ]
+}

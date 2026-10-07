@@ -1,0 +1,117 @@
+import { mkdir, readFile, writeFile } from "node:fs/promises";
+import { dirname, join } from "node:path";
+import { fileURLToPath } from "node:url";
+
+const root = dirname(dirname(fileURLToPath(import.meta.url)));
+const outputDir = join(root, "output", "local_hosting");
+
+const fonts = {
+  "/fonts/HyundaiSansHead-Medium.woff2": "public/fonts/HyundaiSansHead-Medium.woff2",
+  "/fonts/HyundaiSansHead-Bold.woff2": "public/fonts/HyundaiSansHead-Bold.woff2",
+  "/fonts/HyundaiSansText-Regular.woff2": "public/fonts/HyundaiSansText-Regular.woff2",
+  "/fonts/HyundaiSansText-Medium.woff2": "public/fonts/HyundaiSansText-Medium.woff2",
+};
+
+let css = await readFile(join(root, "app", "globals.css"), "utf8");
+css = css.replace('@import "tailwindcss";', "");
+for (const [url, path] of Object.entries(fonts)) {
+  const encoded = (await readFile(join(root, path))).toString("base64");
+  css = css.replaceAll(url, `data:font/woff2;base64,${encoded}`);
+}
+css += "\n[hidden]{display:none!important}.local-badge{color:var(--green);font-weight:700}";
+const macroContext = JSON.parse(await readFile(join(root, "public", "data", "macro_context.json"), "utf8"));
+const competitiveContext = JSON.parse(await readFile(join(root, "public", "data", "comp_context.json"), "utf8"));
+const summaryData = JSON.parse(await readFile(join(root, "public", "data", "summary_metrics.json"), "utf8"));
+
+const stages = [
+  { id:"summary", label:"Summary", eyebrow:"DAILY OVERVIEW", title:"Performance summary", description:"A governed view across retail, supply, incentives, and market context.", source:"Multiple governed sources", accent:"cyan", bars:[42,58,49,65,61,74,71,82] },
+  { id:"sales", label:"Sales Volume", eyebrow:"SALES PERFORMANCE", title:"Sales volume", description:"Retail sales performance across the selected geography, model, and period.", source:"Governed sales source · pending", accent:"navy", bars:[36,48,43,61,55,68,63,77] },
+  { id:"market-share", label:"Market Share", eyebrow:"MARKET POSITION", title:"Market share", description:"Brand and model position within the approved competitive denominator.", source:"Governed share source · pending", accent:"blue", bars:[64,58,62,54,60,66,63,69] },
+  { id:"media", label:"Media", eyebrow:"MEDIA PERFORMANCE", title:"Media", description:"Investment, delivery, and response signals across the selected period.", source:"Governed media source · pending", accent:"violet", bars:[32,45,41,57,52,64,69,73] },
+  { id:"operations", label:"Operations", eyebrow:"OPERATING CONTEXT", title:"Operations", description:"Inventory, pricing, dealer, and operational readiness indicators.", source:"Governed operations sources · pending", accent:"teal", bars:[29,38,45,52,61,69,65,73] },
+  { id:"macro", label:"Macroeconomic & Other Major Influences", eyebrow:"MARKET CONTEXT", title:"Macroeconomic & other major influences", description:"Economic signals and current automotive-industry events.", source:"Public primary sources", accent:"violet", bars:[48,54,51,63,59,71,67,75] },
+  { id:"awareness-opinion", label:"Awareness & Opinion", eyebrow:"BRAND HEALTH", title:"Awareness & opinion", description:"Awareness, familiarity, and brand-opinion signals across the audience journey.", source:"Governed brand-health source · pending", accent:"cyan", bars:[43,49,52,55,58,62,66,69] },
+  { id:"consideration-research", label:"Consideration & Research", eyebrow:"MID-FUNNEL", title:"Consideration & research", description:"Consideration and research behavior before active shopping begins.", source:"Governed journey source · pending", accent:"blue", bars:[28,39,46,51,60,65,71,76] },
+  { id:"shopping", label:"Shopping", eyebrow:"SHOPPING ACTIVITY", title:"Shopping", description:"Shopping engagement, configuration, and vehicle-detail activity.", source:"Governed shopping source · pending", accent:"amber", bars:[40,47,44,58,63,61,72,78] },
+  { id:"purchase", label:"Purchase", eyebrow:"PURCHASE", title:"Purchase", description:"Lead, showroom, credit, incentive, and purchase-conversion context.", source:"Governed purchase sources · pending", accent:"navy", bars:[35,42,49,54,57,66,70,75] },
+  { id:"loyalty", label:"Loyalty", eyebrow:"OWNER VALUE", title:"Loyalty", description:"Retention, repurchase, and owner-value indicators.", source:"Governed loyalty source · pending", accent:"teal", bars:[51,54,56,61,63,67,68,72] },
+];
+
+const summaryMetrics = [
+  { label:"Retail Sales", key:"retail_sales", eyebrow:"SRS", title:"Retail sales", accent:"navy", target:"sales" },
+  { label:"Retail Share", key:"retail_share", eyebrow:"SRS · INDUSTRY DENOMINATOR", title:"Retail share of industry", accent:"blue", target:"market-share" },
+  { label:"Inventory", key:"inventory", eyebrow:"CLOUDTHEORY", title:"Inventory", accent:"teal", target:"operations" },
+  { label:"Incentives", key:"incentives", eyebrow:"COX AUTOMOTIVE", title:"Incentive PNVS", accent:"amber", target:"purchase" },
+  { label:"Macro/Competitive", key:"macro_rate", eyebrow:"FEDERAL RESERVE", title:"Federal funds target", accent:"violet", target:"macro" },
+  { label:"Media Spend", key:"media_spend", eyebrow:"HMA WEEKLY / CMO", title:"Media spend", accent:"violet", target:"media" },
+  { label:"Google Ad Ops", key:"google_adops", eyebrow:"GOOGLE AD OPS", title:"Search opportunity", accent:"cyan", target:"media" },
+  { label:"Brand Awareness", key:null, eyebrow:"BRAND HEALTH", title:"Brand awareness", accent:"cyan", bars:[43,49,52,55,58,62,66,69], target:"awareness-opinion" },
+  { label:"Demand", key:null, eyebrow:"CONSIDERATION / RESEARCH", title:"Demand", accent:"blue", bars:[28,39,46,51,60,65,71,76], target:"consideration-research" },
+  { label:"Shopping", key:null, eyebrow:"SHOPPING ACTIVITY", title:"Shopping", accent:"amber", bars:[40,47,44,58,63,61,72,78], target:"shopping" },
+  { label:"Purchase", key:null, eyebrow:"PURCHASE", title:"Purchase", accent:"navy", bars:[35,42,49,54,57,66,70,75], target:"purchase" },
+  { label:"Loyalty", key:null, eyebrow:"OWNER VALUE", title:"Loyalty", accent:"teal", bars:[51,54,56,61,63,67,68,72], target:"loyalty" },
+];
+
+const summaryBands = [
+  { id:"sales-share", label:"Retail Sales | Retail Share", metrics:["Retail Sales","Retail Share"] },
+  { id:"supply-context", label:"Inventory | Incentives | Macro/Competitive", metrics:["Inventory","Incentives","Macro/Competitive"] },
+  { id:"media", label:"Media Spend | Google Ad Ops", metrics:["Media Spend","Google Ad Ops"] },
+  { id:"brand-demand", label:"Brand Awareness | Demand (Consideration / Research)", metrics:["Brand Awareness","Demand"] },
+  { id:"journey", label:"Shopping — Purchase — Loyalty", metrics:["Shopping","Purchase","Loyalty"] },
+];
+
+const summaryInsights = [
+  { section:"Retail Sales | Retail Share", headline:"September volume strengthened while industry share held its ground.", subhead:"Illustrative read: retail demand improved late in the month, with Hyundai gains broadly keeping pace with the total market." },
+  { section:"Inventory | Incentives | Macro/Competitive", headline:"Supply remains healthy as incentive support stays disciplined.", subhead:"Illustrative read: available inventory is supporting conversion without requiring a broad-based step-up in PNVS." },
+  { section:"Media Spend | Google Ad Ops", headline:"Media weight is building behind the strongest pockets of shopper intent.", subhead:"Illustrative read: September investment appears aligned to areas where search opportunity remains most actionable." },
+  { section:"Brand Awareness | Demand", headline:"Upper-funnel momentum is positioned to support the next demand cycle.", subhead:"Illustrative placeholder pending governed brand-health and consideration feeds." },
+  { section:"Shopping | Purchase | Loyalty", headline:"Down-funnel signals suggest a stable path from shopping to ownership.", subhead:"Illustrative placeholder pending governed journey and loyalty feeds." },
+];
+
+const html = `<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tommy Dash | Local HMA KPI Intelligence</title><meta name="description" content="Local governed HMA KPI dashboard preview.">
+<style>${css}</style></head><body><main data-tommy-local-dashboard>
+  <header class="topbar"><div class="view-title"><h1 id="pageTitle">Daily performance overview</h1></div><div class="topbar-meta"><span class="status-dot"></span><span class="local-badge">GOVERNED EXTRACTS</span><strong id="headerPeriod">September 2026</strong></div></header>
+  <nav class="stage-nav" aria-label="Dashboard stages"><div class="stage-track" id="stageTrack" role="tablist" aria-label="Select dashboard stage"></div></nav>
+  <section class="control-shell" aria-label="Dashboard filters">
+    <div class="selectors">
+      <label>Region<select id="region"><option value="NTL">National</option><option value="CE">Central</option><option value="EA">Eastern</option><option value="MA">Mid-Atlantic</option><option value="MS">Mountain States</option><option value="SC">South Central</option><option value="SO">Southern</option><option value="WE">Western</option></select></label>
+      <label>Model<select id="model">${summaryData.models.map(model => `<option>${model}</option>`).join("")}</select></label>
+      <label>Time period<select id="period"><option value="2026-09">September 2026</option><option value="2026-08">August 2026</option><option value="2026-07">July 2026</option></select></label>
+    </div>
+  </section>
+  <div class="dashboard-layout">
+    <section class="workspace" aria-live="polite">
+      <div id="summaryView"><section class="executive-placeholder" aria-label="Executive Summary Placeholder"><div class="executive-heading"><span class="eyebrow">ILLUSTRATIVE EXECUTIVE SUMMARY</span><h2 id="executiveTitle">September momentum is constructive, with balanced growth signals across demand, supply, and market support.</h2></div><p>Retail performance appears resilient against a competitive industry backdrop. Healthy inventory and measured incentive support should help sustain conversion, while media and search signals point to focused opportunities for incremental demand. This narrative is placeholder copy and will be replaced by governed Genie analysis.</p><span class="executive-source" id="executiveSource"></span></section><div class="summary-bands" id="summaryBands"></div></div>
+      <section class="stage-detail-card" id="detailView" hidden><div class="detail-heading"><div><span class="eyebrow" id="detailSource"></span><h2 id="detailSelection"></h2><p id="detailPeriod"></p></div><span class="data-state">DATA CONNECTION PENDING</span></div><div id="detailChart"></div><div class="detail-metrics"><div><span>Current</span><strong>—</strong></div><div><span>Month over month</span><strong>—</strong></div><div><span>Year over year</span><strong>—</strong></div><div><span>Source refreshed</span><strong>Pending</strong></div></div></section>
+    </section>
+    <aside class="intelligence-rail" aria-label="Industry intelligence"><section class="context-card"><div class="context-head"><button class="context-nav" type="button" id="contextPrev" aria-label="Previous context view">‹</button><div><span class="rail-label" id="contextHeading"></span><small id="contextFreshness"></small></div><button class="context-nav" type="button" id="contextNext" aria-label="Next context view">›</button></div><ul class="context-list" id="contextList"></ul></section>
+    </aside>
+  </div>
+  <footer><div><strong>DATA CONTRACT</strong><span>Shared governed extracts from Sales/Demand, Ops, and HMA Weekly.</span></div><div><strong>NATIONAL SCOPE</strong><span>NH remains in National calculations and is not selectable.</span></div><div><strong>FRESHNESS</strong><span>All Summary sources are current through September 2026.</span></div></footer>
+</main><script>
+const STAGES=${JSON.stringify(stages)};const SUMMARY_METRICS=${JSON.stringify(summaryMetrics)};const SUMMARY_BANDS=${JSON.stringify(summaryBands)};const SUMMARY_INSIGHTS=${JSON.stringify(summaryInsights)};const SUMMARY_DATA=${JSON.stringify(summaryData)};const MACRO_CONTEXT=${JSON.stringify(macroContext)};const COMP_CONTEXT=${JSON.stringify(competitiveContext)};
+const REGION_LABELS={NTL:'National',CE:'Central',EA:'Eastern',MA:'Mid-Atlantic',MS:'Mountain States',SC:'South Central',SO:'Southern',WE:'Western'};
+const PERIOD_LABELS={'2026-09':'September 2026','2026-08':'August 2026','2026-07':'July 2026'};
+const state={stage:'summary',contextView:'summary',openBands:new Set(['sales-share']),activeBand:'sales-share'};const el=id=>document.getElementById(id);
+function chart(stage,expanded=false,labels=['FEB','APR','JUN','SEP'],values=[]){const bars=stage.bars?.length?stage.bars:[8];return '<div class="placeholder-chart '+(expanded?'expanded':'')+'" aria-label="Governed metric trend"><div class="chart-grid" aria-hidden="true">'+bars.map((height,index)=>'<span class="bar '+stage.accent+'" style="height:'+height+'%" data-bar="'+index+'">'+(values[index]?'<em class="bar-value">'+values[index]+'</em>':'')+'</span>').join('')+'</div><div class="chart-axis">'+labels.map(label=>'<span>'+label+'</span>').join('')+'</div></div>'}
+function renderNav(){el('stageTrack').innerHTML=STAGES.map(stage=>'<button type="button" role="tab" data-stage="'+stage.id+'" aria-selected="'+(stage.id===state.stage)+'" class="'+(stage.id===state.stage?'selected':'')+'">'+stage.label+'</button>').join('');el('stageTrack').querySelectorAll('button').forEach(button=>button.onclick=()=>{state.stage=button.dataset.stage;render()})}
+function metricScope(metric,model,region){if(metric==='media_spend'||metric==='macro_rate')return{model:'All Hyundai',region:'NTL',note:'National brand'};if(metric==='inventory'||metric==='incentives')return{model,region:'NTL',note:region==='NTL'?'National':'National only'};return{model,region,note:REGION_LABELS[region]}}
+function metricValue(metric,value,range){if(metric==='retail_share')return(value*100).toFixed(1)+'%';if(metric==='incentives')return'$'+Math.round(value).toLocaleString();if(metric==='media_spend')return'$'+(value/1000000).toFixed(1)+'M';if(metric==='macro_rate')return range||value.toFixed(2)+'%';if(metric==='google_adops')return value.toFixed(1);return Math.round(value).toLocaleString()}
+function chartValue(metric,value){if(metric==='retail_share')return(value*100).toFixed(1)+'%';if(metric==='macro_rate')return value.toFixed(2)+'%';if(metric==='media_spend')return'$'+Math.round(value/1000000)+'M';if(metric==='incentives')return'$'+(value/1000).toFixed(1)+'K';if(value>=100000)return Math.round(value/1000)+'K';if(value>=10000)return(value/1000).toFixed(1)+'K';return Math.round(value).toLocaleString()}
+function chartHeights(metric,rows){const values=rows.map(row=>row.value);if(!values.length)return[];if(metric==='retail_share'){const minimum=Math.min(...values),maximum=Math.max(...values),spread=Math.max(maximum-minimum,maximum*.01,.0001),floor=Math.max(0,minimum-spread*.35),ceiling=maximum+spread*.35;return values.map(value=>Math.round(12+((value-floor)/(ceiling-floor))*80))}const sorted=[...values].sort((a,b)=>a-b),middle=Math.floor(sorted.length/2),median=sorted.length%2?sorted[middle]:((sorted[middle-1]||0)+(sorted[middle]||0))/2;return values.map(value=>Math.max(8,Math.min(96,Math.round(value/Math.max(median*2,1)*100))))}
+function shiftMonth(month,amount){const parts=month.split('-').map(Number),date=new Date(Date.UTC(parts[0],parts[1]-1+amount,1));return date.getUTCFullYear()+'-'+String(date.getUTCMonth()+1).padStart(2,'0')}
+function comparisonText(metric,current,comparison){if(comparison===undefined||!Number.isFinite(comparison))return'—';if(metric==='retail_share'||metric==='macro_rate'){const delta=metric==='retail_share'?(current-comparison)*100:current-comparison;return(delta>=0?'+':'')+delta.toFixed(1)+' pp'}if(comparison===0)return'—';const delta=(current/comparison-1)*100;return(delta>=0?'+':'')+delta.toFixed(1)+'%'}
+function ytdComparison(metric,rows,period){const year=Number(period.slice(0,4)),monthNumber=Number(period.slice(5,7)),current=rows.filter(row=>Number(row.month.slice(0,4))===year&&Number(row.month.slice(5,7))<=monthNumber),prior=rows.filter(row=>Number(row.month.slice(0,4))===year-1&&Number(row.month.slice(5,7))<=monthNumber);if(current.length!==monthNumber||prior.length!==monthNumber)return'—';const additive=['retail_sales','media_spend','google_adops'].includes(metric),aggregate=items=>items.reduce((sum,row)=>sum+row.value,0)/(additive?1:items.length);return comparisonText(metric,aggregate(current),aggregate(prior))}
+function metricCard(stage,band){if(!stage.key)return '<button class="metric-card" type="button" data-card="'+stage.target+'" data-band="'+band+'"><div class="metric-card-head"><div><span class="eyebrow">'+stage.eyebrow+'</span><h3>'+stage.title+'</h3></div><span class="card-arrow" aria-hidden="true">↗</span></div>'+chart(stage)+'<div class="metric-footer"><span>Data connection deferred</span><strong>—</strong></div></button>';const model=el('model').value,region=el('region').value,period=el('period').value,scope=metricScope(stage.key,model,region),source=SUMMARY_DATA.sources[stage.key],allRecords=SUMMARY_DATA.records.filter(row=>row.metric===stage.key&&row.model===scope.model&&row.region===scope.region).sort((a,b)=>a.month.localeCompare(b.month)),all=allRecords.filter(row=>row.month<=period),current=all.find(row=>row.month===period),trend=all.filter(row=>row.month.startsWith(period.slice(0,4))),bars=chartHeights(stage.key,trend),labels=trend.map(row=>new Date(row.month+'-01T00:00:00Z').toLocaleString('en-US',{month:'short',timeZone:'UTC'}).toUpperCase()),values=trend.map(row=>chartValue(stage.key,row.value)),priorMonth=allRecords.find(row=>row.month===shiftMonth(period,-1)),priorYear=allRecords.find(row=>row.month===shiftMonth(period,-12));return '<button class="metric-card" type="button" data-card="'+stage.target+'" data-band="'+band+'"><div class="metric-card-head"><div><span class="eyebrow">'+stage.eyebrow+'</span><h3>'+stage.title+'</h3></div><span class="card-arrow" aria-hidden="true">↗</span></div>'+chart({...stage,bars},false,labels,values)+'<div class="metric-footer"><div class="metric-current"><small>'+PERIOD_LABELS[period]+'</small><strong>'+(current?metricValue(stage.key,current.value,current.range):'—')+'</strong></div><div class="metric-comparisons"><span><small>M/M</small>'+(current?comparisonText(stage.key,current.value,priorMonth?.value):'—')+'</span><span><small>Y/Y</small>'+(current?comparisonText(stage.key,current.value,priorYear?.value):'—')+'</span><span><small>CYTD</small>'+(current?ytdComparison(stage.key,allRecords,period):'—')+'</span></div></div><span class="metric-source">'+(current?scope.note+' · through '+source.through:'No '+period+' record · through '+source.through)+'</span></button>'}
+function renderBands(){el('summaryBands').innerHTML=SUMMARY_BANDS.map(band=>{const open=state.openBands.has(band.id),metrics=band.metrics.map(label=>SUMMARY_METRICS.find(metric=>metric.label===label));return '<section class="summary-band '+(state.activeBand===band.id?'active':'')+'"><button class="band-toggle" type="button" data-band-toggle="'+band.id+'" aria-expanded="'+open+'"><span>'+band.label+'</span><span class="band-caret" aria-hidden="true">'+(open?'▾':'▸')+'</span></button>'+(open?'<div class="band-grid columns-'+metrics.length+'">'+metrics.map(metric=>metricCard(metric,band.id)).join('')+'</div>':'')+'</section>'}).join('');el('summaryBands').querySelectorAll('[data-band-toggle]').forEach(button=>button.onclick=()=>{const id=button.dataset.bandToggle;state.activeBand=id;if(state.openBands.has(id))state.openBands.delete(id);else state.openBands.add(id);renderBands()});el('summaryBands').querySelectorAll('[data-card]').forEach(button=>button.onclick=()=>{state.activeBand=button.dataset.band;state.stage=button.dataset.card;render()})}
+function competitiveBullets(model){const contexts=COMP_CONTEXT.contexts;if(contexts[model])return contexts[model].bullets.slice(0,5);const seen=new Set;return Object.values(contexts).flatMap(context=>context.bullets).sort((a,b)=>b.date.localeCompare(a.date)).filter(bullet=>{if(seen.has(bullet.url))return false;seen.add(bullet.url);return true}).slice(0,5)}
+function renderContext(){if(state.contextView==='summary'){el('contextHeading').textContent='SUMMARY';el('contextFreshness').textContent='Illustrative headlines';el('contextList').className='context-list summary-insights';el('contextList').innerHTML=SUMMARY_INSIGHTS.map(item=>'<li class="context-item"><span class="context-section">'+item.section+'</span><h3>'+item.headline+'</h3><p>'+item.subhead+'</p></li>').join('');return}const macro=state.contextView==='macro',model=el('model').value,modelContext=COMP_CONTEXT.contexts[model],bullets=macro?MACRO_CONTEXT.context.bullets.slice(0,5):competitiveBullets(model),windowEnd=macro?MACRO_CONTEXT.context.window_end:(modelContext?.window_end||COMP_CONTEXT.generated_at.slice(0,10));el('contextHeading').textContent=macro?'MACRO & INDUSTRY CONTEXT':'PRODUCT & RELEASE CONTEXT';el('contextFreshness').textContent='Updated '+windowEnd;el('contextList').className='context-list';el('contextList').innerHTML=bullets.map(bullet=>'<li class="context-item"><a href="'+bullet.url+'" target="_blank" rel="noreferrer">'+bullet.headline+'<span aria-hidden="true">↗</span></a><span class="context-meta">'+[bullet.date,bullet.outlet,bullet.category,bullet.direction].filter(Boolean).join(' · ')+'</span><p>'+bullet.context+(bullet.affected_segments?.length?' Affected: '+bullet.affected_segments.join(', ')+'.':'')+'</p></li>').join('')}
+function render(){const stage=STAGES.find(item=>item.id===state.stage)||STAGES[0],period=el('period').value;renderNav();el('headerPeriod').textContent=PERIOD_LABELS[period];el('pageTitle').textContent=state.stage==='summary'?'Daily performance overview':stage.title;el('summaryView').hidden=state.stage!=='summary';el('detailView').hidden=state.stage==='summary';if(state.stage==='summary'){el('executiveSource').textContent='Illustrative narrative · '+el('model').value+' · '+REGION_LABELS[el('region').value]+' · Source freshness varies by card';renderBands()}else{el('detailSource').textContent=stage.source;el('detailSelection').textContent=el('model').value+' · '+REGION_LABELS[el('region').value];el('detailPeriod').textContent=PERIOD_LABELS[period];el('detailChart').innerHTML=chart(stage,true)}renderContext()}
+['region','model','period'].forEach(id=>el(id).onchange=render);function rotateContext(direction){const views=['summary','competitive','macro'],next=(views.indexOf(state.contextView)+direction+views.length)%views.length;state.contextView=views[next];renderContext()}el('contextPrev').onclick=()=>rotateContext(-1);el('contextNext').onclick=()=>rotateContext(1);render();
+</script></body></html>`;
+
+await mkdir(outputDir, { recursive: true });
+await writeFile(join(outputDir, "index.html"), html, "utf8");
+console.log(join(outputDir, "index.html"));

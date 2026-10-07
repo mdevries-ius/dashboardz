@@ -1,7 +1,7 @@
 # Dashboard Collection
 
-This is the clean working home for the HMA Governance, GMA Marcom, and GMA
-Operations dashboards.
+This is the clean working home for the HMA Governance, Tommy Dash, GMA Marcom,
+and GMA Operations dashboards.
 
 ## Folder structure
 
@@ -11,6 +11,7 @@ dashboards/
 ├── outputs/                  # Final distributable HTML files only
 ├── projects/
 │   ├── hma_governance/      # HMA source, governed data, refresh scripts
+│   ├── tommy_dash/          # HMA KPI summary dashboard and local HTML builder
 │   ├── gma_marcom/          # Shared source for both Marcom dashboards
 │   └── ops_dash/            # Data pipeline plus dashboard application
 └── shared/
@@ -18,6 +19,9 @@ dashboards/
 ```
 
 ## Final dashboards
+
+GitHub Pages publishes the browser-ready dashboards from `docs/`. Tommy Dash is
+available at `/tommy-dash/` on the repository's Pages site.
 
 The only files in `outputs/` are:
 
@@ -54,6 +58,21 @@ Run the full governed refresh from the HMA project folder with:
 
 ```bash
 python3 scripts/refresh_dashboard.py --full
+```
+
+### Tommy Dash
+
+- Dashboard UI: `projects/tommy_dash/app/TommyDashboard.tsx`
+- Site styling: `projects/tommy_dash/app/globals.css`
+- Governed Summary package: `projects/tommy_dash/public/data/summary_metrics.json`
+- Standalone builder: `projects/tommy_dash/scripts/build_local_html.mjs`
+- Published page: `docs/tommy-dash/index.html`
+
+From the Tommy Dash project folder, rebuild the governed package and standalone
+HTML with:
+
+```bash
+pnpm run build:local
 ```
 
 ### GMA Marcom
