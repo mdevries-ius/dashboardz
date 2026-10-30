@@ -125,6 +125,9 @@ body.hma-dashboard .hero-metric .hero-value { font-size:var(--hma-heading)!impor
 body.hma-dashboard .metric-comparison { display:flex; flex-wrap:wrap; gap:5px 12px; }
 body.hma-dashboard .metric-comparison .positive { color:#00795c; }
 body.hma-dashboard .metric-comparison .negative { color:#b13b2d; }
+.tooltip .tip-metric > span { display:block; min-height:30px; line-height:15px; margin-bottom:2px; }
+.tooltip .tip-metric > b { display:block; line-height:18px; font-variant-numeric:tabular-nums; }
+.tooltip .tip-deltas { font-variant-numeric:tabular-nums; }
 .metric-body { display:grid; grid-template-columns:minmax(95px,1fr) minmax(80px,144px); gap:12px; align-items:center; }
 .metric-body > div { min-width:0; }
 body.hma-dashboard .metric-body .metric-sparkline { width:100%; height:60px; }
