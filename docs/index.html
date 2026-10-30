@@ -141,6 +141,22 @@ body.hma-dashboard .metric-comparison .negative { color:#b13b2d; }
 .metric-body { display:grid; grid-template-columns:minmax(95px,1fr) minmax(80px,144px); gap:12px; align-items:center; }
 .metric-body > div { min-width:0; }
 .brand-lockup-row { display:flex; align-items:center; gap:12px; }
+body.hma-dashboard .site-nav { width:100%; min-width:0; }
+body.hma-dashboard .nav-brand { min-width:360px; }
+body.hma-dashboard .brand-lockup-row .brand-lockup { width:240px; }
+body.hma-dashboard .model-rail .rail-heading { display:flex; align-items:center; justify-content:space-between; width:100%; min-height:47px; margin:0; padding:0 2px; border-bottom:1px solid #47484b; }
+.model-rail .model-rail-list { border-top:0; }
+body.hma-dashboard .control label.switch { display:inline-block; width:38px; height:21px; min-height:21px; margin:0; padding:0; flex:0 0 38px; overflow:visible; }
+body.hma-dashboard .special-control .toggle-wrap { white-space:normal; min-width:0; }
+.special-control .toggle-copy { min-width:0; }
+.special-control .toggle-copy small { white-space:normal; }
+body.hma-dashboard .insight-strip { display:block; width:auto; max-width:none; grid-column:1/-1; }
+body.hma-dashboard .insight-summary { width:100%; max-width:none; }
+body.hma-dashboard .insight-controls { position:static; margin-top:8px; min-width:0; width:100%; }
+body.hma-dashboard .insight-status { text-align:left; white-space:normal; }
+body.hma-dashboard .insight-sources { padding-right:0; }
+.brand-dashboard > .brand-overview-context { margin:0 24px 10px; padding:20px; }
+.brand-overview-context .news-list { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px 24px; }
 body.hma-dashboard .brand-home { text-align:left; }
 body.hma-dashboard .brand-korean { color:#fff; font-family:"Apple SD Gothic Neo","Malgun Gothic",Arial,sans-serif; font-size:20px!important; font-weight:600; white-space:nowrap; }
 body.hma-dashboard .brand-home .brand-product { display:block; margin-top:5px; font-size:12px!important; text-align:left; text-transform:none; letter-spacing:.08em; }
@@ -150,7 +166,8 @@ body.hma-dashboard .brand-home .brand-product { display:block; margin-top:5px; f
 .model-rail .rail-utility:before { content:none; }
 .model-rail .rail-utility:after { content:"→"; float:right; opacity:0; font-family:Arial,sans-serif; }
 .model-rail .rail-utility[aria-current="page"]:after { opacity:1; }
-@media(max-width:700px) { .brand-lockup-row { gap:8px; } .brand-lockup-row .brand-lockup { width:160px; } }
+@media(max-width:900px) { body.hma-dashboard .site-nav { height:auto; min-height:72px; flex-wrap:wrap; } body.hma-dashboard .nav-brand { min-width:0; padding:10px 0; } body.hma-dashboard .site-links { width:100%; min-height:42px; justify-content:space-between; } body.hma-dashboard .nav-tools { display:none; } }
+@media(max-width:700px) { .brand-lockup-row { gap:8px; } body.hma-dashboard .brand-lockup-row .brand-lockup { width:190px; } .brand-dashboard > .brand-overview-context { margin-left:12px; margin-right:12px; } .brand-overview-context .news-list { grid-template-columns:1fr; } }
 .trim-mix-card { grid-column:span 2; }
 body.hma-dashboard .hero-metric.ratio-metric { grid-column:span 2; }
 .trim-mix-title { display:flex; justify-content:space-between; gap:12px; margin-bottom:12px; }
@@ -272,12 +289,12 @@ main.page > .visual > :is(.performance-card,.regional-card) { grid-column:auto; 
       <div class="control"><label for="brandMonth">Reporting period</label><select class="select" id="brandMonth"></select></div>
       <div class="control"><label for="brandMarketScope">Market universe</label><select class="select" id="brandMarketScope"><option value="all">Entire U.S. market</option><option value="tcg">Hyundai competitive segments (TCG)</option></select></div>
     </div></section>
+    <section class="insight-strip" aria-live="polite"><div><span class="insight-eyebrow">EXECUTIVE READOUT</span><p class="insight-summary" id="brandInsight"></p></div><div class="insight-controls"><div class="insight-status" id="brandInsightStatus"></div></div></section>
+      <aside class="side context-card overview-context brand-overview-context"><section class="news-context" aria-labelledby="brandNewsHeading"><div class="news-head"><div class="context-heading"><button class="context-nav" id="brandContextPrev" type="button" aria-label="Previous context view">‹</button><span class="eyebrow" id="brandNewsHeading">PRODUCT &amp; RELEASE CONTEXT</span><button class="context-nav" id="brandContextNext" type="button" aria-label="Next context view">›</button></div><span class="news-freshness" id="brandNewsFreshness"></span></div><ul class="news-list" id="brandContextList"></ul></section></aside>
   <section class="hero-metrics" aria-label="Selected brand summary"><div class="hero-metric"><span>Retail share</span><strong class="hero-value" id="brandHeroRetail">—</strong></div><div class="hero-metric"><span>Search share</span><strong class="hero-value" id="brandHeroSearch">—</strong></div><div class="hero-metric"><span>Inventory share</span><strong class="hero-value" id="brandHeroInventory">—</strong></div><div class="hero-metric"><span>Search : Retail</span><strong class="hero-value" id="brandHeroRatio">—</strong></div></section>
   <div class="brand-body">
-    <section class="insight-strip" aria-live="polite"><div><span class="insight-eyebrow">EXECUTIVE READOUT</span><p class="insight-summary" id="brandInsight"></p></div><div class="insight-controls"><div class="insight-status" id="brandInsightStatus"></div></div></section>
     <div class="brand-grid">
       <article class="brand-card chart-card wide"><span class="chart-eyebrow">BRAND QUADRANT</span><h2>Hyundai vs competitive brands</h2><div class="brand-card-sub" id="brandQuadrantPeriod"></div><svg class="brand-chart" id="brandQuadrant" viewBox="0 0 900 500" role="img" aria-label="Brand search and retail share change"></svg></article>
-      <aside class="brand-card side context-card context"><section class="news-context" aria-labelledby="brandNewsHeading"><div class="news-head"><div class="context-heading"><button class="context-nav" id="brandContextPrev" type="button" aria-label="Previous context view">‹</button><span class="eyebrow" id="brandNewsHeading">PRODUCT &amp; RELEASE CONTEXT</span><button class="context-nav" id="brandContextNext" type="button" aria-label="Next context view">›</button></div><span class="news-freshness" id="brandNewsFreshness"></span></div><ul class="news-list" id="brandContextList"></ul></section></aside>
       <article class="brand-card side performance-card performance"><span class="chart-eyebrow">BRAND PERFORMANCE</span><h2>Competitive brand position</h2><div class="brand-card-sub">Brand volumes divided by the complete selected market</div><div class="brand-performance-table" id="brandPerformance"></div></article>
       <article class="brand-card trend-card regional-card regional"><span class="chart-eyebrow">REGIONAL STRENGTH</span><h2>Hyundai vs national</h2><div class="brand-card-sub">Regional Hyundai share movement relative to its national benchmark</div><svg class="brand-chart" id="brandRegional" viewBox="0 0 520 330" role="img" aria-label="Average Hyundai regional share movement"></svg></article>
     </div>
