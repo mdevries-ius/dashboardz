@@ -102,7 +102,7 @@ body.hma-dashboard :is(h2,h3):not(.studio *) { font-size:var(--hma-heading) !imp
 body.hma-dashboard :is(.title,.hero-value,.brand-hero-value) { font-size:var(--hma-display) !important; }
 body.hma-dashboard svg:not(.studio svg) :is(text,tspan) { font-size:var(--hma-chart-text-size,12px) !important; }
 body.hma-dashboard :is(button,select,input,textarea,.regression-chart text) { font-family:HyundaiText,Arial,sans-serif; }
-.hma-regressions-container { grid-column:2; min-width:0; margin:20px 24px 32px; --coral:#002c5f; --coral-soft:#edf2f7; --white:#fff; --paper:#fff; }
+.hma-regressions-container { grid-column:2; min-width:0; margin:0; background:#fff; --coral:#002c5f; --coral-soft:#edf2f7; --white:#fff; --paper:#fff; }
 .hma-regressions-container { grid-row:1; }
 .hma-regressions-container .advanced-hero { margin:0; padding:26px; }
 .hma-regressions-container .regression-heading { display:none; }
@@ -176,7 +176,7 @@ body.hma-dashboard .vehicle-hero { min-height:115px; }
 @media(max-width:1180px) { .app-shell::before { width:190px; } }
 @media(max-width:900px) { .app-shell::before { display:none; } }
 @media(max-width:700px) { body.hma-dashboard .hero-metrics { margin:12px; grid-template-columns:repeat(2,minmax(0,1fr)); } body.hma-dashboard .hero-metric:nth-child(2n) { border-right:0; } body.hma-dashboard .hero-metric:nth-child(n+3) { border-top:1px solid #e2e4e6; } }
-.hma-regressions-container .regressions-panel { margin:0; background:#fff; border:1px solid var(--line); border-radius:8px; box-shadow:0 7px 24px #17324d0a; }
+.hma-regressions-container .regressions-panel { margin:0; background:#fff; border:0; border-radius:0; box-shadow:none; }
 .hma-regressions-container .regression-heading h2 { margin:5px 0; color:var(--navy); font-family:HyundaiHead,Arial,sans-serif; }
 .hma-regressions-container .eyebrow { color:var(--navy); letter-spacing:.12em; text-transform:uppercase; margin:0; }
 .hma-regressions-container .regression-chart-title { min-height:40px; align-items:flex-start; line-height:1.4; }
@@ -201,18 +201,17 @@ main.page > .visual { grid-template-columns:repeat(2,minmax(0,1fr)); }
 main.page > .visual > :is(.performance-card,.regional-card) { grid-column:auto; grid-row:auto; min-width:0; }
 @media(max-width:1000px) { .model-quadrants,main.page > .visual { grid-template-columns:1fr; } }
 @media(max-width:650px) { .model-quadrants { margin-left:12px; margin-right:12px; } main.page > .overview-context { margin-left:12px; margin-right:12px; } main.page > .overview-context .news-list { grid-template-columns:1fr; } }
-@media(max-width:900px) { .hma-regressions-container { margin-left:20px; margin-right:20px; } }
 @media(max-width:650px) { .hma-regressions-container .regression-layout { grid-template-columns:minmax(0,1fr); } }
 
 .nav-link,.rail-utility { text-decoration:none; }
-.hma-analytics-studio { grid-column:2; grid-row:1; min-width:0; margin:20px 24px 32px; color:var(--ink); }
+.hma-analytics-studio { grid-column:2; grid-row:1; min-width:0; margin:0; background:#fff; color:var(--ink); }
 .hma-analytics-studio[hidden] { display:none!important; }
 .hma-analytics-studio .analytics-hero { margin:0; padding:26px; }
 .analytics-intro { padding:24px; background:#fff; border:1px solid var(--line); }
 .analytics-intro h1 { margin:8px 0; font:20px HyundaiHead,Arial,sans-serif; color:var(--navy); }
 .analytics-intro p { margin:0; color:var(--muted); }
 .analytics-intro .eyebrow { letter-spacing:.12em; color:var(--navy); }
-.analytics-layout { display:grid; grid-template-columns:280px minmax(0,1fr); min-height:480px; background:#fff; border:1px solid var(--line); border-top:0; }
+.analytics-layout { display:grid; grid-template-columns:280px minmax(0,1fr); min-height:480px; background:#fff; border:0; }
 .analytics-library { padding:24px; border-right:1px solid var(--line); }
 .analytics-library label { display:block; margin-bottom:8px; }
 .analytics-library input { width:100%; padding:10px; border:1px solid var(--line); border-radius:0; }
@@ -227,7 +226,7 @@ main.page > .visual > :is(.performance-card,.regional-card) { grid-column:auto; 
 .analytics-toolbar { display:flex; flex-wrap:wrap; gap:12px; align-items:center; margin:16px 0; }
 .analytics-toolbar button,.analytics-toolbar a { padding:8px 12px; border:1px solid var(--line); background:#fff; color:var(--navy); text-decoration:none; }
 .analytics-slide { display:block; width:100%; height:auto; aspect-ratio:16/9; object-fit:contain; border:1px solid var(--line); }
-@media(max-width:800px) { .analytics-layout { grid-template-columns:1fr; } .analytics-library { border-right:0; border-bottom:1px solid var(--line); } .hma-analytics-studio { margin:20px; } }
+@media(max-width:800px) { .analytics-layout { grid-template-columns:1fr; } .analytics-library { border-right:0; border-bottom:1px solid var(--line); } }
 
 </style>
 </head>
