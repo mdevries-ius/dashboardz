@@ -128,6 +128,14 @@ body.hma-dashboard .metric-comparison .negative { color:#b13b2d; }
 .tooltip .tip-metric > span { display:block; min-height:30px; line-height:15px; margin-bottom:2px; }
 .tooltip .tip-metric > b { display:block; line-height:18px; font-variant-numeric:tabular-nums; }
 .tooltip .tip-deltas { font-variant-numeric:tabular-nums; }
+.source-details { width:100%; min-width:0; }
+.source-details summary { cursor:pointer; color:var(--navy); font-weight:700; padding:6px 0; }
+.source-details[open] summary { margin-bottom:10px; }
+.source-provenance { color:var(--muted); line-height:1.5; }
+.source-provenance table { border-collapse:collapse; width:100%; margin:12px 0; text-align:left; }
+.source-provenance th,.source-provenance td { padding:8px 12px 8px 0; border-bottom:1px solid var(--line); text-align:left; vertical-align:top; }
+.source-provenance code { overflow-wrap:anywhere; color:var(--navy); }
+.source-details .source-method { color:var(--muted); line-height:1.5; }
 .metric-body { display:grid; grid-template-columns:minmax(95px,1fr) minmax(80px,144px); gap:12px; align-items:center; }
 .metric-body > div { min-width:0; }
 body.hma-dashboard .metric-body .metric-sparkline { width:100%; height:60px; }
@@ -210,7 +218,7 @@ main.page > .visual > :is(.performance-card,.regional-card) { grid-column:auto; 
       <div class="control"><label for="monthSelect"><span>Current month</span></label><select class="select" id="monthSelect"></select></div>
       <div class="control"><div class="label"><span>Comp display window</span></div><details class="comp-picker" id="compPicker"><summary id="compSummary">All vehicles</summary><div class="comp-menu"><div class="comp-actions"><button type="button" id="showGovernance">DISPLAY MODELS</button><button type="button" id="showAll">SHOW ALL</button><button type="button" id="showNone">CLEAR</button></div><div id="compOptions"></div></div></details></div>
     </div>
-    <div class="control-source"><div class="source-copy"><strong>Direct notebook sources</strong><span>Google AdOps daily × SRS monthly retail × Cloud Theory monthly inventory</span><span class="source-method" id="methodText"></span></div><div class="refresh-date"><strong>Refresh date</strong><span id="refreshDate"></span></div></div>
+    <div class="control-source"><details class="source-details"><summary>Sources &amp; Refresh</summary><!-- BEGIN APPROVED SOURCE DISCLOSURE --><div class="source-provenance"><p><strong>Dashboard data snapshot refreshed:</strong> <time datetime="2026-10-30T19:46:06.936786+00:00">Oct 30, 2026 · 19:46:06 UTC</time></p><p>This is the extraction timestamp, not the underlying tables’ last-update time.</p><table><thead><tr><th>Measure</th><th>Databricks table</th></tr></thead><tbody><tr><th scope="row">Model search (Google AdOps daily)</th><td><code>ius_unity_prod.google_datamart.ad_opportunity_regional_daily</code></td></tr><tr><th scope="row">Regional / brand search (Google AdOps monthly)</th><td><code>ius_unity_prod.sandbox.agent_googleadops_monthly</code></td></tr><tr><th scope="row">Retail sales &amp; share (Urban Science/SRS)</th><td><code>ius_unity_prod.sandbox.agent_srs</code></td></tr><tr><th scope="row">Inventory (Cloud Theory)</th><td><code>ius_unity_prod.sandbox.agent_cloudtheory</code></td></tr></tbody></table></div><!-- END APPROVED SOURCE DISCLOSURE --><p class="source-method" id="methodText"></p><span id="refreshDate" hidden></span></details></div>
     <div class="toggle-group"><div class="toggle-wrap"><label class="switch"><input id="specialToggle" type="checkbox" checked><span class="track"></span></label><div class="toggle-copy"><strong>Special segmentation</strong><small id="segmentMode">Approved custom sets</small></div></div></div>
   </section>
   <section class="insight-strip" aria-live="polite" aria-labelledby="insightHeading">
