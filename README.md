@@ -23,6 +23,20 @@ dashboards/
 GitHub Pages publishes the browser-ready dashboards from `docs/`. Tommy Dash is
 available at `/tommy-dash/` on the repository's Pages site.
 
+Genesis Demand is published at `/1047/`. It is a public, static snapshot of the
+Demand-only dashboard, with the same header, filters and light/dark themes.
+Its data is embedded in the page; publication does not schedule data refreshes.
+To update it after building the Demand-only export, run:
+
+```bash
+node shared/scripts/build_demand_page.mjs /path/to/GMA_Demand_Dashboard.html
+node --test shared/scripts/build_demand_page.test.mjs
+```
+
+The packager removes identifying local paths, retains source table/workbook names,
+and rejects full Operations payloads or unexpected private markers. Commit only
+the intended page and packaging changes; leave other dashboard files untouched.
+
 The only files in `outputs/` are:
 
 - `hma_governance.html`
