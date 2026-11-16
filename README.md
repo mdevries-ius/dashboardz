@@ -25,6 +25,9 @@ available at `/tommy-dash/` on the repository's Pages site.
 
 Genesis Demand is published at `/1047/`. It is a public, static snapshot of the
 Demand-only dashboard, with the same header, filters and light/dark themes.
+Its brand universes are Total Lux (governed SRS GMA vehicle flag) and Genesis
+TCG (all governed segments containing a Genesis vehicle). Brand visibility
+selections never change those denominators.
 Its data is embedded in the page; publication does not schedule data refreshes.
 To update it after building the Demand-only export, run:
 
