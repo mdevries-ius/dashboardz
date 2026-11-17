@@ -3166,7 +3166,7 @@ html,body{margin:0!important;padding:0!important}body>main{max-width:none!import
 #gma-search-sales-dashboard .market-assets>.market-asset{min-width:0;box-sizing:border-box;border:1px solid var(--border);border-top:1px solid #aa5339;padding:16px;margin:0;align-self:stretch}
 #gma-search-sales-dashboard .market-assets .pnv-panel{padding-top:16px}
 #gma-search-sales-dashboard .market-assets .rank-panel{width:auto!important;max-width:none!important;display:flex;flex-direction:column}
-#gma-search-sales-dashboard .market-assets .rank-wrap{max-width:100%;max-height:none;overflow:auto}
+#gma-search-sales-dashboard .market-assets .rank-wrap{max-width:100%;max-height:604px;overflow:auto}
 #gma-search-sales-dashboard .market-assets .rank-panel>.demand-asset-notes{margin-top:auto}
 #gma-search-sales-dashboard [data-incentive-body] td:nth-child(4),#gma-search-sales-dashboard [data-incentive-body] td:nth-child(6){white-space:nowrap}
 #gma-search-sales-dashboard .chart-actions{display:none!important}
@@ -3262,6 +3262,21 @@ window.addEventListener('load',()=>{
  const audit=root.querySelector('.source-audit');audit.open=false;audit.querySelector('summary').textContent='Sources & notes';controls.after(audit);
  const coverage=root.querySelector('.coverage');if(coverage){delete coverage.dataset.marketExtra;audit.append(coverage);}
  if(coverage)coverage.textContent='Default: October 2026 month-end. Total Lux retail uses all vehicles in governed SRS segments containing Lux. Search, media and inventory retain their existing GMA scope. Genesis TCG includes all vehicles in the governed segments containing Genesis. Total Lux search includes flagged make-only; TCG search does not allocate make-only to segments. All Genesis retail units are retained. Brands selections change visibility, never denominators. Retail sales use national SRS history plus newer ADI monthly observations; search uses native national Google AdOps. Inventory includes in-stock and in-transit/on-order average inventory. Incentive index* is not inventory weighted; see asset notes for the separate workbook competitor groups and PNVS coverage. Unavailable source-month values remain blank.';
+ // Expand the old 390px viewport to eighteen rows, not the entire OEM list.
+ // Measure rendered rows so wrapped headers and responsive fonts stay correct.
+ const rankWrap=root.querySelector('[data-rank-wrap]'),rankBody=root.querySelector('[data-rank-body]');
+ let rankMeasurePending=false;
+ function fitCompetitiveRows(){
+  rankMeasurePending=false;
+  const rows=[...rankBody.rows].slice(0,18),header=rankWrap.querySelector('thead');
+  if(!rows.length||!header)return;
+  const height=Math.ceil(header.getBoundingClientRect().height+rows.reduce((sum,row)=>sum+row.getBoundingClientRect().height,0)+2);
+  if(height>2&&rankWrap.style.maxHeight!==height+'px')rankWrap.style.maxHeight=height+'px';
+ }
+ function queueRankMeasure(){if(!rankMeasurePending){rankMeasurePending=true;requestAnimationFrame(fitCompetitiveRows);}}
+ new MutationObserver(queueRankMeasure).observe(rankBody,{childList:true,subtree:true,characterData:true});
+ new ResizeObserver(queueRankMeasure).observe(root);
+ document.fonts?.ready.then(queueRankMeasure);queueRankMeasure();
  function reportSize(){parent.postMessage({type:'gma-sales-intelligence-size',height:Math.ceil(document.body.getBoundingClientRect().height)},'*');}
  new ResizeObserver(reportSize).observe(document.body);reportSize();
  window.addEventListener('message',event=>{if(event.source!==parent||event.data?.type!=='gma-sales-intelligence-theme')return;const theme=event.data.appearance;if(['light','dark'].includes(theme)&&root.dataset.theme!==theme)root.querySelector('[data-theme-toggle]').click();});
