@@ -3165,8 +3165,9 @@ html,body{margin:0!important;padding:0!important}body>main{max-width:none!import
 #gma-search-sales-dashboard .market-assets{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;align-items:stretch;margin-top:18px}
 #gma-search-sales-dashboard .market-assets>.market-asset{min-width:0;box-sizing:border-box;border:1px solid var(--border);border-top:1px solid #aa5339;padding:16px;margin:0;align-self:stretch}
 #gma-search-sales-dashboard .market-assets .pnv-panel{padding-top:16px}
-#gma-search-sales-dashboard .market-assets .rank-panel{width:auto!important;max-width:none!important}
-#gma-search-sales-dashboard .market-assets .rank-wrap{max-width:100%;overflow:auto}
+#gma-search-sales-dashboard .market-assets .rank-panel{width:auto!important;max-width:none!important;display:flex;flex-direction:column}
+#gma-search-sales-dashboard .market-assets .rank-wrap{max-width:100%;max-height:none;overflow:auto}
+#gma-search-sales-dashboard .market-assets .rank-panel>.demand-asset-notes{margin-top:auto}
 #gma-search-sales-dashboard [data-incentive-body] td:nth-child(4),#gma-search-sales-dashboard [data-incentive-body] td:nth-child(6){white-space:nowrap}
 #gma-search-sales-dashboard .chart-actions{display:none!important}
 #gma-search-sales-dashboard [data-market-extra]{display:none!important}
